@@ -4,35 +4,42 @@ import repos from "./db/flathub/repos.js";
 import { writeFile } from "fs/promises";
 let metadatas = [];
 let index = 0;
+
 for (const { name, full_name, default_branch } of repos) {
-    let waylandSocket = false;
-    let x11Socket = false;
-    const json = await fetch(`https://raw.githubusercontent.com/${full_name}/${default_branch}/${name}.json`, FetchConfig);
+  let wayland = false;
+  let x11 = false;
+  let filesystem = false;
+  let filename = `https://raw.githubusercontent.com/${full_name}/${default_branch}/${name}.json`;
+  let found = false;
+  const json = await fetch(filename, FetchConfig);
+
+  if (json.ok) {
     /** json */
-    if (json.ok) {
-        const jsonStr = await json.text();
-        if (jsonStr.match(/--socket=wayland/)) {
-            waylandSocket = true;
-        }
-        if (jsonStr.match(/--socket=x11/)) {
-            x11Socket = true;
-        }
-    } /** yaml */
-    else {
-        const yaml = await fetch(`https://raw.githubusercontent.com/${full_name}/${default_branch}/${name}.yaml`, FetchConfig);
-        if (yaml.ok) {
-            const yamlStr = await yaml.text();
-            if (yamlStr.match(/--socket=wayland/)) {
-                waylandSocket = true;
-            }
-            if (yamlStr.match(/--socket=x11/)) {
-                x11Socket = true;
-            }
-        }
+    const jsonStr = await json.text();
+    found = true;
+    wayland = !!jsonStr.match(/--socket=wayland/);
+    x11 = !!jsonStr.match(/--socket=x11/);
+    filesystem = !!jsonStr.match(/--filesystem=/);
+  } else {
+    /** yaml */
+    filename = `https://raw.githubusercontent.com/${full_name}/${default_branch}/${name}.yaml`;
+    const yaml = await fetch(filename, FetchConfig);
+    if (yaml.ok) {
+      const yamlStr = await yaml.text();
+      found = true;
+      wayland = !!yamlStr.match(/--socket=wayland/);
+      x11 = !!yamlStr.match(/--socket=x11/);
+      filesystem = !!yamlStr.match(/--filesystem=/);
     }
-    const metadata = { index, name, waylandSocket, x11Socket };
-    console.log({ metadata });
-    index += 1;
-    metadatas.push(metadata);
+  }
+
+  const metadata = { index, x11, wayland, filesystem, found, filename };
+  console.log({ metadata });
+  index += 1;
+  metadatas.push(metadata);
 }
-await writeFile(`./src/db/flathub/metadata.js`, `export default ${JSON.stringify(metadatas, null, 2)}`);
+
+await writeFile(
+  `./src/db/flathub/metadata.js`,
+  `export default ${JSON.stringify(metadatas, null, 2)}`
+);
