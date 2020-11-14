@@ -50,6 +50,12 @@
   <script type="module">
     import count from "./src/db/flathub/count.js";
 
+    const TOTAL_COLOR = "#546e7a";
+    const BAD_COLOR = "#ac0800";
+    const GOOD_COLOR = "#00e676";
+
+    const ALL_BAD_COLOR = "#ff9100";
+
     const options = {
       responsive: true,
       tooltips: {
@@ -89,23 +95,23 @@
         datasets: [
           {
             label: "total",
-            backgroundColor: "grey",
-            borderColor: "grey",
+            backgroundColor: TOTAL_COLOR,
+            borderColor: TOTAL_COLOR,
             data: count.map((it) => it.gui),
             fill: false,
           },
           {
-            label: "x11",
-            backgroundColor: "red",
-            borderColor: "red",
-            data: count.map((it) => it.x11),
+            label: "wayland and x11",
+            backgroundColor: BAD_COLOR,
+            borderColor: BAD_COLOR,
+            data: count.map((it) => it.wayland),
             fill: false,
           },
           {
-            label: "wayland",
-            backgroundColor: "green",
-            borderColor: "green",
-            data: count.map((it) => it.wayland),
+            label: "wayland and fallback-x11",
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map((it) => it["fallback-x11"]),
             fill: false,
           },
           {
@@ -115,13 +121,6 @@
             data: count.map((it) => it["only-x11"]),
             fill: false,
           },
-          {
-            label: "only wayland",
-            backgroundColor: "orange",
-            borderColor: "orange",
-            data: count.map((it) => it["only-wayland"]),
-            fill: false,
-          },
         ],
       },
       options: {
@@ -129,7 +128,7 @@
         title: {
           display: true,
           text:
-            "flathub.org / apps with --socket=(x11 or fallback-x11) or --socket=wayland",
+            "flathub.org / apps with --socket=(x11 or fallback-x11 or wayland)",
         },
       },
     });
@@ -141,37 +140,37 @@
         datasets: [
           {
             label: "total",
-            backgroundColor: "grey",
-            borderColor: "grey",
+            backgroundColor: TOTAL_COLOR,
+            borderColor: TOTAL_COLOR,
             data: count.map((it) => it["no-filesystem"] + it.filesystem),
             fill: false,
           },
           {
             label: "--no-filesystem",
-            backgroundColor: "green",
-            borderColor: "green",
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
             data: count.map((it) => it["no-filesystem"]),
             fill: false,
           },
           {
-            label: "--filesystem=<some>",
-            backgroundColor: "red",
-            borderColor: "red",
-            data: count.map((it) => it.filesystem),
+            label: "--filesystem=<other>",
+            backgroundColor: BAD_COLOR,
+            borderColor: BAD_COLOR,
+            data: count.map((it) => it["filesystem-other"]),
             fill: false,
           },
           {
             label: "--filesystem=home",
-            backgroundColor: "indigo",
-            borderColor: "indigo",
-            data: count.map((it) => it.filesystemHome),
+            backgroundColor: ALL_BAD_COLOR,
+            borderColor: ALL_BAD_COLOR,
+            data: count.map((it) => it["filesystem-home"]),
             fill: false,
           },
           {
             label: "--filesystem=host",
-            backgroundColor: "orange",
-            borderColor: "orange",
-            data: count.map((it) => it.filesystemHost),
+            backgroundColor: "indigo",
+            borderColor: "indigo",
+            data: count.map((it) => it["filesystem-host"]),
             fill: false,
           },
         ],
@@ -192,29 +191,29 @@
         datasets: [
         {
             label: "total",
-            backgroundColor: "grey",
-            borderColor: "grey",
+            backgroundColor: TOTAL_COLOR,
+            borderColor: TOTAL_COLOR,
             data: count.map((it) => it.device + it["no-device"]),
             fill: false,
           },
           {
             label: "--no-device",
-            backgroundColor: "green",
-            borderColor: "green",
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
             data: count.map((it) => it["no-device"]),
             fill: false,
           },
           {
-            label: "--device=<some>",
-            backgroundColor: "red",
-            borderColor: "red",
-            data: count.map((it) => it.device),
+            label: "--device=<other>",
+            backgroundColor: BAD_COLOR,
+            borderColor: BAD_COLOR,
+            data: count.map((it) => it["device-other"]),
             fill: false,
           },
           {
             label: "--device=all",
-            backgroundColor: "indigo",
-            borderColor: "indigo",
+            backgroundColor: ALL_BAD_COLOR,
+            borderColor: ALL_BAD_COLOR,
             data: count.map((it) => it["device-all"]),
             fill: false,
           },

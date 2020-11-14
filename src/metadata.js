@@ -51,6 +51,7 @@ function parseHistory(history) {
     return {
       date,
       x11,
+      fallbackX11,
       wayland,
       filesystem,
       filesystemHome,

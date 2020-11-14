@@ -51,22 +51,33 @@ const countMap = metadata.reduce((acc, it) => {
     if (currentMonth) {
       const maybeValue = acc.get(key);
 
-      const supportsX11 = currentMonth.x11; // || currentMonth.fallbackX11;
+      const supportsX11 = currentMonth.x11 || currentMonth.fallbackX11;
 
       acc.set(key, {
+        // --socket
         x11: (maybeValue?.x11 ?? 0) + currentMonth.x11,
         ["fallback-x11"]:
           (maybeValue?.["fallback-x11"] ?? 0) + currentMonth.fallbackX11,
-        wayland: (maybeValue?.wayland ?? 0) + currentMonth.wayland,
+        wayland:
+          (maybeValue?.wayland ?? 0) +
+          (currentMonth.wayland && currentMonth.x11),
 
         // --device
         device: (maybeValue?.device ?? 0) + currentMonth.device,
+        ["device-other"]:
+          (maybeValue?.["device-other"] ?? 0) +
+          (currentMonth.device && !currentMonth.deviceAll),
         ["device-all"]:
           (maybeValue?.["device-all"] ?? 0) + currentMonth.deviceAll,
         ["no-device"]: (maybeValue?.["no-device"] ?? 0) + !currentMonth.device,
 
         // --filesystem
         filesystem: (maybeValue?.filesystem ?? 0) + currentMonth.filesystem,
+        ["filesystem-other"]:
+          (maybeValue?.["filesystem-other"] ?? 0) +
+          (currentMonth.filesystem &&
+            !currentMonth.filesystemHome &&
+            !currentMonth.filesystemHost),
         ["filesystem-home"]:
           (maybeValue?.["filesystem-home"] ?? 0) + currentMonth.filesystemHome,
         ["filesystem-host"]:
@@ -74,6 +85,7 @@ const countMap = metadata.reduce((acc, it) => {
         ["no-filesystem"]:
           (maybeValue?.["no-filesystem"] ?? 0) + !currentMonth.filesystem,
 
+        // misc
         ["only-wayland"]:
           (maybeValue?.["only-wayland"] ?? 0) +
           (currentMonth.wayland && !supportsX11),
