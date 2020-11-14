@@ -6,15 +6,20 @@
     <title>Flatpak DB</title>
   </head>
   <body>
-    <main style="width: 600px; margin: auto">
-      <h1>Flatpak DB</h1>
+    <main style="width: 700px; margin: auto">
+      <h1 id="title">Flatpak DB</h1>
+
+      <h3 id="display-server">Display server</h3>
       <canvas id="x11-wayland-chart" width="400" height="300"></canvas>
+
+      <h3 id="filesystem-permissions">Filesystem permissions</h3>
       <canvas id="filesystem-chart" width="400" height="300"></canvas>
 
-      <h3>About the data</h3>
+      <h3 id="about">About</h3>
       <p>
-        The data is gathered from public repos found under
-        <a href="https://github.com/flathub/">https://github.com/flathub/</a>
+        The data is gathered from the repos found under the
+        <a href="https://github.com/flathub/">https://github.com/flathub</a>
+        organization.
       </p>
       <p>
         In each repo, we look for the respective APP_ID.json or APP_ID.yaml
@@ -32,6 +37,11 @@
           >https://github.com/Arxcis/flatpak-db</a
         >/
       </p>
+      <p>
+        Thanks to
+        <a href="https://www.chartjs.org/">https://www.chartjs.org/</a> for
+        drawing the charts!
+      </p>
     </main>
   </body>
   <script type="module">
@@ -39,10 +49,6 @@
 
     const options = {
       responsive: true,
-      title: {
-        display: true,
-        text: "Flathub.org apps Jan 2018 - Nov 2020",
-      },
       tooltips: {
         mode: "index",
         intersect: false,
@@ -120,7 +126,7 @@
         title: {
           display: true,
           text:
-            "flathub.org / Apps by display technology (--socket=x11, --socket=wayland)",
+            "flathub.org / Apps by display server (--socket=x11, --socket=wayland)",
         },
       },
     });
