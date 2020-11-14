@@ -99,6 +99,7 @@
             borderColor: TOTAL_COLOR,
             data: count.map((it) => it.gui),
             fill: false,
+            hidden: true,
           },
           {
             label: "wayland and fallback-x11",
@@ -144,6 +145,7 @@
             borderColor: TOTAL_COLOR,
             data: count.map((it) => it["no-filesystem"] + it.filesystem),
             fill: false,
+            hidden: true,
           },
           {
             label: "--no-filesystem",
@@ -195,6 +197,7 @@
             borderColor: TOTAL_COLOR,
             data: count.map((it) => it.device + it["no-device"]),
             fill: false,
+            hidden: true,
           },
           {
             label: "--no-device",
