@@ -114,14 +114,14 @@
             label: "wayland and fallback-x11",
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it["fallback-x11"]),
+            data: count.map((it) => it["wayland-and-fallback-x11"]),
             fill: false,
           },
           {
             label: "wayland and x11",
             backgroundColor: BAD_COLOR,
             borderColor: BAD_COLOR,
-            data: count.map((it) => it.wayland),
+            data: count.map((it) => it["wayland-and-x11"]),
             fill: false,
           },
           {
