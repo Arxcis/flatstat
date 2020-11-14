@@ -50,16 +50,15 @@ const countMap = metadata.reduce((acc, it) => {
 
     if (currentMonth) {
       const maybeValue = acc.get(key);
-
       const supportsX11 = currentMonth.x11 || currentMonth.fallbackX11;
 
       acc.set(key, {
         // --socket
-        x11: (maybeValue?.x11 ?? 0) + currentMonth.x11,
-        ["fallback-x11"]:
-          (maybeValue?.["fallback-x11"] ?? 0) + currentMonth.fallbackX11,
-        wayland:
-          (maybeValue?.wayland ?? 0) +
+        ["wayland-and-fallback-x11"]:
+          (maybeValue?.["wayland-and-fallback-x11"] ?? 0) +
+          (currentMonth.wayland && currentMonth.fallbackX11),
+        ["wayland-and-x11"]:
+          (maybeValue?.["wayland-and-x11"] ?? 0) +
           (currentMonth.wayland && currentMonth.x11),
 
         // --device
