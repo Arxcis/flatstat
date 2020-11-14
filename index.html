@@ -51,10 +51,9 @@
     import count from "./src/db/flathub/count.js";
 
     const TOTAL_COLOR = "#546e7a";
-    const BAD_COLOR = "#ac0800";
-    const GOOD_COLOR = "#00e676";
-
-    const ALL_BAD_COLOR = "#ff9100";
+    const GOOD_COLOR = "#00c853";
+    const BAD_COLOR = "#ff9100";
+    const ALL_BAD_COLOR = "#ac0800";
 
     const options = {
       responsive: true,
@@ -116,8 +115,8 @@
           },
           {
             label: "only x11",
-            backgroundColor: "indigo",
-            borderColor: "indigo",
+            backgroundColor: ALL_BAD_COLOR,
+            borderColor: ALL_BAD_COLOR,
             data: count.map((it) => it["only-x11"]),
             fill: false,
           },
