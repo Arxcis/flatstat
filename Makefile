@@ -1,14 +1,11 @@
 # Requires node version >= 14
-repos: tsc
+repos:
 	node src/repos.js --harmony-top-level-await;
 
-count: tsc
+count:
 	node src/count.js --harmony-top-level-await;
 
-metadata: tsc
+metadata:
 	node src/metadata.js --harmony-top-level-await;
 
-tsc:
-	tsc --build tsconfig.json
-
-.PHONY: repos tsc count metadata
+.PHONY: repos count metadata
