@@ -40,12 +40,24 @@ async function makeMetadata(repos) {
 function parseHistory(history) {
   const transformed = history.map(({ date, text }) => {
     const x11 = !!text?.match(/--socket=x11/);
+    const fallbackX11 = !!text?.match(/--socket=fallback-x11/);
     const wayland = !!text?.match(/--socket=wayland/);
     const filesystemHome = !!text?.match(/--filesystem=home/);
     const filesystemHost = !!text?.match(/--filesystem=host/);
     const filesystem = !!text?.match(/--filesystem=/);
+    const device = !!text?.match(/--device=/);
+    const deviceAll = !!text?.match(/--device=all/);
 
-    return { date, x11, wayland, filesystem, filesystemHome, filesystemHost };
+    return {
+      date,
+      x11,
+      wayland,
+      filesystem,
+      filesystemHome,
+      filesystemHost,
+      device,
+      deviceAll,
+    };
   });
 
   return transformed;

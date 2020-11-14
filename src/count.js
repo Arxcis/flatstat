@@ -50,45 +50,44 @@ const countMap = metadata.reduce((acc, it) => {
 
     if (currentMonth) {
       const maybeValue = acc.get(key);
-      const x11 = (maybeValue?.x11 ?? 0) + currentMonth.x11;
-      const wayland = (maybeValue?.wayland ?? 0) + currentMonth.wayland;
-      const filesystem =
-        (maybeValue?.filesystem ?? 0) + currentMonth.filesystem;
 
-      const filesystemHome =
-        (maybeValue?.filesystemHome ?? 0) + currentMonth.filesystemHome;
-
-      const filesystemHost =
-        (maybeValue?.filesystemHost ?? 0) + currentMonth.filesystemHost;
+      const supportsX11 = currentMonth.x11; // || currentMonth.fallbackX11;
 
       acc.set(key, {
-        x11,
-        wayland,
-        filesystem,
-        filesystemHome,
-        filesystemHost,
+        x11: (maybeValue?.x11 ?? 0) + currentMonth.x11,
+        ["fallback-x11"]:
+          (maybeValue?.["fallback-x11"] ?? 0) + currentMonth.fallbackX11,
+        wayland: (maybeValue?.wayland ?? 0) + currentMonth.wayland,
+
+        // --device
+        device: (maybeValue?.device ?? 0) + currentMonth.device,
+        ["device-all"]:
+          (maybeValue?.["device-all"] ?? 0) + currentMonth.deviceAll,
+        ["no-device"]: (maybeValue?.["no-device"] ?? 0) + !currentMonth.device,
+
+        // --filesystem
+        filesystem: (maybeValue?.filesystem ?? 0) + currentMonth.filesystem,
+        ["filesystem-home"]:
+          (maybeValue?.["filesystem-home"] ?? 0) + currentMonth.filesystemHome,
+        ["filesystem-host"]:
+          (maybeValue?.["filesystem-host"] ?? 0) + currentMonth.filesystemHost,
         ["no-filesystem"]:
           (maybeValue?.["no-filesystem"] ?? 0) + !currentMonth.filesystem,
 
-        ["x11-and-wayland"]:
-          (maybeValue?.["x11-and-wayland"] ?? 0) +
-          (currentMonth.x11 && currentMonth.wayland),
-
         ["only-wayland"]:
           (maybeValue?.["only-wayland"] ?? 0) +
-          (currentMonth.wayland && !currentMonth.x11),
+          (currentMonth.wayland && !supportsX11),
 
         ["only-x11"]:
           (maybeValue?.["only-x11"] ?? 0) +
-          (currentMonth.x11 && !currentMonth.wayland),
+          (supportsX11 && !currentMonth.wayland),
 
         ["gui"]:
-          (maybeValue?.["gui"] ?? 0) +
-          (currentMonth.x11 || currentMonth.wayland),
+          (maybeValue?.["gui"] ?? 0) + (supportsX11 || currentMonth.wayland),
 
         ["no-gui"]:
           (maybeValue?.["no-gui"] ?? 0) +
-          (!currentMonth.x11 && !currentMonth.wayland),
+          (!supportsX11 && !currentMonth.wayland),
       });
     }
   }

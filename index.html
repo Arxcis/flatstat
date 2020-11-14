@@ -9,11 +9,14 @@
     <main style="width: 700px; margin: auto">
       <h1 id="title" title="Stats from Flatspace">flatstat</small></h1>
 
-      <h3 id="display-server">Display server</h3>
+      <h3 id="display">Display</h3>
       <canvas id="x11-wayland-chart" width="400" height="300"></canvas>
 
-      <h3 id="filesystem-permissions">Filesystem permissions</h3>
+      <h3 id="filesystem">Filesystem</h3>
       <canvas id="filesystem-chart" width="400" height="300"></canvas>
+
+      <h3 id="device">Device</h3>
+      <canvas id="device-chart" width="400" height="300"></canvas>
 
       <h3 id="about">About</h3>
       <p>
@@ -85,7 +88,7 @@
         labels: count.map((it) => it.key),
         datasets: [
           {
-            label: "all",
+            label: "total",
             backgroundColor: "grey",
             borderColor: "grey",
             data: count.map((it) => it.gui),
@@ -126,7 +129,7 @@
         title: {
           display: true,
           text:
-            "flathub.org / Apps by display server (--socket=x11, --socket=wayland)",
+            "flathub.org / apps with --socket=(x11 or fallback-x11) or --socket=wayland",
         },
       },
     });
@@ -137,7 +140,7 @@
         labels: count.map((it) => it.key),
         datasets: [
           {
-            label: "all",
+            label: "total",
             backgroundColor: "grey",
             borderColor: "grey",
             data: count.map((it) => it["no-filesystem"] + it.filesystem),
@@ -177,7 +180,51 @@
         ...options,
         title: {
           display: true,
-          text: "flathub.org / Apps by filesystem permissions (--filesystem)",
+          text: "flathub.org / apps with --filesystem",
+        },
+      },
+    });
+
+    new Chart(document.getElementById("device-chart").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.key),
+        datasets: [
+        {
+            label: "total",
+            backgroundColor: "grey",
+            borderColor: "grey",
+            data: count.map((it) => it.device + it["no-device"]),
+            fill: false,
+          },
+          {
+            label: "--no-device",
+            backgroundColor: "green",
+            borderColor: "green",
+            data: count.map((it) => it["no-device"]),
+            fill: false,
+          },
+          {
+            label: "--device=<some>",
+            backgroundColor: "red",
+            borderColor: "red",
+            data: count.map((it) => it.device),
+            fill: false,
+          },
+          {
+            label: "--device=all",
+            backgroundColor: "indigo",
+            borderColor: "indigo",
+            data: count.map((it) => it["device-all"]),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...options,
+        title: {
+          display: true,
+          text: "flathub.org / apps with --device",
         },
       },
     });
