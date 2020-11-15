@@ -73,8 +73,8 @@ async function makeMetadata(repos) {
   }
 }
 
-function parseCommits(history) {
-  const transformed = history.map(({ date, text }) => {
+function parseCommits(commits) {
+  const history = commits.map(({ date, text }) => {
     const x11 = !!text?.match(/--socket=x11/);
     const fallbackX11 = !!text?.match(/--socket=fallback-x11/);
     const wayland = !!text?.match(/--socket=wayland/);
@@ -101,7 +101,7 @@ function parseCommits(history) {
     };
   });
 
-  return transformed;
+  return history;
 }
 
 async function makeGqlQuery(filename, ext) {
