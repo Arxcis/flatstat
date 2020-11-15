@@ -14,6 +14,7 @@ main ul {
 main ul a {
   padding: 8px 10px 5px 10px;
   display: flex;
+  color: black;
 }
 
 main ul a span:first-of-type {
