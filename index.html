@@ -35,7 +35,7 @@
         The data is sourced from repos belonging to <a target="_blank" href="https://github.com/flathub/">https://github.com/flathub</a>
       </p>
       <p>
-        In each repo, we look for the APP_ID.json file.
+        In each repo, we look for the APP_ID.(json|yaml|yml) file.
       </p>
       <p>
         To get historic data, we use Github Graphql API
@@ -314,7 +314,7 @@
         ...options,
         title: {
           display: true,
-          text: "flathub.org - APP_ID.json vs APP_ID.yaml",
+          text: "flathub.org - APP_ID.(json|yaml|yml) files",
         },
       },
     });
