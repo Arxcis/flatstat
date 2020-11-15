@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>Flatstat | Stats from flathub.org</title>
-    <link rel="stylesheet" type="text/css" href="/flatstat/index.css"></link>
-    <link rel="stylesheet" type="text/css" href="/flatstat/search/search.css"></link>
+    <link rel="stylesheet" type="text/css" href="../index.css"></link>
+    <link rel="stylesheet" type="text/css" href="./search.css"></link>
 </head>
   <body>
     <header>
-      <a href="/flatstat/"><h1 id="title" title="Flatstat | Stats from flathub.org">flatstat</h1></a>
+      <a href="/flatstat"><h1 id="title" title="Flatstat | Stats from flathub.org">flatstat</h1></a>
       <nav>
         <a href="/flatstat/#" title="Graphs">graph</a>
         <a href="/flatstat/search" title="Search">search</a>
@@ -26,14 +26,14 @@
     </main>
   </body>
   <script type="module">
-    import metadata from "/db/flathub/metadata.js"
+    import metadata from "./db/flathub/metadata.js"
 
     const urlParams = new URLSearchParams(window.location.search);
     const ul = document.querySelector("ul")
     const filter = urlParams.get("filter");
 
     // Check if any a[href] contains the search, and mark them as active
-    let a = document.querySelector(`header a[href='/search']`)
+    let a = document.querySelector(`header a[href*='/search']`)
     a?.classList.add("current")
     a = document.querySelector(`a[href*='${window.location.search}']`)
     a?.classList.add("current")
