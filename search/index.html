@@ -16,10 +16,10 @@
     </header>
     <main>
       <nav>
-        <a href="/flatstat/search/?filter=x11-only">--x11 only</a>
-        <a href="/flatstat/search/?filter=filesystem-home">--filesystem=home</a>
-        <a href="/flatstat/search/?filter=filesystem-host">--filesystem=host</a>
-        <a href="/flatstat/search/?filter=device-all">--device=all</a>
+        <a title="Filter x11-only" href="/flatstat/search/?filter=x11-only">--x11 only</a>
+        <a title="Filter filesystem-home" href="/flatstat/search/?filter=filesystem-home">--filesystem=home</a>
+        <a title="Filter filesystem-host" href="/flatstat/search/?filter=filesystem-host">--filesystem=host</a>
+        <a title="Filter device-all" href="/flatstat/search/?filter=device-all">--device=all</a>
       </nav>
       <ul>
       </ul>
@@ -31,12 +31,13 @@
     const urlParams = new URLSearchParams(window.location.search);
     const ul = document.querySelector("ul")
     const filter = urlParams.get("filter");
-
+    
     // Check if any a[href] contains the search, and mark them as active
     let a = document.querySelector(`header a[href*='/search']`)
     a?.classList.add("current")
-    a = document.querySelector(`a[href*='${window.location.search}']`)
-    a?.classList.add("current")
+
+    let b = document.querySelector(`a[title*='${filter??""}']`)
+    b?.classList.add("current")
 
     let filtered = null;
     switch(filter) {
