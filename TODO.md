@@ -1,5 +1,7 @@
 ## 2020-11-15
 
+- [ ] ignore metadata files wihtout 'finish-args'
+- [ ] json vs yaml vs yml?
 - [ ] How many apps use pulseaudio?
 - [x] Show me a list of all the 'only x11' apps
 - [x] Show me a list of all the '--filesystem=home' apps

@@ -17,12 +17,9 @@ async function makeMetadata(repos) {
     // ignore names which does not include atleast two periods '.'
     //
     // Example valid name: 'com.github.Flacon' or 'org.robocode.Robocode
-    // Exampe invalid name: 'flathub.org' or 'blog'
+    // Exampe invalid name: 'flathub-tools' or 'blog'
     //
-    if (
-      name.IndexOf(".") !== name.LastIndexOf(".") &&
-      name.IndexOf(".") !== -1
-    ) {
+    if (!name.includes(".")) {
       console.log("-------> Ignoring: ", name);
       continue;
     }
