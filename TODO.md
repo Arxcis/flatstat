@@ -1,6 +1,6 @@
 ## 2020-11-15
 
-- [ ] Sort search by number of contributors on github
+- [x] Sort search by number of stargazers on github
 - [x] json vs yaml vs yml?
 - [x] How many apps use pulseaudio?
 - [x] Show me a list of all the 'only x11' apps
