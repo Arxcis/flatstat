@@ -16,7 +16,7 @@ async function makeMetadata(repos) {
     index += 1;
 
     //
-    // ignore names which does not include atleast two periods '.'
+    // 1. ignore names which does not include atleast a period '.'
     //
     // Example valid name: 'com.github.Flacon' or 'org.robocode.Robocode
     // Exampe invalid name: 'flathub-tools' or 'blog'
@@ -28,53 +28,60 @@ async function makeMetadata(repos) {
       continue;
     }
 
-    let ext = null;
-    let history = null;
-    let branch = null;
-    let stargazerCount = null;
-
-    const json = await makeGqlQuery(name, "json");
-    if (json) {
-      branch = json.branch;
-      stargazerCount = json.stargazerCount;
-      history = parseCommits(json.commits);
-      ext = "json";
-    } else {
-      const yaml = await makeGqlQuery(name, "yaml");
-      if (yaml) {
-        branch = yaml.branch;
-        stargazerCount = yaml.stargazerCount;
-        history = parseCommits(yaml.commits);
-        ext = "yaml";
-      } else {
-        const yml = await makeGqlQuery(name, "yml");
-        if (yml) {
-          branch = yml.branch;
-          stargazerCount = yml.stargazerCount;
-          history = parseCommits(yml.commits);
-          ext = "yml";
-        } else {
-          // not found
-          console.log(
-            `${index}: https://github.com/flathub/${name} -------> Not found`
-          );
-          continue;
-        }
-      }
+    //
+    // 2. There are three known metadata file extensions: .json, .yaml and .yml
+    // Query the commit-history for all 3.
+    //
+    const [json, yaml, yml] = await Promise.all([
+      queryCommitHistory(name, "json"),
+      queryCommitHistory(name, "yaml"),
+      queryCommitHistory(name, "yml"),
+    ]);
+    if (!yaml && !yml && !json) {
+      // no history found
+      console.log(
+        `${index}: https://github.com/flathub/${name} -------> No history found`
+      );
+      continue;
     }
 
+    // 3. Pick a branch. Should be the same across queries.
+    const branch = json?.branch ?? yaml?.branch ?? yml?.branch;
+
+    // 4. Pick a stargazer count. Should be the same across queries.
+    const stargazerCount =
+      json?.stargazerCount ?? yaml?.stargazerCount ?? yml?.stargazerCount;
+
+    // 5. Parse commit history
+    const jsonHistory = json ? parseCommits(json.commits) : [];
+    const yamlHistory = yaml ? parseCommits(yaml.commits) : [];
+    const ymlHistory = yml ? parseCommits(yml.commits) : [];
+
+    // 6. Merge and re-sort history
+    const history = [
+      ...jsonHistory,
+      ...yamlHistory,
+      ...ymlHistory,
+    ].sort((a, b) => b.date.localeCompare(a.date));
+
+    // 7. Get the file-extension of the latest history entry
+    let ext = history[0]?.ext ?? null;
+
+    // 8. Log a line, to see progress when running the tool.
     console.log(
       `${index}: https://github.com/flathub/${name}/blob/${branch}/${name}.${ext} ${stargazerCount}`
     );
 
+    // 9. Bundle what we learned into a metadata-object
     const metadata = { index, name, ext, branch, stargazerCount, history };
 
+    // 10. Append metadata-object to file
     await appendFile(MEATDATA_JSON, `${JSON.stringify(metadata, null, 2)},`);
   }
 }
 
 function parseCommits(commits) {
-  const history = commits.map(({ date, text }) => {
+  const history = commits.map(({ date, text, ext }) => {
     const x11 = !!text?.match(/--socket=x11/);
     const fallbackX11 = !!text?.match(/--socket=fallback-x11/);
     const wayland = !!text?.match(/--socket=wayland/);
@@ -87,6 +94,7 @@ function parseCommits(commits) {
     const finishArgs = !!text?.match(/(\"finish-args\")|(finish-args:)/);
 
     return {
+      ext,
       date,
       x11,
       fallbackX11,
@@ -104,7 +112,7 @@ function parseCommits(commits) {
   return history;
 }
 
-async function makeGqlQuery(filename, ext) {
+async function queryCommitHistory(filename, ext) {
   const query = `\
 query {\
     repository(name:"${filename}", owner:"flathub") {\
@@ -172,6 +180,7 @@ query {\
     commits: nodes.map(({ committedDate, file }) => ({
       date: committedDate,
       text: file?.object?.text ?? null,
+      ext,
     })),
   };
 }
