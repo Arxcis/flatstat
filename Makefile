@@ -8,4 +8,7 @@ count:
 metadata:
 	node src/metadata.js --harmony-top-level-await;
 
-.PHONY: repos count metadata
+server:
+	python -m http.server
+
+.PHONY: repos count metadata server

@@ -1,0 +1,69 @@
+<!DOCTYPE html5>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Flatstat | Stats from flathub.org</title>
+    <link rel="stylesheet" type="text/css" href="/index.css"></link>
+    <link rel="stylesheet" type="text/css" href="/search/search.css"></link>
+</head>
+  <body>
+    <header>
+      <a href="/"><h1 id="title" title="Flatstat | Stats from flathub.org">flatstat</h1></a>
+      <nav>
+        <a href="/#" title="Graphs">graph</a>
+        <a href="/search" title="Search">search</a>
+      </nav>
+    </header>
+    <main>
+      <nav>
+        <a href="/search/?filter=filesystem-home">--filesystem-home</a>
+        <a href="/search/?filter=filesystem-host">--filesystem-host</a>
+        <a href="/search/?filter=only-x11">only x11</a>
+      </nav>
+      <ul>
+      </ul>
+    </main>
+  </body>
+  <script type="module">
+    import metadata from "/db/flathub/metadata.js"
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const ul = document.querySelector("ul")
+    const filter = urlParams.get("filter");
+
+    // Check if any a[href] contains the search, and mark them as active
+    let a = document.querySelector(`header a[href='/search']`)
+    a?.classList.add("current")
+    a = document.querySelector(`a[href*='${window.location.search}']`)
+    a?.classList.add("current")
+
+    let filtered = [];
+    switch(filter) {
+      case "filesystem-host":
+        filtered = metadata.filter(it => it.history?.[0]?.filesystemHost)
+        break;
+      case "filesystem-home":
+        filtered = metadata.filter(it => it.history?.[0]?.filesystemHome)
+        break;
+      case "only-x11":
+        filtered = metadata.filter(it => (it.history?.[0]?.x11 || it.history?.[0]?.fallbackX11) && !it.history?.[0]?.wayland)
+        break;
+    }
+
+
+
+    ul.innerHTML = filtered.map(({name, ext, branch }) => {
+      const href = `https://github.com/flathub/${name}/blob/${branch}/${name}.${ext}` 
+    
+      return  `<a 
+        href="${href}" 
+        title="${href}" 
+        target="_blank"
+      >
+          ${name}.${ext}
+      </a>
+`;
+    }
+    ).join("")
+  </script>
+</html>

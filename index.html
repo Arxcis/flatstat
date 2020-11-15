@@ -3,36 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    <title>Flatstat | Stats from Flatspace</title>
-    <style>
-      main {
-        width: 700px;
-        margin: auto;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        font-family: Helvetica, Arial, Sans-Serif;
-      }
-    </style>
-  </head>
+    <title>Flatstat | Stats from Flathub.org</title>
+   <link rel="stylesheet" type="text/css" href="./index.css"></link>
+</head>
   <body>
+    <header>
+      <a href="/"><h1 id="title" title="Flatstat | Stats from Flathub.org">flatstat</h1></a>
+      <nav>
+        <a href="/#" title="Graphs">graph</a>
+        <a href="/search" title="Search">search</a>
+      </nav>
+    </header>
     <main>
-      <h1 id="title" title="Stats from Flatspace">flatstat</small></h1>
-
+      <a href="#wayland-vs-x11" title="Wayland vs X11 graph"><h3 id="wayland-vs-x11">wayland vs x11</h3></a>
       <canvas id="x11-wayland-chart" width="400" height="300"></canvas>
 
-      <h3 id="filesystem">Filesystem</h3>
+      <a href="#filesystem" title="Filesystem graph"><h3 id="filesystem">filesystem</h3></a>
       <canvas id="filesystem-chart" width="400" height="300"></canvas>
 
-      <h3 id="device">Device</h3>
+      <a href="#device"title="Device graph"><h3 id="device">device</h3></a>
       <canvas id="device-chart" width="400" height="300"></canvas>
 
-      <h3 id="about">About</h3>
+      <a href="#about" title="About the graphs"><h3 id="about">about</h3></a>
       <p>
-        The data is sourced from the <a href="https://github.com/flathub/">https://github.com/flathub</a>
-        organization.
+        The data is sourced from repos belonging to <a href="https://github.com/flathub/">https://github.com/flathub</a>
       </p>
       <p>
-        In each repo, we look the APP_ID.json or APP_ID.yaml file.
+        In each repo, we look for the APP_ID.json file.
       </p>
       <p>
         To get historic data, we use Github Graphql API
@@ -54,7 +51,10 @@
     </main>
   </body>
   <script type="module">
-    import count from "./src/db/flathub/count.js";
+    import count from "./db/flathub/count.js";
+   
+    let a = document.querySelector(`header a[href='/#']`)
+    a?.classList.add("current")
 
     const TOTAL_COLOR = "#546e7a";
     const GOOD_COLOR = "#00c853";
@@ -237,4 +237,5 @@
       },
     });
   </script>
+  
 </html>

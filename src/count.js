@@ -1,4 +1,4 @@
-import metadata from "./db/flathub/metadata.js";
+import metadata from "../db/flathub/metadata.js";
 import { writeFile } from "fs/promises";
 
 const MONTHS = [
@@ -42,6 +42,7 @@ const MONTHS = [
 const countMap = metadata.reduce((acc, it) => {
   const itHistory = it.history ?? [];
   let currentMonth = null;
+
   for (const key of MONTHS) {
     const found = itHistory.find((it) => it.date.startsWith(key));
     if (found) {
@@ -114,6 +115,21 @@ const count = [...countMap.entries()]
   .sort((a, b) => a.key.localeCompare(b.key));
 
 await writeFile(
-  "./src/db/flathub/count.js",
+  "./db/flathub/count.js",
   `export default ${JSON.stringify(count, null, 2)}`
+);
+
+//
+// json vs yaml
+//
+const jsonVsYaml = metadata.reduce((acc, { ext }) => {
+  return {
+    ...acc,
+    [ext]: (acc[ext] ?? 0) + 1,
+  };
+}, {});
+
+await writeFile(
+  "./db/flathub/count-json-vs-yaml.js",
+  `export default ${JSON.stringify(jsonVsYaml, null, 2)}`
 );
