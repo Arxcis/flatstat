@@ -15,11 +15,12 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: scroll;
+  margin: 0 0 30px 0;
 }
 
 header {
-  margin: 0 0 60px 0;
+  margin: 0 0 10px 0;
   display: flex;
   align-items: baseline;
 }
@@ -56,4 +57,5 @@ a.current {
 
 h3 {
   color: #424242;
+  margin-top: 30px;
 }

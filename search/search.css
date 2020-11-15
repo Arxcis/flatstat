@@ -1,3 +1,6 @@
+main {
+  overflow: hidden;
+}
 main nav a {
   font-size: 18px;
 }
