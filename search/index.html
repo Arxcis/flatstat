@@ -37,7 +37,7 @@
     a = document.querySelector(`a[href*='${window.location.search}']`)
     a?.classList.add("current")
 
-    let filtered = [];
+    let filtered = null;
     switch(filter) {
       case "filesystem-host":
         filtered = metadata.filter(it => it.history?.[0]?.filesystemHost)
@@ -52,7 +52,7 @@
 
 
 
-    ul.innerHTML = filtered.map(({name, ext, branch }) => {
+    ul.innerHTML = filtered ? filtered.map(({name, ext, branch }) => {
       const href = `https://github.com/flathub/${name}/blob/${branch}/${name}.${ext}` 
     
       return  `<a 
@@ -64,6 +64,6 @@
       </a>
 `;
     }
-    ).join("")
+    ).join("") : "No filter selected"
   </script>
 </html>
