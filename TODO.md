@@ -1,9 +1,8 @@
 ## 2020-11-15
 
 - [ ] Sort search by number of contributors on github
-- [ ] ignore metadata files wihtout 'finish-args'
-- [ ] json vs yaml vs yml?
-- [ ] How many apps use pulseaudio?
+- [x] json vs yaml vs yml?
+- [x] How many apps use pulseaudio?
 - [x] Show me a list of all the 'only x11' apps
 - [x] Show me a list of all the '--filesystem=home' apps
 - [x] Show me a list of all the `<insert permission here>` apps
