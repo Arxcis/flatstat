@@ -1,8 +1,9 @@
 ## 2020-11-15
-- [ ] Show me a list of all the 'only x11' apps
-- [ ] Show me a list of all the '--filesystem=home' apps
-- [ ] Show me a list of all the `<insert permission here>` apps
+
 - [ ] How many apps use pulseaudio?
+- [x] Show me a list of all the 'only x11' apps
+- [x] Show me a list of all the '--filesystem=home' apps
+- [x] Show me a list of all the `<insert permission here>` apps
 
 ## 2020-11-14
 
