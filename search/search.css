@@ -1,0 +1,17 @@
+main nav a {
+  font-size: 18px;
+}
+
+main ul {
+  display: flex;
+  flex-direction: column;
+}
+
+main ul a {
+  padding: 8px 10px 5px 10px;
+}
+
+main ul a:hover {
+  color: white;
+  background-color: #1976d2;
+}
