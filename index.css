@@ -1,7 +1,21 @@
+html {
+  overflow: hidden;
+  height: 100vh;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   max-width: 700px;
-  margin: 60px auto 60px auto;
+  margin: 0 auto;
   font-family: Helvetica, Arial, Sans-Serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 header {

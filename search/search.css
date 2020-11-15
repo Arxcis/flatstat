@@ -5,6 +5,7 @@ main nav a {
 main ul {
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 main ul a {
