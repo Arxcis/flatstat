@@ -13,6 +13,8 @@ await appendFile(MEATDATA_JSON, "]");
 
 async function makeMetadata(repos) {
   for (const { name } of repos) {
+    index += 1;
+
     //
     // ignore names which does not include atleast two periods '.'
     //
@@ -20,7 +22,9 @@ async function makeMetadata(repos) {
     // Exampe invalid name: 'flathub-tools' or 'blog'
     //
     if (!name.includes(".")) {
-      console.log("-------> Ignoring: ", name);
+      console.log(
+        `${index}: https://github.com/flathub/${name} -------> Ignoring`
+      );
       continue;
     }
 
@@ -46,20 +50,22 @@ async function makeMetadata(repos) {
           history = parseCommits(yml.commits);
           ext = "yml";
         } else {
-          console.log("-------> Not found: ", name);
           // not found
+          console.log(
+            `${index}: https://github.com/flathub/${name} -------> Not found`
+          );
           continue;
         }
       }
     }
 
-    const metadata = { index, name, ext, branch, history };
     console.log(
       `${index}: https://github.com/flathub/${name}/blob/${branch}/${name}.${ext}`
     );
 
+    const metadata = { index, name, ext, branch, history };
+
     await appendFile(MEATDATA_JSON, `${JSON.stringify(metadata, null, 2)},`);
-    index += 1;
   }
 }
 
@@ -73,6 +79,8 @@ function parseCommits(history) {
     const filesystem = !!text?.match(/--filesystem=/);
     const device = !!text?.match(/--device=/);
     const deviceAll = !!text?.match(/--device=all/);
+    const pulseaudio = !!text?.match(/--socket=pulseaudio/);
+    const finishArgs = !!text?.match(/(\"finish-args\")|(finish-args:)/);
 
     return {
       date,
@@ -84,6 +92,8 @@ function parseCommits(history) {
       filesystemHost,
       device,
       deviceAll,
+      pulseaudio,
+      finishArgs,
     };
   });
 
