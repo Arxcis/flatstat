@@ -1,5 +1,6 @@
 ## 2020-11-15
 
+- [ ] Sort search by number of contributors on github
 - [ ] ignore metadata files wihtout 'finish-args'
 - [ ] json vs yaml vs yml?
 - [ ] How many apps use pulseaudio?

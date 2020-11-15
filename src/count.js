@@ -56,13 +56,19 @@ const countMap = metadata.reduce((acc, it) => {
       acc.set(key, {
         ...maybeValue,
         [it.ext]: (maybeValue?.[it.ext] ?? 0) + 1,
-        // --socket
+
+        // wayland vs x11
         ["wayland-and-fallback-x11"]:
           (maybeValue?.["wayland-and-fallback-x11"] ?? 0) +
           (currentMonth.wayland && currentMonth.fallbackX11),
         ["wayland-and-x11"]:
           (maybeValue?.["wayland-and-x11"] ?? 0) +
           (currentMonth.wayland && currentMonth.x11),
+
+        // pulseaudio vs pipewire
+        pulseaudio: (maybeValue?.pulseaudio ?? 0) + currentMonth.pulseaudio,
+        ["no-pulseaudio"]:
+          (maybeValue?.["no-pulseaudio"] ?? 0) + !currentMonth.pulseaudio,
 
         // --device
         device: (maybeValue?.device ?? 0) + currentMonth.device,
