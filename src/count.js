@@ -49,67 +49,68 @@ const countMap = metadata.reduce((acc, it) => {
       currentMonth = found;
     }
 
-    if (currentMonth) {
-      const maybeValue = acc.get(key);
-      const supportsX11 = currentMonth.x11 || currentMonth.fallbackX11;
-
-      acc.set(key, {
-        ...maybeValue,
-        [it.ext]: (maybeValue?.[it.ext] ?? 0) + 1,
-
-        // wayland vs x11
-        ["wayland-and-fallback-x11"]:
-          (maybeValue?.["wayland-and-fallback-x11"] ?? 0) +
-          (currentMonth.wayland && currentMonth.fallbackX11),
-        ["wayland-and-x11"]:
-          (maybeValue?.["wayland-and-x11"] ?? 0) +
-          (currentMonth.wayland && currentMonth.x11),
-
-        // pulseaudio vs pipewire
-        pulseaudio: (maybeValue?.pulseaudio ?? 0) + currentMonth.pulseaudio,
-        ["no-pulseaudio"]:
-          (maybeValue?.["no-pulseaudio"] ?? 0) + !currentMonth.pulseaudio,
-
-        // --device
-        device: (maybeValue?.device ?? 0) + currentMonth.device,
-        ["device-other"]:
-          (maybeValue?.["device-other"] ?? 0) +
-          (currentMonth.device && !currentMonth.deviceAll),
-        ["device-all"]:
-          (maybeValue?.["device-all"] ?? 0) + currentMonth.deviceAll,
-        ["no-device"]: (maybeValue?.["no-device"] ?? 0) + !currentMonth.device,
-
-        // --filesystem
-        filesystem: (maybeValue?.filesystem ?? 0) + currentMonth.filesystem,
-        ["filesystem-other"]:
-          (maybeValue?.["filesystem-other"] ?? 0) +
-          (currentMonth.filesystem &&
-            !currentMonth.filesystemHome &&
-            !currentMonth.filesystemHost),
-        ["filesystem-home"]:
-          (maybeValue?.["filesystem-home"] ?? 0) + currentMonth.filesystemHome,
-        ["filesystem-host"]:
-          (maybeValue?.["filesystem-host"] ?? 0) + currentMonth.filesystemHost,
-        ["no-filesystem"]:
-          (maybeValue?.["no-filesystem"] ?? 0) + !currentMonth.filesystem,
-
-        // misc
-        ["only-wayland"]:
-          (maybeValue?.["only-wayland"] ?? 0) +
-          (currentMonth.wayland && !supportsX11),
-
-        ["only-x11"]:
-          (maybeValue?.["only-x11"] ?? 0) +
-          (supportsX11 && !currentMonth.wayland),
-
-        ["gui"]:
-          (maybeValue?.["gui"] ?? 0) + (supportsX11 || currentMonth.wayland),
-
-        ["no-gui"]:
-          (maybeValue?.["no-gui"] ?? 0) +
-          (!supportsX11 && !currentMonth.wayland),
-      });
+    if (!currentMonth) {
+      continue;
     }
+
+    const maybeValue = acc.get(key);
+    const supportsX11 = currentMonth.x11 || currentMonth.fallbackX11;
+
+    acc.set(key, {
+      ...maybeValue,
+      [it.ext]: (maybeValue?.[it.ext] ?? 0) + 1,
+
+      // wayland vs x11
+      ["wayland-and-fallback-x11"]:
+        (maybeValue?.["wayland-and-fallback-x11"] ?? 0) +
+        (currentMonth.wayland && currentMonth.fallbackX11),
+      ["wayland-and-x11"]:
+        (maybeValue?.["wayland-and-x11"] ?? 0) +
+        (currentMonth.wayland && currentMonth.x11),
+
+      // pulseaudio vs pipewire
+      pulseaudio: (maybeValue?.pulseaudio ?? 0) + currentMonth.pulseaudio,
+      ["no-pulseaudio"]:
+        (maybeValue?.["no-pulseaudio"] ?? 0) + !currentMonth.pulseaudio,
+
+      // --device
+      device: (maybeValue?.device ?? 0) + currentMonth.device,
+      ["device-other"]:
+        (maybeValue?.["device-other"] ?? 0) +
+        (currentMonth.device && !currentMonth.deviceAll),
+      ["device-all"]:
+        (maybeValue?.["device-all"] ?? 0) + currentMonth.deviceAll,
+      ["no-device"]: (maybeValue?.["no-device"] ?? 0) + !currentMonth.device,
+
+      // --filesystem
+      filesystem: (maybeValue?.filesystem ?? 0) + currentMonth.filesystem,
+      ["filesystem-other"]:
+        (maybeValue?.["filesystem-other"] ?? 0) +
+        (currentMonth.filesystem &&
+          !currentMonth.filesystemHome &&
+          !currentMonth.filesystemHost),
+      ["filesystem-home"]:
+        (maybeValue?.["filesystem-home"] ?? 0) + currentMonth.filesystemHome,
+      ["filesystem-host"]:
+        (maybeValue?.["filesystem-host"] ?? 0) + currentMonth.filesystemHost,
+      ["no-filesystem"]:
+        (maybeValue?.["no-filesystem"] ?? 0) + !currentMonth.filesystem,
+
+      // misc
+      ["only-wayland"]:
+        (maybeValue?.["only-wayland"] ?? 0) +
+        (currentMonth.wayland && !supportsX11),
+
+      ["only-x11"]:
+        (maybeValue?.["only-x11"] ?? 0) +
+        (supportsX11 && !currentMonth.wayland),
+
+      ["gui"]:
+        (maybeValue?.["gui"] ?? 0) + (supportsX11 || currentMonth.wayland),
+
+      ["no-gui"]:
+        (maybeValue?.["no-gui"] ?? 0) + (!supportsX11 && !currentMonth.wayland),
+    });
   }
 
   return acc;
