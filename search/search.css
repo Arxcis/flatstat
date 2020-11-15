@@ -13,6 +13,11 @@ main ul {
 
 main ul a {
   padding: 8px 10px 5px 10px;
+  display: flex;
+}
+
+main ul a span:first-of-type {
+  flex: 1;
 }
 
 main ul a:hover {

@@ -31,22 +31,26 @@ async function makeMetadata(repos) {
     let ext = null;
     let history = null;
     let branch = null;
+    let stargazerCount = null;
 
     const json = await makeGqlQuery(name, "json");
     if (json) {
       branch = json.branch;
+      stargazerCount = json.stargazerCount;
       history = parseCommits(json.commits);
       ext = "json";
     } else {
       const yaml = await makeGqlQuery(name, "yaml");
       if (yaml) {
         branch = yaml.branch;
+        stargazerCount = yaml.stargazerCount;
         history = parseCommits(yaml.commits);
         ext = "yaml";
       } else {
         const yml = await makeGqlQuery(name, "yml");
         if (yml) {
           branch = yml.branch;
+          stargazerCount = yml.stargazerCount;
           history = parseCommits(yml.commits);
           ext = "yml";
         } else {
@@ -60,10 +64,10 @@ async function makeMetadata(repos) {
     }
 
     console.log(
-      `${index}: https://github.com/flathub/${name}/blob/${branch}/${name}.${ext}`
+      `${index}: https://github.com/flathub/${name}/blob/${branch}/${name}.${ext} ${stargazerCount}`
     );
 
-    const metadata = { index, name, ext, branch, history };
+    const metadata = { index, name, ext, branch, stargazerCount, history };
 
     await appendFile(MEATDATA_JSON, `${JSON.stringify(metadata, null, 2)},`);
   }
@@ -105,6 +109,7 @@ async function makeGqlQuery(filename, ext) {
 query {\
     repository(name:"${filename}", owner:"flathub") {\
       name\
+      stargazerCount
       defaultBranchRef {\
         name
         target {\
@@ -146,6 +151,7 @@ query {\
       repository,
       repository: {
         name,
+        stargazerCount,
         defaultBranchRef: {
           name: branch,
           target: {
@@ -162,6 +168,7 @@ query {\
 
   return {
     branch,
+    stargazerCount,
     commits: nodes.map(({ committedDate, file }) => ({
       date: committedDate,
       text: file?.object?.text ?? null,
