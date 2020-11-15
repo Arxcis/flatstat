@@ -54,6 +54,8 @@ const countMap = metadata.reduce((acc, it) => {
       const supportsX11 = currentMonth.x11 || currentMonth.fallbackX11;
 
       acc.set(key, {
+        ...maybeValue,
+        [it.ext]: (maybeValue?.[it.ext] ?? 0) + 1,
         // --socket
         ["wayland-and-fallback-x11"]:
           (maybeValue?.["wayland-and-fallback-x11"] ?? 0) +
@@ -117,19 +119,4 @@ const count = [...countMap.entries()]
 await writeFile(
   "./db/flathub/count.js",
   `export default ${JSON.stringify(count, null, 2)}`
-);
-
-//
-// json vs yaml
-//
-const jsonVsYaml = metadata.reduce((acc, { ext }) => {
-  return {
-    ...acc,
-    [ext]: (acc[ext] ?? 0) + 1,
-  };
-}, {});
-
-await writeFile(
-  "./db/flathub/count-json-vs-yaml.js",
-  `export default ${JSON.stringify(jsonVsYaml, null, 2)}`
 );
