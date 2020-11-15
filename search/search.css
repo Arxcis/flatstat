@@ -1,14 +1,36 @@
 main {
   overflow: hidden;
 }
+
+main nav {
+  border: 1px solid #dfdfdf;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
 main nav a {
-  font-size: 18px;
+  font-size: 14px;
+  padding: 7px 20px 3px 20px;
+  border-bottom: none;
+}
+
+main nav a:hover {
+  color: black;
+  background-color: #dfdfdf;
+}
+
+main nav a.current {
+  background-color: #0366d6;
+  color: white;
+  border-bottom: none;
+  border-radius: 5px;
 }
 
 main ul {
   display: flex;
   flex-direction: column;
   overflow: auto;
+  padding: 0;
 }
 
 main ul a {
