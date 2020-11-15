@@ -8,21 +8,27 @@
   </head>
   <body>
     <header>
-      <a href="/flatstat"><h1 id="title" title="Flatstat | Stats from Flathub.org">flatstat</h1></a>
+      <a href="/flatstat/"><h1 id="title" title="Flatstat | Stats from Flathub.org">flatstat</h1></a>
       <nav>
         <a href="/flatstat/#" title="Graphs">graph</a>
         <a href="/flatstat/search/" title="Search">search</a>
       </nav>
     </header>
     <main>
-      <a href="/flatstat/#wayland-vs-x11" title="Wayland vs X11 graph"><h3 id="wayland-vs-x11">wayland vs x11</h3></a>
-      <canvas id="x11-wayland-chart" width="400" height="300"></canvas>
+      <a href="/flatstat/#display" title="Display server"><h3 id="display">display server</h3></a>
+      <canvas id="display-server-chart" width="400" height="300"></canvas>
 
-      <a href="/flatstat/#filesystem" title="Filesystem graph"><h3 id="filesystem">filesystem</h3></a>
+      <a href="/flatstat/#filesystem" title="Filesystem"><h3 id="filesystem">filesystem</h3></a>
       <canvas id="filesystem-chart" width="400" height="300"></canvas>
 
-      <a href="/flatstat/#device"title="Device graph"><h3 id="device">device</h3></a>
+      <a href="/flatstat/#device"title="Device"><h3 id="device">device</h3></a>
       <canvas id="device-chart" width="400" height="300"></canvas>
+
+      <a href="/flatstat/#audio"title="Audio server"><h3 id="device">audio server</h3></a>
+      <canvas id="audio-server-chart" width="400" height="300"></canvas>
+
+      <a href="/flatstat/#metadata-filetype"title="Metadata filetype"><h3 id="metadata-filetype">metadata filetype</h3></a>
+      <canvas id="metadata-filetype-chart" width="400" height="300"></canvas>
 
       <a href="/flatstat/#about" title="About the graphs"><h3 id="about">about</h3></a>
       <p>
@@ -94,7 +100,7 @@
       },
     };
 
-    new Chart(document.getElementById("x11-wayland-chart").getContext("2d"), {
+    new Chart(document.getElementById("display-server-chart").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.key),
@@ -108,21 +114,21 @@
             hidden: true,
           },
           {
-            label: "wayland and fallback-x11",
+            label: "--wayland and --fallback-x11",
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it["wayland-and-fallback-x11"]),
             fill: false,
           },
           {
-            label: "wayland and x11",
+            label: "--wayland and --x11",
             backgroundColor: BAD_COLOR,
             borderColor: BAD_COLOR,
             data: count.map((it) => it["wayland-and-x11"]),
             fill: false,
           },
           {
-            label: "only x11",
+            label: "--x11 only",
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
             data: count.map((it) => it["only-x11"]),
@@ -135,7 +141,7 @@
         title: {
           display: true,
           text:
-            "flathub.org / apps with --socket=wayland and x11 or fallback-x11",
+            "flathub.org - apps with --wayland and --x11",
         },
       },
     });
@@ -187,7 +193,7 @@
         ...options,
         title: {
           display: true,
-          text: "flathub.org / apps with --filesystem",
+          text: "flathub.org - apps with --filesystem",
         },
       },
     });
@@ -232,10 +238,87 @@
         ...options,
         title: {
           display: true,
-          text: "flathub.org / apps with --device",
+          text: "flathub.org - apps with --device",
         },
       },
     });
+
+    new Chart(document.getElementById("audio-server-chart").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.key),
+        datasets: [
+        {
+            label: "total",
+            backgroundColor: TOTAL_COLOR,
+            borderColor: TOTAL_COLOR,
+            data: count.map((it) => it.pulseaudio + it["no-pulseaudio"]),
+            fill: false,
+            hidden: true,
+          },
+          {
+            label: "--no-pulseaudio",
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map((it) => it["no-pulseaudio"]),
+            fill: false,
+          },
+          {
+            label: "--pulseaudio",
+            backgroundColor: VERY_BAD_COLOR,
+            borderColor: VERY_BAD_COLOR,
+            data: count.map((it) => it.pulseaudio),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...options,
+        title: {
+          display: true,
+          text: "flathub.org - apps with --pulseaudio",
+        },
+      },
+    });
+
+
+    new Chart(document.getElementById("metadata-filetype-chart").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.key),
+        datasets: [
+          {
+            label: ".json",
+            backgroundColor: "#424242",
+            borderColor: "#424242",
+            data: count.map((it) => it.json),
+            fill: false,
+          },
+          {
+            label: ".yaml",
+            backgroundColor: "#757575",
+            borderColor: "#757575",
+            data: count.map((it) => it.yaml),
+            fill: false,
+          },
+          {
+            label: ".yml",
+            backgroundColor: "#bdbdbd",
+            borderColor: "#bdbdbd",
+            data: count.map((it) => it.yml),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...options,
+        title: {
+          display: true,
+          text: "flathub.org - APP_ID.json vs APP_ID.yaml",
+        },
+      },
+    });
+
   </script>
   
 </html>
