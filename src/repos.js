@@ -16,7 +16,7 @@ do {
 } while (next);
 
 await writeFile(
-  "src/db/flathub/repos.js",
+  "./db/flathub/repos.js",
   `export default ${JSON.stringify(repos, null, 2)}`
 );
 
