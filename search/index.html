@@ -56,7 +56,15 @@
 
 
 
-    ul.innerHTML = filtered ? filtered.map(({name, ext, branch }) => {
+    ul.innerHTML = filtered ? filtered
+    .sort((a,b) => {
+      if (b.stargazerCount === a.stargazerCount) {
+        return a.name.localeCompare(b.name)
+      } else {
+        return (b.stargazerCount - a.stargazerCount)
+      }
+    })
+    .map(({name, ext, branch,stargazerCount }) => {
       const href = `https://github.com/flathub/${name}/blob/${branch}/${name}.${ext}` 
     
       return  `<a 
@@ -64,10 +72,11 @@
         title="${href}" 
         target="_blank"
       >
-          ${name}.${ext}
+          <span>${name}.${ext}</span>
+          <span>${stargazerCount ? (stargazerCount + " ⭐") : ""}</span>
       </a>
 `;
     }
-    ).sort().join("") : "No filter selected"
+    ).join("") : "No filter selected"
   </script>
 </html>

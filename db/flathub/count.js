@@ -730,8 +730,8 @@ export default [
   {
     "key": "2020-09",
     "json": 1072,
-    "wayland-and-fallback-x11": 192,
-    "wayland-and-x11": 440,
+    "wayland-and-fallback-x11": 193,
+    "wayland-and-x11": 439,
     "pulseaudio": 453,
     "no-pulseaudio": 862,
     "device": 657,
@@ -753,8 +753,8 @@ export default [
   {
     "key": "2020-10",
     "json": 1093,
-    "wayland-and-fallback-x11": 207,
-    "wayland-and-x11": 437,
+    "wayland-and-fallback-x11": 208,
+    "wayland-and-x11": 436,
     "pulseaudio": 464,
     "no-pulseaudio": 886,
     "device": 673,
