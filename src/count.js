@@ -1,5 +1,5 @@
-import metadata from "../db/flathub/metadata.js";
 import { writeFile } from "fs/promises";
+import metadata from "../db/flathub/metadata.js";
 
 const MONTHS = [
   "2018-01",
