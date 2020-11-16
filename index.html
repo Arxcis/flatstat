@@ -12,6 +12,7 @@
       <nav>
         <a href="/flatstat/#display" title="Graphs">graph</a>
         <a href="/flatstat/search/?filter=x11-only" title="Search">search</a>
+        <a href="/flatstat/about/" title="About">about</a>
       </nav>
     </header>
     <main>
@@ -21,7 +22,6 @@
         <a id="#device" title="Apps with --device" href="/flatstat/#device">device</a>
         <a id="#audio" title="Apps with --pulseaudio" href="/flatstat/#audio">audio</a>
         <a id="#metafile" title=".json or .yaml or .yml" href="/flatstat/#metafile">metafile</a>
-        <a id="#about" title="About the data" href="/flatstat/#about">about</a>
       </nav>
 
       <section>
@@ -30,29 +30,6 @@
         <canvas id="device" width="400" height="300"></canvas>
         <canvas id="audio" width="400" height="300"></canvas>
         <canvas id="metafile" width="400" height="300"></canvas>
-
-        <a id="about" href="/flatstat/#about" title="About the data"><h3>about</h3></a>
-        <p>
-          The data is sourced from repos belonging to <a target="_blank" href="https://github.com/flathub/">https://github.com/flathub</a>.
-          In each repo, we look for the APP_ID.(json|yaml|yml)-file.
-          To get historic data, we use 
-          <a target="_blank" href="https://api.github.com/graphql"
-            >Github Graphql API</a
-          >.
-        <p>
-          Source code can be found here
-          <a target="_blank" href="https://github.com/Arxcis/flatstat"
-            >https://github.com/Arxcis/flatstat</a
-          >/
-        </p>
-        <p>
-          Make an <a target="_blank" href="https://github.com/Arxcis/flatstat/issues">issue</a> on github, if you have feedback 🙏
-        </p>
-        <p>
-          Thanks to
-          <a target="_blank" href="https://www.chartjs.org/">https://www.chartjs.org/</a> for
-          drawing the charts! 😀
-        </p>
       </section>
     </main>
   </body>
