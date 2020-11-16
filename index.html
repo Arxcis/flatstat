@@ -34,7 +34,7 @@
     </main>
   </body>
   <script type="module">
-    import count from "https://github.com/Arxcis/flatstat/raw/master/db/flathub/count.js"
+    import count from "./db/flathub/count.js";
    
     // Check if any a[href] contains the search, and mark them as active
     const graphLink = document.getElementById(window.location.hash)
@@ -116,7 +116,7 @@
             label: "--x11 only",
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it["x11-only"]),
+            data: count.map((it) => it["only-x11"]),
             fill: false,
           },
         ],
