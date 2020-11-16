@@ -1,5 +1,5 @@
 import { writeFile } from "fs/promises";
-import metadata from "../db/flathub/metadata.js";
+import metafiles from "../db/flathub/metafiles.js";
 
 const MONTHS = [
   "2018-01",
@@ -39,7 +39,7 @@ const MONTHS = [
   // "2020-11", Ignore current month
 ];
 
-const countMap = metadata.reduce((acc, it) => {
+const countMap = metafiles.reduce((acc, it) => {
   const itHistory = it.history ?? [];
   let lastCommitThisMonth = null;
 
