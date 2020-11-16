@@ -38,7 +38,11 @@
    
     // Check if any a[href] contains the search, and mark them as active
     const graphLink = document.getElementById(window.location.hash)
-    graphLink?.classList.add("current")
+    if (graphLink) {
+      graphLink.classList.add("current")
+    } else {
+      document.getElementById("#display").classList.add("current");
+    }
 
     window.addEventListener("hashchange", () => {
       const links = document.querySelectorAll("main nav a")
@@ -122,11 +126,6 @@
       },
       options: {
         ...options,
-        title: {
-          display: true,
-          text:
-            "apps with --wayland and --x11",
-        },
       },
     });
 
@@ -167,10 +166,6 @@
       },
       options: {
         ...options,
-        title: {
-          display: true,
-          text: "apps with --filesystem",
-        },
       },
     });
 
@@ -204,10 +199,6 @@
       },
       options: {
         ...options,
-        title: {
-          display: true,
-          text: "apps with --device",
-        },
       },
     });
 
@@ -234,10 +225,6 @@
       },
       options: {
         ...options,
-        title: {
-          display: true,
-          text: "apps with --pulseaudio",
-        },
       },
     });
 
@@ -272,10 +259,6 @@
       },
       options: {
         ...options,
-        title: {
-          display: true,
-          text: "APP_ID files",
-        },
       },
     });
 
