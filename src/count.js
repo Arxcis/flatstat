@@ -41,75 +41,74 @@ const MONTHS = [
 
 const countMap = metadata.reduce((acc, it) => {
   const itHistory = it.history ?? [];
-  let currentMonth = null;
+  let lastCommitThisMonth = null;
 
-  for (const key of MONTHS) {
-    const found = itHistory.find((it) => it.date.startsWith(key));
+  for (const MONTH of MONTHS) {
+    const found = itHistory.find((it) => it.date.startsWith(MONTH));
     if (found) {
-      currentMonth = found;
+      lastCommitThisMonth = found;
     }
 
-    if (!currentMonth) {
+    if (!lastCommitThisMonth) {
       continue;
     }
 
-    const maybeValue = acc.get(key);
-    const supportsX11 = currentMonth.x11 || currentMonth.fallbackX11;
+    const supportsWayland = lastCommitThisMonth.wayland;
+    const supportsX11 =
+      lastCommitThisMonth.x11 || lastCommitThisMonth.fallbackX11;
 
-    acc.set(key, {
-      ...maybeValue,
-      [it.ext]: (maybeValue?.[it.ext] ?? 0) + 1,
+    const maybeMonth = acc.get(MONTH);
 
-      // wayland vs x11
-      ["wayland-and-fallback-x11"]:
-        (maybeValue?.["wayland-and-fallback-x11"] ?? 0) +
-        (currentMonth.wayland && currentMonth.fallbackX11),
-      ["wayland-and-x11"]:
-        (maybeValue?.["wayland-and-x11"] ?? 0) +
-        (currentMonth.wayland && currentMonth.x11),
+    function increment(key, value) {
+      return {
+        [key]: (maybeMonth?.[key] ?? 0) + value,
+      };
+    }
 
-      // pulseaudio vs pipewire
-      pulseaudio: (maybeValue?.pulseaudio ?? 0) + currentMonth.pulseaudio,
-      ["no-pulseaudio"]:
-        (maybeValue?.["no-pulseaudio"] ?? 0) + !currentMonth.pulseaudio,
+    acc.set(MONTH, {
+      ...(maybeMonth ?? {}),
 
-      // --device
-      device: (maybeValue?.device ?? 0) + currentMonth.device,
-      ["device-other"]:
-        (maybeValue?.["device-other"] ?? 0) +
-        (currentMonth.device && !currentMonth.deviceAll),
-      ["device-all"]:
-        (maybeValue?.["device-all"] ?? 0) + currentMonth.deviceAll,
-      ["no-device"]: (maybeValue?.["no-device"] ?? 0) + !currentMonth.device,
+      // display
+      ...increment(
+        "wayland-and-fallback-x11",
+        supportsWayland && lastCommitThisMonth.fallbackX11
+      ),
+      ...increment(
+        "wayland-and-x11",
+        supportsWayland && lastCommitThisMonth.x11
+      ),
+      ...increment("only-wayland", !supportsX11 && supportsWayland),
+      ...increment("only-x11", supportsX11 && !supportsWayland),
+      ...increment("gui", supportsX11 || supportsWayland),
+      ...increment("no-gui", !supportsX11 && !supportsWayland),
 
-      // --filesystem
-      filesystem: (maybeValue?.filesystem ?? 0) + currentMonth.filesystem,
-      ["filesystem-other"]:
-        (maybeValue?.["filesystem-other"] ?? 0) +
-        (currentMonth.filesystem &&
-          !currentMonth.filesystemHome &&
-          !currentMonth.filesystemHost),
-      ["filesystem-home"]:
-        (maybeValue?.["filesystem-home"] ?? 0) + currentMonth.filesystemHome,
-      ["filesystem-host"]:
-        (maybeValue?.["filesystem-host"] ?? 0) + currentMonth.filesystemHost,
-      ["no-filesystem"]:
-        (maybeValue?.["no-filesystem"] ?? 0) + !currentMonth.filesystem,
+      // audio
+      ...increment("pulseaudio", lastCommitThisMonth.pulseaudio),
+      ...increment("no-pulseaudio", !lastCommitThisMonth.pulseaudio),
 
-      // misc
-      ["only-wayland"]:
-        (maybeValue?.["only-wayland"] ?? 0) +
-        (currentMonth.wayland && !supportsX11),
+      // device
+      ...increment("device", lastCommitThisMonth.device),
+      ...increment(
+        "device-other",
+        lastCommitThisMonth.device && !lastCommitThisMonth.deviceAll
+      ),
+      ...increment("device-all", lastCommitThisMonth.deviceAll),
+      ...increment("no-device", !lastCommitThisMonth.device),
 
-      ["only-x11"]:
-        (maybeValue?.["only-x11"] ?? 0) +
-        (supportsX11 && !currentMonth.wayland),
+      // filesystem
+      ...increment("filesystem", lastCommitThisMonth.filesystem),
+      ...increment(
+        "filesystem-other",
+        lastCommitThisMonth.filesystem &&
+          !lastCommitThisMonth.filesystemHome &&
+          !lastCommitThisMonth.filesystemHost
+      ),
+      ...increment("filesystem-home", lastCommitThisMonth.filesystemHome),
+      ...increment("filesystem-host", lastCommitThisMonth.filesystemHost),
+      ...increment("no-filesystem", !lastCommitThisMonth.filesystem),
 
-      ["gui"]:
-        (maybeValue?.["gui"] ?? 0) + (supportsX11 || currentMonth.wayland),
-
-      ["no-gui"]:
-        (maybeValue?.["no-gui"] ?? 0) + (!supportsX11 && !currentMonth.wayland),
+      // metafile
+      ...increment(it.ext, 1),
     });
   }
 
