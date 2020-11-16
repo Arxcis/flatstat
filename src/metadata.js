@@ -1,7 +1,8 @@
-import { GqlConfig } from "./config.js";
+import { appendFile, unlink } from "fs/promises";
 import fetch from "node-fetch";
 import repos from "../db/flathub/repos.js";
-import { appendFile, unlink } from "fs/promises";
+import { GqlConfig } from "./config.js";
+
 let index = 0;
 
 const MEATDATA_JSON = "./db/flathub/metadata.js";
