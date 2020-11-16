@@ -4,6 +4,16 @@ import { RestConfig } from "./config.js";
 
 let repos = [];
 let next = "https://api.github.com/orgs/flathub/repos?per_page=100";
+const IGNORE_LIST = [
+  "org.gtk.Gtk3theme.",
+  "org.freedesktop.LinuxAudio.",
+  "org.freedesktop.Platform.",
+  ".Extension.",
+  ".Plugin.",
+  ".BaseApp",
+  "org.kde.KStyle.",
+  "org.kde.PlatformTheme."
+];
 
 do {
   // Fetch next page
@@ -14,13 +24,9 @@ do {
 
   repos = [
     ...repos, 
-    ...activeRepos.filter(it => it.name.includes("."))
-      .filter(it => !it.name.startsWith("org.gtk.Gtk3theme."))
-      .filter(it => !it.name.startsWith("org.freedesktop.LinuxAudio."))
-      .filter(it => !it.name.startsWith("org.freedesktop.Platform."))
-      .filter(it => !it.name.startsWith(".Extension."))
-      .filter(it => !it.name.includes(".Plugin."))
-      .filter(it => !it.name.includes(".BaseApp"))
+    ...activeRepos
+      .filter(it => it.name.includes("."))
+      .filter(it => IGNORE_LIST.every(ignore => !it.name.includes(ignore)))
       .map((it) => it.name)
   ];
 

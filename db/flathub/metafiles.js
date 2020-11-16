@@ -16974,51 +16974,6 @@ export default [{
     }
   ]
 },{
-  "appID": "io.atom.electron.BaseApp",
-  "displayURL": "https://github.com/flathub/io.atom.electron.BaseApp/blob/branch/20.08/io.atom.electron.BaseApp.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "branch/20.08",
-  "stargazerCount": 2,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2018-11-21T15:51:30Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-08-17T13:25:05Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-05-20T09:34:04Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-04-29T20:59:52Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-13T23:52:57Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-18T10:46:36Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "com.slack.Slack",
   "displayURL": "https://github.com/flathub/com.slack.Slack/blob/master/com.slack.Slack.json",
   "ext": "json",
@@ -21473,21 +21428,6 @@ export default [{
           "x11"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.freedesktop.Platform.VAAPI.Intel",
-  "displayURL": "https://github.com/flathub/org.freedesktop.Platform.VAAPI.Intel/blob/master/org.freedesktop.Platform.VAAPI.Intel.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2018-02-15T10:55:55Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -51041,27 +50981,6 @@ export default [{
     }
   ]
 },{
-  "appID": "org.freedesktop.Platform.ffmpeg",
-  "displayURL": "https://github.com/flathub/org.freedesktop.Platform.ffmpeg/blob/master/org.freedesktop.Platform.ffmpeg.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2018-02-26T17:47:43Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-17T08:15:10Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "com.github.robertsanseries.ciano",
   "displayURL": "https://github.com/flathub/com.github.robertsanseries.ciano/blob/master/com.github.robertsanseries.ciano.json",
   "ext": "json",
@@ -57280,39 +57199,6 @@ export default [{
     }
   ]
 },{
-  "appID": "io.qt.qtwebkit.BaseApp",
-  "displayURL": "https://github.com/flathub/io.qt.qtwebkit.BaseApp/blob/branch/5.12/io.qt.qtwebkit.BaseApp.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "branch/5.12",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2019-01-30T19:30:31Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-08-28T08:49:50Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-05-31T18:37:54Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-26T20:36:13Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "net.poedit.Poedit",
   "displayURL": "https://github.com/flathub/net.poedit.Poedit/blob/master/net.poedit.Poedit.json",
   "ext": "json",
@@ -59970,39 +59856,6 @@ export default [{
           "x11"
         ]
       }
-    }
-  ]
-},{
-  "appID": "io.github.Hexchat.Plugin.Perl",
-  "displayURL": "https://github.com/flathub/io.github.Hexchat.Plugin.Perl/blob/master/io.github.Hexchat.Plugin.Perl.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-03-15T00:51:38Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-10-09T22:06:52Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-09-23T18:48:48Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-03-17T10:38:13Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -73649,78 +73502,6 @@ export default [{
     }
   ]
 },{
-  "appID": "org.electronjs.Electron2.BaseApp",
-  "displayURL": "https://github.com/flathub/org.electronjs.Electron2.BaseApp/blob/branch/20.08/org.electronjs.Electron2.BaseApp.yml",
-  "ext": "yml",
-  "status": "missing-finish-args",
-  "branch": "branch/20.08",
-  "stargazerCount": 2,
-  "history": [
-    {
-      "ext": "yml",
-      "date": "2020-09-15T22:36:54Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2020-02-27T18:50:29Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2019-09-19T08:42:37Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2019-03-22T18:19:52Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2018-11-21T17:15:35Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2018-08-17T13:18:43Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2018-05-22T20:09:21Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "de.wolfvollprecht.UberWriter.Plugin.TexLive",
-  "displayURL": "https://github.com/flathub/de.wolfvollprecht.UberWriter.Plugin.TexLive/blob/master/de.wolfvollprecht.UberWriter.Plugin.TexLive.json",
-  "ext": "json",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-07-02T11:14:53Z",
-      "status": "ok",
-      "finishArgs": {}
-    },
-    {
-      "ext": "json",
-      "date": "2018-05-22T23:48:07Z",
-      "status": "ok",
-      "finishArgs": {}
-    }
-  ]
-},{
   "appID": "org.texstudio.TeXstudio",
   "displayURL": "https://github.com/flathub/org.texstudio.TeXstudio/blob/master/org.texstudio.TeXstudio.yaml",
   "ext": "yaml",
@@ -84965,75 +84746,6 @@ export default [{
     }
   ]
 },{
-  "appID": "org.gajim.Gajim.Plugin.url_image_preview",
-  "displayURL": "https://github.com/flathub/org.gajim.Gajim.Plugin.url_image_preview/blob/master/org.gajim.Gajim.Plugin.url_image_preview.yaml",
-  "ext": "yaml",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-09-21T19:58:06Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-06-21T09:11:08Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-05-02T16:28:32Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-03-18T21:51:25Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-02-25T23:08:08Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2019-04-24T21:03:46Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2018-12-16T16:13:34Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-11-07T00:14:22Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-07-05T21:06:11Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-06-24T21:24:14Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "edu.stanford.Almond",
   "displayURL": "https://github.com/flathub/edu.stanford.Almond/blob/master/edu.stanford.Almond.json",
   "ext": "json",
@@ -86010,87 +85722,6 @@ export default [{
           "x11"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.gajim.Gajim.Plugin.pgp",
-  "displayURL": "https://github.com/flathub/org.gajim.Gajim.Plugin.pgp/blob/master/org.gajim.Gajim.Plugin.pgp.yaml",
-  "ext": "yaml",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-09-21T19:57:18Z",
-      "status": "ok",
-      "finishArgs": {
-        "filesystem": [
-          "~/.gnupg"
-        ]
-      }
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-06-21T09:12:20Z",
-      "status": "ok",
-      "finishArgs": {
-        "filesystem": [
-          "~/.gnupg"
-        ]
-      }
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-05-02T16:26:24Z",
-      "status": "ok",
-      "finishArgs": {
-        "filesystem": [
-          "~/.gnupg"
-        ]
-      }
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-03-18T18:07:16Z",
-      "status": "ok",
-      "finishArgs": {
-        "filesystem": [
-          "~/.gnupg"
-        ]
-      }
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-02-25T23:13:58Z",
-      "status": "ok",
-      "finishArgs": {
-        "filesystem": [
-          "~/.gnupg"
-        ]
-      }
-    },
-    {
-      "ext": "yaml",
-      "date": "2019-04-24T21:05:47Z",
-      "status": "ok",
-      "finishArgs": {
-        "filesystem": [
-          "~/.gnupg"
-        ]
-      }
-    },
-    {
-      "ext": "yaml",
-      "date": "2018-11-13T22:01:49Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-07-06T20:50:17Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -107663,33 +107294,6 @@ export default [{
     }
   ]
 },{
-  "appID": "io.github.Hexchat.Plugin.OTR",
-  "displayURL": "https://github.com/flathub/io.github.Hexchat.Plugin.OTR/blob/master/io.github.Hexchat.Plugin.OTR.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-03-15T00:17:43Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-10-09T22:30:57Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-09-23T18:26:08Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "org.equeim.Tremotesf",
   "displayURL": "https://github.com/flathub/org.equeim.Tremotesf/blob/master/org.equeim.Tremotesf.json",
   "ext": "json",
@@ -109898,27 +109502,6 @@ export default [{
     }
   ]
 },{
-  "appID": "io.liri.BaseApp",
-  "displayURL": "https://github.com/flathub/io.liri.BaseApp/blob/branch/5.12/io.liri.BaseApp.yaml",
-  "ext": "yaml",
-  "status": "missing-finish-args",
-  "branch": "branch/5.12",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2019-08-02T23:27:25Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2018-10-29T06:31:53Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "io.liri.Text",
   "displayURL": "https://github.com/flathub/io.liri.Text/blob/master/io.liri.Text.yaml",
   "ext": "yaml",
@@ -110500,75 +110083,6 @@ export default [{
           "x11"
         ]
       }
-    }
-  ]
-},{
-  "appID": "io.elementary.BaseApp",
-  "displayURL": "https://github.com/flathub/io.elementary.BaseApp/blob/branch/juno-20.08/io.elementary.BaseApp.yml",
-  "ext": "yml",
-  "status": "missing-finish-args",
-  "branch": "branch/juno-20.08",
-  "stargazerCount": 5,
-  "history": [
-    {
-      "ext": "yml",
-      "date": "2020-10-24T19:28:25Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2020-06-05T10:03:20Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2020-02-06T15:48:52Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2019-10-04T06:31:12Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2019-09-23T11:23:38Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2019-06-02T11:51:46Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2019-03-18T12:08:53Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2019-01-27T09:39:28Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2018-12-30T00:03:19Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yml",
-      "date": "2018-10-17T22:15:56Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -114788,75 +114302,6 @@ export default [{
     }
   ]
 },{
-  "appID": "org.gajim.Gajim.Plugin.omemo",
-  "displayURL": "https://github.com/flathub/org.gajim.Gajim.Plugin.omemo/blob/master/org.gajim.Gajim.Plugin.omemo.yaml",
-  "ext": "yaml",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-09-21T19:54:30Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-07-22T20:17:17Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-06-21T09:14:07Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-05-02T16:21:56Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-03-18T17:59:55Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-02-25T22:57:58Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2019-04-24T21:02:19Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2019-01-05T23:50:49Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2018-12-16T16:05:36Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2018-11-07T21:29:53Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "org.apache.netbeans",
   "displayURL": "https://github.com/flathub/org.apache.netbeans/blob/master/org.apache.netbeans.json",
   "ext": "json",
@@ -115846,39 +115291,6 @@ export default [{
           "ca.desrt.dconf"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.videolan.VLC.Plugin.fdkaac",
-  "displayURL": "https://github.com/flathub/org.videolan.VLC.Plugin.fdkaac/blob/master/org.videolan.VLC.Plugin.fdkaac.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2019-09-22T21:52:51Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-01-04T16:30:00Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-11-12T09:46:37Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-09-18T20:51:12Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -129439,72 +128851,6 @@ export default [{
           "ca.desrt.dconf"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.videolan.VLC.Plugin.bdj",
-  "displayURL": "https://github.com/flathub/org.videolan.VLC.Plugin.bdj/blob/master/org.videolan.VLC.Plugin.bdj.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2019-09-20T14:24:21Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-06-11T16:31:18Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-05-06T08:31:02Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-03-20T12:55:06Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-02-06T19:41:21Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.videolan.VLC.Plugin.makemkv",
-  "displayURL": "https://github.com/flathub/org.videolan.VLC.Plugin.makemkv/blob/master/org.videolan.VLC.Plugin.makemkv.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2019-06-11T21:46:07Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-03-20T12:54:38Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-02-05T22:33:39Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -147619,45 +146965,6 @@ export default [{
     }
   ]
 },{
-  "appID": "org.bitbucket.mystery_keeper.VapourSynthEditor.Plugin.FFMS2",
-  "displayURL": "https://github.com/flathub/org.bitbucket.mystery_keeper.VapourSynthEditor.Plugin.FFMS2/blob/master/org.bitbucket.mystery_keeper.VapourSynthEditor.Plugin.FFMS2.yaml",
-  "ext": "yaml",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-09-05T13:47:59Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-02-15T21:11:06Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2019-09-24T11:29:05Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2019-08-07T18:39:28Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2019-07-31T15:14:37Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "org.electrum.electrum",
   "displayURL": "https://github.com/flathub/org.electrum.electrum/blob/master/org.electrum.electrum.json",
   "ext": "json",
@@ -158319,45 +157626,6 @@ export default [{
     }
   ]
 },{
-  "appID": "org.mozilla.Firefox.BaseApp",
-  "displayURL": "https://github.com/flathub/org.mozilla.Firefox.BaseApp/blob/master/org.mozilla.Firefox.BaseApp.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 5,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-10-21T17:37:08Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-05-12T12:11:57Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-04-23T13:48:50Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-03-16T08:30:42Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-11-30T14:24:00Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "com.brosix.Brosix",
   "displayURL": "https://github.com/flathub/com.brosix.Brosix/blob/master/com.brosix.Brosix.json",
   "ext": "json",
@@ -159017,21 +158285,6 @@ export default [{
     }
   ]
 },{
-  "appID": "io.qt.qtwebengine.BaseApp",
-  "displayURL": "https://github.com/flathub/io.qt.qtwebengine.BaseApp/blob/branch/5.13/io.qt.qtwebengine.BaseApp.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "branch/5.13",
-  "stargazerCount": 5,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2019-12-10T09:41:35Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "org.sugarlabs.StoryActivity",
   "displayURL": "https://github.com/flathub/org.sugarlabs.StoryActivity/blob/master/org.sugarlabs.StoryActivity.json",
   "ext": "json",
@@ -159688,51 +158941,6 @@ export default [{
           "x11"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.godotengine.godot.BaseApp",
-  "displayURL": "https://github.com/flathub/org.godotengine.godot.BaseApp/blob/branch/3.2/org.godotengine.godot.BaseApp.yaml",
-  "ext": "yaml",
-  "status": "missing-finish-args",
-  "branch": "branch/3.2",
-  "stargazerCount": 4,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-10-12T11:45:44Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-07-02T08:04:59Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-04-03T07:24:24Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-03-10T15:11:50Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-01-29T16:56:12Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2019-12-18T16:59:45Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -166718,36 +165926,6 @@ export default [{
     }
   ]
 },{
-  "appID": "org.sugarlabs.BaseApp",
-  "displayURL": "https://github.com/flathub/org.sugarlabs.BaseApp/blob/branch/20.04/org.sugarlabs.BaseApp.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "branch/20.04",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-04-18T00:01:06Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.gnome.gitlab.somas.Apostrophe.Plugin.TexLive",
-  "displayURL": "https://github.com/flathub/org.gnome.gitlab.somas.Apostrophe.Plugin.TexLive/blob/master/org.gnome.gitlab.somas.Apostrophe.Plugin.TexLive.json",
-  "ext": "json",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-04-19T20:10:27Z",
-      "status": "ok",
-      "finishArgs": {}
-    }
-  ]
-},{
   "appID": "cat.xtec.clic.JClic",
   "displayURL": "https://github.com/flathub/cat.xtec.clic.JClic/blob/master/cat.xtec.clic.JClic.yml",
   "ext": "yml",
@@ -168570,21 +167748,6 @@ export default [{
           "wayland"
         ]
       }
-    }
-  ]
-},{
-  "appID": "fr.handbrake.ghb.Plugin.IntelMediaSDK",
-  "displayURL": "https://github.com/flathub/fr.handbrake.ghb.Plugin.IntelMediaSDK/blob/master/fr.handbrake.ghb.Plugin.IntelMediaSDK.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-05-08T14:41:25Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -171789,87 +170952,6 @@ export default [{
     }
   ]
 },{
-  "appID": "org.gimp.GIMP.Plugin.Resynthesizer",
-  "displayURL": "https://github.com/flathub/org.gimp.GIMP.Plugin.Resynthesizer/blob/master/org.gimp.GIMP.Plugin.Resynthesizer.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-06-13T19:12:31Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.gimp.GIMP.Plugin.Lensfun",
-  "displayURL": "https://github.com/flathub/org.gimp.GIMP.Plugin.Lensfun/blob/master/org.gimp.GIMP.Plugin.Lensfun.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-06-13T21:03:39Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.gimp.GIMP.Plugin.GMic",
-  "displayURL": "https://github.com/flathub/org.gimp.GIMP.Plugin.GMic/blob/master/org.gimp.GIMP.Plugin.GMic.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-09-04T01:24:06Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-06-13T01:43:56Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.gimp.GIMP.Plugin.LiquidRescale",
-  "displayURL": "https://github.com/flathub/org.gimp.GIMP.Plugin.LiquidRescale/blob/master/org.gimp.GIMP.Plugin.LiquidRescale.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-06-19T02:39:33Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.gimp.GIMP.Plugin.BIMP",
-  "displayURL": "https://github.com/flathub/org.gimp.GIMP.Plugin.BIMP/blob/master/org.gimp.GIMP.Plugin.BIMP.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-06-11T03:57:45Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "com.sourcepole.kadas",
   "displayURL": "https://github.com/flathub/com.sourcepole.kadas/blob/master/com.sourcepole.kadas.json",
   "ext": "json",
@@ -171899,57 +170981,6 @@ export default [{
           "x11"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.gimp.GIMP.Plugin.FocusBlur",
-  "displayURL": "https://github.com/flathub/org.gimp.GIMP.Plugin.FocusBlur/blob/master/org.gimp.GIMP.Plugin.FocusBlur.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-06-23T00:37:17Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.gimp.GIMP.Plugin.Fourier",
-  "displayURL": "https://github.com/flathub/org.gimp.GIMP.Plugin.Fourier/blob/master/org.gimp.GIMP.Plugin.Fourier.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-06-16T11:59:36Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.gajim.Gajim.Plugin.openpgp",
-  "displayURL": "https://github.com/flathub/org.gajim.Gajim.Plugin.openpgp/blob/master/org.gajim.Gajim.Plugin.openpgp.yaml",
-  "ext": "yaml",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-09-21T19:55:08Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-06-22T19:52:50Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -174145,27 +173176,6 @@ export default [{
     }
   ]
 },{
-  "appID": "fr.free.hxc2001.HxCFloppyEmulator.Extension.capslib",
-  "displayURL": "https://github.com/flathub/fr.free.hxc2001.HxCFloppyEmulator.Extension.capslib/blob/master/fr.free.hxc2001.HxCFloppyEmulator.Extension.capslib.yaml",
-  "ext": "yaml",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-03-18T19:08:54Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-02-16T01:30:10Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
   "appID": "org.gnome.design.VectorSlicer",
   "displayURL": "https://github.com/flathub/org.gnome.design.VectorSlicer/blob/master/org.gnome.design.VectorSlicer.json",
   "ext": "json",
@@ -175755,27 +174765,6 @@ export default [{
           "wayland"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.gajim.Gajim.Plugin.appindicator",
-  "displayURL": "https://github.com/flathub/org.gajim.Gajim.Plugin.appindicator/blob/master/org.gajim.Gajim.Plugin.appindicator.yaml",
-  "ext": "yaml",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-09-21T19:53:28Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "yaml",
-      "date": "2020-08-18T20:29:57Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -179119,21 +178108,6 @@ export default [{
     {
       "ext": "yml",
       "date": "2020-10-01T11:48:24Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.gnome.Boxes.Extension.OsinfoDb",
-  "displayURL": "https://github.com/flathub/org.gnome.Boxes.Extension.OsinfoDb/blob/master/org.gnome.Boxes.Extension.OsinfoDb.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-09-11T08:57:33Z",
       "status": "missing-finish-args",
       "finishArgs": null
     }
