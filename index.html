@@ -15,50 +15,67 @@
       </nav>
     </header>
     <main>
-      <a id="display" href="/flatstat/#display" title="Display server"><h3>display server</h3></a>
-      <canvas id="display-server-chart" width="400" height="300"></canvas>
+      <nav>
+        <a id="#display" title="Apps with --wayland or --x11" href="/flatstat/#display">display</a>
+        <a id="#filesystem" title="Apps with --filesystem" href="/flatstat/#filesystem">filesystem</a>
+        <a id="#device" title="Apps with --device" href="/flatstat/#device">device</a>
+        <a id="#audio" title="Apps with --pulseaudio" href="/flatstat/#audio">audio</a>
+        <a id="#metafile" title=".json or .yaml or .yml" href="/flatstat/#metafile">metafile</a>
+        <a id="#about" title="About the data" href="/flatstat/#about">about</a>
+      </nav>
 
-      <a id="filesystem" href="/flatstat/#filesystem" title="Filesystem"><h3>filesystem</h3></a>
-      <canvas id="filesystem-chart" width="400" height="300"></canvas>
+      <section>
+        <canvas id="display" width="400" height="300"></canvas>
+        <canvas id="filesystem" width="400" height="300"></canvas>
+        <canvas id="device" width="400" height="300"></canvas>
+        <canvas id="audio" width="400" height="300"></canvas>
+        <canvas id="metafile" width="400" height="300"></canvas>
 
-      <a  id="device" href="/flatstat/#device"title="Device"><h3>device</h3></a>
-      <canvas id="device-chart" width="400" height="300"></canvas>
-
-      <a id="audio" href="/flatstat/#audio"title="Audio server"><h3>audio server</h3></a>
-      <canvas id="audio-server-chart" width="400" height="300"></canvas>
-
-      <a id="metadata" href="/flatstat/#metadata"title="Metadata filetype"><h3>metadata filetype</h3></a>
-      <canvas id="metadata-filetype-chart" width="400" height="300"></canvas>
-
-      <a href="/flatstat/#about" title="About the data"><h3 id="about">about</h3></a>
-      <p>
-        The data is sourced from repos belonging to <a target="_blank" href="https://github.com/flathub/">https://github.com/flathub</a>.
-        In each repo, we look for the APP_ID.(json|yaml|yml)-file.
-        To get historic data, we use 
-        <a target="_blank" href="https://api.github.com/graphql"
-          >Github Graphql API</a
-        >.
-      <p>
-        Source code can be found here
-        <a target="_blank" href="https://github.com/Arxcis/flatstat"
-          >https://github.com/Arxcis/flatstat</a
-        >/
-      </p>
-      <p>
-        Make an <a target="_blank" href="https://github.com/Arxcis/flatstat/issues">issue</a> on github, if you have feedback 🙏
-      </p>
-      <p>
-        Thanks to
-        <a target="_blank" href="https://www.chartjs.org/">https://www.chartjs.org/</a> for
-        drawing the charts! 😀
-      </p>
+        <a id="about" href="/flatstat/#about" title="About the data"><h3>about</h3></a>
+        <p>
+          The data is sourced from repos belonging to <a target="_blank" href="https://github.com/flathub/">https://github.com/flathub</a>.
+          In each repo, we look for the APP_ID.(json|yaml|yml)-file.
+          To get historic data, we use 
+          <a target="_blank" href="https://api.github.com/graphql"
+            >Github Graphql API</a
+          >.
+        <p>
+          Source code can be found here
+          <a target="_blank" href="https://github.com/Arxcis/flatstat"
+            >https://github.com/Arxcis/flatstat</a
+          >/
+        </p>
+        <p>
+          Make an <a target="_blank" href="https://github.com/Arxcis/flatstat/issues">issue</a> on github, if you have feedback 🙏
+        </p>
+        <p>
+          Thanks to
+          <a target="_blank" href="https://www.chartjs.org/">https://www.chartjs.org/</a> for
+          drawing the charts! 😀
+        </p>
+      </section>
     </main>
   </body>
   <script type="module">
     import count from "./db/flathub/count.js";
    
-    let a = document.querySelector(`header a[href*='/#']`)
-    a?.classList.add("current")
+    // Check if any a[href] contains the search, and mark them as active
+    const graphLink = document.getElementById(window.location.hash)
+    graphLink?.classList.add("current")
+
+    window.addEventListener("hashchange", () => {
+      const links = document.querySelectorAll("main nav a")
+      for (const link of links) link.classList.remove("current")
+
+      const graphLink = document.getElementById(window.location.hash)
+      graphLink?.classList.add("current")
+    })
+
+    const headerLink = document.querySelector(`header a[href*='/#']`)
+    headerLink?.classList.add("current")
+
+    window.location.hash
+
 
     const TOTAL_COLOR = "#546e7a";
     const GOOD_COLOR = "#00c853";
@@ -98,7 +115,7 @@
       },
     };
 
-    new Chart(document.getElementById("display-server-chart").getContext("2d"), {
+    new Chart(document.getElementById("display").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.key),
@@ -131,12 +148,12 @@
         title: {
           display: true,
           text:
-            "flathub.org - apps with --wayland and --x11",
+            "apps with --wayland and --x11",
         },
       },
     });
 
-    new Chart(document.getElementById("filesystem-chart").getContext("2d"), {
+    new Chart(document.getElementById("filesystem").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.key),
@@ -175,12 +192,12 @@
         ...options,
         title: {
           display: true,
-          text: "flathub.org - apps with --filesystem",
+          text: "apps with --filesystem",
         },
       },
     });
 
-    new Chart(document.getElementById("device-chart").getContext("2d"), {
+    new Chart(document.getElementById("device").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.key),
@@ -212,12 +229,12 @@
         ...options,
         title: {
           display: true,
-          text: "flathub.org - apps with --device",
+          text: "apps with --device",
         },
       },
     });
 
-    new Chart(document.getElementById("audio-server-chart").getContext("2d"), {
+    new Chart(document.getElementById("audio").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.key),
@@ -242,13 +259,13 @@
         ...options,
         title: {
           display: true,
-          text: "flathub.org - apps with --pulseaudio",
+          text: "apps with --pulseaudio",
         },
       },
     });
 
 
-    new Chart(document.getElementById("metadata-filetype-chart").getContext("2d"), {
+    new Chart(document.getElementById("metafile").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.key),
@@ -280,7 +297,7 @@
         ...options,
         title: {
           display: true,
-          text: "flathub.org - APP_ID.(json|yaml|yml) files",
+          text: "APP_ID.(json|yaml|yml) files",
         },
       },
     });
