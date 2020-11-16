@@ -10,14 +10,15 @@
     <header>
       <a href="/"><h1 id="title" title="Flatstat | Graph">flatstat</h1></a>
       <nav>
-        <a href="/#window" title="Graphs">graph</a>
+        <a href="/#total" title="Graphs">graph</a>
         <a href="/list/?filter=x11-only" title="List">list</a>
-        <a href="/spec/" title="Spec">spec</a>
+        <a href="/achievements/" title="Achievements">achievements</a>
         <a href="/about/" title="About">about</a>
       </nav>
     </header>
     <main>
       <nav>
+        <a id="#total" title="Totals" href="/#total">total</a>
         <a id="#window" title="Apps with --wayland or --x11" href="/#window">window</a>
         <a id="#filesystem" title="Apps with --filesystem" href="/#filesystem">filesystem</a>
         <a id="#device" title="Apps with --device" href="/#device">device</a>
@@ -26,6 +27,7 @@
       </nav>
 
       <section>
+        <canvas id="total" width="400" height="300"></canvas>
         <canvas id="window" width="400" height="300"></canvas>
         <canvas id="filesystem" width="400" height="300"></canvas>
         <canvas id="device" width="400" height="300"></canvas>
@@ -47,7 +49,7 @@
     if (graphLink) {
       graphLink.classList.add("current")
     } else {
-      document.getElementById("#window").classList.add("current");
+      document.getElementById("#total").classList.add("current");
     }
 
     window.addEventListener("hashchange", () => {
@@ -91,7 +93,7 @@
             display: true,
             scaleLabel: {
               display: true,
-              labelString: "apps",
+              labelString: "#",
             },
           },
         ],
@@ -99,6 +101,39 @@
     };
 
     // Draw charts
+    new Chart(document.getElementById("total").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: [
+          {
+            label: "achievements",
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map(it => Object.values(ACHIEVEMENTS).reduce((acc, value) => acc + it[value], 0)),
+            fill: false,
+          },
+          {
+            label: "holes",
+            backgroundColor: VERY_BAD_COLOR,
+            borderColor: VERY_BAD_COLOR,
+            data: count.map(it => Object.values(HOLES).reduce((acc, value) => acc + it[value], 0)),
+            fill: false,
+          },
+          {
+            label: "apps",
+            backgroundColor: SUPER_BAD_COLOR,
+            borderColor: SUPER_BAD_COLOR,
+            data: count.map(it => it["apps"]),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...options,
+      },
+    });
+
     new Chart(document.getElementById("window").getContext("2d"), {
       type: "line",
       data: {

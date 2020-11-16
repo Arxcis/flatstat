@@ -2,24 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Flatstat | Spec</title>
+    <title>Flatstat | Achievements</title>
     <link rel="stylesheet" type="text/css" href="../index.css"></link>
-    <link rel="stylesheet" type="text/css" href="./spec.css"></link>
+    <link rel="stylesheet" type="text/css" href="./achievements.css"></link>
 </head>
   <body>
     <header>
-      <a href="/"><h1 id="title" title="Flatstat | Spec">flatstat</h1></a>
+      <a href="/"><h1 id="title" title="Flatstat | Achievements">flatstat</h1></a>
       <nav>
-        <a href="/#window" title="Graphs">graph</a>
+        <a href="/#total" title="Graphs">graph</a>
         <a href="/list/?filter=x11-only" title="List">list</a>
-        <a href="/spec/" title="Spec">spec</a>
+        <a href="/achievements/" title="Achievements">achievements</a>
         <a href="/about/" title="About">about</a>
       </nav>
     </header>
     <main>
       <nav>
-        <a id="#achievements" title="Flatpak achievements" href="/spec/#achievements">achievements</a>
-        <a id="#holes" title="Flatpak holes" href="/spec/#holes">holes</a>
+        <a id="#achievements" title="Flatpak achievements" href="/achievements/#achievements">achievements</a>
+        <a id="#holes" title="Flatpak holes" href="/achievements/#holes">holes</a>
       </nav>
 
       <section>
@@ -31,13 +31,13 @@
           <h3 id="--no-filesystem-all" title="--no-filesystem-all">🏅 Achievement: --no-filesystem-all</h3>
           <p>Your app does not ask for blanket access to the filesystem. Your app may have an explicit list of files and directories it depends on.</p>
 
-          <h3 id="--no-filesystem-at-all" title="--no-filesystem-at-all">🏅 Achievement: --no-filesystem-at-all</h3>
+          <h3 id="--no-filesystem" title="--no-filesystem">🏅 Achievement: --no-filesystem</h3>
           <p>Your app does not ask for any filesystem permissions up front, leaving the user in full control of which files the app is given access to. If implemented correctly, the app should use the <a href="https://flatpak.github.io/xdg-desktop-portal/portal-docs.html#gdbus-org.freedesktop.portal.FileChooser" target="_blank" title="org.freedesktop.portal.FileChooser">FileChooser-portal</a>. This will ensure that the user experience is the same as if the app had --filesystem=host, but without the security hole.</p>
 
           <h3 id="--no-device-all" title="--no-device-all">🏅 Achievement: --no-device-all</h3>
           <p>Your app does not ask for blanket access to the users devices. Your app may have an explicit list of devices it depends on.</p>
 
-          <h3 id="--no-device-at-all" title="--no-device-at-all">🏅 Achievement: --no-device-at-all</h3>
+          <h3 id="--no-device" title="--no-device">🏅 Achievement: --no-device</h3>
           <p>Your app does not ask for any device permissions up front, leaving the user in full control of which devices the app is given access to.</p>
 
           <h3 id="--no-pulseaudio" title="--no-pulseaudio">🏅 Achievement: --no-pulseaudio</h3>
@@ -68,7 +68,7 @@
     </main>
   </body>
   <script type="module">
-    const headerLink = document.querySelector(`header nav a[href*='spec']`)
+    const headerLink = document.querySelector(`header nav a[href*='achievements']`)
     headerLink?.classList.add("current")
 
    // Check if any a[href] contains the search, and mark them as active
