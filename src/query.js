@@ -207,7 +207,7 @@ function parseCommits(commits) {
       const camelCasedKey = key
         .replace("--", "")
         .replace(/([-][a-z])/g, group => group.toUpperCase())
-        .replace('-', '');
+        .replace(/[-]/g, '');
 
       const merged = [...(finishArgMap[camelCasedKey] ?? []), value];
       finishArgMap[camelCasedKey] = merged;
