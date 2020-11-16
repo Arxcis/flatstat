@@ -6873,5 +6873,25 @@ export default [
     "name": "org.gnome.Boxes.Extension.OsinfoDb",
     "full_name": "flathub/org.gnome.Boxes.Extension.OsinfoDb",
     "default_branch": "master"
+  },
+  {
+    "name": "net.shrew.ike.qikea",
+    "full_name": "flathub/net.shrew.ike.qikea",
+    "default_branch": "master"
+  },
+  {
+    "name": "com.github.emmanueltouzery.projectpad",
+    "full_name": "flathub/com.github.emmanueltouzery.projectpad",
+    "default_branch": "master"
+  },
+  {
+    "name": "com.github.arshubham.cipher",
+    "full_name": "flathub/com.github.arshubham.cipher",
+    "default_branch": "master"
+  },
+  {
+    "name": "org.gnome.Totem.Videosite.YouTubeDl",
+    "full_name": "flathub/org.gnome.Totem.Videosite.YouTubeDl",
+    "default_branch": "master"
   }
 ]
