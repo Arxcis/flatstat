@@ -15,8 +15,41 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+main section {
   overflow-y: scroll;
-  margin: 0 0 30px 0;
+  margin: 20px 0 20px 0;
+  scrollbar-width: none;
+}
+
+main section::-webkit-scrollbar {
+  display: none;
+}
+
+main nav {
+  border: 1px solid #dfdfdf;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+main nav a {
+  font-size: 14px;
+  padding: 6px 20px 6px 20px;
+  border-bottom: none;
+}
+
+main nav a:hover {
+  color: black;
+  background-color: #dfdfdf;
+}
+
+main nav a.current {
+  background-color: #0366d6;
+  color: white;
+  border-bottom: none;
+  border-radius: 5px;
 }
 
 header {
