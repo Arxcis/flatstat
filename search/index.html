@@ -27,7 +27,7 @@
     </main>
   </body>
   <script type="module">
-    import metadata from "../db/flathub/metadata.js"
+    import metafiles from "../db/flathub/metafiles.js"
 
     const urlParams = new URLSearchParams(window.location.search);
     const ul = document.querySelector("ul")
@@ -43,16 +43,16 @@
     let filtered = null;
     switch(filter) {
       case "filesystem-host":
-        filtered = metadata.filter(it => it.history[0]?.filesystemHost)
+        filtered = metafiles.filter(it => it.history[0]?.filesystemHost)
         break;
       case "filesystem-home":
-        filtered = metadata.filter(it => it.history[0]?.filesystemHome)
+        filtered = metafiles.filter(it => it.history[0]?.filesystemHome)
         break;
       case "x11-only":
-        filtered = metadata.filter(it => (it.history[0]?.x11 || it.history[0]?.fallbackX11) && !it.history[0]?.wayland)
+        filtered = metafiles.filter(it => (it.history[0]?.x11 || it.history[0]?.fallbackX11) && !it.history[0]?.wayland)
         break;
       case "device-all":
-        filtered = metadata.filter(it => (it.history[0]?.deviceAll))
+        filtered = metafiles.filter(it => (it.history[0]?.deviceAll))
         break;
     }
 
