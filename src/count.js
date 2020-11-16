@@ -4,22 +4,23 @@ import { MONTHS } from "./config.js";
 
 
 const countMap = metafiles.reduce((acc, it) => {
-  const itHistory = it.history ?? [];
-  let lastCommitThisMonth = null;
+  const commitHistory = it.history ?? [];
+  let thisMonthsCommit = null;
 
   for (const MONTH of MONTHS) {
-    const found = itHistory.find((it) => it.date.startsWith(MONTH));
+    const found = commitHistory.find((it) => it.date.startsWith(MONTH) && it.finishArgs !== null);
     if (found) {
-      lastCommitThisMonth = found;
+      thisMonthsCommit = found;
     }
 
-    if (!lastCommitThisMonth) {
+    if (!thisMonthsCommit) {
       continue;
     }
 
-    const supportsWayland = lastCommitThisMonth.wayland;
-    const supportsX11 =
-      lastCommitThisMonth.x11 || lastCommitThisMonth.fallbackX11;
+    const { finishArgs: { socket, filesystem, device } } = thisMonthsCommit
+
+    const supportsWayland = !!socket?.includes("wayland");
+    const supportsX11 = !!socket?.includes("x11") || !!socket?.includes("fallback-x11");
 
     const maybeMonth = acc.get(MONTH);
 
@@ -35,41 +36,31 @@ const countMap = metafiles.reduce((acc, it) => {
       // display
       ...increment(
         "wayland-and-fallback-x11",
-        supportsWayland && lastCommitThisMonth.fallbackX11
+        supportsWayland && !!socket?.includes("fallback-x11")
       ),
       ...increment(
         "wayland-and-x11",
-        supportsWayland && lastCommitThisMonth.x11
+        supportsWayland && !!socket?.includes("x11")
       ),
-      ...increment("only-wayland", !supportsX11 && supportsWayland),
-      ...increment("only-x11", supportsX11 && !supportsWayland),
+      ...increment("wayland-only", !supportsX11 && supportsWayland),
+      ...increment("x11-only", supportsX11 && !supportsWayland),
       ...increment("gui", supportsX11 || supportsWayland),
       ...increment("no-gui", !supportsX11 && !supportsWayland),
 
       // audio
-      ...increment("pulseaudio", lastCommitThisMonth.pulseaudio),
-      ...increment("no-pulseaudio", !lastCommitThisMonth.pulseaudio),
+      ...increment("pulseaudio", !!socket?.includes("pulseaudio")),
+      ...increment("no-pulseaudio", !socket?.includes("pulseaudio")),
 
       // device
-      ...increment("device", lastCommitThisMonth.device),
-      ...increment(
-        "device-other",
-        lastCommitThisMonth.device && !lastCommitThisMonth.deviceAll
-      ),
-      ...increment("device-all", lastCommitThisMonth.deviceAll),
-      ...increment("no-device", !lastCommitThisMonth.device),
+      ...increment("device-other", !!device?.some(it => it !== "all")),
+      ...increment("device-all", !!device?.includes("all")),
+      ...increment("no-device", !device),
 
       // filesystem
-      ...increment("filesystem", lastCommitThisMonth.filesystem),
-      ...increment(
-        "filesystem-other",
-        lastCommitThisMonth.filesystem &&
-          !lastCommitThisMonth.filesystemHome &&
-          !lastCommitThisMonth.filesystemHost
-      ),
-      ...increment("filesystem-home", lastCommitThisMonth.filesystemHome),
-      ...increment("filesystem-host", lastCommitThisMonth.filesystemHost),
-      ...increment("no-filesystem", !lastCommitThisMonth.filesystem),
+      ...increment("filesystem-other", !!filesystem?.some(it => it !== "home" && it !== "host")),
+      ...increment("filesystem-home", !!filesystem?.includes("home")),
+      ...increment("filesystem-host", !!filesystem?.includes("host")),
+      ...increment("no-filesystem", !filesystem),
 
       // metafile
       ...increment(it.ext, 1),

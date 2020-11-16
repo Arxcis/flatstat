@@ -9,7 +9,20 @@ do {
   // Fetch next page
   const res = await fetch(next, RestConfig);
   const json = (await res.json()) ?? [];
-  repos = [...repos, ...mapRepos(json)];
+
+  const activeRepos = json.filter(it => !it.archived && !it.disabled)
+
+  repos = [
+    ...repos, 
+    ...activeRepos.filter(it => it.name.includes("."))
+      .filter(it => !it.name.startsWith("org.gtk.Gtk3theme."))
+      .filter(it => !it.name.startsWith("org.freedesktop.LinuxAudio."))
+      .filter(it => !it.name.startsWith("org.freedesktop.Platform."))
+      .filter(it => !it.name.startsWith(".Extension."))
+      .filter(it => !it.name.includes(".Plugin."))
+      .filter(it => !it.name.includes(".BaseApp"))
+      .map((it) => it.name)
+  ];
 
   // Parse next header
   const link = res.headers?.get("link");
@@ -22,13 +35,3 @@ await writeFile(
   "./db/flathub/repos.js",
   `export default ${JSON.stringify(repos, null, 2)}`
 );
-
-function mapRepos(githubRepo) {
-  return githubRepo.map((it) => {
-    return {
-      name: it.name,
-      full_name: it.full_name,
-      default_branch: it.default_branch,
-    };
-  });
-}
