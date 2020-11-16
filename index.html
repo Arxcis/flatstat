@@ -35,8 +35,13 @@
     </main>
   </body>
   <script type="module">
+    import { ACHIEVEMENTS, HOLES } from "./src/config.js"
     import count from "./db/flathub/count.js";
-   
+
+    // Mark graph link as active
+    const headerLink = document.querySelector(`header a[href*='/#']`)
+    headerLink?.classList.add("current")
+
     // Check if any a[href] contains the search, and mark them as active
     const graphLink = document.getElementById(window.location.hash)
     if (graphLink) {
@@ -53,15 +58,14 @@
       graphLink?.classList.add("current")
     })
 
-    const headerLink = document.querySelector(`header a[href*='/#']`)
-    headerLink?.classList.add("current")
-
+    // Define color constants
     const TOTAL_COLOR = "#546e7a";
     const GOOD_COLOR = "#00c853";
     const BAD_COLOR = "#ff9100";
     const VERY_BAD_COLOR = "#ac0800";
     const SUPER_BAD_COLOR = "#4a148c";
 
+    // Define options
     const options = {
       responsive: true,
       tooltips: {
@@ -94,30 +98,24 @@
       },
     };
 
+    // Draw charts
     new Chart(document.getElementById("window").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: "--wayland and --fallback-x11",
+            label: ACHIEVEMENTS.WaylandWithFallback,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it["wayland-and-fallback-x11"]),
+            data: count.map((it) => it[ACHIEVEMENTS.WaylandWithFallback]),
             fill: false,
           },
           {
-            label: "--wayland and --x11",
-            backgroundColor: BAD_COLOR,
-            borderColor: BAD_COLOR,
-            data: count.map((it) => it["wayland-and-x11"]),
-            fill: false,
-          },
-          {
-            label: "--x11 only",
+            label: HOLES.X11,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it["x11-only"]),
+            data: count.map((it) => it[HOLES.X11]),
             fill: false,
           },
         ],
@@ -133,31 +131,24 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: "--no-filesystem",
+            label: ACHIEVEMENTS.NoFilesystemAtAll,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it["no-filesystem"]),
+            data: count.map((it) => it[ACHIEVEMENTS.NoFilesystemAtAll]),
             fill: false,
           },
           {
-            label: "--filesystem=<other>",
+            label: HOLES.FilesystemSome,
             backgroundColor: BAD_COLOR,
             borderColor: BAD_COLOR,
-            data: count.map((it) => it["filesystem-other"]),
+            data: count.map((it) => it[HOLES.FilesystemSome]),
             fill: false,
           },
           {
-            label: "--filesystem=home",
+            label: HOLES.FilesystemAll,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it["filesystem-home"]),
-            fill: false,
-          },
-          {
-            label: "--filesystem=host",
-            backgroundColor: SUPER_BAD_COLOR,
-            borderColor: SUPER_BAD_COLOR,
-            data: count.map((it) => it["filesystem-host"]),
+            data: count.map((it) => it[HOLES.FilesystemAll]),
             fill: false,
           },
         ],
@@ -173,24 +164,24 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: "--no-device",
+            label: ACHIEVEMENTS.NoDeviceAtAll,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it["no-device"]),
+            data: count.map((it) => it[ACHIEVEMENTS.NoDeviceAtAll]),
             fill: false,
           },
           {
-            label: "--device=<other>",
+            label: HOLES.DeviceSome,
             backgroundColor: BAD_COLOR,
             borderColor: BAD_COLOR,
-            data: count.map((it) => it["device-other"]),
+            data: count.map((it) => it[HOLES.DeviceSome]),
             fill: false,
           },
           {
-            label: "--device=all",
+            label: HOLES.DeviceAll,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it["device-all"]),
+            data: count.map((it) => it[HOLES.DeviceAll]),
             fill: false,
           },
         ],
@@ -206,17 +197,17 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: "--no-pulseaudio",
+            label: ACHIEVEMENTS.NoAudioAll,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it["no-pulseaudio"]),
+            data: count.map((it) => it[ACHIEVEMENTS.NoAudioAll]),
             fill: false,
           },
           {
-            label: "--pulseaudio",
+            label: HOLES.AudioAll,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it.pulseaudio),
+            data: count.map((it) => it[HOLES.AudioAll]),
             fill: false,
           },
         ],

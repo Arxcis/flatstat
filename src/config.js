@@ -51,3 +51,21 @@ export const MONTHS = [
   "2020-10",
   // "2020-11", Ignore current month
 ];
+
+export const ACHIEVEMENTS = {
+  WaylandWithFallback: "--wayland-with-fallback",
+  NoFilesystemAll: "--no-filesystem-all",
+  NoFilesystemAtAll: "--no-filesystem",
+  NoDeviceAll: "--no-device-all",
+  NoDeviceAtAll: "--no-device",
+  NoAudioAll: "--no-pulseaudio",
+};
+
+export const HOLES = {
+  X11: "--x11",
+  FilesystemAll: "--filesystem=all",
+  FilesystemSome: "--filesystem=some",
+  DeviceAll: "--device=all",
+  DeviceSome: "--device=some",
+  AudioAll: "--pulseaudio",
+};

@@ -1,6 +1,6 @@
 import { appendFile, unlink } from "fs/promises";
 import apps from "../db/flathub/repos.js";
-import { queryMetafileHistory } from "./query.js"
+import { queryMetafileHistory } from "./query.js";
 let index = 0;
 
 const MEATFILES_JSON = "./db/flathub/metafiles.js";
@@ -15,7 +15,7 @@ async function makeMetafiles(apps) {
     index += 1;
 
     // 2. Query for the history of the metafile belonging to the appID
-    const metafile = await queryMetafileHistory(appID)
+    const metafile = await queryMetafileHistory(appID);
     if (!metafile) {
       // no history found
       console.log(
@@ -25,9 +25,7 @@ async function makeMetafiles(apps) {
     }
 
     // 3. Log a line, to see progress when running the tool.
-    console.log(
-      `${index}: Status ${metafile.status}: ${metafile.displayURL}`
-    );
+    console.log(`${index}: Status ${metafile.status}: ${metafile.displayURL}`);
 
     // 4. Append metafile-object to file
     await appendFile(MEATFILES_JSON, `${JSON.stringify(metafile, null, 2)},`);

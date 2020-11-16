@@ -1,14 +1,15 @@
 import { writeFile } from "fs/promises";
 import metafiles from "../db/flathub/metafiles.js";
-import { MONTHS } from "./config.js";
-
+import { MONTHS, ACHIEVEMENTS, HOLES } from "./config.js";
 
 const countMap = metafiles.reduce((acc, it) => {
   const commitHistory = it.history ?? [];
   let thisMonthsCommit = null;
 
   for (const MONTH of MONTHS) {
-    const found = commitHistory.find((it) => it.date.startsWith(MONTH) && it.finishArgs !== null);
+    const found = commitHistory.find(
+      (it) => it.date.startsWith(MONTH) && it.finishArgs !== null
+    );
     if (found) {
       thisMonthsCommit = found;
     }
@@ -17,10 +18,13 @@ const countMap = metafiles.reduce((acc, it) => {
       continue;
     }
 
-    const { finishArgs: { socket, filesystem, device } } = thisMonthsCommit
+    const {
+      finishArgs: { socket, filesystem, device },
+    } = thisMonthsCommit;
 
     const supportsWayland = !!socket?.includes("wayland");
-    const supportsX11 = !!socket?.includes("x11") || !!socket?.includes("fallback-x11");
+    const supportsX11 =
+      !!socket?.includes("x11") || !!socket?.includes("fallback-x11");
 
     const maybeMonth = acc.get(MONTH);
 
@@ -33,34 +37,30 @@ const countMap = metafiles.reduce((acc, it) => {
     acc.set(MONTH, {
       ...(maybeMonth ?? {}),
 
-      // display
+      // Achievements
       ...increment(
-        "wayland-and-fallback-x11",
+        ACHIEVEMENTS.WaylandWithFallback,
         supportsWayland && !!socket?.includes("fallback-x11")
       ),
+      ...increment(ACHIEVEMENTS.NoAudioAll, !socket?.includes("pulseaudio")),
+      ...increment(ACHIEVEMENTS.NoDeviceAll, !device?.includes("all")),
+      ...increment(ACHIEVEMENTS.NoDeviceAtAll, !device),
       ...increment(
-        "wayland-and-x11",
-        supportsWayland && !!socket?.includes("x11")
+        ACHIEVEMENTS.NoFilesystemAll,
+        !filesystem?.includes("home") && !!filesystem?.includes("host")
       ),
-      ...increment("wayland-only", !supportsX11 && supportsWayland),
-      ...increment("x11-only", supportsX11 && !supportsWayland),
-      ...increment("gui", supportsX11 || supportsWayland),
-      ...increment("no-gui", !supportsX11 && !supportsWayland),
+      ...increment(ACHIEVEMENTS.NoFilesystemAtAll, !filesystem),
 
-      // audio
-      ...increment("pulseaudio", !!socket?.includes("pulseaudio")),
-      ...increment("no-pulseaudio", !socket?.includes("pulseaudio")),
-
-      // device
-      ...increment("device-other", !!device?.some(it => it !== "all")),
-      ...increment("device-all", !!device?.includes("all")),
-      ...increment("no-device", !device),
-
-      // filesystem
-      ...increment("filesystem-other", !!filesystem?.some(it => it !== "home" && it !== "host")),
-      ...increment("filesystem-home", !!filesystem?.includes("home")),
-      ...increment("filesystem-host", !!filesystem?.includes("host")),
-      ...increment("no-filesystem", !filesystem),
+      // Holes
+      ...increment(HOLES.X11, supportsX11),
+      ...increment(HOLES.AudioAll, !!socket?.includes("pulseaudio")),
+      ...increment(HOLES.DeviceSome, !!device?.length > 0),
+      ...increment(HOLES.DeviceAll, !!device?.includes("all")),
+      ...increment(HOLES.FilesystemSome, !!filesystem?.length > 0),
+      ...increment(
+        HOLES.FilesystemAll,
+        !!filesystem?.includes("home") || !!filesystem?.includes("host")
+      ),
 
       // metafile
       ...increment(it.ext, 1),
