@@ -117,10 +117,10 @@ const countMap = metadata.reduce((acc, it) => {
 
 const count = [...countMap.entries()]
   .map(([key, value]) => ({
-    key,
+    month: key,
     ...value,
   }))
-  .sort((a, b) => a.key.localeCompare(b.key));
+  .sort((a, b) => a.month.localeCompare(b.month));
 
 await writeFile(
   "./db/flathub/count.js",
