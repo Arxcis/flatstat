@@ -10,7 +10,7 @@
     <header>
       <a href="/"><h1 id="title" title="Flatstat | Graph">flatstat</h1></a>
       <nav>
-        <a href="/#display" title="Graphs">graph</a>
+        <a href="/#window" title="Graphs">graph</a>
         <a href="/list/?filter=x11-only" title="List">list</a>
         <a href="/spec/" title="Spec">spec</a>
         <a href="/about/" title="About">about</a>
@@ -18,7 +18,7 @@
     </header>
     <main>
       <nav>
-        <a id="#display" title="Apps with --wayland or --x11" href="/#display">display</a>
+        <a id="#window" title="Apps with --wayland or --x11" href="/#window">window</a>
         <a id="#filesystem" title="Apps with --filesystem" href="/#filesystem">filesystem</a>
         <a id="#device" title="Apps with --device" href="/#device">device</a>
         <a id="#audio" title="Apps with --pulseaudio" href="/#audio">audio</a>
@@ -26,7 +26,7 @@
       </nav>
 
       <section>
-        <canvas id="display" width="400" height="300"></canvas>
+        <canvas id="window" width="400" height="300"></canvas>
         <canvas id="filesystem" width="400" height="300"></canvas>
         <canvas id="device" width="400" height="300"></canvas>
         <canvas id="audio" width="400" height="300"></canvas>
@@ -42,7 +42,7 @@
     if (graphLink) {
       graphLink.classList.add("current")
     } else {
-      document.getElementById("#display").classList.add("current");
+      document.getElementById("#window").classList.add("current");
     }
 
     window.addEventListener("hashchange", () => {
@@ -94,7 +94,7 @@
       },
     };
 
-    new Chart(document.getElementById("display").getContext("2d"), {
+    new Chart(document.getElementById("window").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.month),
