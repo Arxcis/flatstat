@@ -96,7 +96,7 @@
     new Chart(document.getElementById("display").getContext("2d"), {
       type: "line",
       data: {
-        labels: count.map((it) => it.key),
+        labels: count.map((it) => it.month),
         datasets: [
           {
             label: "--wayland and --fallback-x11",
@@ -129,7 +129,7 @@
     new Chart(document.getElementById("filesystem").getContext("2d"), {
       type: "line",
       data: {
-        labels: count.map((it) => it.key),
+        labels: count.map((it) => it.month),
         datasets: [
           {
             label: "--no-filesystem",
@@ -169,7 +169,7 @@
     new Chart(document.getElementById("device").getContext("2d"), {
       type: "line",
       data: {
-        labels: count.map((it) => it.key),
+        labels: count.map((it) => it.month),
         datasets: [
           {
             label: "--no-device",
@@ -202,7 +202,7 @@
     new Chart(document.getElementById("audio").getContext("2d"), {
       type: "line",
       data: {
-        labels: count.map((it) => it.key),
+        labels: count.map((it) => it.month),
         datasets: [
           {
             label: "--no-pulseaudio",
@@ -229,7 +229,7 @@
     new Chart(document.getElementById("metafile").getContext("2d"), {
       type: "line",
       data: {
-        labels: count.map((it) => it.key),
+        labels: count.map((it) => it.month),
         datasets: [
           {
             label: ".json",
