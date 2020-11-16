@@ -2,16 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Flatstat | Achievements</title>
+    <title>Flatstat | Spec</title>
     <link rel="stylesheet" type="text/css" href="../index.css"></link>
 </head>
   <body>
     <header>
-      <a href="/"><h1 id="title" title="Flatstat | Achievements">flatstat</h1></a>
+      <a href="/"><h1 id="title" title="Flatstat | Spec">flatstat</h1></a>
       <nav>
         <a href="/#display" title="Graphs">graph</a>
-        <a href="/search/?filter=x11-only" title="Search">search</a>
-        <a href="/achievements/" title="Achievements">achievements</a>
+        <a href="/list/?filter=x11-only" title="List">list</a>
+        <a href="/spec/" title="Spec">spec</a>
         <a href="/about/" title="About">about</a>
       </nav>
     </header>
@@ -19,7 +19,7 @@
     </main>
   </body>
   <script type="module">
-    const headerLink = document.querySelector(`header nav a[href*='achievements']`)
+    const headerLink = document.querySelector(`header nav a[href*='spec']`)
     headerLink?.classList.add("current")
   </script>
 </html>
