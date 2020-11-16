@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import yaml from "js-yaml";
 import { GqlConfig, MONTHS } from "./config.js";
 
 /**
@@ -127,16 +128,31 @@ async function queryCommitHistory(appID, ext) {
 
 function parseCommits(commits) {
   const history = commits.map(({ date, text, ext }) => {
-    const x11 = !!text?.match(/--socket=x11/);
-    const fallbackX11 = !!text?.match(/--socket=fallback-x11/);
-    const wayland = !!text?.match(/--socket=wayland/);
-    const filesystemHome = !!text?.match(/--filesystem=home/);
-    const filesystemHost = !!text?.match(/--filesystem=host/);
-    const filesystem = !!text?.match(/--filesystem=/);
-    const device = !!text?.match(/--device=/);
-    const deviceAll = !!text?.match(/--device=all/);
-    const pulseaudio = !!text?.match(/--socket=pulseaudio/);
-    const finishArgs = !!text?.match(/(\"finish-args\")|(finish-args:)/);
+
+    let meta;
+    try {
+      meta = (ext === "yml" || ext === "yaml") ? yaml.safeLoad(text) : JSON.parse(text);
+    } catch(err) {
+      // invalid json or yaml. Moving on...
+      return null;
+    }
+
+    if (!meta) {
+      // file must have been deleted in this commit. Moving on...
+      return null;
+    }
+    
+    const finishArgs = meta["finish-args"]
+    
+    const x11 = !!finishArgs?.includes("--socket=x11");
+    const fallbackX11 = !!finishArgs?.includes("--socket=fallback-x11");
+    const wayland = !!finishArgs?.includes("--socket=wayland");
+    const filesystemAny = !!finishArgs?.includes("--filesystem=");
+    const filesystemHome = !!finishArgs?.includes("--filesystem=home");
+    const filesystemHost = !!finishArgs?.includes("--filesystem=host");
+    const deviceAny = !!finishArgs?.includes("--device=");
+    const deviceAll = !!finishArgs?.includes("--device=all");
+    const pulseaudio = !!finishArgs?.includes("--socket=pulseaudio");
 
     return {
       ext,
@@ -144,15 +160,15 @@ function parseCommits(commits) {
       x11,
       fallbackX11,
       wayland,
-      filesystem,
+      filesystemAny,
       filesystemHome,
       filesystemHost,
-      device,
+      deviceAny,
       deviceAll,
       pulseaudio,
-      finishArgs,
+      finishArgs: !!finishArgs,
     };
-  });
+  }).filter(it => it); // trim nulls
 
   return history;
 }

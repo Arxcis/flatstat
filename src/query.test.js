@@ -4,5 +4,5 @@ await testQueryCommitHistory();
 
 async function testQueryCommitHistory() {
     const metafile = await queryMetafileHistory("com.valvesoftware.Steam")
-    console.log(metafile)
+    console.log(metafile.history.length)
 }
