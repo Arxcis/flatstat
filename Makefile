@@ -11,4 +11,7 @@ metafiles:
 server:
 	python -m http.server
 
-.PHONY: repos count metafiles server
+test:
+	node src/query.test.js --harmony-top-level-await;
+
+.PHONY: repos count metafiles server test
