@@ -1,6 +1,6 @@
 export default [
   {
-    "key": "2018-01",
+    "month": "2018-01",
     "wayland-and-fallback-x11": 0,
     "wayland-and-x11": 44,
     "only-wayland": 0,
@@ -23,7 +23,7 @@ export default [
     "yml": 5
   },
   {
-    "key": "2018-02",
+    "month": "2018-02",
     "wayland-and-fallback-x11": 0,
     "wayland-and-x11": 69,
     "only-wayland": 0,
@@ -46,7 +46,7 @@ export default [
     "yaml": 21
   },
   {
-    "key": "2018-03",
+    "month": "2018-03",
     "wayland-and-fallback-x11": 0,
     "wayland-and-x11": 107,
     "only-wayland": 0,
@@ -69,7 +69,7 @@ export default [
     "yaml": 24
   },
   {
-    "key": "2018-04",
+    "month": "2018-04",
     "wayland-and-fallback-x11": 0,
     "wayland-and-x11": 124,
     "only-wayland": 0,
@@ -92,7 +92,7 @@ export default [
     "yaml": 28
   },
   {
-    "key": "2018-05",
+    "month": "2018-05",
     "wayland-and-fallback-x11": 0,
     "wayland-and-x11": 144,
     "only-wayland": 0,
@@ -115,7 +115,7 @@ export default [
     "yml": 17
   },
   {
-    "key": "2018-06",
+    "month": "2018-06",
     "wayland-and-fallback-x11": 0,
     "wayland-and-x11": 170,
     "only-wayland": 0,
@@ -138,7 +138,7 @@ export default [
     "yml": 19
   },
   {
-    "key": "2018-07",
+    "month": "2018-07",
     "wayland-and-fallback-x11": 0,
     "wayland-and-x11": 193,
     "only-wayland": 0,
@@ -161,7 +161,7 @@ export default [
     "yml": 19
   },
   {
-    "key": "2018-08",
+    "month": "2018-08",
     "wayland-and-fallback-x11": 1,
     "wayland-and-x11": 235,
     "only-wayland": 0,
@@ -184,7 +184,7 @@ export default [
     "yml": 20
   },
   {
-    "key": "2018-09",
+    "month": "2018-09",
     "wayland-and-fallback-x11": 8,
     "wayland-and-x11": 256,
     "only-wayland": 0,
@@ -207,7 +207,7 @@ export default [
     "yml": 21
   },
   {
-    "key": "2018-10",
+    "month": "2018-10",
     "wayland-and-fallback-x11": 11,
     "wayland-and-x11": 278,
     "only-wayland": 0,
@@ -230,7 +230,7 @@ export default [
     "yml": 27
   },
   {
-    "key": "2018-11",
+    "month": "2018-11",
     "wayland-and-fallback-x11": 12,
     "wayland-and-x11": 295,
     "only-wayland": 0,
@@ -253,7 +253,7 @@ export default [
     "yml": 28
   },
   {
-    "key": "2018-12",
+    "month": "2018-12",
     "wayland-and-fallback-x11": 15,
     "wayland-and-x11": 308,
     "only-wayland": 0,
@@ -276,7 +276,7 @@ export default [
     "yml": 31
   },
   {
-    "key": "2019-01",
+    "month": "2019-01",
     "wayland-and-fallback-x11": 16,
     "wayland-and-x11": 323,
     "only-wayland": 0,
@@ -299,7 +299,7 @@ export default [
     "yml": 36
   },
   {
-    "key": "2019-02",
+    "month": "2019-02",
     "wayland-and-fallback-x11": 19,
     "wayland-and-x11": 340,
     "only-wayland": 0,
@@ -322,7 +322,7 @@ export default [
     "yml": 37
   },
   {
-    "key": "2019-03",
+    "month": "2019-03",
     "wayland-and-fallback-x11": 21,
     "wayland-and-x11": 356,
     "only-wayland": 0,
@@ -345,7 +345,7 @@ export default [
     "yml": 44
   },
   {
-    "key": "2019-04",
+    "month": "2019-04",
     "wayland-and-fallback-x11": 23,
     "wayland-and-x11": 371,
     "only-wayland": 0,
@@ -368,7 +368,7 @@ export default [
     "yml": 45
   },
   {
-    "key": "2019-05",
+    "month": "2019-05",
     "wayland-and-fallback-x11": 27,
     "wayland-and-x11": 394,
     "only-wayland": 0,
@@ -391,7 +391,7 @@ export default [
     "yml": 49
   },
   {
-    "key": "2019-06",
+    "month": "2019-06",
     "wayland-and-fallback-x11": 29,
     "wayland-and-x11": 400,
     "only-wayland": 0,
@@ -414,7 +414,7 @@ export default [
     "yml": 50
   },
   {
-    "key": "2019-07",
+    "month": "2019-07",
     "wayland-and-fallback-x11": 27,
     "wayland-and-x11": 410,
     "only-wayland": 0,
@@ -437,7 +437,7 @@ export default [
     "yml": 53
   },
   {
-    "key": "2019-08",
+    "month": "2019-08",
     "wayland-and-fallback-x11": 32,
     "wayland-and-x11": 422,
     "only-wayland": 0,
@@ -460,7 +460,7 @@ export default [
     "yml": 54
   },
   {
-    "key": "2019-09",
+    "month": "2019-09",
     "wayland-and-fallback-x11": 41,
     "wayland-and-x11": 445,
     "only-wayland": 0,
@@ -483,7 +483,7 @@ export default [
     "yml": 54
   },
   {
-    "key": "2019-10",
+    "month": "2019-10",
     "wayland-and-fallback-x11": 50,
     "wayland-and-x11": 456,
     "only-wayland": 0,
@@ -506,7 +506,7 @@ export default [
     "yml": 55
   },
   {
-    "key": "2019-11",
+    "month": "2019-11",
     "wayland-and-fallback-x11": 53,
     "wayland-and-x11": 470,
     "only-wayland": 0,
@@ -529,7 +529,7 @@ export default [
     "yml": 60
   },
   {
-    "key": "2019-12",
+    "month": "2019-12",
     "wayland-and-fallback-x11": 58,
     "wayland-and-x11": 476,
     "only-wayland": 0,
@@ -552,7 +552,7 @@ export default [
     "yml": 62
   },
   {
-    "key": "2020-01",
+    "month": "2020-01",
     "wayland-and-fallback-x11": 76,
     "wayland-and-x11": 477,
     "only-wayland": 0,
@@ -575,7 +575,7 @@ export default [
     "yml": 63
   },
   {
-    "key": "2020-02",
+    "month": "2020-02",
     "wayland-and-fallback-x11": 85,
     "wayland-and-x11": 481,
     "only-wayland": 0,
@@ -598,7 +598,7 @@ export default [
     "yml": 66
   },
   {
-    "key": "2020-03",
+    "month": "2020-03",
     "wayland-and-fallback-x11": 96,
     "wayland-and-x11": 483,
     "only-wayland": 0,
@@ -621,7 +621,7 @@ export default [
     "yml": 70
   },
   {
-    "key": "2020-04",
+    "month": "2020-04",
     "wayland-and-fallback-x11": 116,
     "wayland-and-x11": 484,
     "only-wayland": 0,
@@ -644,7 +644,7 @@ export default [
     "yml": 73
   },
   {
-    "key": "2020-05",
+    "month": "2020-05",
     "wayland-and-fallback-x11": 133,
     "wayland-and-x11": 490,
     "only-wayland": 0,
@@ -667,7 +667,7 @@ export default [
     "yml": 76
   },
   {
-    "key": "2020-06",
+    "month": "2020-06",
     "wayland-and-fallback-x11": 160,
     "wayland-and-x11": 478,
     "only-wayland": 0,
@@ -690,7 +690,7 @@ export default [
     "yml": 77
   },
   {
-    "key": "2020-07",
+    "month": "2020-07",
     "wayland-and-fallback-x11": 175,
     "wayland-and-x11": 477,
     "only-wayland": 0,
@@ -713,7 +713,7 @@ export default [
     "yml": 79
   },
   {
-    "key": "2020-08",
+    "month": "2020-08",
     "wayland-and-fallback-x11": 190,
     "wayland-and-x11": 480,
     "only-wayland": 0,
@@ -736,7 +736,7 @@ export default [
     "yml": 86
   },
   {
-    "key": "2020-09",
+    "month": "2020-09",
     "wayland-and-fallback-x11": 210,
     "wayland-and-x11": 479,
     "only-wayland": 0,
@@ -759,7 +759,7 @@ export default [
     "yml": 94
   },
   {
-    "key": "2020-10",
+    "month": "2020-10",
     "wayland-and-fallback-x11": 225,
     "wayland-and-x11": 475,
     "only-wayland": 1,
