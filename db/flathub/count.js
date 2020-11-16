@@ -18,9 +18,9 @@ export default [
     "filesystem-home": 26,
     "filesystem-host": 23,
     "no-filesystem": 27,
-    "json": 74,
-    "yaml": 14,
-    "yml": 5
+    "json": 80,
+    "yaml": 10,
+    "yml": 3
   },
   {
     "month": "2018-02",
@@ -41,9 +41,9 @@ export default [
     "filesystem-home": 40,
     "filesystem-host": 35,
     "no-filesystem": 48,
-    "json": 117,
-    "yml": 8,
-    "yaml": 21
+    "json": 130,
+    "yaml": 13,
+    "yml": 3
   },
   {
     "month": "2018-03",
@@ -64,9 +64,9 @@ export default [
     "filesystem-home": 49,
     "filesystem-host": 50,
     "no-filesystem": 58,
-    "json": 160,
-    "yml": 10,
-    "yaml": 24
+    "json": 176,
+    "yaml": 14,
+    "yml": 4
   },
   {
     "month": "2018-04",
@@ -87,9 +87,9 @@ export default [
     "filesystem-home": 56,
     "filesystem-host": 57,
     "no-filesystem": 72,
-    "json": 184,
-    "yml": 13,
-    "yaml": 28
+    "json": 204,
+    "yaml": 15,
+    "yml": 6
   },
   {
     "month": "2018-05",
@@ -110,9 +110,9 @@ export default [
     "filesystem-home": 63,
     "filesystem-host": 69,
     "no-filesystem": 88,
-    "json": 211,
-    "yaml": 39,
-    "yml": 17
+    "json": 232,
+    "yaml": 26,
+    "yml": 9
   },
   {
     "month": "2018-06",
@@ -133,9 +133,9 @@ export default [
     "filesystem-home": 67,
     "filesystem-host": 77,
     "no-filesystem": 114,
-    "json": 243,
-    "yaml": 48,
-    "yml": 19
+    "json": 265,
+    "yaml": 34,
+    "yml": 11
   },
   {
     "month": "2018-07",
@@ -156,9 +156,9 @@ export default [
     "filesystem-home": 71,
     "filesystem-host": 83,
     "no-filesystem": 149,
-    "json": 285,
-    "yaml": 59,
-    "yml": 19
+    "json": 310,
+    "yaml": 42,
+    "yml": 11
   },
   {
     "month": "2018-08",
@@ -179,9 +179,9 @@ export default [
     "filesystem-home": 86,
     "filesystem-host": 95,
     "no-filesystem": 177,
-    "json": 336,
-    "yaml": 66,
-    "yml": 20
+    "json": 361,
+    "yaml": 48,
+    "yml": 13
   },
   {
     "month": "2018-09",
@@ -202,9 +202,9 @@ export default [
     "filesystem-home": 94,
     "filesystem-host": 101,
     "no-filesystem": 188,
-    "json": 364,
-    "yaml": 71,
-    "yml": 21
+    "json": 389,
+    "yaml": 53,
+    "yml": 14
   },
   {
     "month": "2018-10",
@@ -225,9 +225,9 @@ export default [
     "filesystem-home": 101,
     "filesystem-host": 106,
     "no-filesystem": 173,
-    "json": 387,
-    "yaml": 84,
-    "yml": 27
+    "json": 415,
+    "yaml": 65,
+    "yml": 18
   },
   {
     "month": "2018-11",
@@ -248,9 +248,9 @@ export default [
     "filesystem-home": 110,
     "filesystem-host": 106,
     "no-filesystem": 185,
-    "json": 409,
-    "yaml": 92,
-    "yml": 28
+    "json": 436,
+    "yaml": 73,
+    "yml": 20
   },
   {
     "month": "2018-12",
@@ -271,9 +271,9 @@ export default [
     "filesystem-home": 109,
     "filesystem-host": 118,
     "no-filesystem": 194,
-    "json": 427,
-    "yaml": 98,
-    "yml": 31
+    "json": 454,
+    "yaml": 79,
+    "yml": 23
   },
   {
     "month": "2019-01",
@@ -294,9 +294,9 @@ export default [
     "filesystem-home": 112,
     "filesystem-host": 126,
     "no-filesystem": 198,
-    "json": 442,
-    "yaml": 103,
-    "yml": 36
+    "json": 469,
+    "yaml": 84,
+    "yml": 28
   },
   {
     "month": "2019-02",
@@ -317,9 +317,9 @@ export default [
     "filesystem-home": 121,
     "filesystem-host": 129,
     "no-filesystem": 209,
-    "json": 463,
-    "yaml": 108,
-    "yml": 37
+    "json": 491,
+    "yaml": 88,
+    "yml": 29
   },
   {
     "month": "2019-03",
@@ -340,9 +340,9 @@ export default [
     "filesystem-home": 128,
     "filesystem-host": 131,
     "no-filesystem": 220,
-    "json": 476,
-    "yaml": 118,
-    "yml": 44
+    "json": 504,
+    "yaml": 99,
+    "yml": 35
   },
   {
     "month": "2019-04",
@@ -363,9 +363,9 @@ export default [
     "filesystem-home": 132,
     "filesystem-host": 135,
     "no-filesystem": 231,
-    "json": 501,
-    "yaml": 122,
-    "yml": 45
+    "json": 529,
+    "yaml": 103,
+    "yml": 36
   },
   {
     "month": "2019-05",
@@ -386,9 +386,9 @@ export default [
     "filesystem-home": 139,
     "filesystem-host": 141,
     "no-filesystem": 235,
-    "json": 515,
-    "yaml": 127,
-    "yml": 49
+    "json": 543,
+    "yaml": 108,
+    "yml": 40
   },
   {
     "month": "2019-06",
@@ -409,9 +409,9 @@ export default [
     "filesystem-home": 139,
     "filesystem-host": 143,
     "no-filesystem": 251,
-    "json": 533,
-    "yaml": 130,
-    "yml": 50
+    "json": 561,
+    "yaml": 111,
+    "yml": 41
   },
   {
     "month": "2019-07",
@@ -432,9 +432,9 @@ export default [
     "filesystem-home": 139,
     "filesystem-host": 148,
     "no-filesystem": 291,
-    "json": 575,
-    "yaml": 133,
-    "yml": 53
+    "json": 603,
+    "yaml": 114,
+    "yml": 44
   },
   {
     "month": "2019-08",
@@ -455,9 +455,9 @@ export default [
     "filesystem-home": 140,
     "filesystem-host": 149,
     "no-filesystem": 314,
-    "json": 592,
-    "yaml": 139,
-    "yml": 54
+    "json": 620,
+    "yaml": 120,
+    "yml": 45
   },
   {
     "month": "2019-09",
@@ -478,9 +478,9 @@ export default [
     "filesystem-home": 143,
     "filesystem-host": 154,
     "no-filesystem": 360,
-    "json": 614,
-    "yaml": 147,
-    "yml": 54
+    "json": 642,
+    "yaml": 128,
+    "yml": 45
   },
   {
     "month": "2019-10",
@@ -501,9 +501,9 @@ export default [
     "filesystem-home": 148,
     "filesystem-host": 158,
     "no-filesystem": 405,
-    "json": 646,
-    "yaml": 153,
-    "yml": 55
+    "json": 674,
+    "yaml": 134,
+    "yml": 46
   },
   {
     "month": "2019-11",
@@ -524,9 +524,9 @@ export default [
     "filesystem-home": 155,
     "filesystem-host": 165,
     "no-filesystem": 423,
-    "json": 671,
-    "yaml": 156,
-    "yml": 60
+    "json": 699,
+    "yaml": 137,
+    "yml": 51
   },
   {
     "month": "2019-12",
@@ -547,9 +547,9 @@ export default [
     "filesystem-home": 159,
     "filesystem-host": 170,
     "no-filesystem": 436,
-    "json": 691,
-    "yaml": 160,
-    "yml": 62
+    "json": 719,
+    "yaml": 141,
+    "yml": 53
   },
   {
     "month": "2020-01",
@@ -570,9 +570,9 @@ export default [
     "filesystem-home": 161,
     "filesystem-host": 174,
     "no-filesystem": 454,
-    "json": 717,
-    "yaml": 161,
-    "yml": 63
+    "json": 745,
+    "yaml": 142,
+    "yml": 54
   },
   {
     "month": "2020-02",
@@ -593,9 +593,9 @@ export default [
     "filesystem-home": 164,
     "filesystem-host": 179,
     "no-filesystem": 463,
-    "json": 728,
-    "yaml": 167,
-    "yml": 66
+    "json": 756,
+    "yaml": 148,
+    "yml": 57
   },
   {
     "month": "2020-03",
@@ -616,9 +616,9 @@ export default [
     "filesystem-home": 170,
     "filesystem-host": 182,
     "no-filesystem": 489,
-    "json": 740,
-    "yaml": 175,
-    "yml": 70
+    "json": 768,
+    "yaml": 156,
+    "yml": 61
   },
   {
     "month": "2020-04",
@@ -639,9 +639,9 @@ export default [
     "filesystem-home": 177,
     "filesystem-host": 188,
     "no-filesystem": 503,
-    "json": 759,
-    "yaml": 183,
-    "yml": 73
+    "json": 788,
+    "yaml": 163,
+    "yml": 64
   },
   {
     "month": "2020-05",
@@ -662,9 +662,9 @@ export default [
     "filesystem-home": 187,
     "filesystem-host": 190,
     "no-filesystem": 539,
-    "json": 801,
-    "yaml": 195,
-    "yml": 76
+    "json": 830,
+    "yaml": 175,
+    "yml": 67
   },
   {
     "month": "2020-06",
@@ -685,9 +685,9 @@ export default [
     "filesystem-home": 195,
     "filesystem-host": 199,
     "no-filesystem": 568,
-    "json": 840,
-    "yaml": 203,
-    "yml": 77
+    "json": 870,
+    "yaml": 182,
+    "yml": 68
   },
   {
     "month": "2020-07",
@@ -708,9 +708,9 @@ export default [
     "filesystem-home": 196,
     "filesystem-host": 204,
     "no-filesystem": 599,
-    "json": 876,
-    "yaml": 212,
-    "yml": 79
+    "json": 906,
+    "yaml": 191,
+    "yml": 70
   },
   {
     "month": "2020-08",
@@ -731,9 +731,9 @@ export default [
     "filesystem-home": 206,
     "filesystem-host": 208,
     "no-filesystem": 676,
-    "json": 953,
-    "yaml": 220,
-    "yml": 86
+    "json": 983,
+    "yaml": 199,
+    "yml": 77
   },
   {
     "month": "2020-09",
@@ -754,9 +754,9 @@ export default [
     "filesystem-home": 207,
     "filesystem-host": 213,
     "no-filesystem": 714,
-    "json": 998,
-    "yaml": 223,
-    "yml": 94
+    "json": 1028,
+    "yaml": 202,
+    "yml": 85
   },
   {
     "month": "2020-10",
@@ -777,8 +777,8 @@ export default [
     "filesystem-home": 207,
     "filesystem-host": 216,
     "no-filesystem": 744,
-    "json": 1019,
-    "yaml": 233,
-    "yml": 98
+    "json": 1049,
+    "yaml": 212,
+    "yml": 89
   }
 ]
