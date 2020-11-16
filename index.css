@@ -52,6 +52,10 @@ main nav a.current {
   border-radius: 5px;
 }
 
+main canvas {
+  margin: 0 0 100px 0;
+}
+
 header {
   margin: 0 0 10px 0;
   display: flex;
