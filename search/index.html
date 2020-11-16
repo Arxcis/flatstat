@@ -43,42 +43,45 @@
     let filtered = null;
     switch(filter) {
       case "filesystem-host":
-        filtered = metafiles.filter(it => it.history[0]?.filesystemHost)
+        filtered = metafiles.filter(it => it.history[0]?.finishArgs?.filesystem?.includes("host"))
         break;
       case "filesystem-home":
-        filtered = metafiles.filter(it => it.history[0]?.filesystemHome)
+        filtered = metafiles.filter(it => it.history[0]?.finishArgs?.filesystem?.includes("home"))
         break;
       case "x11-only":
-        filtered = metafiles.filter(it => (it.history[0]?.x11 || it.history[0]?.fallbackX11) && !it.history[0]?.wayland)
+        filtered = metafiles.filter(it => {
+          const socket = it.history[0]?.finishArgs?.socket;
+          return (!!socket?.includes("x11") || !!socket?.includes("fallback-x11")) && !socket?.includes("wayland")
+        })
         break;
       case "device-all":
-        filtered = metafiles.filter(it => (it.history[0]?.deviceAll))
+        filtered = metafiles.filter(it => it.history[0]?.finishArgs?.device?.includes("all"))
         break;
     }
 
 
 
     ul.innerHTML = filtered ? filtered
-    .sort((a,b) => {
-      if (b.stargazerCount === a.stargazerCount) {
-        return a.appID.localeCompare(b.appID)
-      } else {
-        return (b.stargazerCount - a.stargazerCount)
+      .sort((a,b) => {
+        if (b.stargazerCount === a.stargazerCount) {
+          return a.appID.localeCompare(b.appID)
+        } else {
+          return (b.stargazerCount - a.stargazerCount)
+        }
+      })
+      .map(({appID, ext, branch, stargazerCount }) => {
+        const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` 
+        
+        return  `<a 
+          href="${href}" 
+          title="Open file on Github"
+          target="_blank"
+        >
+            <span>${appID}.${ext}</span>
+            <span title="${stargazerCount} Github stars">${stargazerCount ? (stargazerCount + " ⭐") : ""}</span>
+        </a>
+  `;
       }
-    })
-    .map(({appID, ext, branch, stargazerCount }) => {
-      const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` 
-    
-      return  `<a 
-        href="${href}" 
-        title="Open file on Github"
-        target="_blank"
-      >
-          <span>${appID}.${ext}</span>
-          <span title="${stargazerCount} Github stars">${stargazerCount ? (stargazerCount + " ⭐") : ""}</span>
-      </a>
-`;
-    }
-    ).join("") : "No filter selected"
+      ).join("") : "No filter selected"
   </script>
 </html>
