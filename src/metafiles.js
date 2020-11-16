@@ -5,14 +5,14 @@ import { GqlConfig } from "./config.js";
 
 let index = 0;
 
-const MEATDATA_JSON = "./db/flathub/metadata.js";
+const MEATFILES_JSON = "./db/flathub/metafiles.js";
 
-await unlink(MEATDATA_JSON);
-await appendFile(MEATDATA_JSON, "export default [");
-await makeMetadata(repos);
-await appendFile(MEATDATA_JSON, "]");
+await unlink(MEATFILES_JSON);
+await appendFile(MEATFILES_JSON, "export default [");
+await makeMetafiles(repos);
+await appendFile(MEATFILES_JSON, "]");
 
-async function makeMetadata(repos) {
+async function makeMetafiles(repos) {
   for (const { name } of repos) {
     index += 1;
 
@@ -30,7 +30,7 @@ async function makeMetadata(repos) {
     }
 
     //
-    // 2. There are three known metadata file extensions: .json, .yaml and .yml
+    // 2. There are three known metafile extensions: .json, .yaml and .yml
     // Query the commit-history for all 3.
     //
     const [json, yaml, yml] = await Promise.all([
@@ -73,11 +73,11 @@ async function makeMetadata(repos) {
       `${index}: https://github.com/flathub/${name}/blob/${branch}/${name}.${ext} ${stargazerCount}`
     );
 
-    // 9. Bundle what we learned into a metadata-object
-    const metadata = { index, name, ext, branch, stargazerCount, history };
+    // 9. Bundle what we learned into a metafile-object
+    const metafile = { index, name, ext, branch, stargazerCount, history };
 
-    // 10. Append metadata-object to file
-    await appendFile(MEATDATA_JSON, `${JSON.stringify(metadata, null, 2)},`);
+    // 10. Append metafile-object to file
+    await appendFile(MEATFILES_JSON, `${JSON.stringify(metafile, null, 2)},`);
   }
 }
 

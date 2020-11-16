@@ -5,10 +5,10 @@ repos:
 count:
 	node src/count.js --harmony-top-level-await;
 
-metadata:
-	node src/metadata.js --harmony-top-level-await;
+metafiles:
+	node src/metafiles.js --harmony-top-level-await;
 
 server:
 	python -m http.server
 
-.PHONY: repos count metadata server
+.PHONY: repos count metafiles server
