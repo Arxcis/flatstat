@@ -61,20 +61,20 @@
     ul.innerHTML = filtered ? filtered
     .sort((a,b) => {
       if (b.stargazerCount === a.stargazerCount) {
-        return a.name.localeCompare(b.name)
+        return a.appID.localeCompare(b.appID)
       } else {
         return (b.stargazerCount - a.stargazerCount)
       }
     })
-    .map(({name, ext, branch,stargazerCount }) => {
-      const href = `https://github.com/flathub/${name}/blob/${branch}/${name}.${ext}` 
+    .map(({appID, ext, branch, stargazerCount }) => {
+      const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` 
     
       return  `<a 
         href="${href}" 
         title="Open file on Github"
         target="_blank"
       >
-          <span>${name}.${ext}</span>
+          <span>${appID}.${ext}</span>
           <span title="${stargazerCount} Github stars">${stargazerCount ? (stargazerCount + " ⭐") : ""}</span>
       </a>
 `;
