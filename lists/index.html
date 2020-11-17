@@ -1,128 +1,135 @@
 <!DOCTYPE html5>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Flatstat | List</title>
-    <link rel="stylesheet" type="text/css" href="../index.css"></link>
-    <link rel="stylesheet" type="text/css" href="./index.css"></link>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Flatstat | List</title>
+  <link rel="stylesheet" type="text/css" href="../index.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  </link>
 </head>
-  <body>
-    <header>
-      <a href="/"><h1 id="title" title="Flatstat | List">flatstat</h1></a>
-      <nav>
-        <a href="/" title="Graphs">graphs</a>
-        <a href=/lists/ title="Lists" class="active">lists</a>
-        <a href="/library/" title="Library">library</a>
-        <a href="/about/" title="About">about</a>
-      </nav>
-    </header>
-    <main>
-      <nav>
-        <a id="#achievements" title="Apps sorted by achievements" href="/lists/#achievements">🏅 achievements</a>
-        <a id="#holes" title="Apps sorted by holes" href="/lists/#holes">💥 holes</a>
-        <a id="#portals" title="Apps sorted by portals" href="/lists/#portals">🕳️ portals</a>
-        <a id="#stars" title="Apps sorted by Github stars" href="/lists/#stars">⭐ stars</a>
-      </nav>
-      <ul>
-      </ul>
-    </main>
-  </body>
-  <script type="module">
-    import metafiles from "../db/flathub/metafiles.js"
-    import { countAchievements, countHoles, countPortals, sumAchievements, sumHoles, sumPortals } from "../lib/stats.js";
-    import { useActiveLink } from "../lib/useActiveLink.js";
 
-    useActiveLink("#achievements")
+<body>
+  <header>
+    <a href="/">
+      <h1 id="title" title="Flatstat | List">flatstat</h1>
+    </a>
+    <nav>
+      <a href="/" title="Graphs">graphs</a>
+      <a href=/lists/ title="Lists" class="active">lists</a>
+      <a href="/library/" title="Library">library</a>
+      <a href="/about/" title="About">about</a>
+    </nav>
+  </header>
+  <main>
+    <nav>
+      <a id="#achievements" title="Apps sorted by achievements" href="/lists/#achievements">🏅 achievements</a>
+      <a id="#holes" title="Apps sorted by holes" href="/lists/#holes">💥 holes</a>
+      <a id="#portals" title="Apps sorted by portals" href="/lists/#portals">🕳️ portals</a>
+      <a id="#stars" title="Apps sorted by Github stars" href="/lists/#stars">⭐ stars</a>
+    </nav>
+    <ul>
+    </ul>
+  </main>
+</body>
+<script type="module">
+  import metafiles from "../db/flathub/metafiles.js"
+  import { countAchievements, countHoles, countPortals, sumAchievements, sumHoles, sumPortals } from "../lib/stats.js";
+  import { useActiveLink } from "../lib/useActiveLink.js";
 
-    // Check if any a[href] contains the search, and mark them as active
-    let searchLink = document.querySelector(`header a[href*='/list']`)
-    searchLink?.classList.add("current")
+  useActiveLink("#achievements")
 
-    // Set current active button
+  // Check if any a[href] contains the search, and mark them as active
+  let searchLink = document.querySelector(`header a[href*='/list']`)
+  searchLink?.classList.add("current")
+
+  // Set current active button
+  const graphLink = document.getElementById(window.location.hash)
+  if (graphLink) {
+    graphLink.classList.add("current")
+  } else {
+    document.getElementById("#achievements").classList.add("current");
+  }
+
+  renderList();
+  window.addEventListener("hashchange", () => {
+    const links = document.querySelectorAll("main nav a")
+    for (const link of links) link.classList.remove("current")
+
     const graphLink = document.getElementById(window.location.hash)
-    if (graphLink) {
-      graphLink.classList.add("current")
-    } else {
-      document.getElementById("#achievements").classList.add("current");
+    graphLink?.classList.add("current")
+    renderList();
+  })
+
+  // Map, filter, reduce list
+  function renderList() {
+    const ul = document.querySelector("ul")
+    const LIST_LIMIT = 1000;
+
+    let list = [];
+    switch (window.location.hash) {
+      case "#stars":
+        list = metafiles
+          .map(it => ({
+            ...it,
+            icon: "⭐",
+            count: it.stargazerCount,
+            title: `${it.stargazerCount} Github stars`
+          }))
+        break;
+      case "#holes":
+        list = metafiles
+          .filter(it => it.history[0]?.finishArgs)
+          .map(it => ({
+            ...it,
+            holes: countHoles(it.history[0].finishArgs)
+          }))
+          .map(it => ({
+            ...it,
+            icon: "💥",
+            count: sumHoles(it.holes),
+            title: Object.keys(it.holes).join("&#010;")
+          }))
+        break;
+      case "#portals":
+        list = metafiles
+          .filter(it => it.history[0]?.finishArgs)
+          .map(it => ({
+            ...it,
+            portals: countPortals(it.history[0].finishArgs)
+          }))
+          .map(it => ({
+            ...it,
+            icon: "🕳️",
+            count: sumPortals(it.portals),
+            title: Object.keys(it.portals).join("&#010;")
+          }))
+        break;
+      default: /* achievements */
+        list = metafiles
+          .filter(it => it.history[0]?.finishArgs)
+          .map(it => ({
+            ...it,
+            achievements: countAchievements(it.history[0].finishArgs),
+          }))
+          .map(it => ({
+            ...it,
+            icon: "🏅",
+            count: sumAchievements(it.achievements),
+            title: Object.keys(it.achievements).join("&#010;")
+          }))
+        break;
     }
 
-    renderList();
-    window.addEventListener("hashchange", () => {
-      const links = document.querySelectorAll("main nav a")
-      for (const link of links) link.classList.remove("current")
+    ul.innerHTML = list
+      .filter(it => it.count)
+      .sort((a, b) => b.count - a.count)
+      .slice(0, LIST_LIMIT)
+      .map(({ appID, ext, branch, count, icon, max, title }) => {
+        const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}`
 
-      const graphLink = document.getElementById(window.location.hash)
-      graphLink?.classList.add("current")
-      renderList();
-    })
-
-    // Map, filter, reduce list
-    function renderList() {
-      const ul = document.querySelector("ul")
-      const LIST_LIMIT = 1000;
-
-      let list = [];
-      switch(window.location.hash) {
-        case "#stars":
-          list = metafiles
-            .map(it => ({
-              ...it,
-              icon: "⭐",
-              count: it.stargazerCount,
-              title: `${it.stargazerCount} Github stars`
-            }))
-          break;
-        case "#holes":
-          list = metafiles
-            .filter(it => it.history[0]?.finishArgs)  
-            .map(it => ({
-              ...it,
-              holes: countHoles(it.history[0].finishArgs)
-            }))
-            .map(it => ({
-              ...it,
-              icon: "💥",
-              count: sumHoles(it.holes),
-              title: Object.keys(it.holes).join("&#010;")
-            }))
-          break;
-        case "#portals":
-          list = metafiles
-              .filter(it => it.history[0]?.finishArgs)  
-              .map(it => ({
-                ...it,
-                portals: countPortals(it.history[0].finishArgs)
-              }))
-              .map(it => ({
-                ...it,
-                icon: "🕳️",
-                count: sumPortals(it.portals),
-                title: Object.keys(it.portals).join("&#010;")
-              }))
-            break;
-        default: /* achievements */
-          list = metafiles
-            .filter(it => it.history[0]?.finishArgs)  
-            .map(it => ({
-              ...it,
-              achievements: countAchievements(it.history[0].finishArgs),
-            }))
-            .map(it => ({
-              ...it,
-              icon: "🏅",
-              count: sumAchievements(it.achievements),
-              title: Object.keys(it.achievements).join("&#010;")
-            }))
-          break;
-      }
-
-      ul.innerHTML = list
-        .sort((a, b) => b.count - a.count)
-        .slice(0, LIST_LIMIT)
-        .map(({ appID, ext, branch, count, icon, max, title }) => {
-          const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` 
-          
-          return  `\
+        return `\
   <a 
     href="${href}" 
     title="${title}"
@@ -132,10 +139,11 @@
     <span>${count ? (count + ` ${icon}`) : ""}</span>
   </a>
   `;
-        }).join("");
+      }).join("");
 
-      }
+  }
 
 
-  </script>
+</script>
+
 </html>
