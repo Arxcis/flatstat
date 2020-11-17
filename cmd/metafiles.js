@@ -1,7 +1,6 @@
 import { appendFile, unlink } from "fs/promises";
 import apps from "../db/flathub/repos.js";
 import { queryMetafileHistory } from "./query.js";
-let index = 0;
 
 const MEATFILES_JSON = "./db/flathub/metafiles.js";
 
@@ -11,6 +10,8 @@ await makeMetafiles(apps);
 await appendFile(MEATFILES_JSON, "]");
 
 async function makeMetafiles(apps) {
+  let index = 0;
+
   for (const appID of apps) {
     index += 1;
 

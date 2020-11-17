@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <title>Flatstat | Graph</title>
     <link rel="stylesheet" type="text/css" href="./index.css"></link>
   </head>
@@ -10,7 +9,7 @@
     <header>
       <a href="/"><h1 id="title" title="Flatstat | Graph">flatstat</h1></a>
       <nav>
-        <a href="/" title="Graphs">graphs</a>
+        <a href="/" title="Graphs" class="active">graphs</a>
         <a href=/lists/ title="List">lists</a>
         <a href="/achievements/" title="Achievements">achievements</a>
         <a href="/about/" title="About">about</a>
@@ -18,7 +17,7 @@
     </header>
     <main>
       <nav>
-        <a id="#total" title="Totals" href="/">total</a>
+        <a id="#total" title="Totals" href="/#total">total</a>
         <a id="#window" title="Apps with --wayland or --x11" href="/#window">window</a>
         <a id="#filesystem" title="Apps with --filesystem" href="/#filesystem">filesystem</a>
         <a id="#device" title="Apps with --device" href="/#device">device</a>
@@ -37,29 +36,12 @@
     </main>
   </body>
   <script type="module">
+    import "https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js";
     import count from "./db/flathub/count.js";
-    import { countAchievements, countHoles } from "./src/achievements.js";
-    import { ACHIEVEMENTS, HOLES } from "./src/config.js"
-
-    // Mark graph link as active
-    const headerLink = document.querySelector(`header a[href*='/#']`)
-    headerLink?.classList.add("current")
-
-    // Check if any a[href] contains the search, and mark them as active
-    const graphLink = document.getElementById(window.location.hash)
-    if (graphLink) {
-      graphLink.classList.add("current")
-    } else {
-      document.getElementById("#total").classList.add("current");
-    }
-
-    window.addEventListener("hashchange", () => {
-      const links = document.querySelectorAll("main nav a")
-      for (const link of links) link.classList.remove("current")
-
-      const graphLink = document.getElementById(window.location.hash)
-      graphLink?.classList.add("current")
-    })
+    import { countAchievements, countHoles, ACHIEVEMENTS, HOLES } from "./lib/achievements.js";
+    import { useActiveLink } from "./lib/useActiveLink.js";
+    
+    useActiveLink("#total")
 
     // Define color constants
     const TOTAL_COLOR = "#546e7a";

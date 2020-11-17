@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <title>Flatstat | List</title>
     <link rel="stylesheet" type="text/css" href="../index.css"></link>
-    <link rel="stylesheet" type="text/css" href="./list.css"></link>
+    <link rel="stylesheet" type="text/css" href="./index.css"></link>
 </head>
   <body>
     <header>
       <a href="/"><h1 id="title" title="Flatstat | List">flatstat</h1></a>
       <nav>
         <a href="/" title="Graphs">graphs</a>
-        <a href=/lists/ title="Lists">lists</a>
+        <a href=/lists/ title="Lists" class="active">lists</a>
         <a href="/achievements/" title="Achievements">achievements</a>
         <a href="/about/" title="About">about</a>
       </nav>
@@ -28,8 +28,10 @@
   </body>
   <script type="module">
     import metafiles from "../db/flathub/metafiles.js"
-    import { addAchievements, addHoles, countAchievements, countHoles } from "../src/achievements.js";
+    import { addAchievements, addHoles, countAchievements, countHoles } from "../lib/achievements.js";
+    import { useActiveLink } from "../lib/useActiveLink.js";
 
+    useActiveLink("#achievements")
 
     // Check if any a[href] contains the search, and mark them as active
     let searchLink = document.querySelector(`header a[href*='/list']`)

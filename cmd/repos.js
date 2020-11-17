@@ -2,6 +2,8 @@ import { writeFile } from "fs/promises";
 import fetch from "node-fetch";
 import { RestConfig } from "./config.js";
 
+const REPOS_JS = "./db/flathub/repos.js";
+
 let repos = [];
 let next = "https://api.github.com/orgs/flathub/repos?per_page=100";
 const IGNORE_LIST = [
@@ -12,7 +14,7 @@ const IGNORE_LIST = [
   ".Plugin.",
   ".BaseApp",
   "org.kde.KStyle.",
-  "org.kde.PlatformTheme."
+  "org.kde.PlatformTheme.",
 ];
 
 do {
@@ -20,14 +22,14 @@ do {
   const res = await fetch(next, RestConfig);
   const json = (await res.json()) ?? [];
 
-  const activeRepos = json.filter(it => !it.archived && !it.disabled)
+  const activeRepos = json.filter((it) => !it.archived && !it.disabled);
 
   repos = [
-    ...repos, 
+    ...repos,
     ...activeRepos
-      .filter(it => it.name.includes("."))
-      .filter(it => IGNORE_LIST.every(ignore => !it.name.includes(ignore)))
-      .map((it) => it.name)
+      .filter((it) => it.name.includes("."))
+      .filter((it) => IGNORE_LIST.every((ignore) => !it.name.includes(ignore)))
+      .map((it) => it.name),
   ];
 
   // Parse next header
@@ -37,7 +39,4 @@ do {
   console.log({ next });
 } while (next);
 
-await writeFile(
-  "./db/flathub/repos.js",
-  `export default ${JSON.stringify(repos, null, 2)}`
-);
+await writeFile(REPOS_JS, `export default ${JSON.stringify(repos, null, 2)}`);

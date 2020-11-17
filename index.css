@@ -45,7 +45,7 @@ main nav a:hover {
   background-color: #dfdfdf;
 }
 
-main nav a.current {
+main nav a.active {
   background-color: #0366d6;
   color: white;
   border-bottom: none;
@@ -88,7 +88,7 @@ nav a:hover {
   background-color: #0366d6;
 }
 
-a.current {
+a.active {
   border-bottom: 2px solid #0366d6;
 }
 

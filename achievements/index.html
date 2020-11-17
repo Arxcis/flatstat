@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Flatstat | Achievements</title>
     <link rel="stylesheet" type="text/css" href="../index.css"></link>
-    <link rel="stylesheet" type="text/css" href="./achievements.css"></link>
+    <link rel="stylesheet" type="text/css" href="./index.css"></link>
 </head>
   <body>
     <header>
@@ -12,7 +12,7 @@
       <nav>
         <a href="/" title="Graphs">graphs</a>
         <a href=/lists/ title="List">lists</a>
-        <a href="/achievements/" title="Achievements">achievements</a>
+        <a href="/achievements/" title="Achievements" class="active">achievements</a>
         <a href="/about/" title="About">about</a>
       </nav>
     </header>
@@ -68,25 +68,9 @@
     </main>
   </body>
   <script type="module">
-   // Check if any a[href] contains the search, and mark them as active
-   const headerLink = document.querySelector(`header nav a[href*='achievements']`)
-    headerLink?.classList.add("current")
+    import { useActiveLink } from "../lib/useActiveLink.js";
 
-  // Set current active button
-   const graphLink = document.getElementById(window.location.hash)
-    if (graphLink) {
-      graphLink.classList.add("current")
-    } else {
-      document.getElementById("#achievements").classList.add("current");
-    }
-
-    window.addEventListener("hashchange", () => {
-      const links = document.querySelectorAll("main nav a")
-      for (const link of links) link.classList.remove("current")
-
-      const graphLink = document.getElementById(window.location.hash)
-      graphLink?.classList.add("current")
-    })
+    useActiveLink("#achievements")
 
     // Inject counts for achievements and holes
     

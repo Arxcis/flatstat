@@ -1,6 +1,6 @@
 ## repo.js
 
-This is how a full repo-object looks coming from github. We remove the fields we don't care about before writing to repo.js. The Github API v3 does not offer away to request partial responses, so we always get the full object over the wire, and then transform it on our side, to something that can be written to file.
+This is how a full repo-object looks coming from `GET api.github.com/repos`. We remove the fields we don't care about before writing to `repo.js`. The Github API v3 does not offer a way to request partial responses, so we always get the full object over the wire, and then transform it on our side.
 
 ```json
   {
