@@ -108,21 +108,21 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: " 🏅 achievements",
+            label: " 🏅 achievements earned",
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map(it => countAchievements(it)),
             fill: false,
           },
           {
-            label: " 💥 holes",
+            label: " 💥 holes opened",
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
             data: count.map(it => countHoles(it)),
             fill: false,
           },
           {
-            label: " 🕹️ apps",
+            label: " 🕹️ apps published",
             backgroundColor: SUPER_BAD_COLOR,
             borderColor: SUPER_BAD_COLOR,
             data: count.map(it => it["apps"]),
