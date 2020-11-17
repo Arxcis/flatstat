@@ -85,7 +85,7 @@
               ...it,
               icon: "💥",
               count: countHoles(it.holes),
-              title: Object.keys(it.holes).join(", ")
+              title: Object.keys(it.holes).join("&#010;")
             }))
           break;
         default: /* achievements */
@@ -99,7 +99,7 @@
               ...it,
               icon: "🏅",
               count: countAchievements(it.achievements),
-              title: Object.keys(it.achievements).join(", ")
+              title: Object.keys(it.achievements).join("&#010;")
             }))
           break;
       }

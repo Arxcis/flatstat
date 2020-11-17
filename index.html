@@ -43,12 +43,15 @@
     
     useActiveLink("#total")
 
-    // Define color constants
+    // Define constants
     const TOTAL_COLOR = "#546e7a";
     const GOOD_COLOR = "#00c853";
     const BAD_COLOR = "#ff9100";
     const VERY_BAD_COLOR = "#ac0800";
     const SUPER_BAD_COLOR = "#4a148c";
+    const ACHIEVEMENT_ICON = "🏅"
+    const HOLE_ICON = "💥"
+    const APP_ICON = "🕹️"
 
     // Define options
     const options = {
@@ -90,21 +93,21 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: " 🏅 achievements earned",
+            label: ` ${ACHIEVEMENT_ICON} achievements earned`,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map(it => countAchievements(it)),
             fill: false,
           },
           {
-            label: " 💥 holes opened",
+            label: ` ${HOLE_ICON} holes opened`,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
             data: count.map(it => countHoles(it)),
             fill: false,
           },
           {
-            label: " 🕹️ apps published",
+            label: ` ${APP_ICON} apps published`,
             backgroundColor: SUPER_BAD_COLOR,
             borderColor: SUPER_BAD_COLOR,
             data: count.map(it => it["apps"]),
@@ -149,23 +152,30 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.NoFilesystemAtAll,
+            label: ACHIEVEMENTS.NoFilesystem,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it[ACHIEVEMENTS.NoFilesystemAtAll]),
+            data: count.map((it) => it[ACHIEVEMENTS.NoFilesystem]),
             fill: false,
           },
           {
-            label: HOLES.FilesystemSome,
+            label: HOLES.FilesystemWellKnown,
             backgroundColor: BAD_COLOR,
             borderColor: BAD_COLOR,
-            data: count.map((it) => it[HOLES.FilesystemSome]),
+            data: count.map((it) => it[HOLES.FilesystemWellKnown]),
+            fill: false,
+          },
+          {
+            label: HOLES.FilesystemUnknown,
+            backgroundColor: VERY_BAD_COLOR,
+            borderColor: VERY_BAD_COLOR,
+            data: count.map((it) => it[HOLES.FilesystemUnknown]),
             fill: false,
           },
           {
             label: HOLES.FilesystemAll,
-            backgroundColor: VERY_BAD_COLOR,
-            borderColor: VERY_BAD_COLOR,
+            backgroundColor: SUPER_BAD_COLOR,
+            borderColor: SUPER_BAD_COLOR,
             data: count.map((it) => it[HOLES.FilesystemAll]),
             fill: false,
           },
@@ -182,17 +192,17 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.NoDeviceAtAll,
+            label: ACHIEVEMENTS.NoDevice,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it[ACHIEVEMENTS.NoDeviceAtAll]),
+            data: count.map((it) => it[ACHIEVEMENTS.NoDevice]),
             fill: false,
           },
           {
-            label: HOLES.DeviceSome,
+            label: HOLES.DeviceWellKnown,
             backgroundColor: BAD_COLOR,
             borderColor: BAD_COLOR,
-            data: count.map((it) => it[HOLES.DeviceSome]),
+            data: count.map((it) => it[HOLES.DeviceWellKnown]),
             fill: false,
           },
           {
@@ -215,17 +225,17 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.NoAudioAll,
+            label: ACHIEVEMENTS.NoPulseaudio,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it[ACHIEVEMENTS.NoAudioAll]),
+            data: count.map((it) => it[ACHIEVEMENTS.NoPulseaudio]),
             fill: false,
           },
           {
-            label: HOLES.AudioAll,
+            label: HOLES.Pulseaudio,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it[HOLES.AudioAll]),
+            data: count.map((it) => it[HOLES.Pulseaudio]),
             fill: false,
           },
         ],
