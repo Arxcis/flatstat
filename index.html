@@ -220,7 +220,7 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: achievementLabel(ACHIEVEMENTS.NoDevice),
+            label: ACHIEVEMENTS.NoDevice,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it[ACHIEVEMENTS.NoDevice]),
@@ -253,7 +253,7 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: achievementLabel(ACHIEVEMENTS.NoPulseaudio),
+            label: ACHIEVEMENTS.NoPulseaudio,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it[ACHIEVEMENTS.NoPulseaudio]),
