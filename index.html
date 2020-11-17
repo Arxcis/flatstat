@@ -49,9 +49,11 @@
     const BAD_COLOR = "#ff9100";
     const VERY_BAD_COLOR = "#ac0800";
     const SUPER_BAD_COLOR = "#4a148c";
-    const ACHIEVEMENT_ICON = "🏅"
-    const HOLE_ICON = "💥"
     const APP_ICON = "🕹️"
+
+    function achievementLabel(label) {
+      return `${label} 🏅 `
+    }
 
     // Define options
     const options = {
@@ -93,14 +95,14 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ` ${ACHIEVEMENT_ICON} achievements earned`,
+            label: ` 🏅 achievements earned`,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map(it => countAchievements(it)),
             fill: false,
           },
           {
-            label: ` ${HOLE_ICON} holes opened`,
+            label: ` 💥 holes opened`,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
             data: count.map(it => countHoles(it)),
@@ -126,7 +128,7 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.WaylandWithFallback,
+            label: achievementLabel(ACHIEVEMENTS.WaylandWithFallback),
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it[ACHIEVEMENTS.WaylandWithFallback]),
@@ -152,7 +154,7 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.NoFilesystem,
+            label: achievementLabel(ACHIEVEMENTS.NoFilesystem),
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it[ACHIEVEMENTS.NoFilesystem]),
@@ -192,7 +194,7 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.NoDevice,
+            label: achievementLabel(ACHIEVEMENTS.NoDevice),
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it[ACHIEVEMENTS.NoDevice]),
@@ -225,7 +227,7 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.NoPulseaudio,
+            label: achievementLabel(ACHIEVEMENTS.NoPulseaudio),
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it[ACHIEVEMENTS.NoPulseaudio]),
