@@ -1,7 +1,7 @@
 import { writeFile } from "fs/promises";
 import metafiles from "../db/flathub/metafiles.js";
 import { MONTHS } from "./config.js";
-import { countAchievements, countHoles, countPortals } from "../lib/counting.js";
+import { countAchievements, countHoles, countPortals } from "../lib/stats.js";
 
 const COUNT_JS = "./db/flathub/count.js";
 
