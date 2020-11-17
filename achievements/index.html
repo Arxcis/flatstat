@@ -23,46 +23,79 @@
       </nav>
 
       <section>
+        <section id="achievements">
+          <article>
+            <h3 title="--wayland-with-fallback">🏅 Achievement: --wayland-with-fallback</h3>
+            <p>Your app supports Wayland. Wayland supports isolation between apps. If the user is in a Wayland session, your app does not have access to x11. At the same time your app remains backwards-compatible with x11-users, giving x11-users access to the Flatpak ecosystem.</p>
+          </article>
 
-        <article id="achievements">
-         <h3 id="--wayland-with-fallback" title="--wayland-with-fallback">🏅 Achievement: --wayland and --fallback-x11</h3>
-          <p>If the user is in a Wayland session, your app does not have access to x11. At the same time your app remain backwards-compatible with x11-users. It is important to stay backwards compatible, giving x11-users access to the Flatpak ecosystem.</p>
+          <article>
+            <h3 title="--no-filesystem-all">🏅 Achievement: --no-filesystem-all</h3>
+            <p>Your app does not ask for blanket access to the filesystem, like --filesystem=home or --filesystem=host.</p>
+          </article>
 
-          <h3 id="--no-filesystem-all" title="--no-filesystem-all">🏅 Achievement: --no-filesystem-all</h3>
-          <p>Your app does not ask for blanket access to the filesystem. Your app may have an explicit list of files and directories it depends on.</p>
+          <article>
+            <h3 title="--no-filesystem-unknown">🏅 Achievement: --no-filesystem-unknown</h3>
+            <p>Your app does not ask for access to any unknown files or directories - outside of the "well-known directories" like xdg-download, xdg-music, etc. </p>
+          </article>
 
-          <h3 id="--no-filesystem" title="--no-filesystem">🏅 Achievement: --no-filesystem</h3>
-          <p>Your app does not ask for any filesystem permissions up front, leaving the user in full control of which files the app is given access to. If implemented correctly, the app should use the <a href="https://flatpak.github.io/xdg-desktop-portal/portal-docs.html#gdbus-org.freedesktop.portal.FileChooser" target="_blank" title="org.freedesktop.portal.FileChooser">FileChooser-portal</a>. This will ensure that the user experience is the same as if the app had --filesystem=host, but without the security hole.</p>
+          <article>
+            <h3 title="--no-filesystem">🏅 Achievement: --no-filesystem</h3>
+            <p>Your app does not ask for blanket access to any files or directories, leaving the user in full control of which files the app is given access to. If implemented correctly, the app should use the <a href="https://flatpak.github.io/xdg-desktop-portal/portal-docs.html#gdbus-org.freedesktop.portal.FileChooser" target="_blank" title="org.freedesktop.portal.FileChooser">FileChooser-portal</a>. This will ensure that the user-experience is the same, as if the app had --filesystem=host, but without the security ramifications.</p>
+          </article>
 
-          <h3 id="--no-device-all" title="--no-device-all">🏅 Achievement: --no-device-all</h3>
-          <p>Your app does not ask for blanket access to the users devices. Your app may have an explicit list of devices it depends on.</p>
+          <article>
+            <h3 title="--no-device-all">🏅 Achievement: --no-device-all</h3>
+            <p>Your app does not ask for blanket access to all of the users connected devices.
+          </article>
 
-          <h3 id="--no-device" title="--no-device">🏅 Achievement: --no-device</h3>
-          <p>Your app does not ask for any device permissions up front, leaving the user in full control of which devices the app is given access to.</p>
+          <article>
+            <h3 title="--no-device">🏅 Achievement: --no-device</h3>
+            <p>Your app does not ask for blanket access to any connected devices, leaving the user in full control of which devices the app is given access to.</p>
+          </article>
 
-          <h3 id="--no-pulseaudio" title="--no-pulseaudio">🏅 Achievement: --no-pulseaudio</h3>
-          <p>Your app does not ask for blanket access to the users audio.</p>
-        </article>
+          <article>
+            <h3 title="--no-pulseaudio">🏅 Achievement: --no-pulseaudio</h3>
+            <p>Your app does not ask for blanket access to the users audio.</p>
+          </article>
+        </section>
         
-        <article id="holes"> 
-          <h3 id="--x11" title="--x11">💥 Hole: --socket=x11 </h3>
-          <p>Your app has x11 access. x11 does not support isolation between apps, which enables your app to see what a user is doing in other apps. E.g keylogging, screen capture.</p>
+        <section id="holes"> 
+          <article>
+            <h3 title="--x11">💥 Hole: --x11 </h3>
+            <p>Your app supports x11. x11 does not support isolation between apps, which enables your app to see what a user is doing in other apps. E.g. keylogging, screen capture.</p>
+          </article>
 
-          <h3 id="--filesystem-all" title="--filesystem-all">💥 Hole: --filesystem=home or --filesystem=host</h3>
-          <p>Your app has blanket access to all of the user's private files. E.g. ~/.ssh, ~/Desktop/passwords.txt</p>
+          <article>
+            <h3 title="--filesystem-all">💥 Hole: --filesystem-all</h3>
+            <p>Your app has blanket access to all of the user's private files, because it is using permissions like --filesystem=home or --filesystem=host</p>
+          </article>
 
-          <h3 id="--filesystem-some" title="--filesystem-some">💥 Hole: --filesystem=some</h3>
-          <p>Your app has blanket access to one or more of the user's private files and directories.</p>
+          <article>
+            <h3 title="--filesystem-unknown">💥 Hole: --filesystem-unknown</h3>
+            <p>Your app has blanket access to one or more unknown files or directories - outside of "well-known directories" like xdg-desktop, xdg-music, etc.</p>
+          </article>
 
-          <h3 id="--device-all" title="--device-all">💥 Hole: --device=all</h3>
-          <p>Your app has blanket access to all of the user's connected devices. E.g. microphone, camera, graphics driver.</p>
+          <article>
+            <h3 title="--filesystem-well-known">💥 Hole: --filesystem-well-known</h3>
+            <p>Your app has blanket access to one or more of the well-known directories - like xdg-desktop, xdg-music, etc. This is better than having access to unknown files or directories, or access to all files or directories, but is still considred a hole, because there is no isolation between apps.</p>
+          </article>
 
-          <h3 id="--device-some" title="--device-some">💥 Hole: --device=some</h3>
-          <p>Your app has blanket access to one or more of the user's connected devices.</p>
+          <article>
+            <h3 title="--device-all">💥 Hole: --device-all</h3>
+            <p>Your app has blanket access to all of the user's connected devices.</p>
+          </article>
 
-          <h3 id="--pulseaudio" title="--pulseaudio">💥 Hole: --socket=pulseaudio</h3>
-          <p>Your app has pulseaudio access. Pulseaudio does not support isolation between app. Your app can listen to whatever happens in other apps. Your app can listen to the microphone without asking the user. Your app can play sound without asking the user.</p>
-        </article>
+          <article>
+            <h3 title="--device-well-known">💥 Hole: --device-well-known</h3>
+            <p>Your app has blanket access to one or more of the user's "well-known devices", like --device=dri, or --device=kvm.</p>
+          </article>
+
+          <article>
+            <h3 title="--pulseaudio">💥 Hole: --pulseaudio</h3>
+            <p>Your app has pulseaudio access. Pulseaudio does not support isolation between app. Your app can listen to the microphone without asking the user. Your app can play sound without asking the user.</p>
+          </article>
+        </section>
 
       </section>
     </main>
