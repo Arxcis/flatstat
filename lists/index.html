@@ -130,12 +130,11 @@
       .filter(it => it.count)
       .sort((a, b) => b.count - a.count)
       .slice(0, LIST_LIMIT)
-      .map(({ appID, ext, branch, count, icon, max, title, details }) => {
-        const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}`
+      .map(({ appID, ext, count, icon, title, details, displayURL }) => {
 
         return `\
   <a 
-    href="${href}" 
+    href="${displayURL}" 
     title="${title}"
     target="_blank"
   >

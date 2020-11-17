@@ -1,9 +1,10 @@
-import { writeFile } from "fs/promises";
-import metafiles from "../data/flathub/metafiles.js";
+import { writeFile, readFile } from "fs/promises";
 import { MONTHS } from "./config.js";
 import { countAchievements, countHoles, countPortals } from "../lib/stats.js";
 
-const COUNT_JS = "./data/flathub/count.js";
+const metafiles = JSON.parse(await readFile("./data/flathub/metafiles.json"));
+
+const COUNT_JSON = "./data/flathub/count.json";
 
 const countMap = metafiles.reduce((acc, it) => {
   const commitHistory = it.history ?? [];
@@ -52,4 +53,4 @@ const count = [...countMap.entries()]
   }))
   .sort((a, b) => a.month.localeCompare(b.month));
 
-await writeFile(COUNT_JS, `export default ${JSON.stringify(count, null, 2)}`);
+await writeFile(COUNT_JSON, JSON.stringify(count, null, 2));

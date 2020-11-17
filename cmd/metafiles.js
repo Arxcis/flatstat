@@ -1,11 +1,12 @@
-import { appendFile, unlink } from "fs/promises";
-import apps from "../data/flathub/repos.js";
+import { appendFile, unlink, readFile } from "fs/promises";
 import { queryMetafileHistory } from "./query.js";
 
-const MEATFILES_JSON = "./data/flathub/metafiles.js";
+const apps = JSON.parse(await readFile("./data/flathub/apps.json"));
+
+const MEATFILES_JSON = "./data/flathub/metafiles.json";
 
 await unlink(MEATFILES_JSON);
-await appendFile(MEATFILES_JSON, "export default [");
+await appendFile(MEATFILES_JSON, "[");
 await makeMetafiles(apps);
 await appendFile(MEATFILES_JSON, "]");
 
@@ -29,6 +30,7 @@ async function makeMetafiles(apps) {
     console.log(`${index}: Status ${metafile.status}: ${metafile.displayURL}`);
 
     // 4. Append metafile-object to file
-    await appendFile(MEATFILES_JSON, `${JSON.stringify(metafile, null, 2)},`);
+    const notTheLastApp = index !== apps.length
+    await appendFile(MEATFILES_JSON, `${JSON.stringify(metafile, null, 2)}${notTheLastApp ? "," : ""}`);
   }
 }
