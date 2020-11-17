@@ -35,6 +35,10 @@ main ul a span.middle {
    color: #777777;
 }
 
+main ul a:hover > span.middle {
+  color: white;
+}
+
 main ul a span.padding {
   flex: 0 0 50px;
 }
