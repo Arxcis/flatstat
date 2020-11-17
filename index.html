@@ -322,7 +322,7 @@
     .sort(([, aCounts], [, bCounts]) => bCounts[bCounts.length - 1] - aCounts[aCounts.length - 1])
     .slice(0, 20)  // Show the n most used portals
     .map(([portal, data], i) => ({
-      label: portal,
+      label: `#${i + 1} ${portal}`,
       backgroundColor: GREY_COLORS[i % 4],
       borderColor: GREY_COLORS[i % 4],
       data,
