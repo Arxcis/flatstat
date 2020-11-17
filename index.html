@@ -22,23 +22,42 @@
         <a id="#filesystem" title="Apps with --filesystem" href="/#filesystem">filesystem</a>
         <a id="#device" title="Apps with --device" href="/#device">device</a>
         <a id="#audio" title="Apps with --pulseaudio" href="/#audio">audio</a>
+        <a id="#portal" title="Most used portals" href="/#portal">portal</a>
         <a id="#metafile" title=".json or .yaml or .yml" href="/#metafile">metafile</a>
       </nav>
 
       <section>
-        <canvas id="total" width="400" height="250"></canvas>
-        <canvas id="window" width="400" height="250"></canvas>
-        <canvas id="filesystem" width="400" height="250"></canvas>
-        <canvas id="device" width="400" height="250"></canvas>
-        <canvas id="audio" width="400" height="250"></canvas>
-        <canvas id="metafile" width="400" height="250"></canvas>
+        <article>
+          <canvas id="total" width="400" height="250"></canvas>
+        </article>
+        <article>
+          <canvas id="window" width="400" height="250"></canvas>
+        </article>
+        <article>
+          <canvas id="filesystem" width="400" height="250"></canvas>
+        </article>
+        <article>
+          <canvas id="device" width="400" height="250"></canvas>
+        </article>
+        <article>
+          <canvas id="audio" width="400" height="250"></canvas>
+        </article>
+        <article>
+          <canvas id="portal" width="400" height="250"></canvas>
+          <canvas id="portal-page2" width="400" height="250"></canvas>
+          <canvas id="portal-page3" width="400" height="250"></canvas>
+          <canvas id="portal-page4" width="400" height="250"></canvas>
+        </article>
+        <article>
+          <canvas id="metafile" width="400" height="250"></canvas>
+        </article>
       </section>
     </main>
   </body>
   <script type="module">
     import "https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js";
     import count from "./db/flathub/count.js";
-    import { sumAchievements, sumHoles, ACHIEVEMENTS, HOLES } from "./lib/stats.js";
+    import { sumAchievements, sumHoles, ACHIEVEMENTS, HOLES, PORTALS } from "./lib/stats.js";
     import { useActiveLink } from "./lib/useActiveLink.js";
     
     useActiveLink("#total")
@@ -275,6 +294,68 @@
             fill: false,
           },
         ],
+      },
+      options: {
+        ...options,
+      },
+    });
+    const GREY_COLORS = [GOOD_COLOR, BAD_COLOR, VERY_BAD_COLOR, SUPER_BAD_COLOR]
+
+    const datasets = PORTALS
+      .map(portal => [
+        portal, 
+        count.map(it => it.portals[portal])
+      ])
+      .sort(([,aCounts], [,bCounts]) => bCounts[bCounts.length-1] - aCounts[aCounts.length-1])
+      .slice(0, 16)  // Show the n most used portals
+      .map(([portal, data], i) => ({
+        label: portal,
+        backgroundColor: GREY_COLORS[i%4],
+        borderColor: GREY_COLORS[i%4],
+        data,
+        fill: false,
+      }));
+
+
+
+    new Chart(document.getElementById("portal").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: datasets.slice(0, 4),
+      },
+      options: {
+        ...options,
+      },
+    });
+
+    new Chart(document.getElementById("portal-page2").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: datasets.slice(4, 8),
+      },
+      options: {
+        ...options,
+      },
+    });
+    
+    new Chart(document.getElementById("portal-page3").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: datasets.slice(8, 12),
+      },
+      options: {
+        ...options,
+      },
+    });
+
+    new Chart(document.getElementById("portal-page4").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: datasets.slice(12, 16),
       },
       options: {
         ...options,

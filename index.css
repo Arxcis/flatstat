@@ -52,8 +52,12 @@ main nav a.active {
   border-radius: 5px;
 }
 
-main canvas {
+main > section > article {
   padding: 20px 0 1200px 0;
+}
+
+main > section > article > canvas {
+  padding: 0 0 100px 0;
 }
 
 header {

@@ -31,7 +31,6 @@ const countMap = metafiles.reduce((acc, it) => {
     }
 
     acc.set(MONTH, {
-      ...(monthCount ?? {}),
       ...increment("apps", 1),
       ...increment("json", it.ext === "json"),
       ...increment("yaml", it.ext === "yaml"),
@@ -39,7 +38,7 @@ const countMap = metafiles.reduce((acc, it) => {
 
       ...countAchievements(finishArgs, monthCount),
       ...countHoles(finishArgs, monthCount),
-      ...countPortals(finishArgs, monthCount)
+      portals: countPortals(finishArgs, monthCount?.portals)
     });
   }
 
