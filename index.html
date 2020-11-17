@@ -62,8 +62,8 @@
 </body>
 <script type="module">
   import "https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js";
-  import count from "./data/flathub/count.js";
   import { sumAchievements, sumHoles, sumPortals, ACHIEVEMENTS, HOLES, WELL_KNOWN_PORTALS } from "./lib/stats.js";
+  import { useJSON } from "./lib/useJSON.js";
   import { useActiveLink } from "./lib/useActiveLink.js";
 
   useActiveLink("#total")
@@ -80,8 +80,8 @@
     return `${label} 🏅 `
   }
 
-  // Define options
-  const options = {
+  // Define default graph options
+  const defaultOptions = {
     responsive: true,
     tooltips: {
       mode: "index",
@@ -113,241 +113,247 @@
     },
   };
 
-  // Draw charts
-  new Chart(document.getElementById("total").getContext("2d"), {
-    type: "line",
-    data: {
-      labels: count.map((it) => it.month),
-      datasets: [
-        {
-          label: ` 🏅 achievements earned`,
-          backgroundColor: GOOD_COLOR,
-          borderColor: GOOD_COLOR,
-          data: count.map(it => sumAchievements(it)),
-          fill: false,
-        },
-        {
-          label: ` 💥 holes punched`,
-          backgroundColor: BAD_COLOR,
-          borderColor: BAD_COLOR,
-          data: count.map(it => sumHoles(it)),
-          fill: false,
-        },
-        {
-          label: ` 🕳️ portals opened`,
-          backgroundColor: VERY_BAD_COLOR,
-          borderColor: VERY_BAD_COLOR,
-          data: count.map(it => sumPortals(it.portals)),
-          fill: false,
-        },
-        {
-          label: ` ${APP_ICON} apps published`,
-          backgroundColor: SUPER_BAD_COLOR,
-          borderColor: SUPER_BAD_COLOR,
-          data: count.map(it => it["apps"]),
-          fill: false,
-        },
-      ],
-    },
-    options: {
-      ...options,
-    },
-  });
+  renderCharts();
 
-  new Chart(document.getElementById("window").getContext("2d"), {
-    type: "line",
-    data: {
-      labels: count.map((it) => it.month),
-      datasets: [
-        {
-          label: achievementLabel(ACHIEVEMENTS.WaylandWithFallback),
-          backgroundColor: GOOD_COLOR,
-          borderColor: GOOD_COLOR,
-          data: count.map((it) => it[ACHIEVEMENTS.WaylandWithFallback]),
-          fill: false,
-        },
-        {
-          label: HOLES.X11,
-          backgroundColor: VERY_BAD_COLOR,
-          borderColor: VERY_BAD_COLOR,
-          data: count.map((it) => it[HOLES.X11]),
-          fill: false,
-        },
-      ],
-    },
-    options: {
-      ...options,
-    },
-  });
+  async function renderCharts() {
+    const count = await useJSON("./data/flathub/count.json")
 
-  new Chart(document.getElementById("filesystem").getContext("2d"), {
-    type: "line",
-    data: {
-      labels: count.map((it) => it.month),
-      datasets: [
-        {
-          label: achievementLabel(ACHIEVEMENTS.NoFilesystem),
-          backgroundColor: GOOD_COLOR,
-          borderColor: GOOD_COLOR,
-          data: count.map((it) => it[ACHIEVEMENTS.NoFilesystem]),
-          fill: false,
-        },
-        {
-          label: HOLES.FilesystemWellKnown,
-          backgroundColor: BAD_COLOR,
-          borderColor: BAD_COLOR,
-          data: count.map((it) => it[HOLES.FilesystemWellKnown]),
-          fill: false,
-        },
-        {
-          label: HOLES.FilesystemUnknown,
-          backgroundColor: VERY_BAD_COLOR,
-          borderColor: VERY_BAD_COLOR,
-          data: count.map((it) => it[HOLES.FilesystemUnknown]),
-          fill: false,
-        },
-        {
-          label: HOLES.FilesystemAll,
-          backgroundColor: SUPER_BAD_COLOR,
-          borderColor: SUPER_BAD_COLOR,
-          data: count.map((it) => it[HOLES.FilesystemAll]),
-          fill: false,
-        },
-      ],
-    },
-    options: {
-      ...options,
-    },
-  });
-
-  new Chart(document.getElementById("device").getContext("2d"), {
-    type: "line",
-    data: {
-      labels: count.map((it) => it.month),
-      datasets: [
-        {
-          label: ACHIEVEMENTS.NoDevice,
-          backgroundColor: GOOD_COLOR,
-          borderColor: GOOD_COLOR,
-          data: count.map((it) => it[ACHIEVEMENTS.NoDevice]),
-          fill: false,
-        },
-        {
-          label: HOLES.DeviceWellKnown,
-          backgroundColor: BAD_COLOR,
-          borderColor: BAD_COLOR,
-          data: count.map((it) => it[HOLES.DeviceWellKnown]),
-          fill: false,
-        },
-        {
-          label: HOLES.DeviceAll,
-          backgroundColor: VERY_BAD_COLOR,
-          borderColor: VERY_BAD_COLOR,
-          data: count.map((it) => it[HOLES.DeviceAll]),
-          fill: false,
-        },
-      ],
-    },
-    options: {
-      ...options,
-    },
-  });
-
-  new Chart(document.getElementById("audio").getContext("2d"), {
-    type: "line",
-    data: {
-      labels: count.map((it) => it.month),
-      datasets: [
-        {
-          label: ACHIEVEMENTS.NoPulseaudio,
-          backgroundColor: GOOD_COLOR,
-          borderColor: GOOD_COLOR,
-          data: count.map((it) => it[ACHIEVEMENTS.NoPulseaudio]),
-          fill: false,
-        },
-        {
-          label: HOLES.Pulseaudio,
-          backgroundColor: VERY_BAD_COLOR,
-          borderColor: VERY_BAD_COLOR,
-          data: count.map((it) => it[HOLES.Pulseaudio]),
-          fill: false,
-        },
-      ],
-    },
-    options: {
-      ...options,
-    },
-  });
-
-
-  new Chart(document.getElementById("metafile").getContext("2d"), {
-    type: "line",
-    data: {
-      labels: count.map((it) => it.month),
-      datasets: [
-        {
-          label: ".json",
-          backgroundColor: "#424242",
-          borderColor: "#424242",
-          data: count.map((it) => it.json),
-          fill: false,
-        },
-        {
-          label: ".yaml",
-          backgroundColor: "#757575",
-          borderColor: "#757575",
-          data: count.map((it) => it.yaml),
-          fill: false,
-        },
-        {
-          label: ".yml",
-          backgroundColor: "#bdbdbd",
-          borderColor: "#bdbdbd",
-          data: count.map((it) => it.yml),
-          fill: false,
-        },
-      ],
-    },
-    options: {
-      ...options,
-    },
-  });
-  const GREY_COLORS = [GOOD_COLOR, BAD_COLOR, VERY_BAD_COLOR, SUPER_BAD_COLOR]
-
-  const datasets = WELL_KNOWN_PORTALS
-    .map(portal => [
-      portal,
-      count.map(it => it.portals[portal] ?? 0)
-    ])
-    .sort(([, aCounts], [, bCounts]) => bCounts[bCounts.length - 1] - aCounts[aCounts.length - 1])
-    .slice(0, 20)  // Show the n most used portals
-    .map(([portal, data], i) => ({
-      label: `#${i + 1} ${portal}`,
-      backgroundColor: GREY_COLORS[i % 4],
-      borderColor: GREY_COLORS[i % 4],
-      data,
-      fill: false,
-    }));
-
-
-  for (let page = 1; page <= 5; ++page) {
-    const beginSlice = (page - 1) * 4
-    const endSlice = beginSlice + 4;
-
-    new Chart(document.getElementById(`portal-page${page}`).getContext("2d"), {
+    // Draw charts
+    new Chart(document.getElementById("total").getContext("2d"), {
       type: "line",
       data: {
         labels: count.map((it) => it.month),
-        datasets: datasets.slice(beginSlice, endSlice),
+        datasets: [
+          {
+            label: ` 🏅 achievements earned`,
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map(it => sumAchievements(it)),
+            fill: false,
+          },
+          {
+            label: ` 💥 holes punched`,
+            backgroundColor: BAD_COLOR,
+            borderColor: BAD_COLOR,
+            data: count.map(it => sumHoles(it)),
+            fill: false,
+          },
+          {
+            label: ` 🕳️ portals opened`,
+            backgroundColor: VERY_BAD_COLOR,
+            borderColor: VERY_BAD_COLOR,
+            data: count.map(it => sumPortals(it.portals)),
+            fill: false,
+          },
+          {
+            label: ` ${APP_ICON} apps published`,
+            backgroundColor: SUPER_BAD_COLOR,
+            borderColor: SUPER_BAD_COLOR,
+            data: count.map(it => it["apps"]),
+            fill: false,
+          },
+        ],
       },
       options: {
-        ...options,
-        title: {
-          display: true,
-          text: "Top " + (beginSlice + 1) + "-" + endSlice + " portals"
-        }
+        ...defaultOptions,
       },
     });
+
+    new Chart(document.getElementById("window").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: [
+          {
+            label: achievementLabel(ACHIEVEMENTS.WaylandWithFallback),
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map((it) => it[ACHIEVEMENTS.WaylandWithFallback]),
+            fill: false,
+          },
+          {
+            label: HOLES.X11,
+            backgroundColor: VERY_BAD_COLOR,
+            borderColor: VERY_BAD_COLOR,
+            data: count.map((it) => it[HOLES.X11]),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...defaultOptions,
+      },
+    });
+
+    new Chart(document.getElementById("filesystem").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: [
+          {
+            label: achievementLabel(ACHIEVEMENTS.NoFilesystem),
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map((it) => it[ACHIEVEMENTS.NoFilesystem]),
+            fill: false,
+          },
+          {
+            label: HOLES.FilesystemWellKnown,
+            backgroundColor: BAD_COLOR,
+            borderColor: BAD_COLOR,
+            data: count.map((it) => it[HOLES.FilesystemWellKnown]),
+            fill: false,
+          },
+          {
+            label: HOLES.FilesystemUnknown,
+            backgroundColor: VERY_BAD_COLOR,
+            borderColor: VERY_BAD_COLOR,
+            data: count.map((it) => it[HOLES.FilesystemUnknown]),
+            fill: false,
+          },
+          {
+            label: HOLES.FilesystemAll,
+            backgroundColor: SUPER_BAD_COLOR,
+            borderColor: SUPER_BAD_COLOR,
+            data: count.map((it) => it[HOLES.FilesystemAll]),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...defaultOptions,
+      },
+    });
+
+    new Chart(document.getElementById("device").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: [
+          {
+            label: ACHIEVEMENTS.NoDevice,
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map((it) => it[ACHIEVEMENTS.NoDevice]),
+            fill: false,
+          },
+          {
+            label: HOLES.DeviceWellKnown,
+            backgroundColor: BAD_COLOR,
+            borderColor: BAD_COLOR,
+            data: count.map((it) => it[HOLES.DeviceWellKnown]),
+            fill: false,
+          },
+          {
+            label: HOLES.DeviceAll,
+            backgroundColor: VERY_BAD_COLOR,
+            borderColor: VERY_BAD_COLOR,
+            data: count.map((it) => it[HOLES.DeviceAll]),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...defaultOptions,
+      },
+    });
+
+    new Chart(document.getElementById("audio").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: [
+          {
+            label: ACHIEVEMENTS.NoPulseaudio,
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map((it) => it[ACHIEVEMENTS.NoPulseaudio]),
+            fill: false,
+          },
+          {
+            label: HOLES.Pulseaudio,
+            backgroundColor: VERY_BAD_COLOR,
+            borderColor: VERY_BAD_COLOR,
+            data: count.map((it) => it[HOLES.Pulseaudio]),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...defaultOptions,
+      },
+    });
+
+
+    new Chart(document.getElementById("metafile").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: count.map((it) => it.month),
+        datasets: [
+          {
+            label: ".json",
+            backgroundColor: "#424242",
+            borderColor: "#424242",
+            data: count.map((it) => it.json),
+            fill: false,
+          },
+          {
+            label: ".yaml",
+            backgroundColor: "#757575",
+            borderColor: "#757575",
+            data: count.map((it) => it.yaml),
+            fill: false,
+          },
+          {
+            label: ".yml",
+            backgroundColor: "#bdbdbd",
+            borderColor: "#bdbdbd",
+            data: count.map((it) => it.yml),
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        ...defaultOptions,
+      },
+    });
+    const GREY_COLORS = [GOOD_COLOR, BAD_COLOR, VERY_BAD_COLOR, SUPER_BAD_COLOR]
+
+    const datasets = WELL_KNOWN_PORTALS
+      .map(portal => [
+        portal,
+        count.map(it => it.portals[portal] ?? 0)
+      ])
+      .sort(([, aCounts], [, bCounts]) => bCounts[bCounts.length - 1] - aCounts[aCounts.length - 1])
+      .slice(0, 20)  // Show the n most used portals
+      .map(([portal, data], i) => ({
+        label: `#${i + 1} ${portal}`,
+        backgroundColor: GREY_COLORS[i % 4],
+        borderColor: GREY_COLORS[i % 4],
+        data,
+        fill: false,
+      }));
+
+
+    for (let page = 1; page <= 5; ++page) {
+      const beginSlice = (page - 1) * 4
+      const endSlice = beginSlice + 4;
+
+      new Chart(document.getElementById(`portal-page${page}`).getContext("2d"), {
+        type: "line",
+        data: {
+          labels: count.map((it) => it.month),
+          datasets: datasets.slice(beginSlice, endSlice),
+        },
+        options: {
+          ...defaultOptions,
+          title: {
+            display: true,
+            text: "Top " + (beginSlice + 1) + "-" + endSlice + " portals"
+          }
+        },
+      });
+    }
   }
 </script>
 
