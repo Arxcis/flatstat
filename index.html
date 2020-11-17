@@ -53,7 +53,6 @@
         <canvas id="portal-page3" width="400" height="250"></canvas>
         <canvas id="portal-page4" width="400" height="250"></canvas>
         <canvas id="portal-page5" width="400" height="250"></canvas>
-        <canvas id="portal-page6" width="400" height="250"></canvas>
       </article>
       <article>
         <canvas id="metafile" width="400" height="250"></canvas>
@@ -321,7 +320,7 @@
       count.map(it => it.portals[portal] ?? 0)
     ])
     .sort(([, aCounts], [, bCounts]) => bCounts[bCounts.length - 1] - aCounts[aCounts.length - 1])
-    .slice(0, 40)  // Show the n most used portals
+    .slice(0, 20)  // Show the n most used portals
     .map(([portal, data], i) => ({
       label: portal,
       backgroundColor: GREY_COLORS[i % 4],
@@ -331,7 +330,7 @@
     }));
 
 
-  for (let page = 1; page <= 6; ++page) {
+  for (let page = 1; page <= 5; ++page) {
     const beginSlice = (page - 1) * 4
     const endSlice = beginSlice + 4;
 
@@ -345,7 +344,7 @@
         ...options,
         title: {
           display: true,
-          text: "# " + (beginSlice + 1) + "-" + endSlice
+          text: "Top " + (beginSlice + 1) + "-" + endSlice + " portals"
         }
       },
     });
