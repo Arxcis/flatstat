@@ -18,9 +18,10 @@
     </header>
     <main>
       <nav>
-        <a id="#achievements" title="Apps ranked by number of achievements" href="/lists/#achievements">🏅 achievements</a>
-        <a id="#holes" title="Apps ranked by number of holes" href="/lists/#holes">💥 holes</a>
-        <a id="#stars" title="Apps ranked by number of Github stars" href="/lists/#stars">⭐ stars</a>
+        <a id="#achievements" title="Apps sorted by achievements" href="/lists/#achievements">🏅 achievements</a>
+        <a id="#holes" title="Apps sorted by holes" href="/lists/#holes">💥 holes</a>
+        <a id="#portals" title="Apps sorted by portals" href="/lists/#portals">🕳️ portals</a>
+        <a id="#stars" title="Apps sorted by Github stars" href="/lists/#stars">⭐ stars</a>
       </nav>
       <ul>
       </ul>
@@ -28,7 +29,7 @@
   </body>
   <script type="module">
     import metafiles from "../db/flathub/metafiles.js"
-    import { countAchievements, countHoles, sumAchievements, sumHoles } from "../lib/stats.js";
+    import { countAchievements, countHoles, countPortals, sumAchievements, sumHoles, sumPortals } from "../lib/stats.js";
     import { useActiveLink } from "../lib/useActiveLink.js";
 
     useActiveLink("#achievements")
@@ -60,13 +61,10 @@
       const ul = document.querySelector("ul")
       const LIST_LIMIT = 1000;
 
-      const metafileWithCounts = metafiles
-        
-
-      let counted = [];
+      let list = [];
       switch(window.location.hash) {
         case "#stars":
-          counted = metafileWithCounts
+          list = metafiles
             .map(it => ({
               ...it,
               icon: "⭐",
@@ -75,7 +73,7 @@
             }))
           break;
         case "#holes":
-          counted = metafileWithCounts
+          list = metafiles
             .filter(it => it.history[0]?.finishArgs)  
             .map(it => ({
               ...it,
@@ -88,8 +86,22 @@
               title: Object.keys(it.holes).join("&#010;")
             }))
           break;
+        case "#portals":
+          list = metafiles
+              .filter(it => it.history[0]?.finishArgs)  
+              .map(it => ({
+                ...it,
+                portals: countPortals(it.history[0].finishArgs)
+              }))
+              .map(it => ({
+                ...it,
+                icon: "🕳️",
+                count: sumPortals(it.portals),
+                title: Object.keys(it.portals).join("&#010;")
+              }))
+            break;
         default: /* achievements */
-          counted = metafileWithCounts
+          list = metafiles
             .filter(it => it.history[0]?.finishArgs)  
             .map(it => ({
               ...it,
@@ -104,7 +116,7 @@
           break;
       }
 
-      ul.innerHTML = counted
+      ul.innerHTML = list
         .sort((a, b) => b.count - a.count)
         .slice(0, LIST_LIMIT)
         .map(({ appID, ext, branch, count, icon, max, title }) => {
