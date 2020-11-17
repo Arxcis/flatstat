@@ -1,4 +1,4 @@
-export default [
+[
   "org.gnome.Recipes",
   "com.uploadedlobster.peek",
   "com.vinszent.GnomeTwitch",

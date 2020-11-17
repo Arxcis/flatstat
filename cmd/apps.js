@@ -2,11 +2,11 @@ import { writeFile } from "fs/promises";
 import fetch from "node-fetch";
 import { RestConfig } from "./config.js";
 
-const REPOS_JS = "./data/flathub/repos.js";
+const APPS_JSON = "./data/flathub/apps.json";
 
-let repos = [];
+let apps = [];
 let next = "https://api.github.com/orgs/flathub/repos?per_page=100";
-const IGNORE_LIST = [
+const NON_APP_LIST = [
   "org.gtk.Gtk3theme.",
   "org.freedesktop.LinuxAudio.",
   "org.freedesktop.Platform.",
@@ -24,11 +24,11 @@ do {
 
   const activeRepos = json.filter((it) => !it.archived && !it.disabled);
 
-  repos = [
-    ...repos,
+  apps = [
+    ...apps,
     ...activeRepos
       .filter((it) => it.name.includes("."))
-      .filter((it) => IGNORE_LIST.every((ignore) => !it.name.includes(ignore)))
+      .filter((it) => NON_APP_LIST.every((ignore) => !it.name.includes(ignore)))
       .map((it) => it.name),
   ];
 
@@ -39,4 +39,4 @@ do {
   console.log({ next });
 } while (next);
 
-await writeFile(REPOS_JS, `export default ${JSON.stringify(repos, null, 2)}`);
+await writeFile(APPS_JSON, JSON.stringify(apps, null, 2));

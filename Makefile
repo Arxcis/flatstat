@@ -1,6 +1,11 @@
 # Requires node version >= 14
-repos:
-	node cmd/repos.js --harmony-top-level-await;
+all: 
+	make apps;
+	make metafiles;
+	make count; 
+
+apps:
+	node cmd/apps.js --harmony-top-level-await;
 
 count:
 	node cmd/count.js --harmony-top-level-await;
@@ -14,4 +19,4 @@ server:
 test:
 	node cmd/query.test.js --harmony-top-level-await;
 
-.PHONY: repos count metafiles server test
+.PHONY: apps count metafiles server test all
