@@ -57,7 +57,7 @@
   <script type="module">
     import "https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js";
     import count from "./db/flathub/count.js";
-    import { sumAchievements, sumHoles, ACHIEVEMENTS, HOLES, PORTALS } from "./lib/stats.js";
+    import { sumAchievements, sumHoles, sumPortals, ACHIEVEMENTS, HOLES, PORTALS } from "./lib/stats.js";
     import { useActiveLink } from "./lib/useActiveLink.js";
     
     useActiveLink("#total")
@@ -121,10 +121,17 @@
             fill: false,
           },
           {
-            label: ` 💥 holes opened`,
+            label: ` 💥 holes punched`,
+            backgroundColor: BAD_COLOR,
+            borderColor: BAD_COLOR,
+            data: count.map(it => sumHoles(it)),
+            fill: false,
+          },
+          {
+            label: ` 🕳️ portals opened`,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map(it => sumHoles(it)),
+            data: count.map(it => sumPortals(it)),
             fill: false,
           },
           {
