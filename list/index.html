@@ -28,7 +28,6 @@
   </body>
   <script type="module">
     import metafiles from "../db/flathub/metafiles.js"
-    import { MAX_ACHIEVEMENTS, MAX_HOLES } from "../src/config.js"
     import { addAchievements, addHoles, countAchievements, countHoles } from "../src/achievements.js";
 
 
@@ -70,7 +69,7 @@
               ...it,
               icon: "⭐",
               count: it.stargazerCount,
-              title: "Github stars"
+              title: `${it.stargazerCount} Github stars`
             }))
           break;
         case "#holes":
@@ -84,7 +83,6 @@
               ...it,
               icon: "💥",
               count: countHoles(it.holes),
-              max: MAX_HOLES,
               title: Object.keys(it.holes).join(", ")
             }))
           break;
@@ -99,7 +97,6 @@
               ...it,
               icon: "🏅",
               count: countAchievements(it.achievements),
-              max: MAX_ACHIEVEMENTS,
               title: Object.keys(it.achievements).join(", ")
             }))
           break;
@@ -114,7 +111,7 @@
           return  `\
   <a 
     href="${href}" 
-    title="${count} ${max ? ("/ " + max + " [" + title + "]") : title}"
+    title="${title}"
     target="_blank"
   >
     <span>${appID}.${ext}</span>
