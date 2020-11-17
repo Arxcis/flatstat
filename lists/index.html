@@ -28,7 +28,7 @@
   </body>
   <script type="module">
     import metafiles from "../db/flathub/metafiles.js"
-    import { addAchievements, addHoles, countAchievements, countHoles } from "../lib/achievements.js";
+    import { countAchievements, countHoles, countAchievements, countHoles } from "../lib/counting.js";
     import { useActiveLink } from "../lib/useActiveLink.js";
 
     useActiveLink("#achievements")
@@ -79,7 +79,7 @@
             .filter(it => it.history[0]?.finishArgs)  
             .map(it => ({
               ...it,
-              holes: addHoles(it.history[0].finishArgs)
+              holes: countHoles(it.history[0].finishArgs)
             }))
             .map(it => ({
               ...it,
@@ -93,7 +93,7 @@
             .filter(it => it.history[0]?.finishArgs)  
             .map(it => ({
               ...it,
-              achievements: addAchievements(it.history[0].finishArgs),
+              achievements: countAchievements(it.history[0].finishArgs),
             }))
             .map(it => ({
               ...it,

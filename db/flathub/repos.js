@@ -236,9 +236,6 @@ export default [
   "com.github.utsushi.Utsushi",
   "de.haeckerfelix.Fragments",
   "io.github.cges30901.hmtimer",
-  "org.kde.KStyle.HighContrast",
-  "org.kde.KStyle.Adwaita",
-  "org.kde.PlatformTheme.QGnomePlatform",
   "net.sourceforge.Chessx",
   "org.flatpak.Builder",
   "org.kde.okular",
@@ -884,7 +881,6 @@ export default [
   "org.kde.lokalize",
   "com.gitlab.newsflash",
   "org.gnome.GTG",
-  "org.kde.PlatformTheme.QtSNI",
   "org.kde.okteta",
   "de.uni_heidelberg.zah.GaiaSky",
   "org.kde.kwrite",
@@ -1024,5 +1020,8 @@ export default [
   "com.github.arshubham.cipher",
   "org.gnome.Totem.Videosite.YouTubeDl",
   "net.kuribo64.melonDS",
-  "com.github.arshubham.gitignore"
+  "com.github.arshubham.gitignore",
+  "org.firestormviewer.FirestormViewer",
+  "org.gnome.EasyTAG",
+  "org.unitystation.StationHub"
 ]

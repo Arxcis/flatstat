@@ -4289,7 +4289,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -4320,7 +4320,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -4351,7 +4351,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -4382,7 +4382,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -4413,7 +4413,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -4444,7 +4444,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -4475,7 +4475,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -4506,7 +4506,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -4841,7 +4841,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -4861,7 +4861,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -4881,7 +4881,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -4901,7 +4901,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -4921,7 +4921,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -4941,7 +4941,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -4961,7 +4961,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -4981,7 +4981,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -5001,7 +5001,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -8289,7 +8289,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8352,7 +8352,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8414,7 +8414,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8476,7 +8476,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8538,7 +8538,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8600,7 +8600,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8662,7 +8662,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8723,7 +8723,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8783,7 +8783,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8843,7 +8843,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8903,7 +8903,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -8961,7 +8961,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9018,7 +9018,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9075,7 +9075,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9132,7 +9132,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9189,7 +9189,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9247,7 +9247,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9304,7 +9304,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9361,7 +9361,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9417,7 +9417,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9473,7 +9473,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9529,7 +9529,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9581,7 +9581,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9631,7 +9631,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9681,7 +9681,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
         ],
@@ -9725,7 +9725,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "com.feralinteractive.GameMode",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UPower"
@@ -14063,7 +14063,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1",
           "org.freedesktop.timedate1"
@@ -14098,7 +14098,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1",
           "org.freedesktop.timedate1"
@@ -14133,7 +14133,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1",
           "org.freedesktop.timedate1"
@@ -14168,7 +14168,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1",
           "org.freedesktop.timedate1"
@@ -14203,7 +14203,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1",
           "org.freedesktop.timedate1"
@@ -14240,7 +14240,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1",
           "org.freedesktop.timedate1"
@@ -14278,7 +14278,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1",
           "org.freedesktop.timedate1"
@@ -14316,7 +14316,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -14352,7 +14352,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -14388,7 +14388,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -14424,7 +14424,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -14460,7 +14460,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -14495,7 +14495,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -18087,7 +18087,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.RealtimeKit1"
         ],
         "talkName": [
@@ -18118,7 +18118,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.RealtimeKit1"
         ],
         "talkName": [
@@ -18149,7 +18149,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.RealtimeKit1"
         ],
         "talkName": [
@@ -18180,7 +18180,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.RealtimeKit1"
         ],
         "talkName": [
@@ -20432,7 +20432,7 @@ export default [{
         "socket": [
           "fallback-x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -20458,7 +20458,7 @@ export default [{
         "socket": [
           "fallback-x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -20484,7 +20484,7 @@ export default [{
         "socket": [
           "fallback-x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -20510,7 +20510,7 @@ export default [{
         "socket": [
           "fallback-x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -20536,7 +20536,7 @@ export default [{
         "socket": [
           "fallback-x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -20562,7 +20562,7 @@ export default [{
         "socket": [
           "fallback-x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -20586,7 +20586,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -20607,7 +20607,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -20628,7 +20628,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -20652,7 +20652,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -20677,7 +20677,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -20702,7 +20702,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -20727,7 +20727,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -21524,7 +21524,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21562,7 +21562,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21600,7 +21600,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21638,7 +21638,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21676,7 +21676,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21714,7 +21714,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21751,7 +21751,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21788,7 +21788,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21825,7 +21825,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21862,7 +21862,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21899,7 +21899,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21936,7 +21936,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -21973,7 +21973,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -22010,7 +22010,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -22047,7 +22047,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -22084,7 +22084,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -22121,7 +22121,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager",
           "org.freedesktop.login1"
@@ -22158,7 +22158,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager"
         ],
@@ -22194,7 +22194,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager"
         ],
@@ -22230,7 +22230,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager"
         ],
@@ -22266,7 +22266,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager"
         ],
@@ -22302,7 +22302,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager"
         ],
@@ -22338,7 +22338,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager"
         ],
@@ -22374,7 +22374,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager"
         ],
@@ -22410,7 +22410,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.NetworkManager"
         ],
@@ -23221,7 +23221,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -23794,7 +23794,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -23849,7 +23849,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -23904,7 +23904,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -23959,7 +23959,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -24014,7 +24014,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -24069,7 +24069,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -24124,7 +24124,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -24179,7 +24179,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -24234,7 +24234,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -24289,7 +24289,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -24344,7 +24344,7 @@ export default [{
           "system-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof3"
@@ -24396,7 +24396,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24449,7 +24449,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24502,7 +24502,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24555,7 +24555,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24608,7 +24608,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24661,7 +24661,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24711,7 +24711,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24761,7 +24761,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24813,7 +24813,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24865,7 +24865,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24917,7 +24917,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -24969,7 +24969,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.PolicyKit1",
           "org.gnome.Sysprof2"
@@ -26158,7 +26158,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -26180,7 +26180,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -26202,7 +26202,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -26224,7 +26224,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -26246,7 +26246,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -26268,7 +26268,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -26290,7 +26290,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -26316,7 +26316,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -26345,7 +26345,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -26374,7 +26374,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -26403,7 +26403,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -26432,7 +26432,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -26461,7 +26461,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -26490,7 +26490,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -28976,7 +28976,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -29003,7 +29003,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -29033,7 +29033,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -30240,7 +30240,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -30272,7 +30272,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -30304,7 +30304,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.NetworkManager"
         ],
@@ -30338,7 +30338,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.NetworkManager"
         ],
@@ -30372,7 +30372,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.NetworkManager"
         ],
@@ -30406,7 +30406,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.NetworkManager"
         ],
@@ -30443,7 +30443,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.NetworkManager"
         ],
@@ -30485,7 +30485,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.NetworkManager"
         ],
@@ -30527,7 +30527,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.NetworkManager"
         ],
@@ -30569,7 +30569,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.NetworkManager"
         ],
@@ -30623,7 +30623,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -30665,7 +30665,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -30707,7 +30707,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -30749,7 +30749,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -30791,7 +30791,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -30832,7 +30832,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -34569,7 +34569,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -34602,7 +34602,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -34636,7 +34636,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -34693,7 +34693,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -34743,7 +34743,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -34792,7 +34792,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -34842,7 +34842,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -34892,7 +34892,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -34942,7 +34942,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -34993,7 +34993,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -35044,7 +35044,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -35096,7 +35096,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -35148,7 +35148,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -35200,7 +35200,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -35252,7 +35252,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -35302,7 +35302,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -35453,7 +35453,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -35474,7 +35474,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -35495,7 +35495,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -35516,7 +35516,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -35541,7 +35541,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -35569,7 +35569,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -35597,7 +35597,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -35625,7 +35625,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -35916,7 +35916,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -35945,7 +35945,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -35974,7 +35974,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -36003,7 +36003,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -36032,7 +36032,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -36065,7 +36065,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -36100,7 +36100,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -36134,7 +36134,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -36168,7 +36168,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -36202,7 +36202,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -38886,7 +38886,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -38910,7 +38910,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -38934,7 +38934,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -38958,7 +38958,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -38982,7 +38982,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -39006,7 +39006,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -39177,7 +39177,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -39220,7 +39220,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -39263,7 +39263,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -39306,7 +39306,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -39349,7 +39349,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -46120,7 +46120,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -46154,7 +46154,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -46188,7 +46188,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -48872,7 +48872,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ]
       }
@@ -48901,7 +48901,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ]
       }
@@ -48930,7 +48930,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ]
       }
@@ -48958,7 +48958,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ]
       }
@@ -48986,7 +48986,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ]
       }
@@ -49015,7 +49015,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ]
       }
@@ -53628,7 +53628,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -53664,7 +53664,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -53700,7 +53700,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -62529,7 +62529,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62568,7 +62568,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62606,7 +62606,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62644,7 +62644,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62682,7 +62682,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62720,7 +62720,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62758,7 +62758,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62796,7 +62796,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62835,7 +62835,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62874,7 +62874,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62913,7 +62913,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -62953,7 +62953,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -64851,7 +64851,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -64890,7 +64890,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -64929,7 +64929,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -64967,7 +64967,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65001,7 +65001,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65032,7 +65032,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65063,7 +65063,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65093,7 +65093,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65123,7 +65123,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65153,7 +65153,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65188,7 +65188,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65224,7 +65224,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65260,7 +65260,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65296,7 +65296,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65331,7 +65331,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65366,7 +65366,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65401,7 +65401,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65436,7 +65436,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65471,7 +65471,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65506,7 +65506,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65541,7 +65541,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -65576,7 +65576,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -67933,7 +67933,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
@@ -67955,7 +67955,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
@@ -67977,7 +67977,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
@@ -67999,7 +67999,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
@@ -68021,7 +68021,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
@@ -68043,7 +68043,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
@@ -68065,205 +68065,10 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.kde.KStyle.HighContrast",
-  "displayURL": "https://github.com/flathub/org.kde.KStyle.HighContrast/blob/branch/5.12/org.kde.KStyle.HighContrast.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "branch/5.12",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2019-01-03T08:15:02Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-05-23T10:57:50Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-04-26T08:09:01Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-26T19:14:48Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.kde.KStyle.Adwaita",
-  "displayURL": "https://github.com/flathub/org.kde.KStyle.Adwaita/blob/branch/5.12/org.kde.KStyle.Adwaita.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "branch/5.12",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-09-24T07:01:25Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-05-19T12:05:16Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-02-05T15:26:35Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-11-20T08:28:25Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-09-20T01:17:32Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-08-13T07:44:09Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-07-29T09:09:43Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-01-03T08:16:10Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-05-23T10:56:28Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-04-26T15:23:25Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-26T19:12:35Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    }
-  ]
-},{
-  "appID": "org.kde.PlatformTheme.QGnomePlatform",
-  "displayURL": "https://github.com/flathub/org.kde.PlatformTheme.QGnomePlatform/blob/branch/5.12/org.kde.PlatformTheme.QGnomePlatform.json",
-  "ext": "json",
-  "status": "ill-formed",
-  "branch": "branch/5.12",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-09-24T07:03:03Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-05-11T19:17:15Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-02-05T15:27:14Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-11-20T08:25:35Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-10-18T13:29:22Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-09-27T16:09:55Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-08-28T10:32:53Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2019-01-03T08:12:50Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-12-05T14:11:29Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-09-29T18:26:38Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-05-23T10:58:43Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-04-26T08:11:17Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-26T19:05:30Z",
-      "status": "ill-formed",
-      "finishArgs": null
     }
   ]
 },{
@@ -72476,7 +72281,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72513,7 +72318,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72550,7 +72355,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72586,7 +72391,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72622,7 +72427,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72657,7 +72462,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72689,7 +72494,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72721,7 +72526,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72756,7 +72561,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72792,7 +72597,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72826,7 +72631,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72860,7 +72665,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72894,7 +72699,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72929,7 +72734,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72964,7 +72769,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -72998,7 +72803,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2",
           "org.freedesktop.login1"
         ],
@@ -73232,7 +73037,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73264,7 +73069,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73295,7 +73100,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73324,7 +73129,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73353,7 +73158,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73382,7 +73187,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73411,7 +73216,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73440,7 +73245,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73469,7 +73274,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -73495,7 +73300,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ]
       }
@@ -74536,7 +74341,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74574,7 +74379,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74613,7 +74418,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74652,7 +74457,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74691,7 +74496,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74729,7 +74534,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74767,7 +74572,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74805,7 +74610,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74843,7 +74648,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -74881,7 +74686,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Accounts",
           "org.freedesktop.timedate1"
         ],
@@ -83279,7 +83084,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.login1"
         ]
@@ -83298,7 +83103,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.login1"
         ]
@@ -83317,7 +83122,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.login1"
         ]
@@ -84773,7 +84578,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -84809,7 +84614,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -84842,7 +84647,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -84875,7 +84680,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -84908,7 +84713,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -84941,7 +84746,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -84974,7 +84779,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -85007,7 +84812,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -85040,7 +84845,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -85073,7 +84878,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -85106,7 +84911,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.login1"
         ],
@@ -100069,7 +99874,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -100096,7 +99901,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -100123,7 +99928,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -100150,7 +99955,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -100177,7 +99982,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -100209,7 +100014,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -100242,7 +100047,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -100275,7 +100080,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -100308,7 +100113,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -104808,7 +104613,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ratbag1"
         ]
       }
@@ -104825,7 +104630,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ratbag1"
         ]
       }
@@ -104849,7 +104654,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ratbag1"
         ],
         "talkName": [
@@ -104876,7 +104681,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ratbag1"
         ],
         "talkName": [
@@ -104903,7 +104708,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ratbag1"
         ],
         "talkName": [
@@ -104930,7 +104735,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ratbag1"
         ],
         "talkName": [
@@ -104957,7 +104762,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ratbag1"
         ],
         "talkName": [
@@ -104993,7 +104798,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105020,7 +104825,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105047,7 +104852,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105074,7 +104879,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105101,7 +104906,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105128,7 +104933,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105155,7 +104960,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105182,7 +104987,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105209,7 +105014,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105236,7 +105041,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105263,7 +105068,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105290,7 +105095,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105317,7 +105122,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105344,7 +105149,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105371,7 +105176,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105398,7 +105203,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105425,7 +105230,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105452,7 +105257,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105479,7 +105284,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105506,7 +105311,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105533,7 +105338,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105560,7 +105365,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager",
           "org.freedesktop.UDisks2"
         ],
@@ -105587,7 +105392,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -105613,7 +105418,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -105639,7 +105444,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -108002,7 +107807,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -108060,7 +107865,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -108117,7 +107922,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -108174,7 +107979,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -108225,7 +108030,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -109040,7 +108845,7 @@ export default [{
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -109853,6 +109658,26 @@ export default [{
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-07-15T21:38:30Z",
+      "status": "ok",
+      "finishArgs": {
+        "env": [
+          "JAVA_HOME"
+        ],
+        "filesystem": [
+          "home"
+        ],
+        "share": [
+          "ipc",
+          "network"
+        ],
+        "socket": [
+          "x11"
+        ]
+      }
+    },
     {
       "ext": "json",
       "date": "2020-04-24T19:01:17Z",
@@ -111610,7 +111435,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2",
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
@@ -111633,7 +111458,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111655,7 +111480,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111677,7 +111502,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111699,7 +111524,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111721,7 +111546,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111743,7 +111568,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111765,7 +111590,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111787,7 +111612,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111809,7 +111634,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111831,7 +111656,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111853,7 +111678,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111875,7 +111700,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111897,7 +111722,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111919,7 +111744,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111941,7 +111766,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111963,7 +111788,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -111985,7 +111810,7 @@ export default [{
         "share": [
           "network"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower",
           "org.freedesktop.fwupd"
         ]
@@ -117438,7 +117263,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117464,7 +117289,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117490,7 +117315,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117516,7 +117341,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117542,7 +117367,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117568,7 +117393,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117594,7 +117419,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117620,7 +117445,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117646,7 +117471,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117672,7 +117497,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117698,7 +117523,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117724,7 +117549,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117750,7 +117575,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117776,7 +117601,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117802,7 +117627,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117828,7 +117653,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -117917,7 +117742,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -117954,7 +117779,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -117991,7 +117816,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118028,7 +117853,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118065,7 +117890,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118102,7 +117927,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118139,7 +117964,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118176,7 +118001,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118213,7 +118038,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118250,7 +118075,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118287,7 +118112,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118324,7 +118149,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118358,7 +118183,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118391,7 +118216,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2",
@@ -118423,7 +118248,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez",
           "org.freedesktop.Avahi"
         ]
@@ -118554,7 +118379,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -118581,7 +118406,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -118612,7 +118437,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -118644,7 +118469,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -118676,7 +118501,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -118708,7 +118533,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -118740,7 +118565,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -119267,7 +119092,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ],
@@ -119306,7 +119131,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ],
@@ -119346,7 +119171,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ],
@@ -119386,7 +119211,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ],
@@ -119426,7 +119251,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ],
@@ -119465,7 +119290,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -128468,7 +128293,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.DBus",
           "org.freedesktop.DBus.Peer.Ping"
@@ -128509,7 +128334,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.DBus",
           "org.freedesktop.DBus.Peer.Ping"
         ],
@@ -128759,7 +128584,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -128776,7 +128601,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -128793,7 +128618,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -128817,7 +128642,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ],
         "talkName": [
@@ -128844,7 +128669,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ],
         "talkName": [
@@ -128876,7 +128701,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -128900,7 +128725,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -128929,7 +128754,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -128959,7 +128784,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.ColorManager"
         ],
         "talkName": [
@@ -129496,7 +129321,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.DBus"
         ],
         "talkName": [
@@ -129516,7 +129341,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.DBus"
         ]
       }
@@ -129536,7 +129361,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.DBus"
         ],
         "talkName": [
@@ -129559,7 +129384,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.DBus"
         ],
         "talkName": [
@@ -129585,7 +129410,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.DBus"
         ],
         "talkName": [
@@ -130045,7 +129870,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -130089,7 +129914,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -131041,36 +130866,6 @@ export default [{
     {
       "ext": "json",
       "date": "2019-03-23T23:35:49Z",
-      "status": "ok",
-      "finishArgs": {
-        "device": [
-          "dri"
-        ],
-        "filesystem": [
-          "xdg-download",
-          "xdg-music",
-          "~/.config/fontconfig/:ro"
-        ],
-        "ownName": [
-          "org.mpris.MediaPlayer2.tauon"
-        ],
-        "share": [
-          "ipc",
-          "network"
-        ],
-        "socket": [
-          "pulseaudio",
-          "wayland",
-          "x11"
-        ],
-        "talkName": [
-          "org.freedesktop.Notifications"
-        ]
-      }
-    },
-    {
-      "ext": "json",
-      "date": "2019-02-24T12:38:25Z",
       "status": "ok",
       "finishArgs": {
         "device": [
@@ -132447,7 +132242,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -132474,7 +132269,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ]
       }
@@ -132498,7 +132293,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ]
       }
@@ -132522,7 +132317,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ]
       }
@@ -132546,7 +132341,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ]
       }
@@ -132570,7 +132365,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ]
       }
@@ -132594,7 +132389,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ]
       }
@@ -135132,7 +134927,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -135159,7 +134954,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -135183,7 +134978,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -135206,7 +135001,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -135229,7 +135024,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -135252,7 +135047,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -135275,7 +135070,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -135298,7 +135093,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -136016,7 +135811,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136046,7 +135841,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136076,7 +135871,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136106,7 +135901,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136136,7 +135931,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136166,7 +135961,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136196,7 +135991,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136226,7 +136021,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136256,7 +136051,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136286,7 +136081,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136316,7 +136111,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136346,7 +136141,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136376,7 +136171,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -136406,7 +136201,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -144165,7 +143960,7 @@ export default [{
           "ssh-auth",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.NetworkManager"
         ],
         "talkName": [
@@ -144741,7 +144536,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -144777,7 +144572,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -144814,7 +144609,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -144849,7 +144644,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -144884,7 +144679,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -144919,7 +144714,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -144953,7 +144748,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -144987,7 +144782,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ],
         "talkName": [
@@ -145024,7 +144819,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ],
         "talkName": [
@@ -145060,7 +144855,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ],
         "talkName": [
@@ -145096,7 +144891,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ],
         "talkName": [
@@ -145126,7 +144921,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UPower"
         ]
       }
@@ -146755,7 +146550,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.portal.FileChooser"
         ],
         "talkName": [
@@ -146788,7 +146583,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.portal.FileChooser"
         ],
         "talkName": [
@@ -146820,7 +146615,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.portal.FileChooser"
         ],
         "talkName": [
@@ -147183,7 +146978,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -147212,7 +147007,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ],
         "talkName": [
@@ -148642,7 +148437,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -148665,7 +148460,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -148688,7 +148483,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -148711,7 +148506,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -149704,7 +149499,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -149726,7 +149521,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -149791,7 +149586,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.fwupd"
         ]
       }
@@ -149809,7 +149604,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.fwupd"
         ]
       }
@@ -149827,7 +149622,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.fwupd"
         ]
       }
@@ -149845,7 +149640,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.fwupd"
         ]
       }
@@ -149863,7 +149658,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.fwupd"
         ]
       }
@@ -153405,7 +153200,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -153435,7 +153230,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -153465,7 +153260,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -153495,7 +153290,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -153522,7 +153317,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -153549,7 +153344,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -153576,7 +153371,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -153603,7 +153398,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -155913,7 +155708,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -155943,7 +155738,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -155973,7 +155768,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ],
         "talkName": [
@@ -156907,7 +156702,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -156931,7 +156726,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -156955,7 +156750,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -156979,7 +156774,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -157003,7 +156798,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -157027,7 +156822,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -157051,7 +156846,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -157075,7 +156870,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -157099,7 +156894,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -157123,7 +156918,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -159419,7 +159214,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -159444,7 +159239,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -159469,7 +159264,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -164470,7 +164265,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -164491,7 +164286,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.bluez"
         ]
       }
@@ -166263,7 +166058,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -166290,7 +166085,7 @@ export default [{
         "socket": [
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ],
         "talkName": [
@@ -166695,7 +166490,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -166739,7 +166534,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -166782,7 +166577,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -166825,7 +166620,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -166868,7 +166663,7 @@ export default [{
           "ssh-auth",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -168856,7 +168651,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ]
@@ -168887,7 +168682,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ]
@@ -168918,7 +168713,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ]
@@ -168949,7 +168744,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ]
@@ -168980,7 +168775,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.UDisks2"
         ]
@@ -169011,7 +168806,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -171510,7 +171305,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -171756,7 +171551,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
@@ -171774,31 +171569,10 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ]
       }
-    }
-  ]
-},{
-  "appID": "org.kde.PlatformTheme.QtSNI",
-  "displayURL": "https://github.com/flathub/org.kde.PlatformTheme.QtSNI/blob/master/org.kde.PlatformTheme.QtSNI.json",
-  "ext": "json",
-  "status": "missing-finish-args",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-09-14T18:29:58Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2020-07-10T20:22:28Z",
-      "status": "missing-finish-args",
-      "finishArgs": null
     }
   ]
 },{
@@ -172345,7 +172119,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.GeoClue2"
         ]
       }
@@ -173335,7 +173109,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -173380,7 +173154,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -173603,7 +173377,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.fedoraproject.FirewallD1",
           "org.freedesktop.NetworkManager"
         ],
@@ -173631,7 +173405,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.fedoraproject.FirewallD1",
           "org.freedesktop.NetworkManager"
         ],
@@ -173659,7 +173433,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.fedoraproject.FirewallD1",
           "org.freedesktop.NetworkManager"
         ],
@@ -173687,7 +173461,7 @@ export default [{
           "pulseaudio",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.fedoraproject.FirewallD1",
           "org.freedesktop.NetworkManager"
         ],
@@ -173757,7 +173531,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -173780,7 +173554,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -173803,7 +173577,7 @@ export default [{
           "fallback-x11",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.UDisks2"
         ]
       }
@@ -174506,7 +174280,7 @@ export default [{
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -174969,7 +174743,7 @@ export default [{
           "ssh-auth",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -175000,7 +174774,7 @@ export default [{
           "ssh-auth",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.login1"
         ],
         "talkName": [
@@ -175217,7 +174991,7 @@ export default [{
           "wayland",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.hostname1"
         ],
         "talkName": [
@@ -176999,7 +176773,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi",
           "org.freedesktop.GeoClue2",
           "org.freedesktop.UPower"
@@ -177125,7 +176899,7 @@ export default [{
           "session-bus",
           "wayland"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "com.endlessm.Metrics",
           "org.freedesktop.Accounts",
           "org.freedesktop.NetworkManager",
@@ -177227,7 +177001,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -177268,7 +177042,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -178021,7 +177795,7 @@ export default [{
           "pulseaudio",
           "x11"
         ],
-        "systemTalk-Name": [
+        "systemTalkName": [
           "org.freedesktop.Avahi"
         ],
         "talkName": [
@@ -178178,6 +177952,134 @@ export default [{
 },{
   "appID": "com.github.arshubham.gitignore",
   "displayURL": "https://github.com/flathub/com.github.arshubham.gitignore",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.firestormviewer.FirestormViewer",
+  "displayURL": "https://github.com/flathub/org.firestormviewer.FirestormViewer/blob/master/org.firestormviewer.FirestormViewer.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-09-17T12:35:45Z",
+      "status": "ok",
+      "finishArgs": {
+        "allow": [
+          "multiarch"
+        ],
+        "device": [
+          "dri"
+        ],
+        "filesystem": [
+          "xdg-desktop",
+          "xdg-documents",
+          "xdg-download",
+          "xdg-music",
+          "xdg-pictures",
+          "xdg-run/app/com.discordapp.Discord:create",
+          "~/.firestorm_x64"
+        ],
+        "ownName": [
+          "com.secondlife.ViewerAppAPIService"
+        ],
+        "share": [
+          "ipc",
+          "network"
+        ],
+        "socket": [
+          "pulseaudio",
+          "x11"
+        ],
+        "talkName": [
+          "org.freedesktop.Notifications"
+        ]
+      }
+    },
+    {
+      "ext": "json",
+      "date": "2020-04-27T18:11:25Z",
+      "status": "ok",
+      "finishArgs": {
+        "allow": [
+          "multiarch"
+        ],
+        "device": [
+          "dri"
+        ],
+        "filesystem": [
+          "xdg-desktop",
+          "xdg-documents",
+          "xdg-download",
+          "xdg-music",
+          "xdg-pictures",
+          "xdg-run/app/com.discordapp.Discord:create",
+          "~/.firestorm_x64"
+        ],
+        "ownName": [
+          "com.secondlife.ViewerAppAPIService"
+        ],
+        "share": [
+          "ipc",
+          "network"
+        ],
+        "socket": [
+          "pulseaudio",
+          "x11"
+        ],
+        "talkName": [
+          "org.freedesktop.Notifications"
+        ]
+      }
+    },
+    {
+      "ext": "json",
+      "date": "2020-01-08T12:42:52Z",
+      "status": "ok",
+      "finishArgs": {
+        "allow": [
+          "multiarch"
+        ],
+        "device": [
+          "dri"
+        ],
+        "filesystem": [
+          "home",
+          "xdg-run/app/com.discordapp.Discord:create"
+        ],
+        "ownName": [
+          "com.secondlife.ViewerAppAPIService"
+        ],
+        "share": [
+          "ipc",
+          "network"
+        ],
+        "socket": [
+          "pulseaudio",
+          "x11"
+        ],
+        "talkName": [
+          "org.freedesktop.Notifications"
+        ]
+      }
+    }
+  ]
+},{
+  "appID": "org.gnome.EasyTAG",
+  "displayURL": "https://github.com/flathub/org.gnome.EasyTAG",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.unitystation.StationHub",
+  "displayURL": "https://github.com/flathub/org.unitystation.StationHub",
   "ext": null,
   "status": null,
   "branch": "master",
