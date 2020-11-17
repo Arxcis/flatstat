@@ -69,3 +69,6 @@ export const HOLES = {
   DeviceSome: "--device=some",
   AudioAll: "--pulseaudio",
 };
+
+export const MAX_ACHIEVEMENTS = Object.keys(ACHIEVEMENTS).length;
+export const MAX_HOLES = Object.keys(HOLES).length;

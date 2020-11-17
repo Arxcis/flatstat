@@ -10,18 +10,17 @@
     <header>
       <a href="/"><h1 id="title" title="Flatstat | List">flatstat</h1></a>
       <nav>
-        <a href="/#total" title="Graphs">graph</a>
-        <a href="/list/?filter=x11-only" title="List">list</a>
+        <a href="/" title="Graphs">graph</a>
+        <a href=/list/ title="Lists">list</a>
         <a href="/achievements/" title="Achievements">achievements</a>
         <a href="/about/" title="About">about</a>
       </nav>
     </header>
     <main>
       <nav>
-        <a id="x11-only" title="Apps only supporting x11" href="/list/?filter=x11-only">--x11 only</a>
-        <a id="filesystem-home" title="Apps with --filesystem=home enabled" href="/list/?filter=filesystem-home">--filesystem=home</a>
-        <a id="filesystem-host" title="Apps with --filesystem=host enabled" href="/list/?filter=filesystem-host">--filesystem=host</a>
-        <a id="device-all" title="Apps with --device=all enabled" href="/list/?filter=device-all">--device=all</a>
+        <a id="#achievements" title="Apps ranked by number of achievements" href="/list/#achievements">🏅 achievements</a>
+        <a id="#holes" title="Apps ranked by number of holes" href="/list/#holes">💥 holes</a>
+        <a id="#stars" title="Apps ranked by number of Github stars" href="/list/#stars">⭐ stars</a>
       </nav>
       <ul>
       </ul>
@@ -29,60 +28,103 @@
   </body>
   <script type="module">
     import metafiles from "../db/flathub/metafiles.js"
+    import { MAX_ACHIEVEMENTS, MAX_HOLES } from "../src/config.js"
+    import { addAchievements, addHoles, countAchievements, countHoles } from "../src/achievements.js";
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const ul = document.querySelector("ul")
-    const filter = urlParams.get("filter");
-    
+
     // Check if any a[href] contains the search, and mark them as active
-    let searchLink = document.querySelector(`header a[href*='/search']`)
+    let searchLink = document.querySelector(`header a[href*='/list']`)
     searchLink?.classList.add("current")
 
-    let currentFilterLink = document.getElementById(filter??"unknown")
-    currentFilterLink?.classList.add("current")
-
-    let filtered = null;
-    switch(filter) {
-      case "filesystem-host":
-        filtered = metafiles.filter(it => it.history[0]?.finishArgs?.filesystem?.includes("host"))
-        break;
-      case "filesystem-home":
-        filtered = metafiles.filter(it => it.history[0]?.finishArgs?.filesystem?.includes("home"))
-        break;
-      case "x11-only":
-        filtered = metafiles.filter(it => {
-          const socket = it.history[0]?.finishArgs?.socket;
-          return (!!socket?.includes("x11") || !!socket?.includes("fallback-x11")) && !socket?.includes("wayland")
-        })
-        break;
-      case "device-all":
-        filtered = metafiles.filter(it => it.history[0]?.finishArgs?.device?.includes("all"))
-        break;
+    // Set current active button
+    const graphLink = document.getElementById(window.location.hash)
+    if (graphLink) {
+      graphLink.classList.add("current")
+    } else {
+      document.getElementById("#achievements").classList.add("current");
     }
 
+    renderList();
+    window.addEventListener("hashchange", () => {
+      const links = document.querySelectorAll("main nav a")
+      for (const link of links) link.classList.remove("current")
 
+      const graphLink = document.getElementById(window.location.hash)
+      graphLink?.classList.add("current")
+      renderList();
+    })
 
-    ul.innerHTML = filtered ? filtered
-      .sort((a,b) => {
-        if (b.stargazerCount === a.stargazerCount) {
-          return a.appID.localeCompare(b.appID)
-        } else {
-          return (b.stargazerCount - a.stargazerCount)
-        }
-      })
-      .map(({appID, ext, branch, stargazerCount }) => {
-        const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` 
+    // Map, filter, reduce list
+    function renderList() {
+      const ul = document.querySelector("ul")
+      const LIST_LIMIT = 1000;
+
+      const metafileWithCounts = metafiles
         
-        return  `<a 
-          href="${href}" 
-          title="Open file on Github"
-          target="_blank"
-        >
-            <span>${appID}.${ext}</span>
-            <span title="${stargazerCount} Github stars">${stargazerCount ? (stargazerCount + " ⭐") : ""}</span>
-        </a>
-  `;
+
+      let counted = [];
+      switch(window.location.hash) {
+        case "#stars":
+          counted = metafileWithCounts
+            .map(it => ({
+              ...it,
+              icon: "⭐",
+              count: it.stargazerCount,
+              title: "Github stars"
+            }))
+          break;
+        case "#holes":
+          counted = metafileWithCounts
+            .filter(it => it.history[0]?.finishArgs)  
+            .map(it => ({
+              ...it,
+              holes: addHoles(it.history[0].finishArgs)
+            }))
+            .map(it => ({
+              ...it,
+              icon: "💥",
+              count: countHoles(it.holes),
+              max: MAX_HOLES,
+              title: Object.keys(it.holes).join(", ")
+            }))
+          break;
+        default: /* achievements */
+          counted = metafileWithCounts
+            .filter(it => it.history[0]?.finishArgs)  
+            .map(it => ({
+              ...it,
+              achievements: addAchievements(it.history[0].finishArgs),
+            }))
+            .map(it => ({
+              ...it,
+              icon: "🏅",
+              count: countAchievements(it.achievements),
+              max: MAX_ACHIEVEMENTS,
+              title: Object.keys(it.achievements).join(", ")
+            }))
+          break;
       }
-      ).join("") : "No filter selected"
+
+      ul.innerHTML = counted
+        .sort((a, b) => b.count - a.count)
+        .slice(0, LIST_LIMIT)
+        .map(({ appID, ext, branch, count, icon, max, title }) => {
+          const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` 
+          
+          return  `\
+  <a 
+    href="${href}" 
+    title="${count} ${max ? ("/ " + max + " [" + title + "]") : title}"
+    target="_blank"
+  >
+    <span>${appID}.${ext}</span>
+    <span>${count ? (count + ` ${icon}`) : ""}</span>
+  </a>
+  `;
+        }).join("");
+
+      }
+
+
   </script>
 </html>

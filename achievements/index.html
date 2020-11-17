@@ -10,8 +10,8 @@
     <header>
       <a href="/"><h1 id="title" title="Flatstat | Achievements">flatstat</h1></a>
       <nav>
-        <a href="/#total" title="Graphs">graph</a>
-        <a href="/list/?filter=x11-only" title="List">list</a>
+        <a href="/" title="Graphs">graph</a>
+        <a href=/list/ title="List">list</a>
         <a href="/achievements/" title="Achievements">achievements</a>
         <a href="/about/" title="About">about</a>
       </nav>
@@ -68,10 +68,11 @@
     </main>
   </body>
   <script type="module">
-    const headerLink = document.querySelector(`header nav a[href*='achievements']`)
+   // Check if any a[href] contains the search, and mark them as active
+   const headerLink = document.querySelector(`header nav a[href*='achievements']`)
     headerLink?.classList.add("current")
 
-   // Check if any a[href] contains the search, and mark them as active
+  // Set current active button
    const graphLink = document.getElementById(window.location.hash)
     if (graphLink) {
       graphLink.classList.add("current")

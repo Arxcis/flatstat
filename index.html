@@ -10,15 +10,15 @@
     <header>
       <a href="/"><h1 id="title" title="Flatstat | Graph">flatstat</h1></a>
       <nav>
-        <a href="/#total" title="Graphs">graph</a>
-        <a href="/list/?filter=x11-only" title="List">list</a>
+        <a href="/" title="Graphs">graph</a>
+        <a href=/list/ title="List">list</a>
         <a href="/achievements/" title="Achievements">achievements</a>
         <a href="/about/" title="About">about</a>
       </nav>
     </header>
     <main>
       <nav>
-        <a id="#total" title="Totals" href="/#total">total</a>
+        <a id="#total" title="Totals" href="/">total</a>
         <a id="#window" title="Apps with --wayland or --x11" href="/#window">window</a>
         <a id="#filesystem" title="Apps with --filesystem" href="/#filesystem">filesystem</a>
         <a id="#device" title="Apps with --device" href="/#device">device</a>
@@ -37,8 +37,9 @@
     </main>
   </body>
   <script type="module">
-    import { ACHIEVEMENTS, HOLES } from "./src/config.js"
     import count from "./db/flathub/count.js";
+    import { countAchievements, countHoles } from "./src/achievements.js";
+    import { ACHIEVEMENTS, HOLES } from "./src/config.js"
 
     // Mark graph link as active
     const headerLink = document.querySelector(`header a[href*='/#']`)
@@ -107,21 +108,21 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: "achievements",
+            label: " 🏅 achievements",
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map(it => Object.values(ACHIEVEMENTS).reduce((acc, value) => acc + it[value], 0)),
+            data: count.map(it => countAchievements(it)),
             fill: false,
           },
           {
-            label: "holes",
+            label: " 💥 holes",
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map(it => Object.values(HOLES).reduce((acc, value) => acc + it[value], 0)),
+            data: count.map(it => countHoles(it)),
             fill: false,
           },
           {
-            label: "apps",
+            label: " 🕹️ apps",
             backgroundColor: SUPER_BAD_COLOR,
             borderColor: SUPER_BAD_COLOR,
             data: count.map(it => it["apps"]),
