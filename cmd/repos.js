@@ -2,7 +2,7 @@ import { writeFile } from "fs/promises";
 import fetch from "node-fetch";
 import { RestConfig } from "./config.js";
 
-const REPOS_JS = "./db/flathub/repos.js";
+const REPOS_JS = "./data/flathub/repos.js";
 
 let repos = [];
 let next = "https://api.github.com/orgs/flathub/repos?per_page=100";

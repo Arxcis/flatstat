@@ -1,9 +1,9 @@
 import { writeFile } from "fs/promises";
-import metafiles from "../db/flathub/metafiles.js";
+import metafiles from "../data/flathub/metafiles.js";
 import { MONTHS } from "./config.js";
 import { countAchievements, countHoles, countPortals } from "../lib/stats.js";
 
-const COUNT_JS = "./db/flathub/count.js";
+const COUNT_JS = "./data/flathub/count.js";
 
 const countMap = metafiles.reduce((acc, it) => {
   const commitHistory = it.history ?? [];

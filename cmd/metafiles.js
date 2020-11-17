@@ -1,8 +1,8 @@
 import { appendFile, unlink } from "fs/promises";
-import apps from "../db/flathub/repos.js";
+import apps from "../data/flathub/repos.js";
 import { queryMetafileHistory } from "./query.js";
 
-const MEATFILES_JSON = "./db/flathub/metafiles.js";
+const MEATFILES_JSON = "./data/flathub/metafiles.js";
 
 await unlink(MEATFILES_JSON);
 await appendFile(MEATFILES_JSON, "export default [");
