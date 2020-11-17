@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 700px;
+  max-width: 830px;
   margin: 0 auto;
   font-family: Helvetica, Arial, Sans-Serif;
 }
