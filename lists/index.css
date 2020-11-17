@@ -22,8 +22,21 @@ main ul a {
   border-radius: 5px;
 }
 
-main ul a span:first-of-type {
-  flex: 1;
+main ul a span.left {
+  text-overflow: ellipsis; white-space: nowrap; overflow: hidden; flex: 1;
+}
+
+main ul a span.middle {
+  text-overflow: ellipsis;
+   white-space: nowrap; 
+   overflow: hidden; 
+   font-size: 12px; 
+   flex: 0 0 250px; 
+   color: #777777;
+}
+
+main ul a span.padding {
+  flex: 0 0 50px;
 }
 
 main ul a:hover {

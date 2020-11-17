@@ -75,7 +75,8 @@
             ...it,
             icon: "⭐",
             count: it.stargazerCount,
-            title: `${it.stargazerCount} Github stars`
+            title: `${it.stargazerCount} Github stars`,
+            details: ""
           }))
         break;
       case "#holes":
@@ -89,7 +90,8 @@
             ...it,
             icon: "💥",
             count: sumHoles(it.holes),
-            title: Object.keys(it.holes).join("&#010;")
+            title: Object.keys(it.holes).join("&#010;"),
+            details: Object.keys(it.holes).join(", ")
           }))
         break;
       case "#portals":
@@ -103,7 +105,8 @@
             ...it,
             icon: "🕳️",
             count: sumPortals(it.portals),
-            title: Object.keys(it.portals).join("&#010;")
+            title: Object.keys(it.portals).join("&#010;"),
+            details: Object.keys(it.portals).join(", ")
           }))
         break;
       default: /* achievements */
@@ -117,7 +120,8 @@
             ...it,
             icon: "🏅",
             count: sumAchievements(it.achievements),
-            title: Object.keys(it.achievements).join("&#010;")
+            title: Object.keys(it.achievements).join("&#010;"),
+            details: Object.keys(it.achievements).join(", ")
           }))
         break;
     }
@@ -126,7 +130,7 @@
       .filter(it => it.count)
       .sort((a, b) => b.count - a.count)
       .slice(0, LIST_LIMIT)
-      .map(({ appID, ext, branch, count, icon, max, title }) => {
+      .map(({ appID, ext, branch, count, icon, max, title, details }) => {
         const href = `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}`
 
         return `\
@@ -135,9 +139,11 @@
     title="${title}"
     target="_blank"
   >
-    <span>${appID}.${ext}</span>
+    <span class="left">${appID}.${ext}</span>
+    <span class="middle"> ${details}</span>
+    <span class="padding"></span>
     <span>${count ? (count + ` ${icon}`) : ""}</span>
-  </a>
+  </a >
   `;
       }).join("");
 
