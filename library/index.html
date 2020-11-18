@@ -1,211 +1,134 @@
 <!DOCTYPE html5>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Flatstat | Library</title>
-    <link rel="stylesheet" type="text/css" href="../index.css"></link>
-    <link rel="stylesheet" type="text/css" href="./index.css"></link>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Flatstat | Library</title>
+  <link rel="stylesheet" type="text/css" href="../index.css">
+  </link>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  </link>
 </head>
-  <body>
-    <header>
-      <a href="/"><h1 id="title" title="Flatstat | Library">flatstat</h1></a>
-      <nav>
-        <a href="/" title="Graphs">graphs</a>
-        <a href=/lists/ title="List">lists</a>
-        <a href="/library/" title="Library" class="active">library</a>
-        <a href="/about/" title="About">about</a>
-      </nav>
-    </header>
-    <main>
-      <nav>
-        <a id="#achievements" title="Flatpak achievements" href="/library/#achievements"> 🏅 achievements</a>
-        <a id="#holes" title="Flatpak holes" href="/library/#holes"> 💥 holes</a>
-        <a id="#portals" title="Flatpak portals" href="/library/#portals"> 🕳️ portals</a>
-      </nav>
 
-      <section>
-        <section id="achievements">
-          <article title="--wayland-with-fallback">
-            <h3>🏅 Achievement: --wayland-with-fallback</h3>
-            <p>Your app supports Wayland. Wayland supports isolation between apps. If the user is in a Wayland session, your app does not have access to x11. At the same time your app remains backwards-compatible with x11-users, giving x11-users access to the Flatpak ecosystem.</p>
-          </article>
+<body>
+  <header>
+    <a href="/">
+      <h1 id="title" title="Flatstat | Library">flatstat</h1>
+    </a>
+    <nav>
+      <a href="/" title="Graphs">graphs</a>
+      <a href=/lists/ title="List">lists</a>
+      <a href="/library/" title="Library" class="active">library</a>
+      <a href="/about/" title="About">about</a>
+    </nav>
+  </header>
+  <main>
+    <nav>
+      <a id="#achievements" title="Flatpak achievements" href="/library/#achievements"> 🏅 achievements</a>
+      <a id="#holes" title="Flatpak holes" href="/library/#holes"> 💥 holes</a>
+    </nav>
 
-          <article title="--no-filesystem-all">
-            <h3>🏅 Achievement: --no-filesystem-all</h3>
-            <p>Your app does not ask for blanket access to the entire filesystem, like --filesystem=home or --filesystem=host.</p>
-          </article>
+    <section>
+      <section id="achievements">
+        <article title="--wayland-with-fallback">
+          <h3>🏅 Achievement: --wayland-with-fallback</h3>
+          <p>Your app supports Wayland. Wayland supports isolation between apps. If the user is in a Wayland session,
+            your app does not have access to x11. At the same time your app remains backwards-compatible with x11-users,
+            giving x11-users access to the Flatpak ecosystem.</p>
+        </article>
 
-          <article title="--no-filesystem-unknown">
-            <h3>🏅 Achievement: --no-filesystem-unknown</h3>
-            <p>Your app does not ask for access to any unknown files or directories - outside of the "well-known directories" like xdg-download, xdg-music, etc. </p>
-          </article>
+        <article title="--no-filesystem-all">
+          <h3>🏅 Achievement: --no-filesystem-all</h3>
+          <p>Your app does not ask for blanket access to the entire filesystem, like --filesystem=home or
+            --filesystem=host.</p>
+        </article>
 
-          <article title="--no-filesystem">
-            <h3>🏅 Achievement: --no-filesystem</h3>
-            <p>Your app does not ask for blanket access to any files or directories, leaving the user in full control of which files the app is given access to. If implemented correctly, the app should use the <a href="https://flatpak.github.io/xdg-desktop-portal/portal-docs.html#gdbus-org.freedesktop.portal.FileChooser" target="_blank" title="org.freedesktop.portal.FileChooser">FileChooser-portal</a>. This will ensure that the user-experience is the same, as if the app had --filesystem=host, but without the security ramifications.</p>
-          </article>
+        <article title="--no-filesystem-unknown">
+          <h3>🏅 Achievement: --no-filesystem-unknown</h3>
+          <p>Your app does not ask for access to any unknown files or directories - outside of the "well-known
+            directories" like xdg-download, xdg-music, etc. </p>
+        </article>
 
-          <article title="--no-device-all">
-            <h3>🏅 Achievement: --no-device-all</h3>
-            <p>Your app does not ask for blanket access to all of the users connected devices, aka --device=all.
-          </article>
+        <article title="--no-filesystem">
+          <h3>🏅 Achievement: --no-filesystem</h3>
+          <p>Your app does not ask for blanket access to any files or directories, leaving the user in full control of
+            which files the app is given access to. If implemented correctly, the app should use the <a
+              href="https://flatpak.github.io/xdg-desktop-portal/portal-docs.html#gdbus-org.freedesktop.portal.FileChooser"
+              target="_blank" title="org.freedesktop.portal.FileChooser">FileChooser-portal</a>. This will ensure that
+            the user-experience is the same, as if the app had --filesystem=host, but without the security
+            ramifications.</p>
+        </article>
 
-          <article title="--no-device">
-            <h3>🏅 Achievement: --no-device</h3>
-            <p>Your app does not ask for blanket access to any connected devices, leaving the user in full control of which devices the app is given access to.</p>
-          </article>
+        <article title="--no-device-all">
+          <h3>🏅 Achievement: --no-device-all</h3>
+          <p>Your app does not ask for blanket access to all of the users connected devices, aka --device=all.
+        </article>
 
-          <article title="--no-pulseaudio">
-            <h3>🏅 Achievement: --no-pulseaudio</h3>
-            <p>Your app does not ask for blanket access to the users audio.</p>
-          </article>
-        </section>
-        
-        <section id="holes"> 
-          <article title="--x11">
-            <h3>💥 Hole: --x11 </h3>
-            <p>Your app supports x11. x11 does not support isolation between apps, which enables your app to see what a user is doing in other apps. E.g. keylogging, screen capture.</p>
-          </article>
+        <article title="--no-device">
+          <h3>🏅 Achievement: --no-device</h3>
+          <p>Your app does not ask for blanket access to any connected devices, leaving the user in full control of
+            which devices the app is given access to.</p>
+        </article>
 
-          <article title="--filesystem-all">
-            <h3>💥 Hole: --filesystem-all</h3>
-            <p>Your app has blanket access to all of the user's private files, because it is using permissions like --filesystem=home or --filesystem=host</p>
-          </article>
-
-          <article title="--filesystem-unknown">
-            <h3>💥 Hole: --filesystem-unknown</h3>
-            <p>Your app has blanket access to one or more unknown files or directories - outside of "well-known directories" like xdg-desktop, xdg-music, etc.</p>
-          </article>
-
-          <article title="--filesystem-well-known">
-            <h3>💥 Hole: --filesystem-well-known</h3>
-            <p>Your app has blanket access to one or more of the well-known directories - like xdg-desktop, xdg-music, etc. This is better than having access to unknown files or directories, or access to all files or directories, but is still considred a hole, because there is no isolation between apps.</p>
-          </article>
-
-          <article title="--device-all">
-            <h3>💥 Hole: --device-all</h3>
-            <p>Your app has blanket access to all of the user's connected devices.</p>
-          </article>
-
-          <article title="--device-well-known">
-            <h3>💥 Hole: --device-well-known</h3>
-            <p>Your app has blanket access to one or more of the user's "well-known devices", like --device=dri, or --device=kvm.</p>
-          </article>
-
-          <article title="--pulseaudio">
-            <h3>💥 Hole: --pulseaudio</h3>
-            <p>Your app has pulseaudio access. Pulseaudio does not support isolation between app. Your app can listen to the microphone without asking the user. Your app can play sound without asking the user.</p>
-          </article>
-        </section>
-
-        <section id="portals"> 
-          <article title="org.freedesktop.Notifications">
-            <h3>🕳️ Portal: org.freedesktop.Notifications</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.secrets">
-            <h3>🕳️ Portal: org.freedesktop.secrets</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.ScreenSaver">
-            <h3>🕳️ Portal: org.freedesktop.ScreenSaver</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.FileManager1">
-            <h3>🕳️ Portal: org.freedesktop.FileManager1</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.ColorManager">
-            <h3>🕳️ Portal: org.freedesktop.ColorManager</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.UPower">
-            <h3>🕳️ Portal: org.freedesktop.UPower</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.Flatpak">
-            <h3>🕳️ Portal: org.freedesktop.Flatpak</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.NetworkManager">
-            <h3>🕳️ Portal: org.freedesktop.NetworkManager</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.PowerManagement">
-            <h3>🕳️ Portal: org.freedesktop.PowerManagement</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.GeoClue2">
-            <h3>🕳️ Portal: org.freedesktop.GeoClue2</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.login1">
-            <h3>🕳️ Portal: org.freedesktop.login1</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.timedate1">
-            <h3>🕳️ Portal: org.freedesktop.timedate1</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.PackageKit">
-            <h3>🕳️ Portal: org.freedesktop.PackageKit</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.PolicyKit1">
-            <h3>🕳️ Portal: org.freedesktop.PolicyKit1</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.Tracker1">
-            <h3>🕳️ Portal: org.freedesktop.Tracker1</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.Telepathy">
-            <h3>🕳️ Portal: org.freedesktop.Telepathy</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.Avahi">
-            <h3>🕳️ Portal: org.freedesktop.Avahi</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.Accounts">
-            <h3>🕳️ Portal: org.freedesktop.Accounts</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.UDisk2">
-            <h3>🕳️ Portal: org.freedesktop.UDisk2</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.fwupd">
-            <h3>🕳️ Portal: org.freedesktop.fwupd</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.DBus">
-            <h3>🕳️ Portal: org.freedesktop.DBus</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.portal.Fcitx">
-            <h3>🕳️ Portal: org.freedesktop.portal.Fcitx</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.portal.FileChooser">
-            <h3>🕳️ Portal: org.freedesktop.portal.FileChooser</h3>
-            <p>TODO</p>
-          </article>
-          <article title="org.freedesktop.portal.Trash">
-            <h3>🕳️ Portal: org.freedesktop.portal.Trash</h3>
-            <p>TODO</p>
-          </article>
-       </section>
-
+        <article title="--no-pulseaudio">
+          <h3>🏅 Achievement: --no-pulseaudio</h3>
+          <p>Your app does not ask for blanket access to the users audio.</p>
+        </article>
       </section>
-    </main>
-  </body>
-  <script type="module">
-    import { useActiveLink } from "../lib/useActiveLink.js";
 
-    useActiveLink("#achievements")
+      <section id="holes">
+        <article title="--x11">
+          <h3>💥 Hole: --x11 </h3>
+          <p>Your app supports x11. x11 does not support isolation between apps, which enables your app to see what a
+            user is doing in other apps. E.g. keylogging, screen capture.</p>
+        </article>
+
+        <article title="--filesystem-all">
+          <h3>💥 Hole: --filesystem-all</h3>
+          <p>Your app has blanket access to all of the user's private files, because it is using permissions like
+            --filesystem=home or --filesystem=host</p>
+        </article>
+
+        <article title="--filesystem-unknown">
+          <h3>💥 Hole: --filesystem-unknown</h3>
+          <p>Your app has blanket access to one or more unknown files or directories - outside of "well-known
+            directories" like xdg-desktop, xdg-music, etc.</p>
+        </article>
+
+        <article title="--filesystem-well-known">
+          <h3>💥 Hole: --filesystem-well-known</h3>
+          <p>Your app has blanket access to one or more of the well-known directories - like xdg-desktop, xdg-music,
+            etc. This is better than having access to unknown files or directories, or access to all files or
+            directories, but is still considred a hole, because there is no isolation between apps.</p>
+        </article>
+
+        <article title="--device-all">
+          <h3>💥 Hole: --device-all</h3>
+          <p>Your app has blanket access to all of the user's connected devices.</p>
+        </article>
+
+        <article title="--device-well-known">
+          <h3>💥 Hole: --device-well-known</h3>
+          <p>Your app has blanket access to one or more of the user's "well-known devices", like --device=dri, or
+            --device=kvm.</p>
+        </article>
+
+        <article title="--pulseaudio">
+          <h3>💥 Hole: --pulseaudio</h3>
+          <p>Your app has pulseaudio access. Pulseaudio does not support isolation between app. Your app can listen to
+            the microphone without asking the user. Your app can play sound without asking the user.</p>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+<script type="module">
+  import { useActiveLink } from "../lib/useActiveLink.js";
+
+  useActiveLink("#achievements")
 
     // Inject counts for achievements and holes
-    
-  </script>
+
+</script>
+
 </html>

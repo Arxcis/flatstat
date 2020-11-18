@@ -23,11 +23,13 @@
     </nav>
   </header>
   <main>
+    <input id="search" value="" type="search" placeholder="Search for name">
     <nav>
-      <a id="#achievements" title="Apps sorted by achievements" href="/lists/#achievements">🏅 achievements</a>
-      <a id="#holes" title="Apps sorted by holes" href="/lists/#holes">💥 holes</a>
-      <a id="#portals" title="Apps sorted by portals" href="/lists/#portals">🕳️ portals</a>
-      <a id="#stars" title="Apps sorted by Github stars" href="/lists/#stars">⭐ stars</a>
+      <a id="#finish-args" title="Frequently used finish-args" href="/lists/#finish-args">🏁 finish-args</a>
+      <a id="#achievements" title="Apps sorted by achievement count" href="/lists/#achievements">🏅 achievements</a>
+      <a id="#holes" title="Apps sorted by hole count" href="/lists/#holes">💥 holes</a>
+      <a id="#portals" title="Apps sorted by --talk-name count" href="/lists/#portals">🕳️ portals</a>
+      <a id="#stars" title="Apps sorted by Github stars count" href="/lists/#stars">⭐ stars</a>
     </nav>
     <ul>
     </ul>
@@ -37,16 +39,25 @@
   import { incrementAchievementCount, incrementHoleCount, incrementPortalCount, sumAchievements, sumHoles, sumPortals } from "../lib/stats.js";
   import { useJSON } from "../lib/useJSON.js";
   import { useActiveLink } from "../lib/useActiveLink.js";
+  import { useSearch } from "../lib/useSearch.js";
 
-  useActiveLink("#achievements")
+  let fetching = true;
+  let count = [];
+  let metafiles = [];
 
-  renderList();
-  window.addEventListener("hashchange", renderList)
+  useActiveLink("#finish-args")
+  useSearch("#search", (search) => renderList(search))
 
+  renderList("");
+  window.addEventListener("hashchange", () => renderList(""))
 
   // Map, filter, sort, slice, join list
-  async function renderList() {
-    const metafiles = await useJSON("../data/flathub/metafiles.json")
+  async function renderList(search) {
+    if (fetching) {
+      count = await useJSON("../data/flathub/count.json")
+      metafiles = await useJSON("../data/flathub/metafiles.json")
+      fetching = false;
+    }
 
     const ul = document.querySelector("ul")
     const LIST_LIMIT = 1000;
@@ -56,11 +67,12 @@
       case "#stars":
         list = metafiles
           .map(it => ({
-            ...it,
-            icon: "⭐",
             count: it.stargazerCount,
+            details: "",
+            displayURL: it.displayURL,
+            icon: "⭐",
+            name: `${it.appID}.${it.ext}`,
             title: `${it.stargazerCount} Github stars`,
-            details: ""
           }))
         break;
       case "#holes":
@@ -71,11 +83,12 @@
             holes: incrementHoleCount(it.history[0].finishArgs)
           }))
           .map(it => ({
-            ...it,
-            icon: "💥",
             count: sumHoles(it.holes),
+            details: Object.keys(it.holes).join(", "),
+            displayURL: it.displayURL,
+            icon: "💥",
+            name: `${it.appID}.${it.ext}`,
             title: Object.keys(it.holes).join("&#010;"),
-            details: Object.keys(it.holes).join(", ")
           }))
         break;
       case "#portals":
@@ -86,14 +99,15 @@
             portals: incrementPortalCount(it.history[0].finishArgs)
           }))
           .map(it => ({
-            ...it,
-            icon: "🕳️",
             count: sumPortals(it.portals),
+            details: Object.keys(it.portals).join(", "),
+            displayURL: it.displayURL,
+            icon: "🕳️",
+            name: `${it.appID}.${it.ext}`,
             title: Object.keys(it.portals).join("&#010;"),
-            details: Object.keys(it.portals).join(", ")
           }))
         break;
-      default: /* achievements */
+      case "#achievements":
         list = metafiles
           .filter(it => it.history[0]?.finishArgs)
           .map(it => ({
@@ -101,20 +115,32 @@
             achievements: incrementAchievementCount(it.history[0].finishArgs),
           }))
           .map(it => ({
-            ...it,
-            icon: "🏅",
             count: sumAchievements(it.achievements),
+            details: Object.keys(it.achievements).join(", "),
+            displayURL: it.displayURL,
+            icon: "🏅",
+            name: `${it.appID}.${it.ext}`,
             title: Object.keys(it.achievements).join("&#010;"),
-            details: Object.keys(it.achievements).join(", ")
           }))
+        break;
+      default: /* finish-args */
+        list = Object.entries(count[count.length - 1].finishArgs).map(([arg, count]) => ({
+          count,
+          details: "",
+          displayURL: "",
+          icon: "🏁",
+          name: arg,
+          title: `${arg}: ${count}`,
+        }))
         break;
     }
 
     ul.innerHTML = list
       .filter(it => it.count)
+      .filter(it => it.name.toLowerCase().includes(search.toLowerCase()))
       .sort((a, b) => b.count - a.count)
       .slice(0, LIST_LIMIT)
-      .map(({ appID, ext, count, icon, title, details, displayURL }) => {
+      .map(({ count, details, displayURL, icon, name, title }) => {
 
         return `\
   <a
@@ -122,7 +148,7 @@
     title="${title}"
     target="_blank"
   >
-    <span class="left">${appID}.${ext}</span>
+    <span class="left">${name}</span>
     <span class="middle"> ${details}</span>
     <span class="padding"></span>
     <span>${count ? (count + ` ${icon}`) : ""}</span>
