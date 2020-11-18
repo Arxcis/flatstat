@@ -4,7 +4,7 @@ Hosted at https://arxcis.github.io/flatstat/
 ## Folder structure
 
 ```
-# Runs commands
+# Run commands
 Makefile
 
 # Commands that generate data

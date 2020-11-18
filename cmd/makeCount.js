@@ -1,6 +1,6 @@
 import { writeFile, readFile } from "fs/promises";
 import { MONTHS } from "./config.js";
-import { countAchievements, countHoles, countPortals } from "../lib/stats.js";
+import { incrementAchievementCount, incrementHoleCount, incrementPortalCount } from "../lib/stats.js";
 
 const metafiles = JSON.parse(await readFile("./data/flathub/metafiles.json"));
 
@@ -37,9 +37,9 @@ const countMap = metafiles.reduce((acc, it) => {
       ...increment("yaml", it.ext === "yaml"),
       ...increment("yml", it.ext === "yml"),
 
-      ...countAchievements(finishArgs, monthCount),
-      ...countHoles(finishArgs, monthCount),
-      portals: countPortals(finishArgs, monthCount?.portals)
+      ...incrementAchievementCount(finishArgs, monthCount),
+      ...incrementHoleCount(finishArgs, monthCount),
+      portals: incrementPortalCount(finishArgs, monthCount?.portals)
     });
   }
 

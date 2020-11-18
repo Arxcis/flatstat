@@ -34,7 +34,7 @@
   </main>
 </body>
 <script type="module">
-  import { countAchievements, countHoles, countPortals, sumAchievements, sumHoles, sumPortals } from "../lib/stats.js";
+  import { incrementAchievementCount, incrementHoleCount, incrementPortalCount, sumAchievements, sumHoles, sumPortals } from "../lib/stats.js";
   import { useJSON } from "../lib/useJSON.js";
   import { useActiveLink } from "../lib/useActiveLink.js";
 
@@ -68,7 +68,7 @@
           .filter(it => it.history[0]?.finishArgs)
           .map(it => ({
             ...it,
-            holes: countHoles(it.history[0].finishArgs)
+            holes: incrementHoleCount(it.history[0].finishArgs)
           }))
           .map(it => ({
             ...it,
@@ -83,7 +83,7 @@
           .filter(it => it.history[0]?.finishArgs)
           .map(it => ({
             ...it,
-            portals: countPortals(it.history[0].finishArgs)
+            portals: incrementPortalCount(it.history[0].finishArgs)
           }))
           .map(it => ({
             ...it,
@@ -98,7 +98,7 @@
           .filter(it => it.history[0]?.finishArgs)
           .map(it => ({
             ...it,
-            achievements: countAchievements(it.history[0].finishArgs),
+            achievements: incrementAchievementCount(it.history[0].finishArgs),
           }))
           .map(it => ({
             ...it,
@@ -117,8 +117,8 @@
       .map(({ appID, ext, count, icon, title, details, displayURL }) => {
 
         return `\
-  <a 
-    href="${displayURL}" 
+  <a
+    href="${displayURL}"
     title="${title}"
     target="_blank"
   >

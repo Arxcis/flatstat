@@ -5,7 +5,7 @@ const apps = JSON.parse(await readFile("./data/flathub/apps.json"));
 
 const MEATFILES_JSON = "./data/flathub/metafiles.json";
 
-await unlink(MEATFILES_JSON);
+await unlink(MEATFILES_JSON)
 await appendFile(MEATFILES_JSON, "[");
 await makeMetafiles(apps);
 await appendFile(MEATFILES_JSON, "]");
