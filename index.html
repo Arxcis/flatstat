@@ -46,11 +46,11 @@
   useActiveLink("#finish-args")
   useSearch("#search", (search) => renderList(search))
 
-  renderList("");
-  window.addEventListener("hashchange", () => renderList(""))
+  renderList();
+  window.addEventListener("hashchange", () => renderList())
 
   // Map, filter, sort, slice, join list
-  async function renderList(search) {
+  async function renderList(search = "") {
     if (fetching) {
       count = await useJSON("./data/flathub/count.json")
       metafiles = await useJSON("./data/flathub/metafiles.json")
@@ -125,7 +125,7 @@
         list = Object.entries(count[count.length - 1].finishArgs).map(([arg, count]) => ({
           count,
           details: "",
-          displayURL: "",
+          displayURL: null,
           icon: "🏁",
           name: arg,
           title: `${arg}: ${count}`,
@@ -135,13 +135,15 @@
 
     ul.innerHTML = list
       .filter(it => it.count)
+      // search
       .filter(it => it.name.toLowerCase().includes(search.toLowerCase()))
       .sort((a, b) => b.count - a.count)
       .slice(0, LIST_LIMIT)
       .map(({ count, details, displayURL, icon, name, title }) => {
 
         return `\
-  <a
+  <${displayURL ? "a" : "div"}
+    class="row"
     href="${displayURL}"
     title="${title}"
     target="_blank"
@@ -150,7 +152,7 @@
     <span class="middle"> ${details}</span>
     <span class="padding"></span>
     <span>${count ? (count + ` ${icon}`) : ""}</span>
-  </a >
+  </${displayURL ? "a" : "div"}>
   `;
       }).join("");
 

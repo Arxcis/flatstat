@@ -118,18 +118,18 @@ main > ul::-webkit-scrollbar {
   display: none;
 }
 
-main > ul a {
+main > ul > .row {
   padding: 8px 10px 8px 10px;
   display: flex;
   color: black;
   border-radius: 5px;
 }
 
-main > ul a span.left {
+main > ul > .row span.left {
   text-overflow: ellipsis; white-space: nowrap; overflow: hidden; flex: 1;
 }
 
-main > ul a span.middle {
+main > ul > .row span.middle {
   text-overflow: ellipsis;
    white-space: nowrap;
    overflow: hidden;
@@ -138,15 +138,15 @@ main > ul a span.middle {
    color: #777777;
 }
 
-main > ul a:hover > span.middle {
+main > ul > .row:hover > span.middle {
   color: white;
 }
 
-main > ul a span.padding {
+main > ul > .row span.padding {
   flex: 0 0 50px;
 }
 
-main > ul a:hover {
+main > ul > .row:hover {
   color: white;
   background-color: #0366d6;
 }
