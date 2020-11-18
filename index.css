@@ -28,24 +28,24 @@ main section::-webkit-scrollbar {
   display: none;
 }
 
-main nav {
+main > nav {
   border: 1px solid #dfdfdf;
   margin-right: auto;
   border-radius: 5px;
 }
 
-main nav a {
+main > nav a {
   font-size: 14px;
   padding: 6px 20px 6px 20px;
   border-bottom: none;
 }
 
-main nav a:hover {
+main > nav a:hover {
   color: black;
   background-color: #dfdfdf;
 }
 
-main nav a.active {
+main > nav a.active {
   background-color: #0366d6;
   color: white;
   border-bottom: none;
@@ -138,15 +138,16 @@ main > ul > .row span.middle {
    color: #777777;
 }
 
-main > ul > .row:hover > span.middle {
-  color: white;
-}
 
 main > ul > .row span.padding {
   flex: 0 0 50px;
 }
 
 main > ul > .row:hover {
-  color: white;
-  background-color: #0366d6;
+  color: black;
+  background-color: #dfdfdf;
+}
+
+main > ul > .row:hover > span.middle {
+  color: black;
 }
