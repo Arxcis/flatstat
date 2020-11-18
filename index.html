@@ -133,27 +133,30 @@
         break;
     }
 
-    ul.innerHTML = list
-      .filter(it => it.count)
+    const filtered = list.filter(it => it.count)
       // search
       .filter(it => it.name.toLowerCase().includes(search.toLowerCase()))
       .sort((a, b) => b.count - a.count)
       .slice(0, LIST_LIMIT)
-      .map(({ count, details, displayURL, icon, name, title }) => {
 
+
+
+    ul.innerHTML = filtered.length === 0
+      ? "No results"
+      : filtered.map(({ count, details, displayURL, icon, name, title }) => {
         return `\
-  <${displayURL ? "a" : "div"}
-    class="row"
-    href="${displayURL}"
-    title="${title}"
-    target="_blank"
-  >
-    <span class="left">${name}</span>
-    <span class="middle"> ${details}</span>
-    <span class="padding"></span>
-    <span>${count ? (count + ` ${icon}`) : ""}</span>
-  </${displayURL ? "a" : "div"}>
-  `;
+          <${displayURL ? "a" : "div"}
+            class="row"
+            href="${displayURL}"
+            title="${title}"
+            target="_blank"
+          >
+            <span class="left">${name}</span>
+            <span class="middle"> ${details}</span>
+            <span class="padding"></span>
+            <span>${count ? (count + ` ${icon}`) : ""}</span>
+          </${displayURL ? "a" : "div"}>
+      `;
       }).join("");
 
   }
