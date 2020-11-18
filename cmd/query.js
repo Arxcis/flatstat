@@ -21,7 +21,7 @@ export async function queryMetafileHistory(appID) {
   // 2. Pick a branch and stargazer count. Should be the same across queries.
   const branch = json?.branch ?? yaml?.branch ?? yml?.branch;
   const stargazerCount = json?.stargazerCount ?? yaml?.stargazerCount ?? yml?.stargazerCount;
-  
+
   // 3. Parse commit history
   const jsonHistory = json ? parseCommits(json.commits) : [];
   const yamlHistory = yaml ? parseCommits(yaml.commits) : [];
@@ -45,7 +45,7 @@ export async function queryMetafileHistory(appID) {
   const status = trimmedHistory[0]?.status ?? null;
 
   // 7. Concat the displayURL
-  const displayURL = ext ? `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}`: `https://github.com/flathub/${appID}`;
+  const displayURL = ext ? `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` : `https://github.com/flathub/${appID}`;
 
   // 8. Bundle what we learned into a metafile object
   const metafile = { appID, displayURL, ext, status, branch, stargazerCount, history: trimmedHistory };
@@ -58,7 +58,7 @@ export async function queryMetafileHistory(appID) {
  * @param {string} ext json|yaml|yml
  */
 async function queryCommitHistory(appID, ext) {
-    const query = `\
+  const query = `\
   query {\
       repository(name:"${appID}", owner:"flathub") {\
         name\
@@ -67,7 +67,7 @@ async function queryCommitHistory(appID, ext) {
           name
           target {\
             ... on Commit {\
-              history(since: "2018-01-01T00:00:00Z", path:"${appID}.${ext}") {\
+              history(since: "${MONTHS[0]}-01T00:00:00Z", path:"${appID}.${ext}") {\
                 nodes {\
                   committedDate\
                   file(path:"${appID}.${ext}") {\
@@ -154,13 +154,13 @@ function parseCommits(commits) {
 
     let meta;
     try {
-      if (ext === "yml" || ext === "yaml") {
+      if (ext === "yml" || ext === "yaml") {
         meta = yaml.safeLoad(text)
       } else {
         // Try to make JSON better formed, before parsing it, to get fewer "ill-formed" results.
         const jsonWithoutComments = stripJsonComments(text);
-        const jsonWithoutWhitespace = jsonWithoutComments.replace(/\s/g,"")
-        
+        const jsonWithoutWhitespace = jsonWithoutComments.replace(/\s/g, "")
+
         meta = JSON.parse(jsonWithoutWhitespace);
       }
     } catch {
@@ -182,7 +182,7 @@ function parseCommits(commits) {
         finishArgs: null,
       };
     }
-    
+
     const finishArgs = meta["finish-args"]
     if (!finishArgs) {
       return {
@@ -199,11 +199,13 @@ function parseCommits(commits) {
         // syntax error. Moving on...
         continue;
       }
-      const [key, value] = arg.split("=");
+      let [key, ...value] = arg.split("=");
       if (!key || !value) {
         // syntax error. Moving on...
         continue;
       }
+      value = value.join("=")
+
       const camelCasedKey = key
         .replace("--", "")
         .replace(/([-][a-z])/g, group => group.toUpperCase())
