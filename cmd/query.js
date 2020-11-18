@@ -227,7 +227,7 @@ function parseCommits(commits) {
         return {
           ext,
           date,
-          status: "missing-finish-args",
+          status: "finish-args-not-found",
           finishArgs: null,
         }
       }
