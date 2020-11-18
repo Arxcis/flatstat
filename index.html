@@ -44,10 +44,10 @@
   let metafiles = [];
 
   useActiveLink("#finish-args")
-  useSearch("#search", (search) => renderList(search))
+  const input = useSearch("#search", (search) => renderList(search))
 
-  renderList();
-  window.addEventListener("hashchange", () => renderList())
+  renderList(input.value);
+  window.addEventListener("hashchange", () => renderList(input.value))
 
   // Map, filter, sort, slice, join list
   async function renderList(search = "") {
