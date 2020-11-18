@@ -25,6 +25,6 @@ lib/
 # HTML Pages
 about/index.html
 library/index.html
-lists/index.html
+graphs/index.html
 index.html
 ```
