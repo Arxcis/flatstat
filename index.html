@@ -23,18 +23,27 @@
   <main>
     <input id="search" value="" type="search" placeholder="Search for name">
     <nav>
-      <a id="#finish-args" title="Frequently used finish-args" href="/#finish-args">🏁 finish-args</a>
+      <a id="#apps" title="Apps sorted by Github stars" href="/#apps">🕹️ apps</a>
+      <a id="#finish-args" title="Frequently used 'finish-args'" href=" /#finish-args">🏁 finish-args</a>
       <a id="#achievements" title="Apps sorted by achievements" href="/#achievements">🏅 achievements</a>
       <a id="#holes" title="Apps sorted by holes" href="/#holes">💥 holes</a>
       <a id="#portals" title="Apps sorted by well-known portals" href="/#portals">🕳️ portals</a>
-      <a id="#stars" title="Apps sorted by Github stars" href="/#stars">⭐ stars</a>
     </nav>
     <ul>
     </ul>
   </main>
 </body>
 <script type="module">
-  import { incrementAchievementCount, incrementHoleCount, incrementPortalCount, sumAchievements, sumHoles, sumPortals } from "./lib/stats.js";
+  import {
+    incrementAchievementCount,
+    incrementHoleCount,
+    incrementPortalCount,
+    incrementFinishArgs,
+    sumFinishArgs,
+    sumAchievements,
+    sumHoles,
+    sumPortals
+  } from "./lib/stats.js";
   import { useJSON } from "./lib/useJSON.js";
   import { useActiveLink } from "./lib/useActiveLink.js";
   import { useSearch } from "./lib/useSearch.js";
@@ -43,7 +52,7 @@
   let count = [];
   let metafiles = [];
 
-  useActiveLink("#finish-args")
+  useActiveLink("#apps")
   const input = useSearch("#search", (search) => renderList(search, window.location.hash))
 
   renderList(input.value, window.location.hash);
@@ -62,17 +71,6 @@
 
     let list = [];
     switch (hash) {
-      case "#stars":
-        list = metafiles
-          .map(it => ({
-            count: it.stargazerCount,
-            displayURL: it.displayURL,
-            icon: "⭐",
-            name: `${it.appID}.${it.ext}`,
-            tags: [`${it.appID}.${it.ext}`, `${it.stargazerCount}`],
-            title: `${it.stargazerCount} Github stars`,
-          }))
-        break;
       case "#holes":
         list = metafiles
           .filter(it => it.history[0]?.finishArgs)
@@ -121,7 +119,7 @@
             }
           })
         break;
-      default: /* finish-args */
+      case "#finish-args":
         list = Object.entries(count[count.length - 1].finishArgs).map(([arg, count]) => ({
           count,
           displayURL: null,
@@ -130,6 +128,20 @@
           tags: [arg, `${count}`],
           title: `${arg} - used by ${count} apps`,
         }))
+        break;
+      default: //"#stars":
+        list = metafiles
+          .map(it => {
+            const finishArgs = incrementFinishArgs(it.history[0]?.finishArgs ?? [])
+
+            return {
+              count: it.stargazerCount,
+              displayURL: it.displayURL,
+              icon: "⭐",
+              name: `${it.appID}.${it.ext}`,
+              tags: [`${it.appID}.${it.ext}`, ...(finishArgs ? Object.keys(finishArgs) : []), `${it.stargazerCount}`],
+            }
+          })
         break;
     }
 
