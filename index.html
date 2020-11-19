@@ -44,13 +44,13 @@
   let metafiles = [];
 
   useActiveLink("#finish-args")
-  const input = useSearch("#search", (search) => renderList(search))
+  const input = useSearch("#search", (search) => renderList(search, window.location.hash))
 
-  renderList(input.value);
-  window.addEventListener("hashchange", () => renderList(input.value))
+  renderList(input.value, window.location.hash);
+  window.addEventListener("hashchange", () => renderList(input.value, window.location.hash))
 
   // Map, filter, sort, slice, join list
-  async function renderList(search = "") {
+  async function renderList(search, hash) {
     if (fetching) {
       count = await useJSON("./data/flathub/count.json")
       metafiles = await useJSON("./data/flathub/metafiles.json")
@@ -58,76 +58,76 @@
     }
 
     const ul = document.querySelector("ul")
-    const LIST_LIMIT = 1000;
+    const LIST_LIMIT = 400;
 
     let list = [];
-    switch (window.location.hash) {
+    switch (hash) {
       case "#stars":
         list = metafiles
           .map(it => ({
             count: it.stargazerCount,
-            details: "",
             displayURL: it.displayURL,
             icon: "⭐",
             name: `${it.appID}.${it.ext}`,
+            tags: [`${it.appID}.${it.ext}`, `${it.stargazerCount}`],
             title: `${it.stargazerCount} Github stars`,
           }))
         break;
       case "#holes":
         list = metafiles
           .filter(it => it.history[0]?.finishArgs)
-          .map(it => ({
-            ...it,
-            holes: incrementHoleCount(it.history[0].finishArgs)
-          }))
-          .map(it => ({
-            count: sumHoles(it.holes),
-            details: Object.keys(it.holes).join(", "),
-            displayURL: it.displayURL,
-            icon: "💥",
-            name: `${it.appID}.${it.ext}`,
-            title: Object.keys(it.holes).join("&#010;"),
-          }))
+          .map(it => {
+            const holes = incrementHoleCount(it.history[0].finishArgs)
+            const count = sumHoles(holes);
+
+            return {
+              count,
+              displayURL: it.displayURL,
+              icon: "💥",
+              name: `${it.appID}.${it.ext}`,
+              tags: [`${it.appID}.${it.ext}`, ...Object.keys(holes), `${count}`],
+            }
+          })
         break;
       case "#portals":
         list = metafiles
           .filter(it => it.history[0]?.finishArgs)
-          .map(it => ({
-            ...it,
-            portals: incrementPortalCount(it.history[0].finishArgs)
-          }))
-          .map(it => ({
-            count: sumPortals(it.portals),
-            details: Object.keys(it.portals).join(", "),
-            displayURL: it.displayURL,
-            icon: "🕳️",
-            name: `${it.appID}.${it.ext}`,
-            title: Object.keys(it.portals).join("&#010;"),
-          }))
+          .map(it => {
+            const portals = incrementPortalCount(it.history[0].finishArgs)
+            const count = sumPortals(portals);
+
+            return {
+              count,
+              displayURL: it.displayURL,
+              icon: "🕳️",
+              name: `${it.appID}.${it.ext}`,
+              tags: [`${it.appID}.${it.ext}`, ...Object.keys(portals), `${count}`],
+            }
+          })
         break;
       case "#achievements":
         list = metafiles
           .filter(it => it.history[0]?.finishArgs)
-          .map(it => ({
-            ...it,
-            achievements: incrementAchievementCount(it.history[0].finishArgs),
-          }))
-          .map(it => ({
-            count: sumAchievements(it.achievements),
-            details: Object.keys(it.achievements).join(", "),
-            displayURL: it.displayURL,
-            icon: "🏅",
-            name: `${it.appID}.${it.ext}`,
-            title: Object.keys(it.achievements).join("&#010;"),
-          }))
+          .map(it => {
+            const achievements = incrementAchievementCount(it.history[0].finishArgs);
+            const count = sumAchievements(achievements);
+
+            return {
+              count,
+              displayURL: it.displayURL,
+              icon: "🏅",
+              name: `${it.appID}.${it.ext}`,
+              tags: [`${it.appID}.${it.ext}`, ...Object.keys(achievements), `${count}`],
+            }
+          })
         break;
       default: /* finish-args */
         list = Object.entries(count[count.length - 1].finishArgs).map(([arg, count]) => ({
           count,
-          details: "",
           displayURL: null,
           icon: "🏁",
           name: arg,
+          tags: [arg, `${count}`],
           title: `${arg} - used by ${count} apps`,
         }))
         break;
@@ -135,32 +135,58 @@
 
     const filtered = list.filter(it => it.count)
       // search
-      .filter(it => search.toLocaleLowerCase().split(" ").every(term => it.name.toLowerCase().includes(term)))
+      .map(it => ({ ...it, hits: searchHits(search, it.tags) }))
+      .filter(it => it.hits)
       .sort((a, b) => b.count - a.count)
       .slice(0, LIST_LIMIT)
 
 
+    if (filtered.length === 0) {
+      ul.innerHTML = "No results"
+      return;
+    }
 
-    ul.innerHTML = filtered.length === 0
-      ? "No results"
-      : filtered.map(({ count, details, displayURL, icon, name, title }) => {
-        return `\
-          <${displayURL ? "a" : "div"}
-            class="row"
-            href="${displayURL}"
-            title="${title}"
-            target="_blank"
-          >
-            <span class="left">${name}</span>
-            <span class="middle"> ${details}</span>
-            <span class="padding"></span>
-            <span>${count ? (count + ` ${icon}`) : ""}</span>
-          </${displayURL ? "a" : "div"}>
-      `;
-      }).join("");
+    const renderedList = filtered.map(({ count, displayURL, icon, name, title, hits, tags }) => {
+      title = title ?? tags?.join("&#010;")
+      const details = hits?.filter(hit => hit !== name).join(", ")
 
+      return `\
+        <${displayURL ? "a" : "div"}
+          class="row"
+          href="${displayURL}"
+          title="${title}"
+          target="_blank"
+        >
+          <span class="left">${name}</span>
+          <span class="middle">${details}</span>
+          <span class="padding"></span>
+          <span>${count ? (count + ` ${icon}`) : ""}</span>
+        </${displayURL ? "a" : "div"}>
+    `;
+    }).join("");
+
+    ul.innerHTML = renderedList;
+    return;
   }
 
+  function searchHits(search, tags) {
+    const terms = search
+      .toLowerCase()
+      .split(" ")
+      .filter(it => it !== "")
+
+    if (terms.length === 0) {
+      return tags;
+    }
+
+    const searchString = tags.join(" ").toLowerCase();
+    const hit = terms.every(term => searchString.includes(term))
+    if (!hit) {
+      return null;
+    }
+
+    return tags.filter(tag => terms.some(term => tag.toLowerCase().includes(term)))
+  }
 
 </script>
 
