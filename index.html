@@ -148,7 +148,7 @@
 
     const renderedList = filtered.map(({ count, displayURL, icon, name, title, hits, tags }) => {
       title = title ?? tags?.join("&#010;")
-      const details = hits?.filter(hit => hit !== name).join(", ")
+      const details = hits?.filter(hit => hit !== name && isNaN(hit)).join(", ")
 
       return `\
         <${displayURL ? "a" : "div"}
