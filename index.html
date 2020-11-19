@@ -135,7 +135,7 @@
 
     const filtered = list.filter(it => it.count)
       // search
-      .filter(it => it.name.toLowerCase().includes(search.toLowerCase()))
+      .filter(it => search.toLocaleLowerCase().split(" ").every(term => it.name.toLowerCase().includes(term)))
       .sort((a, b) => b.count - a.count)
       .slice(0, LIST_LIMIT)
 
