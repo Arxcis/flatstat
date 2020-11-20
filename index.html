@@ -11,10 +11,10 @@
 <body>
   <header>
     <a href="/flatstat/">
-      <h1 id="title" title="Flatstat | Lists">flatstat</h1>
+      <h1 id="title" title="Flatstat | Apps">flatstat</h1>
     </a>
     <nav>
-      <a href="/flatstat/" title="Lists" class="active">lists</a>
+      <a href="/flatstat/" title="Apps" class="active">apps</a>
       <a href="/flatstat/graphs/" title="Graphs">graphs</a>
       <a href="/flatstat/library/" title="Library">library</a>
       <a href="/flatstat/about/" title="About">about</a>
@@ -23,12 +23,12 @@
   <main>
     <input id="search" value="" type="search" placeholder="Search for name">
     <nav>
-      <a id="#apps" title="Apps sorted by Github stars" href="/flatstat/#apps">🕹️ apps</a>
-      <a id="#changelog" title="Latest changes" href="/flatstat/#changelog">📜 changelog</a>
-      <a id="#finish-args" title="Frequently used 'finish-args'" href=" /flatstat/#finish-args">🏁 finish-args</a>
+      <a id="#stars" title="Apps sorted by Github stars" href="/flatstat/#stars">⭐ stars</a>
       <a id="#achievements" title="Apps sorted by achievements" href="/flatstat/#achievements">🏅 achievements</a>
       <a id="#holes" title="Apps sorted by holes" href="/flatstat/#holes">💥 holes</a>
-      <a id="#portals" title="Apps sorted by well-known portals" href="/flatstat/#portals">🕳️ portals</a>
+      <a id="#talk-names" title="Apps sorted by well-known --talk-names" href="/flatstat/#talk-names">💬 talk-names</a>
+      <a id="#changelog" title="Latest changes to apps" href="/flatstat/#changelog">📜 changelog</a>
+      <a id="#finish-args" title="Frequently used 'finish-args'" href=" /flatstat/#finish-args">🏁 finish-args</a>
     </nav>
     <ul>
     </ul>
@@ -53,7 +53,7 @@
 
 
   // Setup rendering triggers
-  useActiveLink("#apps")
+  useActiveLink("#stars")
   const input = useSearch("#search", (search) => renderList(search, window.location.hash))
 
   window.addEventListener("hashchange", () => renderList(input.value, window.location.hash))
@@ -62,7 +62,7 @@
   // Init search indexes
   let changelogIndex = [];
   let holesIndex = [];
-  let portalsIndex = [];
+  let talkNamesIndex = [];
   let achievementsIndex = [];
   let appsIndex = [];
   let finishArgsIndex = [];
@@ -94,7 +94,7 @@
         }
 
         if (additions) {
-          const tags = [`Additions in ${appID}.${ext}&#010;`, ...additions, count];
+          const tags = [`Additions to ${appID}.${ext}&#010;`, ...additions, count];
           acc.push({
             name: `➕ ${additions.join(", ")}`,
             displayURL,
@@ -143,19 +143,19 @@
       })
       .sort((a, b) => b.count - a.count)
 
-    // portals
-    portalsIndex = metafiles
+    // talk-names
+    talkNamesIndex = metafiles
       .filter(it => it.history[0]?.finishArgs)
       .map(it => {
-        const portals = incrementPortalCount(it.history[0].finishArgs)
-        const count = sumPortals(portals);
-        const tags = [`${it.appID}.${it.ext}`, ...Object.keys(portals)];
+        const talkNames = incrementPortalCount(it.history[0].finishArgs)
+        const count = sumPortals(talkNames);
+        const tags = [`--talk-names of ${it.appID}.${it.ext}&#010;`, ...Object.keys(talkNames)];
 
         return {
           count,
           displayURL: it.displayURL,
-          icon: "🕳️",
-          name: `🕹️ ${it.appID}.${it.ext}`,
+          icon: "💬",
+          name: `🕹️ ${it.appID}`,
           tags,
           searchString: tags.join("").toLocaleLowerCase(),
         }
@@ -229,8 +229,8 @@
       case "#holes":
         list = holesIndex;
         break;
-      case "#portals":
-        list = portalsIndex;
+      case "#talk-names":
+        list = talkNamesIndex;
         break;
       case "#achievements":
         list = achievementsIndex;

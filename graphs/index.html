@@ -14,7 +14,7 @@
       <h1 id="title" title="Flatstat | Graphs">flatstat</h1>
     </a>
     <nav>
-      <a href="/flatstat/" title="Lists">lists</a>
+      <a href="/flatstat/" title="Apps">apps</a>
       <a href="/flatstat/graphs/" title="Graphs" class="active">graphs</a>
       <a href="/flatstat/library/" title="Library">library</a>
       <a href="/flatstat/about/" title="About">about</a>
@@ -27,7 +27,7 @@
       <a id="#filesystem" title="Apps with --filesystem" href="/flatstat/graphs/#filesystem">filesystem</a>
       <a id="#device" title="Apps with --device" href="/flatstat/graphs/#device">device</a>
       <a id="#audio" title="Apps with --pulseaudio" href="/flatstat/graphs/#audio">audio</a>
-      <a id="#portal" title="Most used portals" href="/flatstat/graphs/#portal">portal</a>
+      <a id="#talk-names" title="Most used --talk-names" href="/flatstat/graphs/#talk-names">talk-names</a>
       <a id="#metafile" title=".json or .yaml or .yml" href="/flatstat/graphs/#metafile">metafile</a>
     </nav>
 
@@ -47,12 +47,12 @@
       <article>
         <canvas id="audio" width="400" height="250"></canvas>
       </article>
-      <article id="portal">
-        <canvas id="portal-page1" width="400" height="250"></canvas>
-        <canvas id="portal-page2" width="400" height="250"></canvas>
-        <canvas id="portal-page3" width="400" height="250"></canvas>
-        <canvas id="portal-page4" width="400" height="250"></canvas>
-        <canvas id="portal-page5" width="400" height="250"></canvas>
+      <article id="talk-names">
+        <canvas id="talk-names-page1" width="400" height="250"></canvas>
+        <canvas id="talk-names-page2" width="400" height="250"></canvas>
+        <canvas id="talk-names-page3" width="400" height="250"></canvas>
+        <canvas id="talk-names-page4" width="400" height="250"></canvas>
+        <canvas id="talk-names-page5" width="400" height="250"></canvas>
       </article>
       <article>
         <canvas id="metafile" width="400" height="250"></canvas>
@@ -145,7 +145,7 @@
             fill: false,
           },
           {
-            label: ` 🕳️ portals opened`,
+            label: ` 💬 talk-names used`,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
             data: count.map(it => sumPortals(it.portals)),
@@ -331,7 +331,7 @@
         count.map(it => it.portals[portal] ?? 0)
       ])
       .sort(([, aCounts], [, bCounts]) => bCounts[bCounts.length - 1] - aCounts[aCounts.length - 1])
-      .slice(0, 20)  // Show the n most used portals
+      .slice(0, 20)  // Show the n most used talk-names
       .map(([portal, data], i) => ({
         label: `#${i + 1} ${portal}`,
         backgroundColor: GREY_COLORS[i % 4],
@@ -345,7 +345,7 @@
       const beginSlice = (page - 1) * 4
       const endSlice = beginSlice + 4;
 
-      new Chart(document.getElementById(`portal-page${page}`).getContext("2d"), {
+      new Chart(document.getElementById(`talk-names-page${page}`).getContext("2d"), {
         type: "line",
         data: {
           labels: count.map((it) => it.month),
@@ -355,7 +355,7 @@
           ...defaultOptions,
           title: {
             display: true,
-            text: "Top " + (beginSlice + 1) + "-" + endSlice + " portals"
+            text: "💬 Top " + (beginSlice + 1) + "-" + endSlice + " talk-names"
           }
         },
       });
