@@ -10,25 +10,25 @@
 
 <body>
   <header>
-    <a href="/">
+    <a href="/flatstat/">
       <h1 id="title" title="Flatstat | Lists">flatstat</h1>
     </a>
     <nav>
-      <a href="/" title="Lists" class="active">lists</a>
-      <a href=/graphs/ title="Graphs">graphs</a>
-      <a href="/library/" title="Library">library</a>
-      <a href="/about/" title="About">about</a>
+      <a href="/flatstat/" title="Lists" class="active">lists</a>
+      <a href="/flatstat/graphs/" title="Graphs">graphs</a>
+      <a href="/flatstat/library/" title="Library">library</a>
+      <a href="/flatstat/about/" title="About">about</a>
     </nav>
   </header>
   <main>
     <input id="search" value="" type="search" placeholder="Search for name">
     <nav>
-      <a id="#apps" title="Apps sorted by Github stars" href="/#apps">🕹️ apps</a>
+      <a id="#apps" title="Apps sorted by Github stars" href="/flatstat/#apps">🕹️ apps</a>
       <a id="#changelog" title="Latest changes" href=" /#changelog">📜 changelog</a>
       <a id="#finish-args" title="Frequently used 'finish-args'" href=" /#finish-args">🏁 finish-args</a>
-      <a id="#achievements" title="Apps sorted by achievements" href="/#achievements">🏅 achievements</a>
-      <a id="#holes" title="Apps sorted by holes" href="/#holes">💥 holes</a>
-      <a id="#portals" title="Apps sorted by well-known portals" href="/#portals">🕳️ portals</a>
+      <a id="#achievements" title="Apps sorted by achievements" href="/flatstat/#achievements">🏅 achievements</a>
+      <a id="#holes" title="Apps sorted by holes" href="/flatstat/#holes">💥 holes</a>
+      <a id="#portals" title="Apps sorted by well-known portals" href="/flatstat/#portals">🕳️ portals</a>
     </nav>
     <ul>
     </ul>
@@ -274,6 +274,7 @@
     return;
   }
 
+  // Generate a list of search hits
   function searchHits(search, tags) {
     if (search.trim() === "") {
       return tags;
