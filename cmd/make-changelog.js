@@ -26,7 +26,7 @@ const changelog = metafiles.filter(meta => (!!meta.history?.length) > 0).reduce(
 
   return [...acc, ...changelog];
 
-}, []).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 1500) // Keep changelog-search consistly fast, by limiting to 1500
+}, []).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 1200) // Keep changelog-search consistly fast, by limiting to 1200 latest entries
 
 
 let changelogStr = `[\n  ${changelog.map(change => JSON.stringify(change)).join(",\n  ")}\n]\n`;

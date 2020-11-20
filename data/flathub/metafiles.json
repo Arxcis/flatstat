@@ -1493,7 +1493,7 @@
     },
     {
       "ext": "json",
-      "date": "2019-04-18T15:12:13Z",
+      "date": "2019-04-18T15:15:09Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -1682,7 +1682,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "json",
@@ -2061,6 +2061,54 @@
   "branch": "beta",
   "stargazerCount": 154,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-11T10:30:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=bluetooth",
+        "--allow=devel",
+        "--allow=multiarch",
+        "--device=all",
+        "--env=ALSA_CONFIG_PATH=",
+        "--env=DBUS_FATAL_WARNINGS=0",
+        "--env=LC_ADDRESS=C",
+        "--env=LC_COLLATE=C",
+        "--env=LC_MEASUREMENT=C",
+        "--env=LC_MONETARY=C",
+        "--env=LC_NAME=C",
+        "--env=LC_NUMERIC=C",
+        "--env=LC_TELEPHONE=C",
+        "--env=MESA_GLSL_CACHE_DIR=",
+        "--env=PATH=/app/bin:/app/utils/bin:/usr/bin",
+        "--env=PROTON_DEBUG_DIR=/var/tmp",
+        "--env=PYTHONPATH=/app/utils/lib/python3.8/site-packages",
+        "--env=SDL_VIDEODRIVER=",
+        "--env=SSL_CERT_DIR=/etc/ssl/certs",
+        "--env=STEAM_EXTRA_COMPAT_TOOLS_PATHS=/app/share/steam/compatibilitytools.d",
+        "--env=STEAM_RUNTIME=",
+        "--env=STEAM_RUNTIME_PREFER_HOST_LIBRARIES=",
+        "--env=TZ=",
+        "--env=XDG_CONFIG_DIRS=/etc/xdg:/usr/lib/x86_64-linux-gnu/GL:/usr/lib/i386-linux-gnu/GL",
+        "--filesystem=xdg-music:ro",
+        "--filesystem=xdg-pictures:ro",
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--persist=.",
+        "--require-version=1.0.0",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.NetworkManager",
+        "--system-talk-name=org.freedesktop.UPower",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.PowerManagement",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2020-10-05T12:51:20Z",
@@ -4172,6 +4220,21 @@
   "history": [
     {
       "ext": "yml",
+      "date": "2020-11-01T11:36:32Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=LADSPA_PATH=/app/lib/ladspa:/app/extensions/Plugins/ladspa",
+        "--env=LV2_PATH=/app/lib/lv2:/app/extensions/Plugins/lv2",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "yml",
       "date": "2020-10-31T20:11:24Z",
       "status": "ok",
       "finishArgs": [
@@ -4360,6 +4423,32 @@
   "branch": "master",
   "stargazerCount": 5,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-18T01:10:59Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--filesystem=host",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=xdg-run/gvfs",
+        "--filesystem=~/.config/dconf:ro",
+        "--own-name=org.mpris.MediaPlayer2.vlc",
+        "--require-version=0.11.4",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=ca.desrt.dconf",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.kde.kwalletd",
+        "--talk-name=org.kde.kwalletd5",
+        "--talk-name=org.mpris.MediaPlayer2.Player"
+      ]
+    },
     {
       "ext": "json",
       "date": "2019-09-13T09:29:33Z",
@@ -9849,6 +9938,20 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-16T15:06:29Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host",
+        "--filesystem=xdg-run/geany:create",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-02-16T23:12:10Z",
       "status": "ok",
       "finishArgs": [
@@ -10161,8 +10264,43 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 10,
+  "stargazerCount": 11,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-01T10:52:51Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=/tmp",
+        "--filesystem=host",
+        "--filesystem=xdg-config/BraveSoftware/Brave-Browser/NativeMessagingHosts:create",
+        "--filesystem=xdg-config/chromium/NativeMessagingHosts:create",
+        "--filesystem=xdg-config/google-chrome/NativeMessagingHosts:create",
+        "--filesystem=xdg-config/vivaldi/NativeMessagingHosts:create",
+        "--filesystem=xdg-run/gvfs",
+        "--filesystem=~/.mozilla/native-messaging-hosts:create",
+        "--filesystem=~/.tor-browser/app/Browser/TorBrowser/Data/Browser/.mozilla/native-messaging-hosts:create",
+        "--own-name=org.kde.StatusNotifierItem-2-2",
+        "--own-name=org.kde.StatusNotifierItem-3-2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=ssh-auth",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=com.canonical.Unity.Session",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.freedesktop.login1.Manager",
+        "--talk-name=org.freedesktop.login1.Session",
+        "--talk-name=org.gnome.ScreenSaver",
+        "--talk-name=org.gnome.SessionManager",
+        "--talk-name=org.gnome.SessionManager.Presence",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2020-09-02T21:42:09Z",
@@ -13755,6 +13893,28 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-19T17:17:12Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=xdg-download:rw",
+        "--filesystem=xdg-public-share:ro",
+        "--filesystem=xdg-run/gnupg:ro",
+        "--filesystem=~/.gnupg",
+        "--persist=.thunderbird",
+        "--require-version=0.10.3",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pcsc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.a11y.*",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-08-26T13:50:47Z",
       "status": "ok",
       "finishArgs": [
@@ -16929,7 +17089,7 @@
     {
       "ext": "json",
       "date": "2018-05-29T04:35:56Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -17669,7 +17829,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2020-01-22T19:06:13Z",
+      "date": "2020-01-23T19:06:10Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -18412,14 +18572,14 @@
   "appID": "com.github.wwmm.pulseeffects.plugin.lsp-plugins",
   "displayURL": "https://github.com/flathub/com.github.wwmm.pulseeffects.plugin.lsp-plugins/blob/master/com.github.wwmm.pulseeffects.plugin.lsp-plugins.yml",
   "ext": "yml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "yml",
       "date": "2018-06-24T09:49:49Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -21261,7 +21421,7 @@
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-07-23T05:17:05Z",
+      "date": "2020-07-25T13:21:29Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -21860,6 +22020,19 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-17T00:25:58Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=LD_LIBRARY_PATH=/app/lib:/app/grass78/lib",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-02-17T16:11:17Z",
       "status": "ok",
       "finishArgs": [
@@ -22112,6 +22285,26 @@
   "branch": "master",
   "stargazerCount": 7,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-16T14:20:44Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=KDE_FORK_SLAVES=1",
+        "--filesystem=host",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--own-name=org.kde.StatusNotifierItem-2-1",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.NetworkManager",
+        "--system-talk-name=org.freedesktop.UDisks2",
+        "--talk-name=com.canonical.AppMenu.Registrar",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-10-31T17:12:47Z",
@@ -22813,6 +23006,24 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-08T10:48:46Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=GST_VAAPI_ALL_DRIVERS=1",
+        "--env=LIBVA_DRIVER_NAME=iHD",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-videos",
+        "--metadata=X-DConf=migrate-path=/net/baseart/Glide/",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-01-28T16:13:20Z",
@@ -25199,6 +25410,25 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-04T21:54:42Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=LD_LIBRARY_PATH=/app/lib/",
+        "--filesystem=host",
+        "--filesystem=xdg-run/keyring",
+        "--share=ipc",
+        "--share=network",
+        "--socket=ssh-auth",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-09-01T14:53:46Z",
       "status": "ok",
       "finishArgs": [
@@ -27362,6 +27592,26 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-17T01:34:06Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--filesystem=~/.config/fontconfig/:ro",
+        "--own-name=org.mpris.MediaPlayer2.tauon",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-07-05T21:11:57Z",
       "status": "ok",
       "finishArgs": [
@@ -29165,6 +29415,23 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-02T13:13:06Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-01-21T08:46:15Z",
       "status": "ok",
       "finishArgs": [
@@ -30714,6 +30981,23 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-04T13:48:17Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=AGS_LICENSE_FILENAME=/app/share/gsequencer/GPL-3",
+        "--env=AGS_ONLINE_HELP_START_FILENAME=file:///app/share/doc/gsequencer/html/index.html",
+        "--env=DSSI_PATH=/app/extensions/Plugins/dssi:/app/lib/dssi",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa:/app/lib/ladspa",
+        "--env=LV2_PATH=/app/extensions/Plugins/lv2:/app/lib/lv2",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-10-08T01:48:32Z",
       "status": "ok",
       "finishArgs": [
@@ -31555,14 +31839,14 @@
   "appID": "io.dbeaver.DBeaverCommunity.Client.pgsql",
   "displayURL": "https://github.com/flathub/io.dbeaver.DBeaverCommunity.Client.pgsql/blob/master/io.dbeaver.DBeaverCommunity.Client.pgsql.json",
   "ext": "json",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "json",
       "date": "2019-06-06T20:42:00Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -31570,20 +31854,20 @@
   "appID": "io.dbeaver.DBeaverCommunity.Client.mariadb",
   "displayURL": "https://github.com/flathub/io.dbeaver.DBeaverCommunity.Client.mariadb/blob/master/io.dbeaver.DBeaverCommunity.Client.mariadb.json",
   "ext": "json",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "json",
       "date": "2019-09-24T08:55:09Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     },
     {
       "ext": "json",
       "date": "2019-06-11T09:18:49Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -32392,7 +32676,7 @@
     {
       "ext": "json",
       "date": "2019-08-08T03:00:31Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -32674,6 +32958,21 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-11T19:25:36Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host",
+        "--filesystem=xdg-config/gtk-3.0",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.portal.Trash",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*"
+      ]
+    },
     {
       "ext": "json",
       "date": "2019-09-04T19:07:25Z",
@@ -34089,7 +34388,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "json",
@@ -34540,14 +34839,14 @@
   "appID": "com.valvesoftware.Steam.CompatibilityTool.Boxtron",
   "displayURL": "https://github.com/flathub/com.valvesoftware.Steam.CompatibilityTool.Boxtron/blob/master/com.valvesoftware.Steam.CompatibilityTool.Boxtron.yml",
   "ext": "yml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
       "date": "2019-07-27T14:47:09Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -34601,14 +34900,14 @@
   "appID": "com.valvesoftware.Steam.Utility.protontricks",
   "displayURL": "https://github.com/flathub/com.valvesoftware.Steam.Utility.protontricks/blob/master/com.valvesoftware.Steam.Utility.protontricks.yml",
   "ext": "yml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 15,
   "history": [
     {
       "ext": "yml",
       "date": "2019-11-11T17:06:39Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -34905,14 +35204,14 @@
   "appID": "net.lutris.Lutris.Runner.Wine",
   "displayURL": "https://github.com/flathub/net.lutris.Lutris.Runner.Wine/blob/beta/net.lutris.Lutris.Runner.Wine.yml",
   "ext": "yml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "beta",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "yml",
       "date": "2019-07-06T09:29:08Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -36068,6 +36367,18 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-19T22:45:37Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-01-12T21:53:19Z",
       "status": "ok",
       "finishArgs": [
@@ -36891,14 +37202,14 @@
   "appID": "org.kde.PlatformInputContexts.MaliitSailfishOS",
   "displayURL": "https://github.com/flathub/org.kde.PlatformInputContexts.MaliitSailfishOS/blob/branch/5.12/org.kde.PlatformInputContexts.MaliitSailfishOS.yaml",
   "ext": "yaml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "branch/5.12",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "yaml",
       "date": "2020-02-24T10:21:03Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -37216,14 +37527,14 @@
   "appID": "com.valvesoftware.Steam.Utility.MangoHud",
   "displayURL": "https://github.com/flathub/com.valvesoftware.Steam.Utility.MangoHud/blob/master/com.valvesoftware.Steam.Utility.MangoHud.yml",
   "ext": "yml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "yml",
       "date": "2020-03-20T11:19:58Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -37644,7 +37955,7 @@
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-07-02T09:21:08Z",
+      "date": "2020-07-03T08:21:10Z",
       "status": "ok",
       "finishArgs": [
         "--allow=devel",
@@ -38368,6 +38679,25 @@
   "history": [
     {
       "ext": "yaml",
+      "date": "2020-11-16T12:32:27Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=/media:ro",
+        "--filesystem=/run/media",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--own-name=org.mpris.MediaPlayer2.audacious",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    },
+    {
+      "ext": "yaml",
       "date": "2020-09-27T07:30:38Z",
       "status": "ok",
       "finishArgs": [
@@ -38977,14 +39307,14 @@
   "appID": "org.kicad_pcb.KiCad.Library.Packages3D",
   "displayURL": "https://github.com/flathub/org.kicad_pcb.KiCad.Library.Packages3D/blob/master/org.kicad_pcb.KiCad.Library.Packages3D.json",
   "ext": "json",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "json",
       "date": "2020-05-24T13:47:47Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -39102,14 +39432,20 @@
   "appID": "org.nuspell.Nuspell",
   "displayURL": "https://github.com/flathub/org.nuspell.Nuspell/blob/master/org.nuspell.Nuspell.json",
   "ext": "json",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-19T22:58:31Z",
+      "status": "finish-args-not-found",
+      "finishArgs": null
+    },
+    {
+      "ext": "json",
       "date": "2020-05-20T10:17:58Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -39139,7 +39475,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yaml",
@@ -39672,14 +40008,14 @@
   "appID": "org.gimp.GIMP.Manual",
   "displayURL": "https://github.com/flathub/org.gimp.GIMP.Manual/blob/master/org.gimp.GIMP.Manual.json",
   "ext": "json",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "json",
       "date": "2020-06-16T18:01:33Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -40635,8 +40971,24 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-10T22:48:51Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--persist=.",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.portal.Fcitx"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2020-06-25T18:32:30Z",
@@ -40722,6 +41074,34 @@
   "branch": "beta",
   "stargazerCount": 16,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-17T19:59:44Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=GTK_PATH=/app/lib/gtkmodules",
+        "--filesystem=host-etc",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-videos",
+        "--own-name=org.mpris.MediaPlayer2.chrome.*",
+        "--require-version=1.8.2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=cups",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.Avahi",
+        "--system-talk-name=org.freedesktop.UPower",
+        "--talk-name=org.freedesktop.FileManager1",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.gnome.SessionManager"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-09-24T19:36:18Z",
@@ -40903,6 +41283,17 @@
   "branch": "master",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-06T18:06:08Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.UDisks2"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-10-28T21:09:24Z",
@@ -41274,14 +41665,14 @@
   "appID": "io.github.erkin.ponysay",
   "displayURL": "https://github.com/flathub/io.github.erkin.ponysay/blob/master/io.github.erkin.ponysay.yaml",
   "ext": "yaml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
       "date": "2020-07-19T10:45:34Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -42113,6 +42504,27 @@
   "history": [
     {
       "ext": "yml",
+      "date": "2020-11-09T12:48:40Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=TMPDIR=/var/tmp",
+        "--own-name=org.kde.*",
+        "--own-name=org.mpris.MediaPlayer2.MellowPlayer3.*",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.PowerManagement",
+        "--talk-name=org.gnome.SessionManager",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--talk-name=org.mpris.MediaPlayer2.Player"
+      ]
+    },
+    {
+      "ext": "yml",
       "date": "2020-09-21T08:30:32Z",
       "status": "ok",
       "finishArgs": [
@@ -42466,14 +42878,14 @@
   "appID": "com.jetbrains.PyCharm.Extensions.Python2-7",
   "displayURL": "https://github.com/flathub/com.jetbrains.PyCharm.Extensions.Python2-7/blob/master/com.jetbrains.PyCharm.Extensions.Python2-7.yaml",
   "ext": "yaml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "yaml",
       "date": "2020-09-05T20:00:01Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -42817,6 +43229,22 @@
   "history": [
     {
       "ext": "yml",
+      "date": "2020-11-15T17:03:03Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=/media",
+        "--filesystem=/mnt",
+        "--filesystem=/run/media",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "yml",
       "date": "2020-10-21T00:46:30Z",
       "status": "ok",
       "finishArgs": [
@@ -42839,6 +43267,43 @@
   "branch": "beta",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-19T07:25:10Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--env=GNOTIFICATION_BACKEND=gtk",
+        "--env=GSETTINGS_SCHEMA_DIR=/run/host/usr/share/glib-2.0/schemas/",
+        "--env=GTK3_MODULES=/app/clippy/lib/libclippy-module.so",
+        "--filesystem=/var/lib/AccountsService/icons/:ro",
+        "--filesystem=host",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--own-name=com.endlessm.GameStateService",
+        "--own-name=com.hack_computer.GameStateService",
+        "--own-name=com.hack_computer.HackSoundServer",
+        "--own-name=com.hack_computer.HackToolbox",
+        "--require-version=1.8.2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=session-bus",
+        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.Accounts",
+        "--system-talk-name=org.freedesktop.hostname1",
+        "--talk-name=ca.desrt.dconf",
+        "--talk-name=com.endlessm.EknServices3.SearchProviderV3",
+        "--talk-name=com.hack_computer.hack",
+        "--talk-name=org.endlessos.onboarding",
+        "--talk-name=org.freedesktop.DBus",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.gnome.Shell",
+        "--talk-name=org.gnome.Software",
+        "--talk-name=org.gtk.Notifications"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-10-06T16:04:28Z",
@@ -42901,14 +43366,14 @@
   "appID": "com.hack_computer.Clippy.Extension",
   "displayURL": "https://github.com/flathub/com.hack_computer.Clippy.Extension/blob/beta/com.hack_computer.Clippy.Extension.json",
   "ext": "json",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "beta",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "json",
       "date": "2020-10-06T09:04:50Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -42920,6 +43385,30 @@
   "branch": "beta",
   "stargazerCount": 3,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-19T21:29:08Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=GTK_PATH=/app/lib/gtkmodules",
+        "--filesystem=home",
+        "--own-name=org.mpris.MediaPlayer2.chromium.*",
+        "--require-version=1.8.2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=cups",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.Avahi",
+        "--system-talk-name=org.freedesktop.UPower",
+        "--talk-name=org.freedesktop.FileManager1",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.gnome.SessionManager"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-09-30T15:36:14Z",
@@ -43186,14 +43675,14 @@
   "appID": "com.valvesoftware.Steam.CompatibilityTool.Proton",
   "displayURL": "https://github.com/flathub/com.valvesoftware.Steam.CompatibilityTool.Proton/blob/beta/com.valvesoftware.Steam.CompatibilityTool.Proton.yml",
   "ext": "yml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "beta",
   "stargazerCount": 5,
   "history": [
     {
       "ext": "yml",
       "date": "2019-11-03T18:22:17Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
@@ -43249,6 +43738,25 @@
   "branch": "beta",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-10T09:37:51Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=GTK3_MODULES=/app/clippy/lib/libclippy-module.so",
+        "--require-version=1.8.2",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=com.hack_computer.Clubhouse",
+        "--talk-name=com.hack_computer.GameStateService",
+        "--talk-name=com.hack_computer.HackSoundServer",
+        "--talk-name=com.hack_computer.HackableAppsManager",
+        "--talk-name=com.hack_computer.hack",
+        "--talk-name=org.gnome.Shell"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-10-19T14:29:59Z",
@@ -43344,20 +43852,46 @@
   ]
 },{
   "appID": "com.interversehq.qView",
-  "displayURL": "https://github.com/flathub/com.interversehq.qView",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/com.interversehq.qView/blob/master/com.interversehq.qView.yml",
+  "ext": "yml",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-04T06:42:12Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
 },{
   "appID": "org.desmume.DeSmuME",
-  "displayURL": "https://github.com/flathub/org.desmume.DeSmuME",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/org.desmume.DeSmuME/blob/master/org.desmume.DeSmuME.json",
+  "ext": "json",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-19T01:12:56Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    }
+  ]
 },{
   "appID": "com.simplenote.Simplenote",
   "displayURL": "https://github.com/flathub/com.simplenote.Simplenote/blob/master/com.simplenote.Simplenote.yaml",
@@ -43386,20 +43920,55 @@
   ]
 },{
   "appID": "com.github.marinm.songrec",
-  "displayURL": "https://github.com/flathub/com.github.marinm.songrec",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/com.github.marinm.songrec/blob/master/com.github.marinm.songrec.json",
+  "ext": "json",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-02T13:25:11Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=home:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    }
+  ]
 },{
   "appID": "com.hack_computer.OperatingSystemApp",
-  "displayURL": "https://github.com/flathub/com.hack_computer.OperatingSystemApp",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/com.hack_computer.OperatingSystemApp/blob/beta/com.hack_computer.OperatingSystemApp.json",
+  "ext": "json",
+  "status": "ok",
   "branch": "beta",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-10T09:38:40Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=GTK3_MODULES=/app/clippy/lib/libclippy-module.so",
+        "--require-version=1.8.2",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=com.hack_computer.Clubhouse",
+        "--talk-name=com.hack_computer.GameStateService",
+        "--talk-name=com.hack_computer.HackSoundServer",
+        "--talk-name=com.hack_computer.HackableAppsManager",
+        "--talk-name=com.hack_computer.hack",
+        "--talk-name=org.gnome.Shell"
+      ]
+    }
+  ]
 },{
   "appID": "com.github.Eloston.UngoogledChromium",
   "displayURL": "https://github.com/flathub/com.github.Eloston.UngoogledChromium/blob/beta/com.github.Eloston.UngoogledChromium.yaml",
@@ -43408,6 +43977,29 @@
   "branch": "beta",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-15T14:16:26Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=GTK_PATH=/app/lib/gtkmodules",
+        "--filesystem=xdg-download",
+        "--own-name=org.mpris.MediaPlayer2.chromium.*",
+        "--require-version=1.8.2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=cups",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.Avahi",
+        "--system-talk-name=org.freedesktop.UPower",
+        "--talk-name=org.freedesktop.FileManager1",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.gnome.SessionManager"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-10-06T12:30:56Z",
@@ -43441,6 +44033,22 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-09T09:06:30Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=GST_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gstreamer-1.0/",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2019-10-18T20:22:13Z",
       "status": "ok",
       "finishArgs": [
@@ -43465,6 +44073,17 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-06T16:25:28Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-10-30T21:07:56Z",
       "status": "ok",
       "finishArgs": [
@@ -43480,49 +44099,96 @@
   "appID": "com.valvesoftware.Steam.Utility.vkBasalt",
   "displayURL": "https://github.com/flathub/com.valvesoftware.Steam.Utility.vkBasalt/blob/master/com.valvesoftware.Steam.Utility.vkBasalt.yml",
   "ext": "yml",
-  "status": "missing-finish-args",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
     {
       "ext": "yml",
       "date": "2020-10-01T11:47:26Z",
-      "status": "missing-finish-args",
+      "status": "finish-args-not-found",
       "finishArgs": null
     }
   ]
 },{
   "appID": "net.shrew.ike.qikea",
-  "displayURL": "https://github.com/flathub/net.shrew.ike.qikea",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/net.shrew.ike.qikea/blob/master/net.shrew.ike.qikea.json",
+  "ext": "json",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-12T21:25:47Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=/run/ikedi",
+        "--filesystem=home",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
 },{
   "appID": "com.github.emmanueltouzery.projectpad",
-  "displayURL": "https://github.com/flathub/com.github.emmanueltouzery.projectpad",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/com.github.emmanueltouzery.projectpad/blob/master/com.github.emmanueltouzery.projectpad.json",
+  "ext": "json",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-14T09:26:28Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.secrets"
+      ]
+    }
+  ]
 },{
   "appID": "com.github.arshubham.cipher",
-  "displayURL": "https://github.com/flathub/com.github.arshubham.cipher",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/com.github.arshubham.cipher/blob/master/com.github.arshubham.cipher.json",
+  "ext": "json",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-16T08:04:20Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
 },{
   "appID": "org.gnome.Totem.Videosite.YouTubeDl",
-  "displayURL": "https://github.com/flathub/org.gnome.Totem.Videosite.YouTubeDl",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/org.gnome.Totem.Videosite.YouTubeDl/blob/master/org.gnome.Totem.Videosite.YouTubeDl.yaml",
+  "ext": "yaml",
+  "status": "finish-args-not-found",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-11T17:57:00Z",
+      "status": "finish-args-not-found",
+      "finishArgs": null
+    }
+  ]
 },{
   "appID": "net.kuribo64.melonDS",
   "displayURL": "https://github.com/flathub/net.kuribo64.melonDS/blob/master/net.kuribo64.melonDS.yml",
@@ -43548,12 +44214,25 @@
   ]
 },{
   "appID": "com.github.arshubham.gitignore",
-  "displayURL": "https://github.com/flathub/com.github.arshubham.gitignore",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/com.github.arshubham.gitignore/blob/master/com.github.arshubham.gitignore.json",
+  "ext": "json",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-16T14:28:08Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
 },{
   "appID": "org.firestormviewer.FirestormViewer",
   "displayURL": "https://github.com/flathub/org.firestormviewer.FirestormViewer/blob/master/org.firestormviewer.FirestormViewer.json",
@@ -43562,6 +44241,28 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-17T14:42:54Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=multiarch",
+        "--device=dri",
+        "--filesystem=xdg-desktop",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--filesystem=~/.firestorm_x64:create",
+        "--own-name=com.secondlife.ViewerAppAPIService",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-04-27T18:11:25Z",
@@ -43604,18 +44305,47 @@
   ]
 },{
   "appID": "org.gnome.EasyTAG",
-  "displayURL": "https://github.com/flathub/org.gnome.EasyTAG",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/org.gnome.EasyTAG/blob/master/org.gnome.EasyTAG.yaml",
+  "ext": "yaml",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-16T09:50:40Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=/media",
+        "--filesystem=/run/media",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
 },{
   "appID": "org.unitystation.StationHub",
-  "displayURL": "https://github.com/flathub/org.unitystation.StationHub",
-  "ext": null,
-  "status": null,
+  "displayURL": "https://github.com/flathub/org.unitystation.StationHub/blob/master/org.unitystation.StationHub.yaml",
+  "ext": "yaml",
+  "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
-  "history": []
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-17T03:30:30Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    }
+  ]
 }]
