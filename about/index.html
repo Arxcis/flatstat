@@ -1,45 +1,54 @@
 <!DOCTYPE html5>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Flatstat | Stats from flathub.org</title>
-    <link rel="stylesheet" type="text/css" href="../index.css"></link>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Flatstat | About</title>
+  <link rel="stylesheet" type="text/css" href="../index.css">
+  </link>
 </head>
-  <body>
-    <header>
-      <a href="/flatstat/"><h1 id="title" title="Flatstat | Stats from flathub.org">flatstat</h1></a>
-      <nav>
-        <a href="/flatstat/#display" title="Graphs">graph</a>
-        <a href="/flatstat/search/?filter=x11-only" title="Search">search</a>
-        <a href="/flatstat/about/" title="About">about</a>
-      </nav>
-    </header>
-    <main>
-        <p>
-          The data is sourced from repos belonging to <a target="_blank" href="https://github.com/flathub/">https://github.com/flathub</a>.
-          In each repo, we look for the APP_ID.(json|yaml|yml)-file.
-          To get historic data, we use 
-          <a target="_blank" href="https://api.github.com/graphql"
-            >Github Graphql API</a
-          >.
-        <p>
-          Source code can be found here
-          <a target="_blank" href="https://github.com/Arxcis/flatstat"
-            >https://github.com/Arxcis/flatstat</a
-          >/
-        </p>
-        <p>
-          Make an <a target="_blank" href="https://github.com/Arxcis/flatstat/issues">issue</a> on github, if you have feedback 🙏
-        </p>
-        <p>
-          Thanks to
-          <a target="_blank" href="https://www.chartjs.org/">https://www.chartjs.org/</a> for
-          drawing the charts! 😀
-        </p>
-    </main>
-  </body>
-  <script type="module">
-    const headerLink = document.querySelector(`header nav a[href*='about']`)
-    headerLink?.classList.add("current")
-  </script>
+
+<body>
+  <header>
+    <a href="/">
+      <h1 id="title" title="Flatstat | About">flatstat</h1>
+    </a>
+    <nav>
+      <a href="/" title="Lists">lists</a>
+      <a href=/graphs/ title="Graphs">graphs</a>
+      <a href="/library/" title="Library">library</a>
+      <a href="/about/" title="About" class="active">about</a>
+    </nav>
+  </header>
+  <main>
+    <p>
+      This site is a gift to all the hard-working flatpak and portal maintainers. You are the coolest developers on the
+      planet 🪐
+    </p>
+    <p>
+      The data is sourced from repos belonging to <a target="_blank"
+        href="https://github.com/flathub/">https://github.com/flathub</a>.
+      In each repo, we look for the APP_ID.(json|yaml|yml)-file.
+      To get historic data, we use
+      <a target="_blank" href="https://api.github.com/graphql">Github Graphql API</a>.
+    <p>
+      Source code can be found here
+      <a target="_blank" href="https://github.com/Arxcis/flatstat">https://github.com/Arxcis/flatstat</a>/
+    </p>
+    <p>
+      Make an <a target="_blank" href="https://github.com/Arxcis/flatstat/issues">issue</a> on github, if you have
+      feedback 🙏
+    </p>
+    <p>
+      Thanks to
+      <a target="_blank" href="https://www.chartjs.org/">https://www.chartjs.org/</a> for
+      drawing the charts! 😀
+    </p>
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+        style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is
+    licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+      Attribution-ShareAlike 4.0 International License</a>.
+  </main>
+</body>
+
 </html>

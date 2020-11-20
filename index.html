@@ -1,264 +1,304 @@
 <!DOCTYPE html5>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    <title>Flatstat | Stats from Flathub.org</title>
-    <link rel="stylesheet" type="text/css" href="./index.css"></link>
-  </head>
-  <body>
-    <header>
-      <a href="/flatstat/"><h1 id="title" title="Flatstat | Stats from Flathub.org">flatstat</h1></a>
-      <nav>
-        <a href="/flatstat/#display" title="Graphs">graph</a>
-        <a href="/flatstat/search/?filter=x11-only" title="Search">search</a>
-        <a href="/flatstat/about/" title="About">about</a>
-      </nav>
-    </header>
-    <main>
-      <nav>
-        <a id="#display" title="Apps with --wayland or --x11" href="/flatstat/#display">display</a>
-        <a id="#filesystem" title="Apps with --filesystem" href="/flatstat/#filesystem">filesystem</a>
-        <a id="#device" title="Apps with --device" href="/flatstat/#device">device</a>
-        <a id="#audio" title="Apps with --pulseaudio" href="/flatstat/#audio">audio</a>
-        <a id="#metafile" title=".json or .yaml or .yml" href="/flatstat/#metafile">metafile</a>
-      </nav>
 
-      <section>
-        <canvas id="display" width="400" height="300"></canvas>
-        <canvas id="filesystem" width="400" height="300"></canvas>
-        <canvas id="device" width="400" height="300"></canvas>
-        <canvas id="audio" width="400" height="300"></canvas>
-        <canvas id="metafile" width="400" height="300"></canvas>
-      </section>
-    </main>
-  </body>
-  <script type="module">
-    import count from "./db/flathub/count.js";
-   
-    // Check if any a[href] contains the search, and mark them as active
-    const graphLink = document.getElementById(window.location.hash)
-    if (graphLink) {
-      graphLink.classList.add("current")
-    } else {
-      document.getElementById("#display").classList.add("current");
+<head>
+  <meta charset="utf-8" />
+  <title>Flatstat | Lists</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  </link>
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1 id="title" title="Flatstat | Lists">flatstat</h1>
+    </a>
+    <nav>
+      <a href="/" title="Lists" class="active">lists</a>
+      <a href=/graphs/ title="Graphs">graphs</a>
+      <a href="/library/" title="Library">library</a>
+      <a href="/about/" title="About">about</a>
+    </nav>
+  </header>
+  <main>
+    <input id="search" value="" type="search" placeholder="Search for name">
+    <nav>
+      <a id="#apps" title="Apps sorted by Github stars" href="/#apps">🕹️ apps</a>
+      <a id="#changelog" title="Latest changes" href=" /#changelog">📜 changelog</a>
+      <a id="#finish-args" title="Frequently used 'finish-args'" href=" /#finish-args">🏁 finish-args</a>
+      <a id="#achievements" title="Apps sorted by achievements" href="/#achievements">🏅 achievements</a>
+      <a id="#holes" title="Apps sorted by holes" href="/#holes">💥 holes</a>
+      <a id="#portals" title="Apps sorted by well-known portals" href="/#portals">🕳️ portals</a>
+    </nav>
+    <ul>
+    </ul>
+    <footer>Showing 0 results</footer>
+  </main>
+</body>
+<script type="module">
+  import {
+    incrementAchievementCount,
+    incrementHoleCount,
+    incrementPortalCount,
+    incrementFinishArgs,
+    sumFinishArgs,
+    sumAchievements,
+    sumHoles,
+    sumPortals
+  } from "./lib/stats.js";
+  import { useJSON } from "./lib/useJSON.js";
+  import { useActiveLink } from "./lib/useActiveLink.js";
+  import { useSearch } from "./lib/useSearch.js";
+  import { useMarkPerformance, useMeasurePerformance } from "./lib/usePerformance.js";
+
+
+  // Setup rendering triggers
+  useActiveLink("#apps")
+  const input = useSearch("#search", (search) => renderList(search, window.location.hash))
+
+  window.addEventListener("hashchange", () => renderList(input.value, window.location.hash))
+
+
+  // Init search indexes
+  let changelogIndex = [];
+  let holesIndex = [];
+  let portalsIndex = [];
+  let achievementsIndex = [];
+  let appsIndex = [];
+  let finishArgsIndex = [];
+
+  buildSearchIndexes();
+
+  // Build optimized search datastructures based on the rawdata
+  async function buildSearchIndexes() {
+    const count = await useJSON("./data/flathub/count.json")
+    const metafiles = await useJSON("./data/flathub/metafiles.json")
+    const changelog = await useJSON("./data/flathub/changelog.json")
+
+    // changelog
+    changelogIndex = changelog
+      .reduce((acc, { appID, ext, displayURL, date, additions, deletions, created }) => {
+        const count = `&#010;${date.slice(0, 10)}`;
+
+        if (created) {
+          const tags = [`New app ${appID}.${ext}&#010;`, ...created, count];
+          acc.push({
+            name: `🕹️ ${appID}`,
+            displayURL,
+            count,
+            icon: "",
+            details: created.join(", "),
+            tags,
+            searchString: tags.join("").toLocaleLowerCase()
+          });
+        }
+
+        if (additions) {
+          const tags = [`Additions in ${appID}.${ext}&#010;`, ...additions, count];
+          acc.push({
+            name: `➕ ${additions.join(", ")}`,
+            displayURL,
+            count,
+            icon: "",
+            details: appID,
+            tags,
+            searchString: tags.join("").toLocaleLowerCase()
+          });
+        }
+
+        if (deletions) {
+          const tags = [`Deletions in ${appID}.${ext}&#010;`, ...deletions, count];
+          acc.push({
+            name: `➖ ${deletions.join(", ")}`,
+            displayURL,
+            count,
+            icon: "",
+            details: appID,
+            tags,
+            seachString: tags.join("").toLocaleLowerCase()
+          })
+        }
+
+        return acc;
+      }, [])
+      .sort((a, b) => b.count.localeCompare(a.count))
+
+
+    // holes
+    holesIndex = metafiles
+      .filter(it => it.history[0]?.finishArgs)
+      .map(it => {
+        const holes = incrementHoleCount(it.history[0].finishArgs)
+        const count = sumHoles(holes);
+        const tags = [`${it.appID}.${it.ext}`, ...Object.keys(holes)];
+
+        return {
+          count,
+          displayURL: it.displayURL,
+          icon: "💥",
+          name: `🕹️ ${it.appID}.${it.ext}`,
+          tags,
+          searchString: tags.join(" ").toLocaleLowerCase(),
+        }
+      })
+      .sort((a, b) => b.count - a.count)
+
+    // portals
+    portalsIndex = metafiles
+      .filter(it => it.history[0]?.finishArgs)
+      .map(it => {
+        const portals = incrementPortalCount(it.history[0].finishArgs)
+        const count = sumPortals(portals);
+        const tags = [`${it.appID}.${it.ext}`, ...Object.keys(portals)];
+
+        return {
+          count,
+          displayURL: it.displayURL,
+          icon: "🕳️",
+          name: `🕹️ ${it.appID}.${it.ext}`,
+          tags,
+          searchString: tags.join("").toLocaleLowerCase(),
+        }
+      })
+      .sort((a, b) => b.count - a.count)
+
+    // achievements
+    achievementsIndex = metafiles
+      .filter(it => it.history[0]?.finishArgs)
+      .map(it => {
+        const achievements = incrementAchievementCount(it.history[0].finishArgs);
+        const count = sumAchievements(achievements);
+        const tags = [`${it.appID}.${it.ext}`, ...Object.keys(achievements)];
+
+        return {
+          count,
+          displayURL: it.displayURL,
+          icon: "🏅",
+          name: `🕹️ ${it.appID}.${it.ext}`,
+          tags,
+          searchString: tags.join("").toLocaleLowerCase(),
+        }
+      })
+      .sort((a, b) => b.count - a.count)
+
+    // finishArgs
+    finishArgsIndex = Object.entries(count[count.length - 1].finishArgs).map(([arg, count]) => {
+      const tags = [arg]
+
+      return {
+        title: `${arg} - used by ${count} apps`,
+        count,
+        displayURL: null,
+        icon: "",
+        name: `🏁 ${arg}`,
+        tags,
+        searchString: tags.join("").toLocaleLowerCase(),
+      }
+    })
+      .sort((a, b) => b.count - a.count)
+
+    // apps
+    appsIndex = metafiles
+      .map(it => {
+        const finishArgs = incrementFinishArgs(it.history[0]?.finishArgs ?? [])
+        const tags = [`${it.appID}.${it.ext}`, ...(finishArgs ? Object.keys(finishArgs) : [])];
+
+        return {
+          count: it.stargazerCount,
+          displayURL: it.displayURL,
+          icon: "⭐",
+          name: `🕹️ ${it.appID}.${it.ext}`,
+          tags,
+          searchString: tags.join("").toLocaleLowerCase(),
+        }
+      })
+      .sort((a, b) => b.count - a.count)
+
+    renderList(input.value, window.location.hash);
+  }
+
+  // Render Map, filter, sort, slice, join list
+  async function renderList(search, hash) {
+    const LIST_LIMIT = 300;
+
+    let list = [];
+    switch (hash) {
+      case "#changelog":
+        list = changelogIndex;
+        break;
+      case "#holes":
+        list = holesIndex;
+        break;
+      case "#portals":
+        list = portalsIndex;
+        break;
+      case "#achievements":
+        list = achievementsIndex;
+        break;
+      case "#finish-args":
+        list = finishArgsIndex;
+        break;
+      default: //"#apps":
+        list = appsIndex;
+        break;
     }
 
-    window.addEventListener("hashchange", () => {
-      const links = document.querySelectorAll("main nav a")
-      for (const link of links) link.classList.remove("current")
+    // filter by current search
+    const filtered = list.filter(it => it.count)
+      .map(it => ({ ...it, hits: searchHits(search, it.tags) }))
+      .filter(it => it.hits)
+      .slice(0, LIST_LIMIT)
 
-      const graphLink = document.getElementById(window.location.hash)
-      graphLink?.classList.add("current")
+    const renderedList = filtered.map(({ count, displayURL, icon, name, title, hits, tags, details }) => {
+      title = title ?? tags?.join("&#010;")
+      details = details ?? hits?.filter(hit => !name.includes(hit)).join(", ")
+
+      return `\
+              <${displayURL ? "a" : "div"}
+                class="row"
+                href="${displayURL}"
+                title="${title}"
+                target="_blank"
+              >
+                <span class="left">${name}</span>
+                <span class="middle">${details}</span>
+                <span class="padding"></span>
+                <span class="right">${count ? (count + ` ${icon}`) : ""}</span>
+              </${ displayURL ? "a" : "div"} >
+    `;
     })
 
-    const headerLink = document.querySelector(`header a[href*='/#']`)
-    headerLink?.classList.add("current")
+    document.querySelector("main > ul").innerHTML = renderedList.join("");
+    document.querySelector("footer").innerHTML = `Showing ${renderedList.length === LIST_LIMIT ? "max" : ""} ${renderedList.length} results`
 
-    const TOTAL_COLOR = "#546e7a";
-    const GOOD_COLOR = "#00c853";
-    const BAD_COLOR = "#ff9100";
-    const VERY_BAD_COLOR = "#ac0800";
-    const SUPER_BAD_COLOR = "#4a148c";
+    return;
+  }
 
-    const options = {
-      responsive: true,
-      tooltips: {
-        mode: "index",
-        intersect: false,
-      },
-      hover: {
-        mode: "nearest",
-        intersect: true,
-      },
-      scales: {
-        xAxes: [
-          {
-            display: true,
-            scaleLabel: {
-              display: true,
-              labelString: "month",
-            },
-          },
-        ],
-        yAxes: [
-          {
-            display: true,
-            scaleLabel: {
-              display: true,
-              labelString: "apps",
-            },
-          },
-        ],
-      },
-    };
+  function searchHits(search, tags) {
+    if (search.trim() === "") {
+      return tags;
+    }
 
-    new Chart(document.getElementById("display").getContext("2d"), {
-      type: "line",
-      data: {
-        labels: count.map((it) => it.month),
-        datasets: [
-          {
-            label: "--wayland and --fallback-x11",
-            backgroundColor: GOOD_COLOR,
-            borderColor: GOOD_COLOR,
-            data: count.map((it) => it["wayland-and-fallback-x11"]),
-            fill: false,
-          },
-          {
-            label: "--wayland and --x11",
-            backgroundColor: BAD_COLOR,
-            borderColor: BAD_COLOR,
-            data: count.map((it) => it["wayland-and-x11"]),
-            fill: false,
-          },
-          {
-            label: "--x11 only",
-            backgroundColor: VERY_BAD_COLOR,
-            borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it["x11-only"]),
-            fill: false,
-          },
-        ],
-      },
-      options: {
-        ...options,
-      },
-    });
-
-    new Chart(document.getElementById("filesystem").getContext("2d"), {
-      type: "line",
-      data: {
-        labels: count.map((it) => it.month),
-        datasets: [
-          {
-            label: "--no-filesystem",
-            backgroundColor: GOOD_COLOR,
-            borderColor: GOOD_COLOR,
-            data: count.map((it) => it["no-filesystem"]),
-            fill: false,
-          },
-          {
-            label: "--filesystem=<other>",
-            backgroundColor: BAD_COLOR,
-            borderColor: BAD_COLOR,
-            data: count.map((it) => it["filesystem-other"]),
-            fill: false,
-          },
-          {
-            label: "--filesystem=home",
-            backgroundColor: VERY_BAD_COLOR,
-            borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it["filesystem-home"]),
-            fill: false,
-          },
-          {
-            label: "--filesystem=host",
-            backgroundColor: SUPER_BAD_COLOR,
-            borderColor: SUPER_BAD_COLOR,
-            data: count.map((it) => it["filesystem-host"]),
-            fill: false,
-          },
-        ],
-      },
-      options: {
-        ...options,
-      },
-    });
-
-    new Chart(document.getElementById("device").getContext("2d"), {
-      type: "line",
-      data: {
-        labels: count.map((it) => it.month),
-        datasets: [
-          {
-            label: "--no-device",
-            backgroundColor: GOOD_COLOR,
-            borderColor: GOOD_COLOR,
-            data: count.map((it) => it["no-device"]),
-            fill: false,
-          },
-          {
-            label: "--device=<other>",
-            backgroundColor: BAD_COLOR,
-            borderColor: BAD_COLOR,
-            data: count.map((it) => it["device-other"]),
-            fill: false,
-          },
-          {
-            label: "--device=all",
-            backgroundColor: VERY_BAD_COLOR,
-            borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it["device-all"]),
-            fill: false,
-          },
-        ],
-      },
-      options: {
-        ...options,
-      },
-    });
-
-    new Chart(document.getElementById("audio").getContext("2d"), {
-      type: "line",
-      data: {
-        labels: count.map((it) => it.month),
-        datasets: [
-          {
-            label: "--no-pulseaudio",
-            backgroundColor: GOOD_COLOR,
-            borderColor: GOOD_COLOR,
-            data: count.map((it) => it["no-pulseaudio"]),
-            fill: false,
-          },
-          {
-            label: "--pulseaudio",
-            backgroundColor: VERY_BAD_COLOR,
-            borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it.pulseaudio),
-            fill: false,
-          },
-        ],
-      },
-      options: {
-        ...options,
-      },
-    });
+    const terms = search
+      .toLowerCase()
+      .split(" ")
+      .map(it => it.trim())
+      .filter(it => it !== "")
 
 
-    new Chart(document.getElementById("metafile").getContext("2d"), {
-      type: "line",
-      data: {
-        labels: count.map((it) => it.month),
-        datasets: [
-          {
-            label: ".json",
-            backgroundColor: "#424242",
-            borderColor: "#424242",
-            data: count.map((it) => it.json),
-            fill: false,
-          },
-          {
-            label: ".yaml",
-            backgroundColor: "#757575",
-            borderColor: "#757575",
-            data: count.map((it) => it.yaml),
-            fill: false,
-          },
-          {
-            label: ".yml",
-            backgroundColor: "#bdbdbd",
-            borderColor: "#bdbdbd",
-            data: count.map((it) => it.yml),
-            fill: false,
-          },
-        ],
-      },
-      options: {
-        ...options,
-      },
-    });
+    if (terms.length === 0) {
+      return tags;
+    }
 
-  </script>
-  
+    const searchString = tags.join(" ").toLowerCase();
+    const hit = terms.every(term => searchString.includes(term))
+    if (!hit) {
+      return null;
+    }
+
+    return tags.filter(tag => terms.some(term => tag.toLowerCase().includes(term)))
+  }
+
+</script>
+
 </html>

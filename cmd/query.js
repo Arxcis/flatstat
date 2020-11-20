@@ -21,33 +21,71 @@ export async function queryMetafileHistory(appID) {
   // 2. Pick a branch and stargazer count. Should be the same across queries.
   const branch = json?.branch ?? yaml?.branch ?? yml?.branch;
   const stargazerCount = json?.stargazerCount ?? yaml?.stargazerCount ?? yml?.stargazerCount;
-  
+
   // 3. Parse commit history
   const jsonHistory = json ? parseCommits(json.commits) : [];
   const yamlHistory = yaml ? parseCommits(yaml.commits) : [];
   const ymlHistory = yml ? parseCommits(yml.commits) : [];
 
-  // 4. Merge and re-sort history
+  // 4. Merge
   const history = [
     ...jsonHistory,
     ...yamlHistory,
     ...ymlHistory,
-  ].sort((a, b) => b.date.localeCompare(a.date));
+  ]
+  // Sort oldest -> newest date
+  const historyFromOldest = [...history].sort((a, b) => a.date.localeCompare(b.date.localeCompare));
 
-  // 5. Trim the history to contain one entry per month, which should be the latest entry per month
+  // 5. De-duplication strategy: Only keep history-entries which have a difference from previous entry
+  const deDuplicatedHistory = historyFromOldest
+    .map((it, index) => {
+      // If first entry, moving on...
+      if (index === 0) {
+        return it;
+      }
+
+      // Look back in history
+      const prev = historyFromOldest[index - 1]
+      const isDuplicateOfPrevious =
+        JSON.stringify({
+          ext: prev.ext,
+          status: prev.status,
+          finishArgs: prev.finishArgs
+        }) === JSON.stringify({
+          ext: it.ext,
+          status: it.status,
+          finishArgs: it.finishArgs
+        });
+
+      if (isDuplicateOfPrevious) {
+        return {
+          ...it,
+          status: "duplicate",
+          finishArgs: null,
+        };
+      }
+
+      return it;
+    }).filter(it => it.status !== "duplicate")
+
+
+
+  // 6. Trim the history to contain one entry per month, which should be the latest entry per month
+  const historyFromNewest = [...deDuplicatedHistory].sort((a, b) => a.date.localeCompare(b.date.localeCompare));
+
   const trimmedHistory = MONTHS
-    .map(month => history.find(it => it.date.startsWith(month)))
+    .map(month => historyFromNewest.find(it => it.date.startsWith(month)))
     .filter(it => it)
-    .reverse();
+    .reverse()
 
-  // 6. Get the file-extension of the latest history entry
+  // 7. Get the file-extension of the latest history entry
   const ext = trimmedHistory[0]?.ext ?? null;
   const status = trimmedHistory[0]?.status ?? null;
 
-  // 7. Concat the displayURL
-  const displayURL = ext ? `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}`: `https://github.com/flathub/${appID}`;
+  // 8. Concat the displayURL
+  const displayURL = ext ? `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` : `https://github.com/flathub/${appID}`;
 
-  // 8. Bundle what we learned into a metafile object
+  // 9. Bundle what we learned into a metafile object
   const metafile = { appID, displayURL, ext, status, branch, stargazerCount, history: trimmedHistory };
 
   return metafile;
@@ -58,7 +96,7 @@ export async function queryMetafileHistory(appID) {
  * @param {string} ext json|yaml|yml
  */
 async function queryCommitHistory(appID, ext) {
-    const query = `\
+  const query = `\
   query {\
       repository(name:"${appID}", owner:"flathub") {\
         name\
@@ -67,7 +105,7 @@ async function queryCommitHistory(appID, ext) {
           name
           target {\
             ... on Commit {\
-              history(since: "2018-01-01T00:00:00Z", path:"${appID}.${ext}") {\
+              history(since: "${MONTHS[0]}-01T00:00:00Z", path:"${appID}.${ext}") {\
                 nodes {\
                   committedDate\
                   file(path:"${appID}.${ext}") {\
@@ -131,13 +169,13 @@ async function queryCommitHistory(appID, ext) {
 
 /**
  * @param {{ date: string, text: string, ext: "json"|"yaml"|"yml"}[]} commits
- * 
- * @returns {{ 
- *   ext: string, 
- *   date: string, 
+ *
+ * @returns {{
+ *   ext: string,
+ *   date: string,
  *   status: "ill-formed"|"empty"|"missing-finish-args"|"ok"
  *   finishArgs: {
- *     socket: string[], 
+ *     socket: string[],
  *     allow: string[],
  *     device: string[],
  *     extension: string[],
@@ -150,76 +188,57 @@ async function queryCommitHistory(appID, ext) {
  * }}
  */
 function parseCommits(commits) {
-  const history = commits.map(({ date, text, ext }) => {
+  const history = commits
+    .map(({ date, text, ext }) => {
 
-    let meta;
-    try {
-      if (ext === "yml" || ext === "yaml") {
-        meta = yaml.safeLoad(text)
-      } else {
-        // Try to make JSON better formed, before parsing it, to get fewer "ill-formed" results.
-        const jsonWithoutComments = stripJsonComments(text);
-        const jsonWithoutWhitespace = jsonWithoutComments.replace(/\s/g,"")
-        
-        meta = JSON.parse(jsonWithoutWhitespace);
+      let meta;
+      try {
+        if (ext === "yml" || ext === "yaml") {
+          meta = yaml.safeLoad(text)
+        } else {
+          // Try to make JSON better formed, before parsing it, to get fewer "ill-formed" results.
+          const jsonWithoutComments = stripJsonComments(text);
+          const jsonWithoutWhitespace = jsonWithoutComments.replace(/\s/g, "")
+
+          meta = JSON.parse(jsonWithoutWhitespace);
+        }
+      } catch {
+        // invalid json or yaml. Moving on...
+        return {
+          ext,
+          date,
+          status: "ill-formed",
+          finishArgs: null,
+        };
       }
-    } catch {
-      // invalid json or yaml. Moving on...
+
+      if (!meta) {
+        // file must have been deleted in this commit. Moving on...
+        return {
+          ext,
+          date,
+          status: "empty",
+          finishArgs: null,
+        };
+      }
+
+      const finishArgs = meta["finish-args"]
+      if (!finishArgs) {
+        return {
+          ext,
+          date,
+          status: "finish-args-not-found",
+          finishArgs: null,
+        }
+      }
+
       return {
         ext,
         date,
-        status: "ill-formed",
-        finishArgs: null,
+        status: "ok",
+        finishArgs: [...finishArgs].sort(),
       };
-    }
-
-    if (!meta) {
-      // file must have been deleted in this commit. Moving on...
-      return {
-        ext,
-        date,
-        status: "empty",
-        finishArgs: null,
-      };
-    }
-    
-    const finishArgs = meta["finish-args"]
-    if (!finishArgs) {
-      return {
-        ext,
-        date,
-        status: "missing-finish-args",
-        finishArgs: null,
-      }
-    }
-
-    const finishArgMap = {};
-    for (const arg of finishArgs.sort()) {
-      if (!arg.split) {
-        // syntax error. Moving on...
-        continue;
-      }
-      const [key, value] = arg.split("=");
-      if (!key || !value) {
-        // syntax error. Moving on...
-        continue;
-      }
-      const camelCasedKey = key
-        .replace("--", "")
-        .replace(/([-][a-z])/g, group => group.toUpperCase())
-        .replace(/[-]/g, '');
-
-      const merged = [...(finishArgMap[camelCasedKey] ?? []), value];
-      finishArgMap[camelCasedKey] = merged;
-    }
-
-    return {
-      ext,
-      date,
-      status: "ok",
-      finishArgs: finishArgMap
-    };
-  })
+    })
 
   return history;
 }

@@ -49,5 +49,5 @@ export const MONTHS = [
   "2020-08",
   "2020-09",
   "2020-10",
-  // "2020-11", Ignore current month
+  "2020-11",
 ];

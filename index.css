@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
   font-family: Helvetica, Arial, Sans-Serif;
 }
@@ -28,32 +28,36 @@ main section::-webkit-scrollbar {
   display: none;
 }
 
-main nav {
+main > nav {
   border: 1px solid #dfdfdf;
-  margin-right: auto;
+  margin: 1px auto 0 0;
   border-radius: 5px;
 }
 
-main nav a {
+main > nav a {
   font-size: 14px;
   padding: 6px 20px 6px 20px;
   border-bottom: none;
 }
 
-main nav a:hover {
+main > nav a:hover {
   color: black;
   background-color: #dfdfdf;
 }
 
-main nav a.current {
+main > nav a.active {
   background-color: #0366d6;
   color: white;
   border-bottom: none;
   border-radius: 5px;
 }
 
-main canvas {
+main > section > article {
   padding: 20px 0 1200px 0;
+}
+
+main > section > article > canvas {
+  padding: 0 0 100px 0;
 }
 
 header {
@@ -88,11 +92,72 @@ nav a:hover {
   background-color: #0366d6;
 }
 
-a.current {
+a.active {
   border-bottom: 2px solid #0366d6;
 }
 
 h3 {
   color: #424242;
   margin-top: 30px;
+}
+
+
+/**
+ * --------- main > ul ------------
+ */
+main > ul {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 0;
+  margin: 20px 0 20px 0;
+  scrollbar-width: none;
+}
+
+main > ul::-webkit-scrollbar {
+  display: none;
+}
+
+main > ul > .row {
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  color: black;
+  border-radius: 5px;
+}
+
+main > ul > .row span.left {
+  text-overflow: ellipsis; white-space: nowrap; overflow: hidden; flex: 1;
+  font-size: 14px;
+}
+
+main > ul > .row span.middle {
+  text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+   font-size: 12px;
+   flex: 0 0 220px;
+   color: #777777;
+}
+
+main > ul > .row span.right {
+  font-size: 14px;
+}
+
+main > ul > .row span.padding {
+  flex: 0 0 20px;
+}
+
+main > ul > .row:hover {
+  color: black;
+  background-color: #dfdfdf;
+}
+
+main > ul > .row:hover > span.middle {
+  color: black;
+}
+
+main > footer {
+   color: #777777;
+  font-size: 14px;
+  margin: -10px 0 20px 0;
 }
