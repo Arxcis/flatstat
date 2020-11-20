@@ -127,6 +127,7 @@ main > ul > .row {
 
 main > ul > .row span.left {
   text-overflow: ellipsis; white-space: nowrap; overflow: hidden; flex: 1;
+  font-size: 14px;
 }
 
 main > ul > .row span.middle {
@@ -134,13 +135,13 @@ main > ul > .row span.middle {
    white-space: nowrap;
    overflow: hidden;
    font-size: 12px;
-   flex: 0 0 250px;
+   flex: 0 0 220px;
    color: #777777;
 }
 
 
 main > ul > .row span.padding {
-  flex: 0 0 50px;
+  flex: 0 0 20px;
 }
 
 main > ul > .row:hover {

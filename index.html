@@ -24,6 +24,7 @@
     <input id="search" value="" type="search" placeholder="Search for name">
     <nav>
       <a id="#apps" title="Apps sorted by Github stars" href="/#apps">🕹️ apps</a>
+      <a id="#changelog" title="Latest changes" href=" /#changelog">📜 changelog</a>
       <a id="#finish-args" title="Frequently used 'finish-args'" href=" /#finish-args">🏁 finish-args</a>
       <a id="#achievements" title="Apps sorted by achievements" href="/#achievements">🏅 achievements</a>
       <a id="#holes" title="Apps sorted by holes" href="/#holes">💥 holes</a>
@@ -51,6 +52,7 @@
   let fetching = true;
   let count = [];
   let metafiles = [];
+  let changelog = [];
 
   useActiveLink("#apps")
   const input = useSearch("#search", (search) => renderList(search, window.location.hash))
@@ -63,6 +65,7 @@
     if (fetching) {
       count = await useJSON("./data/flathub/count.json")
       metafiles = await useJSON("./data/flathub/metafiles.json")
+      changelog = await useJSON("./data/flathub/changelog.json")
       fetching = false;
     }
 
@@ -71,6 +74,31 @@
 
     let list = [];
     switch (hash) {
+      case "#changelog":
+        list = changelog
+          .reduce((acc, { appID, ext, displayURL, date, additions, deletions }) => {
+            date = date.slice(0, 10)
+            return [
+              ...acc,
+              additions.length ? {
+                name: `➕ ${additions.join(", ")}`,
+                displayURL,
+                count: date,
+                icon: "",
+                details: appID,
+                tags: [appID, date, ...additions],
+              } : null,
+              deletions.length ? {
+                name: `➖ ${deletions.join(", ")}`,
+                displayURL,
+                count: date,
+                icon: "",
+                details: appID,
+                tags: [appID, date, ...deletions],
+              } : null,
+            ];
+          }, []).filter(it => it)
+        break;
       case "#holes":
         list = metafiles
           .filter(it => it.history[0]?.finishArgs)
@@ -158,22 +186,22 @@
       return;
     }
 
-    const renderedList = filtered.map(({ count, displayURL, icon, name, title, hits, tags }) => {
+    const renderedList = filtered.map(({ count, displayURL, icon, name, title, hits, tags, details }) => {
       title = title ?? tags?.join("&#010;")
-      const details = hits?.filter(hit => hit !== name && isNaN(hit)).join(", ")
+      details = details ?? hits?.filter(hit => hit !== name && isNaN(hit)).join(", ")
 
       return `\
-        <${displayURL ? "a" : "div"}
-          class="row"
-          href="${displayURL}"
-          title="${title}"
-          target="_blank"
-        >
-          <span class="left">${name}</span>
-          <span class="middle">${details}</span>
-          <span class="padding"></span>
-          <span>${count ? (count + ` ${icon}`) : ""}</span>
-        </${displayURL ? "a" : "div"}>
+              <${displayURL ? "a" : "div"}
+                class="row"
+                href="${displayURL}"
+                title="${title}"
+                target="_blank"
+              >
+                <span class="left">${name}</span>
+                <span class="middle">${details}</span>
+                <span class="padding"></span>
+                <span>${count ? (count + ` ${icon}`) : ""}</span>
+              </${ displayURL ? "a" : "div"} >
     `;
     }).join("");
 
@@ -186,6 +214,7 @@
       .toLowerCase()
       .split(" ")
       .filter(it => it !== "")
+
 
     if (terms.length === 0) {
       return tags;

@@ -1,26 +1,19 @@
-#
-# Generates 'apps.json' based on Github REST API
-#
-#  	makeApps(GithubREST) -> 'apps.json'
-#
+# make-apps.js - Generates 'apps.json' based on Github REST API
 apps:
-	node cmd/makeApps.js --harmony-top-level-await;
+	node cmd/make-apps.js --harmony-top-level-await;
 
-#
-# Generates 'metafiles.json' based on 'apps.json' and the Github Graphql API
-#
-#  	makeMetafiles('app.json', GithubGraphQL) -> 'metafiles.json'
-#
+# make-metafiles.js - Generates 'metafiles.json' based on 'apps.json' and the Github Graphql API
 metafiles:
-	node cmd/makeMetafiles.js --harmony-top-level-await;
+	node cmd/make-metafiles.js --harmony-top-level-await;
 
-#
-# Generates 'count.json' based on 'metafiles.json'
-#
-#  	makeCount('metafiles.json') -> 'count.json'
-#
+# make-count.js - Generates 'count.json' based on 'metafiles.json'
 count:
-	node cmd/makeCount.js --harmony-top-level-await;
+	node cmd/make-count.js --harmony-top-level-await;
+
+# make-changelog.js - Generates 'changelog.json' based on 'metafiles.json'
+changelog:
+	node cmd/make-changelog.js --harmony-top-level-await;
+
 
 all:
 	make apps;
@@ -35,4 +28,4 @@ server:
 test:
 	node cmd/query.test.js --harmony-top-level-await;
 
-.PHONY: apps count metafiles server test all
+.PHONY: apps count metafiles server test all changelog
