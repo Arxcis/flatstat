@@ -1,33 +1,50 @@
-import { writeFile, unlink, appendFile, readFile } from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
 
 const metafiles = JSON.parse(await readFile("./data/flathub/metafiles.json"));
 
-const CHANGELOG_JSON = "./data/flathub/changelog.json";
+const changelog = metafiles
+  .filter(meta => meta.history?.length)
+  .reduce((acc, meta) => {
 
-const changelog = metafiles.filter(meta => (!!meta.history?.length) > 0).reduce((acc, meta) => {
+    const nonNullHistory = meta.history
+      .filter(entry => entry.finishArgs !== null)
 
-  const nonNullHistory = meta.history
-    .filter(entry => entry.finishArgs !== null)
-
-  const changelog = nonNullHistory
-    .reverse()
-    .map((current, index) => {
-      if (index === 0) {
-        return { appID: meta.appID, date: current.date, deletions: [], additions: current.finishArgs, ext: meta.ext, displayURL: meta.displayURL }
-      } else {
+    const changelog = nonNullHistory
+      .reverse()
+      .map((current, index) => {
+        if (index === 0) {
+          return { appID: meta.appID, date: current.date, created: current.finishArgs, ext: meta.ext, displayURL: meta.displayURL }
+        }
         const prev = nonNullHistory[index - 1]
 
-        const deletions = prev.finishArgs.filter(prevArg => current.finishArgs.every(arg => arg !== prevArg)).filter(arg => typeof arg === "string")
-        const additions = current.finishArgs.filter(currentArg => prev.finishArgs.every(arg => arg !== currentArg)).filter(arg => typeof arg === "string")
+        const deletions = prev.finishArgs
+          .filter(arg => typeof arg === "string")
+          .filter(prevArg => current.finishArgs
+            .every(arg => arg !== prevArg))
 
-        return { appID: meta.appID, date: current.date, deletions: deletions, additions: additions, ext: meta.ext, displayURL: meta.displayURL }
-      }
-    }).filter(change => change);
+        const additions = current.finishArgs
+          .filter(arg => typeof arg === "string")
+          .filter(currentArg => prev.finishArgs
+            .every(arg => arg !== currentArg))
 
-  return [...acc, ...changelog];
+        let line = { date: current.date, appID: meta.appID, ext: meta.ext, }
 
-}, []).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 1200) // Keep changelog-search consistly fast, by limiting to 1200 latest entries
+        if (additions.length) {
+          line = { ...line, additions }
+        }
 
+        if (deletions.length) {
+          line = { ...line, deletions }
+        }
 
-let changelogStr = `[\n  ${changelog.map(change => JSON.stringify(change)).join(",\n  ")}\n]\n`;
-await writeFile(CHANGELOG_JSON, changelogStr);
+        return { ...line, displayURL: meta.displayURL }
+      })
+
+    return [...acc, ...changelog];
+
+  }, [])
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .map(change => JSON.stringify(change))
+  .join(",\n  ")
+
+await writeFile("./data/flathub/changelog.json", `[\n  ${changelog}\n]\n`);

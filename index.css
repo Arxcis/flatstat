@@ -119,7 +119,7 @@ main > ul::-webkit-scrollbar {
 }
 
 main > ul > .row {
-  padding: 8px 10px 8px 10px;
+  padding: 5px 10px 5px 10px;
   display: flex;
   color: black;
   border-radius: 5px;
@@ -139,6 +139,9 @@ main > ul > .row span.middle {
    color: #777777;
 }
 
+main > ul > .row span.right {
+  font-size: 14px;
+}
 
 main > ul > .row span.padding {
   flex: 0 0 20px;
@@ -151,4 +154,10 @@ main > ul > .row:hover {
 
 main > ul > .row:hover > span.middle {
   color: black;
+}
+
+main > footer {
+   color: #777777;
+  font-size: 14px;
+  margin: -10px 0 20px 0;
 }
