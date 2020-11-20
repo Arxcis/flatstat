@@ -13,7 +13,7 @@ const changelog = metafiles.filter(meta => (!!meta.history?.length) > 0).reduce(
     .reverse()
     .map((current, index) => {
       if (index === 0) {
-        return null;
+        return { appID: meta.appID, date: current.date, deletions: [], additions: current.finishArgs, ext: meta.ext, displayURL: meta.displayURL }
       } else {
         const prev = nonNullHistory[index - 1]
 

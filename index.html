@@ -86,7 +86,7 @@
                 count: date,
                 icon: "",
                 details: appID,
-                tags: [appID, date, ...additions],
+                tags: [appID, date, ...additions, "+ Additions"],
               } : null,
               deletions.length ? {
                 name: `➖ ${deletions.join(", ")}`,
@@ -94,7 +94,7 @@
                 count: date,
                 icon: "",
                 details: appID,
-                tags: [appID, date, ...deletions],
+                tags: [appID, date, ...deletions, "- Deletions"],
               } : null,
             ];
           }, []).filter(it => it)
