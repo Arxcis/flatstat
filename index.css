@@ -119,7 +119,7 @@ main > ul::-webkit-scrollbar {
 }
 
 main > ul > .row {
-  padding: 5px 10px 5px 10px;
+  padding: 6px 10px 6px 10px;
   display: flex;
   color: black;
   border-radius: 5px;

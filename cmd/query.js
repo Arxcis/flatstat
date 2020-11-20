@@ -34,7 +34,7 @@ export async function queryMetafileHistory(appID) {
     ...ymlHistory,
   ]
   // Sort oldest -> newest date
-  const historyFromOldest = [...history].sort((a, b) => a.date.localeCompare(b.date.localeCompare));
+  const historyFromOldest = [...history].sort((a, b) => a.date.localeCompare(b.date));
 
   // 5. De-duplication strategy: Only keep history-entries which have a difference from previous entry
   const deDuplicatedHistory = historyFromOldest
