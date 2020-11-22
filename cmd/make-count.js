@@ -37,8 +37,8 @@ const countMap = metafiles.reduce((acc, it) => {
       ...increment("yaml", it.ext === "yaml"),
       ...increment("yml", it.ext === "yml"),
 
-      ...incrementAchievementCount(finishArgs, monthCount),
-      ...incrementHoleCount(finishArgs, monthCount),
+      achievements: incrementAchievementCount(finishArgs, monthCount?.achievements),
+      holes: incrementHoleCount(finishArgs, monthCount?.holes),
       talkNames: incrementTalkNameCount(finishArgs, monthCount?.talkNames),
       finishArgs: incrementFinishArgs(finishArgs, monthCount?.finishArgs)
     });
@@ -54,6 +54,8 @@ const count = [...countMap.entries()]
     return ({
       month: key,
       ...value,
+      achievements: trimAndSortCount(value.achievements),
+      holes: trimAndSortCount(value.holes),
       talkNames: trimAndSortCount(value.talkNames),
       finishArgs: trimAndSortCount(value.finishArgs),
     })
@@ -62,8 +64,9 @@ const count = [...countMap.entries()]
 
 await writeFile(COUNT_JSON, JSON.stringify(count, null, 2));
 
-function trimAndSortCount(count) {
 
+// Used from trimming and sorting achievemnts,holes,talkNames , and finish-args
+function trimAndSortCount(count) {
   const countsWithMoreThanOne = Object
     .entries(count)
     .filter(([, value]) => value > 1);
