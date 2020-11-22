@@ -50,7 +50,6 @@ const countMap = metafiles.reduce((acc, it) => {
 
 const count = [...countMap.entries()]
   .map(([key, value]) => {
-
     return ({
       month: key,
       ...value,
@@ -65,7 +64,7 @@ const count = [...countMap.entries()]
 await writeFile(COUNT_JSON, JSON.stringify(count, null, 2));
 
 
-// Used from trimming and sorting achievemnts,holes,talkNames , and finish-args
+// Used from trimming and sorting achievemnts, holes, talkNames, and finish-args counts.
 function trimAndSortCount(count) {
   const countsWithMoreThanOne = Object
     .entries(count)
