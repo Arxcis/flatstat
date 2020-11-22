@@ -128,15 +128,16 @@
     holesIndex = metafiles
       .filter(it => it.history[0]?.finishArgs)
       .map(it => {
+        const name = `🕹️ ${it.appID}`;
         const holes = incrementHoleCount(it.history[0].finishArgs)
         const count = sumHoles(holes);
-        const tags = [`${it.appID}.${it.ext}`, ...Object.keys(holes)];
+        const tags = [`Holes in ${name}&#010;`, ...Object.keys(holes)];
 
         return {
           count,
           displayURL: it.displayURL,
           icon: "💥",
-          name: `🕹️ ${it.appID}.${it.ext}`,
+          name,
           tags,
           searchString: tags.join(" ").toLocaleLowerCase(),
         }
@@ -147,15 +148,16 @@
     talkNamesIndex = metafiles
       .filter(it => it.history[0]?.finishArgs)
       .map(it => {
+        const name = `🕹️ ${it.appID}`;
         const talkNames = incrementPortalCount(it.history[0].finishArgs)
         const count = sumPortals(talkNames);
-        const tags = [`--talk-names of ${it.appID}.${it.ext}&#010;`, ...Object.keys(talkNames)];
+        const tags = [`talk-names of ${name}&#010;`, ...Object.keys(talkNames)];
 
         return {
           count,
           displayURL: it.displayURL,
           icon: "💬",
-          name: `🕹️ ${it.appID}`,
+          name,
           tags,
           searchString: tags.join("").toLocaleLowerCase(),
         }
@@ -166,15 +168,16 @@
     achievementsIndex = metafiles
       .filter(it => it.history[0]?.finishArgs)
       .map(it => {
+        const name = `🕹️ ${it.appID}`;
         const achievements = incrementAchievementCount(it.history[0].finishArgs);
         const count = sumAchievements(achievements);
-        const tags = [`${it.appID}.${it.ext}`, ...Object.keys(achievements)];
+        const tags = [`Achievements of ${name}&#010;`, ...Object.keys(achievements)];
 
         return {
           count,
           displayURL: it.displayURL,
           icon: "🏅",
-          name: `🕹️ ${it.appID}.${it.ext}`,
+          name,
           tags,
           searchString: tags.join("").toLocaleLowerCase(),
         }
@@ -183,14 +186,15 @@
 
     // finishArgs
     finishArgsIndex = Object.entries(count[count.length - 1].finishArgs).map(([arg, count]) => {
-      const tags = [arg]
+      const name = `🏁 ${arg}`;
+      const tags = [name]
 
       return {
-        title: `${arg} - used by ${count} apps`,
+        title: `${arg} used by ${count} apps`,
         count,
         displayURL: null,
         icon: "",
-        name: `🏁 ${arg}`,
+        name,
         tags,
         searchString: tags.join("").toLocaleLowerCase(),
       }
@@ -201,13 +205,13 @@
     appsIndex = metafiles
       .map(it => {
         const finishArgs = incrementFinishArgs(it.history[0]?.finishArgs ?? [])
-        const tags = [`${it.appID}.${it.ext}`, ...(finishArgs ? Object.keys(finishArgs) : [])];
+        const tags = [`🕹️ ${it.appID} has the following finish-args:&#010;`, ...(finishArgs ? Object.keys(finishArgs) : [])];
 
         return {
           count: it.stargazerCount,
           displayURL: it.displayURL,
           icon: "⭐",
-          name: `🕹️ ${it.appID}.${it.ext}`,
+          name: `🕹️ ${it.appID}`,
           tags,
           searchString: tags.join("").toLocaleLowerCase(),
         }
@@ -251,7 +255,7 @@
 
     const renderedList = filtered.map(({ count, displayURL, icon, name, title, hits, tags, details }) => {
       title = title ?? tags?.join("&#010;")
-      details = details ?? hits?.filter(hit => !name.includes(hit)).join(", ")
+      details = details ?? hits?.filter(hit => !hit.includes(name)).join(", ")
 
       return `\
               <${displayURL ? "a" : "div"}
