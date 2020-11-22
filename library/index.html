@@ -139,10 +139,30 @@
 </body>
 <script type="module">
   import { useActiveLink } from "../lib/useActiveLink.js";
+  import { HOLE_DESCRIPTIONS } from "../lib/holes.js";
+  import { ACHIEVEMENT_DESCRIPTIONS } from "../lib/achievements.js";
+
+  console.log(HOLE_DESCRIPTIONS)
 
   useActiveLink("#achievements")
 
-    // Inject counts for achievements and holes
+  document.querySelector("#achievements").innerHTML = HOLE_DESCRIPTIONS.map(achievement => {
+    
+    return `\
+        <article title="${achievement.id}">
+          <h3>🏅 Achievement: ${achievement.id}</h3>
+          <p>${achievement.description}</p>
+        </article>`
+  }).join("\n")
+
+  document.querySelector("#holes").innerHTML = HOLE_DESCRIPTIONS.map(hole => {
+    return `\
+        <article title="${hole.id}">
+          <h3>💥 Hole: ${hole.id} </h3>
+          <p>${hole.description}</p>
+        </article>
+`;
+  }).join("\n")
 
 </script>
 
