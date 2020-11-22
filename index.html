@@ -94,7 +94,7 @@
         }
 
         if (additions) {
-          const tags = [`${appID} added:&#010;`, ...additions, count];
+          const tags = [`🕹️ ${appID} added:&#010;`, ...additions, count];
           acc.push({
             name: `➕ ${additions.join(", ")}`,
             displayURL,
@@ -107,7 +107,7 @@
         }
 
         if (deletions) {
-          const tags = [`${appID} removed:&#010;`, ...deletions, count];
+          const tags = [`🕹️ ${appID} removed:&#010;`, ...deletions, count];
           acc.push({
             name: `➖ ${deletions.join(", ")}`,
             displayURL,
@@ -131,7 +131,7 @@
         const name = `🕹️ ${it.appID}`;
         const holes = incrementHoleCount(it.history[0].finishArgs)
         const count = sumHoles(holes);
-        const tags = [`Holes in ${name}&#010;`, ...Object.keys(holes)];
+        const tags = [`💥 Holes in ${name}&#010;`, ...Object.keys(holes)];
 
         return {
           count,
@@ -151,7 +151,7 @@
         const name = `🕹️ ${it.appID}`;
         const talkNames = incrementTalkNameCount(it.history[0].finishArgs)
         const count = sumTalkNames(talkNames);
-        const tags = [`talk-names of ${name}&#010;`, ...Object.keys(talkNames)];
+        const tags = [`💬 talk-names of ${name}&#010;`, ...Object.keys(talkNames)];
 
         return {
           count,
@@ -171,7 +171,7 @@
         const name = `🕹️ ${it.appID}`;
         const achievements = incrementAchievementCount(it.history[0].finishArgs);
         const count = sumAchievements(achievements);
-        const tags = [`Achievements of ${name}&#010;`, ...Object.keys(achievements)];
+        const tags = [`🏅 Achievements of ${name}&#010;`, ...Object.keys(achievements)];
 
         return {
           count,
@@ -190,7 +190,7 @@
       const tags = [name]
 
       return {
-        title: `${arg} used by ${count} apps`,
+        title: `🏁 ${arg}, used by 🕹️ ${count} apps`,
         count,
         displayURL: null,
         icon: "",
@@ -205,7 +205,7 @@
     appsIndex = metafiles
       .map(it => {
         const finishArgs = incrementFinishArgs(it.history[0]?.finishArgs ?? [])
-        const tags = [`🕹️ ${it.appID} has the following finish-args:&#010;`, ...(finishArgs ? Object.keys(finishArgs) : [])];
+        const tags = [`🕹️ ${it.appID}, with ⭐ ${it.stargazerCount} Github stars, has 🏁 finish-args:&#010;`, ...(finishArgs ? Object.keys(finishArgs) : [])];
 
         return {
           count: it.stargazerCount,
