@@ -782,7 +782,6 @@
   "com.valvesoftware.Steam.Utility.MangoHud",
   "no.mifi.losslesscut",
   "org.parlatype.Parlatype",
-  "org.tlauncher.TLauncher",
   "com.github.Anuken.Mindustry",
   "nl.brixit.wiremapper",
   "com.leinardi.gx52",
@@ -1023,5 +1022,6 @@
   "com.github.arshubham.gitignore",
   "org.firestormviewer.FirestormViewer",
   "org.gnome.EasyTAG",
-  "org.unitystation.StationHub"
+  "org.unitystation.StationHub",
+  "org.kde.labplot2"
 ]
