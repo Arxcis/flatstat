@@ -13,7 +13,8 @@
       "--no-filesystem-all": 28,
       "--no-device": 25,
       "--no-filesystem": 14,
-      "--no-device-all": 12
+      "--no-device-all": 12,
+      "--persist": 2
     },
     "holes": {
       "--x11": 73,
@@ -85,7 +86,8 @@
       "--no-filesystem-all": 42,
       "--no-device": 32,
       "--no-filesystem": 24,
-      "--no-device-all": 21
+      "--no-device-all": 21,
+      "--persist": 10
     },
     "holes": {
       "--x11": 113,
@@ -175,7 +177,8 @@
       "--no-filesystem-all": 63,
       "--no-device": 52,
       "--no-filesystem": 32,
-      "--no-device-all": 26
+      "--no-device-all": 26,
+      "--persist": 11
     },
     "holes": {
       "--x11": 155,
@@ -286,7 +289,8 @@
       "--no-filesystem-all": 77,
       "--no-device": 58,
       "--no-filesystem": 43,
-      "--no-device-all": 29
+      "--no-device-all": 29,
+      "--persist": 13
     },
     "holes": {
       "--x11": 182,
@@ -409,7 +413,8 @@
       "--no-filesystem-all": 88,
       "--no-device": 73,
       "--no-filesystem": 48,
-      "--no-device-all": 34
+      "--no-device-all": 34,
+      "--persist": 14
     },
     "holes": {
       "--x11": 211,
@@ -548,7 +553,8 @@
       "--no-filesystem-all": 113,
       "--no-device": 88,
       "--no-filesystem": 67,
-      "--no-device-all": 37
+      "--no-device-all": 37,
+      "--persist": 19
     },
     "holes": {
       "--x11": 248,
@@ -694,7 +700,8 @@
       "--no-filesystem-all": 138,
       "--no-device": 100,
       "--no-filesystem": 86,
-      "--no-device-all": 47
+      "--no-device-all": 47,
+      "--persist": 28
     },
     "holes": {
       "--x11": 282,
@@ -844,7 +851,8 @@
       "--no-filesystem-all": 172,
       "--no-filesystem": 115,
       "--no-device": 113,
-      "--no-device-all": 52
+      "--no-device-all": 52,
+      "--persist": 32
     },
     "holes": {
       "--x11": 337,
@@ -1001,6 +1009,7 @@
       "--no-filesystem": 123,
       "--no-device": 120,
       "--no-device-all": 58,
+      "--persist": 33,
       "--wayland-with-fallback": 7
     },
     "holes": {
@@ -1167,6 +1176,7 @@
       "--no-device": 130,
       "--no-filesystem": 101,
       "--no-device-all": 66,
+      "--persist": 37,
       "--wayland-with-fallback": 8
     },
     "holes": {
@@ -1343,6 +1353,7 @@
       "--no-device": 136,
       "--no-filesystem": 106,
       "--no-device-all": 73,
+      "--persist": 40,
       "--wayland-with-fallback": 9
     },
     "holes": {
@@ -1523,6 +1534,7 @@
       "--no-device": 142,
       "--no-filesystem": 109,
       "--no-device-all": 79,
+      "--persist": 40,
       "--wayland-with-fallback": 11
     },
     "holes": {
@@ -1709,6 +1721,7 @@
       "--no-device": 148,
       "--no-filesystem": 113,
       "--no-device-all": 84,
+      "--persist": 42,
       "--wayland-with-fallback": 12
     },
     "holes": {
@@ -1907,6 +1920,7 @@
       "--no-device": 153,
       "--no-filesystem": 121,
       "--no-device-all": 106,
+      "--persist": 47,
       "--wayland-with-fallback": 16
     },
     "holes": {
@@ -2107,6 +2121,7 @@
       "--no-device": 159,
       "--no-filesystem": 127,
       "--no-device-all": 103,
+      "--persist": 53,
       "--wayland-with-fallback": 17
     },
     "holes": {
@@ -2310,6 +2325,7 @@
       "--no-device": 169,
       "--no-filesystem": 140,
       "--no-device-all": 107,
+      "--persist": 58,
       "--wayland-with-fallback": 18
     },
     "holes": {
@@ -2524,6 +2540,7 @@
       "--no-device": 180,
       "--no-filesystem": 143,
       "--no-device-all": 109,
+      "--persist": 59,
       "--wayland-with-fallback": 22
     },
     "holes": {
@@ -2742,6 +2759,7 @@
       "--no-device": 182,
       "--no-filesystem": 151,
       "--no-device-all": 111,
+      "--persist": 60,
       "--wayland-with-fallback": 23
     },
     "holes": {
@@ -2962,6 +2980,7 @@
       "--no-device": 183,
       "--no-filesystem": 155,
       "--no-device-all": 112,
+      "--persist": 61,
       "--wayland-with-fallback": 21
     },
     "holes": {
@@ -3189,6 +3208,7 @@
       "--no-device": 191,
       "--no-filesystem": 176,
       "--no-device-all": 117,
+      "--persist": 68,
       "--wayland-with-fallback": 26
     },
     "holes": {
@@ -3417,6 +3437,7 @@
       "--no-filesystem": 220,
       "--no-device": 203,
       "--no-device-all": 120,
+      "--persist": 73,
       "--wayland-with-fallback": 35
     },
     "holes": {
@@ -3655,6 +3676,7 @@
       "--no-filesystem": 244,
       "--no-device": 214,
       "--no-device-all": 121,
+      "--persist": 80,
       "--wayland-with-fallback": 45
     },
     "holes": {
@@ -3891,6 +3913,7 @@
       "--no-filesystem": 257,
       "--no-device": 217,
       "--no-device-all": 127,
+      "--persist": 82,
       "--wayland-with-fallback": 48
     },
     "holes": {
@@ -4128,6 +4151,7 @@
       "--no-filesystem": 267,
       "--no-device": 220,
       "--no-device-all": 130,
+      "--persist": 82,
       "--wayland-with-fallback": 53
     },
     "holes": {
@@ -4371,6 +4395,7 @@
       "--no-filesystem": 284,
       "--no-device": 224,
       "--no-device-all": 135,
+      "--persist": 83,
       "--wayland-with-fallback": 70
     },
     "holes": {
@@ -4626,6 +4651,7 @@
       "--no-filesystem": 288,
       "--no-device": 226,
       "--no-device-all": 136,
+      "--persist": 83,
       "--wayland-with-fallback": 79
     },
     "holes": {
@@ -4889,7 +4915,8 @@
       "--no-filesystem": 312,
       "--no-device": 231,
       "--no-device-all": 143,
-      "--wayland-with-fallback": 90
+      "--wayland-with-fallback": 90,
+      "--persist": 84
     },
     "holes": {
       "--x11": 707,
@@ -5161,7 +5188,8 @@
       "--no-filesystem": 323,
       "--no-device": 236,
       "--no-device-all": 152,
-      "--wayland-with-fallback": 109
+      "--wayland-with-fallback": 109,
+      "--persist": 85
     },
     "holes": {
       "--x11": 716,
@@ -5434,7 +5462,8 @@
       "--no-filesystem": 334,
       "--no-device": 242,
       "--no-device-all": 164,
-      "--wayland-with-fallback": 125
+      "--wayland-with-fallback": 125,
+      "--persist": 89
     },
     "holes": {
       "--x11": 730,
@@ -5715,7 +5744,8 @@
       "--no-filesystem": 343,
       "--no-device": 247,
       "--no-device-all": 170,
-      "--wayland-with-fallback": 152
+      "--wayland-with-fallback": 152,
+      "--persist": 92
     },
     "holes": {
       "--x11": 728,
@@ -6004,7 +6034,8 @@
       "--no-filesystem": 353,
       "--no-device": 256,
       "--no-device-all": 176,
-      "--wayland-with-fallback": 166
+      "--wayland-with-fallback": 166,
+      "--persist": 93
     },
     "holes": {
       "--x11": 742,
@@ -6295,7 +6326,8 @@
       "--no-filesystem": 366,
       "--no-device": 264,
       "--no-device-all": 184,
-      "--wayland-with-fallback": 181
+      "--wayland-with-fallback": 181,
+      "--persist": 93
     },
     "holes": {
       "--x11": 757,
@@ -6592,7 +6624,8 @@
       "--no-filesystem": 382,
       "--no-device": 266,
       "--wayland-with-fallback": 201,
-      "--no-device-all": 194
+      "--no-device-all": 194,
+      "--persist": 96
     },
     "holes": {
       "--x11": 771,
@@ -6901,7 +6934,8 @@
       "--no-filesystem": 401,
       "--no-device": 272,
       "--wayland-with-fallback": 216,
-      "--no-device-all": 201
+      "--no-device-all": 201,
+      "--persist": 96
     },
     "holes": {
       "--x11": 786,
@@ -7216,7 +7250,8 @@
       "--no-filesystem": 406,
       "--no-device": 273,
       "--wayland-with-fallback": 225,
-      "--no-device-all": 202
+      "--no-device-all": 202,
+      "--persist": 96
     },
     "holes": {
       "--x11": 788,
