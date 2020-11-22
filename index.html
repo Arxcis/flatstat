@@ -81,7 +81,7 @@
         const count = `&#010;${date.slice(0, 10)}`;
 
         if (created) {
-          const tags = [`New app ${appID} 🎉&#010;`, ...created, count];
+          const tags = [`🕹️ ${appID} created with 🏁 finish-args:&#010;`, ...created, count];
           acc.push({
             name: `🕹️ ${appID}`,
             displayURL,
@@ -94,7 +94,7 @@
         }
 
         if (additions) {
-          const tags = [`🕹️ ${appID} added:&#010;`, ...additions, count];
+          const tags = [`🕹️ ${appID} added 🏁 finish-args:&#010;`, ...additions, count];
           acc.push({
             name: `➕ ${additions.join(", ")}`,
             displayURL,
@@ -107,7 +107,7 @@
         }
 
         if (deletions) {
-          const tags = [`🕹️ ${appID} removed:&#010;`, ...deletions, count];
+          const tags = [`🕹️ ${appID} removed 🏁 finish-args:&#010;`, ...deletions, count];
           acc.push({
             name: `➖ ${deletions.join(", ")}`,
             displayURL,
