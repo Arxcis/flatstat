@@ -1,6 +1,6 @@
 import { writeFile, readFile } from "fs/promises";
 import { MONTHS } from "./config.js";
-import { incrementAchievementCount, incrementHoleCount, incrementPortalCount, incrementFinishArgs } from "../lib/stats.js";
+import { incrementAchievementCount, incrementHoleCount, incrementTalkNameCount, incrementFinishArgs } from "../lib/stats.js";
 
 const metafiles = JSON.parse(await readFile("./data/flathub/metafiles.json"));
 
@@ -39,7 +39,7 @@ const countMap = metafiles.reduce((acc, it) => {
 
       ...incrementAchievementCount(finishArgs, monthCount),
       ...incrementHoleCount(finishArgs, monthCount),
-      portals: incrementPortalCount(finishArgs, monthCount?.portals),
+      talkNames: incrementTalkNameCount(finishArgs, monthCount?.talkNames),
       finishArgs: incrementFinishArgs(finishArgs, monthCount?.finishArgs)
     });
   }
@@ -51,51 +51,48 @@ const countMap = metafiles.reduce((acc, it) => {
 const count = [...countMap.entries()]
   .map(([key, value]) => {
 
-    // First get all finish args which happen more than once.
-    const moreFinishArgs = Object
-      .entries(value.finishArgs)
-      .filter(([, value]) => value > 1);
-
-    // See if any of the args used only once, startswith args which happen more than once
-    const onceFinishArgs = Object
-      .entries(value.finishArgs)
-      .filter(([, value]) => value === 1);
-
-    const sortedMoreFinishArgs = moreFinishArgs
-      .sort(([, a], [, b]) => b - a)
-
-    const sortedByArgLength = [...moreFinishArgs].sort(([arga], [argb]) => argb.length - arga.length)
-
-    const combinedOnceFinishArgs = Object.entries(
-      onceFinishArgs.reduce((acc, [onceArg]) => {
-        const moreArg = sortedByArgLength.find(([moreArg]) => onceArg.startsWith(moreArg));
-        if (moreArg) {
-          return { ...acc, [`${moreArg[0]}&lt;other&gt;`]: (acc[`${moreArg[0]}&lt;other&gt;`] ?? 0) + 1 }
-        } else {
-          return acc
-        }
-      }, {})).filter(([, v]) => v > 1)
-
-    const finishArgs = [
-      ...sortedMoreFinishArgs,
-      ...combinedOnceFinishArgs
-    ]
-      .sort(([, a], [, b]) => b - a)
-      .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
-
-    const portals = Object
-      .entries(value.portals)
-      .filter(([, value]) => value > 1)
-      .sort(([, a], [, b]) => b - a)
-      .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
-
     return ({
       month: key,
       ...value,
-      finishArgs,
-      portals,
+      talkNames: trimAndSortCount(value.talkNames),
+      finishArgs: trimAndSortCount(value.finishArgs),
     })
   })
   .sort((a, b) => a.month.localeCompare(b.month));
 
 await writeFile(COUNT_JSON, JSON.stringify(count, null, 2));
+
+function trimAndSortCount(count) {
+
+  const countsWithMoreThanOne = Object
+    .entries(count)
+    .filter(([, value]) => value > 1);
+
+  const countsWithJustOnce = Object
+    .entries(count)
+    .filter(([, value]) => value === 1);
+
+  const sortedCountsWithMoreThanOne = countsWithMoreThanOne
+    .sort(([, a], [, b]) => b - a)
+
+  const sortedByArgLength = [...countsWithMoreThanOne].sort(([arga], [argb]) => argb.length - arga.length)
+
+  const combinedCountsWithJustOnce = Object.entries(
+    countsWithJustOnce.reduce((acc, [onceArg]) => {
+      const moreArg = sortedByArgLength.find(([moreArg]) => onceArg.startsWith(moreArg));
+      if (moreArg) {
+        return { ...acc, [`${moreArg[0]}&lt;SOMETHING&gt;`]: (acc[`${moreArg[0]}&lt;SOMETHING&gt;`] ?? 0) + 1 }
+      } else {
+        return acc
+      }
+    }, {})).filter(([, v]) => v > 1)
+
+  const trimmedAndSortedCounts = [
+    ...sortedCountsWithMoreThanOne,
+    ...combinedCountsWithJustOnce
+  ]
+    .sort(([, a], [, b]) => b - a)
+    .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
+
+  return trimmedAndSortedCounts;
+}

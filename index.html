@@ -39,12 +39,12 @@
   import {
     incrementAchievementCount,
     incrementHoleCount,
-    incrementPortalCount,
+    incrementTalkNameCount,
     incrementFinishArgs,
     sumFinishArgs,
     sumAchievements,
     sumHoles,
-    sumPortals
+    sumTalkNames
   } from "./lib/stats.js";
   import { useJSON } from "./lib/useJSON.js";
   import { useActiveLink } from "./lib/useActiveLink.js";
@@ -149,8 +149,8 @@
       .filter(it => it.history[0]?.finishArgs)
       .map(it => {
         const name = `🕹️ ${it.appID}`;
-        const talkNames = incrementPortalCount(it.history[0].finishArgs)
-        const count = sumPortals(talkNames);
+        const talkNames = incrementTalkNameCount(it.history[0].finishArgs)
+        const count = sumTalkNames(talkNames);
         const tags = [`talk-names of ${name}&#010;`, ...Object.keys(talkNames)];
 
         return {

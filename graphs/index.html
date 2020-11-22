@@ -53,6 +53,9 @@
         <canvas id="talk-names-page3" width="400" height="250"></canvas>
         <canvas id="talk-names-page4" width="400" height="250"></canvas>
         <canvas id="talk-names-page5" width="400" height="250"></canvas>
+        <canvas id="talk-names-page6" width="400" height="250"></canvas>
+        <canvas id="talk-names-page7" width="400" height="250"></canvas>
+        <canvas id="talk-names-page8" width="400" height="250"></canvas>
       </article>
       <article>
         <canvas id="metafile" width="400" height="250"></canvas>
@@ -62,7 +65,7 @@
 </body>
 <script type="module">
   import "https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js";
-  import { sumAchievements, sumHoles, sumPortals, ACHIEVEMENTS, HOLES, WELL_KNOWN_PORTALS } from "../lib/stats.js";
+  import { sumAchievements, sumHoles, sumTalkNames, ACHIEVEMENTS, HOLES } from "../lib/stats.js";
   import { useJSON } from "../lib/useJSON.js";
   import { useActiveLink } from "../lib/useActiveLink.js";
 
@@ -74,7 +77,6 @@
   const BAD_COLOR = "#ff9100";
   const VERY_BAD_COLOR = "#ac0800";
   const SUPER_BAD_COLOR = "#4a148c";
-  const APP_ICON = "🕹️"
 
   function achievementLabel(label) {
     return `${label} 🏅 `
@@ -148,11 +150,11 @@
             label: ` 💬 talk-names used`,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map(it => sumPortals(it.portals)),
+            data: count.map(it => sumTalkNames(it.talkNames)),
             fill: false,
           },
           {
-            label: ` ${APP_ICON} apps published`,
+            label: ` 🕹️ apps published`,
             backgroundColor: SUPER_BAD_COLOR,
             borderColor: SUPER_BAD_COLOR,
             data: count.map(it => it["apps"]),
@@ -325,23 +327,22 @@
     });
     const GREY_COLORS = [GOOD_COLOR, BAD_COLOR, VERY_BAD_COLOR, SUPER_BAD_COLOR]
 
-    const datasets = WELL_KNOWN_PORTALS
-      .map(portal => [
-        portal,
-        count.map(it => it.portals[portal] ?? 0)
+    const datasets = Object.keys(count[count.length - 1].talkNames)
+      .map(talkName => [
+        talkName,
+        count.map(it => it.talkNames[talkName] ?? 0)
       ])
       .sort(([, aCounts], [, bCounts]) => bCounts[bCounts.length - 1] - aCounts[aCounts.length - 1])
-      .slice(0, 20)  // Show the n most used talk-names
-      .map(([portal, data], i) => ({
-        label: `#${i + 1} ${portal}`,
+      .slice(0, 32)  // Show the n most used talk-names
+      .map(([talkName, data], i) => ({
+        label: `#${i + 1} ${talkName}`,
         backgroundColor: GREY_COLORS[i % 4],
         borderColor: GREY_COLORS[i % 4],
         data,
         fill: false,
       }));
 
-
-    for (let page = 1; page <= 5; ++page) {
+    for (let page = 1; page <= 8; ++page) {
       const beginSlice = (page - 1) * 4
       const endSlice = beginSlice + 4;
 
