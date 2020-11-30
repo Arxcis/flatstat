@@ -18,48 +18,6 @@ main {
   overflow: hidden;
 }
 
-main section {
-  overflow-y: scroll;
-  margin: 20px 0 20px 0;
-  scrollbar-width: none;
-}
-
-main section::-webkit-scrollbar {
-  display: none;
-}
-
-main > nav {
-  border: 1px solid #dfdfdf;
-  margin: 1px auto 0 0;
-  border-radius: 5px;
-}
-
-main > nav a {
-  font-size: 14px;
-  padding: 6px 20px 6px 20px;
-  border-bottom: none;
-}
-
-main > nav a:hover {
-  color: black;
-  background-color: #dfdfdf;
-}
-
-main > nav a.active {
-  background-color: #0366d6;
-  color: white;
-  border-bottom: none;
-  border-radius: 5px;
-}
-
-main > section > article {
-  padding: 20px 0 1200px 0;
-}
-
-main > section > article > canvas {
-  padding: 0 0 100px 0;
-}
-
 header {
   margin: 0 0 10px 0;
   display: flex;
@@ -70,6 +28,7 @@ a {
   color: #424242;
   text-decoration: none;
 }
+
 header h1 {
   padding: 0 30px 0 0;
 }
@@ -102,9 +61,55 @@ h3 {
 }
 
 
-/**
- * --------- main > ul ------------
- */
+
+/* --------- main > nav ------------*/
+main > nav {
+  border: 1px solid #dfdfdf;
+  margin: 1px auto 0 0;
+  border-radius: 5px;
+}
+
+main > nav a {
+  font-size: 14px;
+  padding: 10px 19px 10px 19px;
+  white-space: nowrap;
+  border-bottom: none;
+}
+
+main > nav a:hover {
+  color: black;
+  background-color: #dfdfdf;
+}
+
+main > nav a.active {
+  background-color: #0366d6;
+  color: white;
+  border-bottom: none;
+  border-radius: 5px;
+}
+
+
+/** --------- main > section ------------ */
+main > section {
+  overflow-y: scroll;
+  margin: 20px 0 20px 0;
+  scrollbar-width: none;
+}
+
+main > section::-webkit-scrollbar {
+  display: none;
+}
+
+main > section > article {
+  padding: 20px 0 1200px 0;
+}
+
+main > section > article > canvas {
+  padding: 0 0 100px 0;
+}
+
+
+/** --------- main > ul ------------ */
 main > ul {
   display: flex;
   flex-direction: column;
@@ -156,6 +161,7 @@ main > ul > .row:hover > span.middle {
   color: black;
 }
 
+/* --------- main > footer ------------*/
 main > footer {
    color: #777777;
   font-size: 14px;
