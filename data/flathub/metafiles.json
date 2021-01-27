@@ -473,7 +473,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 3,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "json",
@@ -719,7 +719,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -845,7 +845,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -1522,31 +1522,6 @@
         "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2019-04-18T15:15:09Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=host",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:rw",
-        "--own-name=org.mpris.MediaPlayer2.Lollypop",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.Flatpak",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gnome.OnlineAccounts",
-        "--talk-name=org.gtk.vfs",
-        "--talk-name=org.gtk.vfs.*"
-      ]
     }
   ]
 },{
@@ -1714,7 +1689,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -2091,11 +2066,11 @@
   "ext": "yml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 154,
+  "stargazerCount": 159,
   "history": [
     {
       "ext": "yml",
-      "date": "2020-11-11T10:30:01Z",
+      "date": "2020-11-25T17:38:23Z",
       "status": "ok",
       "finishArgs": [
         "--allow=bluetooth",
@@ -2104,6 +2079,7 @@
         "--device=all",
         "--env=ALSA_CONFIG_PATH=",
         "--env=DBUS_FATAL_WARNINGS=0",
+        "--env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/app/lib32/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0:/usr/lib/i386-linux-gnu/gstreamer-1.0",
         "--env=LC_ADDRESS=C",
         "--env=LC_COLLATE=C",
         "--env=LC_MEASUREMENT=C",
@@ -2500,7 +2476,7 @@
     },
     {
       "ext": "yml",
-      "date": "2019-01-08T15:35:16Z",
+      "date": "2019-02-06T21:30:47Z",
       "status": "ok",
       "finishArgs": [
         "--allow=devel",
@@ -2794,7 +2770,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 25,
+  "stargazerCount": 27,
   "history": [
     {
       "ext": "json",
@@ -3240,7 +3216,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 8,
+  "stargazerCount": 7,
   "history": [
     {
       "ext": "json",
@@ -3381,7 +3357,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 12,
+  "stargazerCount": 13,
   "history": [
     {
       "ext": "json",
@@ -4046,7 +4022,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 4,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -4297,7 +4273,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 8,
+  "stargazerCount": 9,
   "history": [
     {
       "ext": "yml",
@@ -4417,23 +4393,6 @@
       ]
     },
     {
-      "ext": "yml",
-      "date": "2018-06-24T08:35:03Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--env=LADSPA_PATH=/app/lib/ladspa",
-        "--env=LV2_PATH=/app/lib/lv2:/app/extensions/lib/lv2",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
-    },
-    {
       "ext": "json",
       "date": "2018-05-05T07:10:10Z",
       "status": "ill-formed",
@@ -4501,26 +4460,22 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
-      "date": "2020-11-18T01:10:59Z",
+      "date": "2020-11-30T22:04:32Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--filesystem=host",
-        "--filesystem=xdg-run/dconf",
         "--filesystem=xdg-run/gvfs",
-        "--filesystem=~/.config/dconf:ro",
         "--own-name=org.mpris.MediaPlayer2.vlc",
         "--require-version=0.11.4",
         "--share=ipc",
         "--share=network",
         "--socket=pulseaudio",
         "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
         "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.freedesktop.ScreenSaver",
         "--talk-name=org.freedesktop.secrets",
@@ -5631,11 +5586,11 @@
   ]
 },{
   "appID": "org.telegram.desktop",
-  "displayURL": "https://github.com/flathub/org.telegram.desktop/blob/master/org.telegram.desktop.json",
+  "displayURL": "https://github.com/flathub/org.telegram.desktop/blob/beta/org.telegram.desktop.json",
   "ext": "json",
   "status": "ok",
-  "branch": "master",
-  "stargazerCount": 21,
+  "branch": "beta",
+  "stargazerCount": 22,
   "history": [
     {
       "ext": "json",
@@ -5996,7 +5951,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-05-23T05:28:48Z",
+      "date": "2018-05-26T17:22:59Z",
       "status": "ok",
       "finishArgs": [
         "--allow=devel",
@@ -7609,7 +7564,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 20,
+  "stargazerCount": 23,
   "history": [
     {
       "ext": "json",
@@ -7807,7 +7762,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 3,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "json",
@@ -8262,7 +8217,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 3,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "json",
@@ -8730,7 +8685,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 4,
+  "stargazerCount": 5,
   "history": [
     {
       "ext": "json",
@@ -8915,26 +8870,10 @@
     },
     {
       "ext": "json",
-      "date": "2018-03-14T20:36:47Z",
+      "date": "2018-04-11T18:05:32Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
-        "--filesystem=xdg-download",
-        "--filesystem=xdg-run/keyring",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.secrets"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-25T17:02:59Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
         "--filesystem=xdg-download",
         "--filesystem=xdg-run/keyring",
         "--share=ipc",
@@ -9209,10 +9148,16 @@
   "appID": "org.fedoraproject.MediaWriter",
   "displayURL": "https://github.com/flathub/org.fedoraproject.MediaWriter/blob/master/org.fedoraproject.MediaWriter.json",
   "ext": "json",
-  "status": "ok",
+  "status": "ill-formed",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-09-17T11:32:44Z",
+      "status": "ill-formed",
+      "finishArgs": null
+    },
     {
       "ext": "json",
       "date": "2018-01-11T14:03:33Z",
@@ -9977,7 +9922,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "json",
@@ -10119,7 +10064,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 51,
+  "stargazerCount": 55,
   "history": [
     {
       "ext": "yml",
@@ -10171,44 +10116,6 @@
         "--share=ipc",
         "--share=network",
         "--socket=wayland",
-        "--socket=x11"
-      ]
-    }
-  ]
-},{
-  "appID": "org.kicad_pcb.KiCad",
-  "displayURL": "https://github.com/flathub/org.kicad_pcb.KiCad/blob/master/org.kicad_pcb.KiCad.json",
-  "ext": "json",
-  "status": "ill-formed",
-  "branch": "master",
-  "stargazerCount": 4,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-05-16T19:30:48Z",
-      "status": "ill-formed",
-      "finishArgs": null
-    },
-    {
-      "ext": "json",
-      "date": "2018-09-01T21:51:21Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-05-09T14:55:42Z",
-      "status": "ok",
-      "finishArgs": [
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
         "--socket=x11"
       ]
     }
@@ -10278,7 +10185,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -10608,7 +10515,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 11,
+  "stargazerCount": 12,
   "history": [
     {
       "ext": "yml",
@@ -11328,7 +11235,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -11599,7 +11506,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 23,
+  "stargazerCount": 25,
   "history": [
     {
       "ext": "json",
@@ -11882,8 +11789,26 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 13,
+  "stargazerCount": 14,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-24T00:51:29Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=QT_QPA_PLATFORM=",
+        "--filesystem=~/.zoom:create",
+        "--filesystem=~/Documents/Zoom:create",
+        "--own-name=org.kde.*",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.Shell"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-09-28T18:21:16Z",
@@ -12061,6 +11986,44 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-24T12:37:20Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=xdg-desktop",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-public-share",
+        "--filesystem=xdg-videos",
+        "--filesystem=~/.zotero",
+        "--filesystem=~/Zotero",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-10-20T18:56:16Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=xdg-desktop",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-public-share",
+        "--filesystem=xdg-videos",
+        "--filesystem=~/.zotero",
+        "--filesystem=~/Zotero",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-05-10T18:34:16Z",
       "status": "ok",
       "finishArgs": [
@@ -12228,7 +12191,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 9,
+  "stargazerCount": 10,
   "history": [
     {
       "ext": "json",
@@ -12398,7 +12361,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-08-08T14:13:21Z",
+      "date": "2018-09-11T15:20:20Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=/tmp",
@@ -12529,7 +12492,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -12623,7 +12586,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "json",
@@ -14382,16 +14345,15 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 16,
+  "stargazerCount": 17,
   "history": [
     {
       "ext": "json",
-      "date": "2020-11-19T17:17:12Z",
+      "date": "2020-11-24T20:51:36Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
         "--filesystem=xdg-download:rw",
-        "--filesystem=xdg-public-share:ro",
         "--filesystem=xdg-run/gnupg:ro",
         "--filesystem=~/.gnupg",
         "--persist=.thunderbird",
@@ -14705,7 +14667,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -14948,7 +14910,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-10-06T20:10:23Z",
+      "date": "2018-12-10T07:56:21Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -16907,6 +16869,67 @@
   "history": [
     {
       "ext": "yaml",
+      "date": "2020-03-09T20:00:13Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=LC_ALL=C",
+        "--env=PATH=/app/jre/bin:/usr/bin:/app/bin:/app/bin/x86_64-linux",
+        "--env=TEXMFCACHE=$XDG_CACHE_HOME",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--talk-name=com.canonical.AppMenu.Registrar",
+        {
+          "--env=TEXINPUTS=.:~/texmf/": null
+        }
+      ]
+    },
+    {
+      "ext": "yaml",
+      "date": "2019-12-19T21:04:17Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=LC_ALL=C",
+        "--env=PATH=/app/jre/bin:/usr/bin:/app/bin:/app/bin/x86_64-linux",
+        "--env=TEXMFCACHE=$XDG_CACHE_HOME",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--talk-name=com.canonical.AppMenu.Registrar",
+        {
+          "--env=TEXINPUTS=.:~/texmf/": null
+        }
+      ]
+    },
+    {
+      "ext": "yaml",
+      "date": "2019-11-09T12:35:03Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PATH=/app/jre/bin:/usr/bin:/app/bin:/app/bin/x86_64-linux",
+        "--env=TEXMFCACHE=$XDG_CACHE_HOME",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--talk-name=com.canonical.AppMenu.Registrar",
+        {
+          "--env=TEXINPUTS=.:~/texmf/": null
+        }
+      ]
+    },
+    {
+      "ext": "yaml",
       "date": "2019-10-31T18:38:05Z",
       "status": "ok",
       "finishArgs": [
@@ -17119,7 +17142,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 4,
+  "stargazerCount": 5,
   "history": [
     {
       "ext": "yaml",
@@ -17201,7 +17224,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 4,
+  "stargazerCount": 5,
   "history": [
     {
       "ext": "json",
@@ -17538,7 +17561,7 @@
   "ext": "json",
   "status": "ill-formed",
   "branch": "master",
-  "stargazerCount": 3,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "json",
@@ -17634,7 +17657,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yaml",
@@ -18047,6 +18070,20 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-30T19:28:25Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--persist=.sauerbraten",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2018-06-11T10:22:30Z",
       "status": "ok",
       "finishArgs": [
@@ -18333,30 +18370,13 @@
     },
     {
       "ext": "json",
-      "date": "2018-07-12T08:20:20Z",
+      "date": "2018-07-12T21:08:00Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
         "--env=LD_LIBRARY_PATH=/app/lib",
         "--filesystem=host",
         "--require-version=0.11.1",
-        "--share=ipc",
-        "--share=network",
-        "--socket=ssh-auth",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.secrets"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-06-28T09:56:46Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=LD_LIBRARY_PATH=/app/lib",
-        "--filesystem=host",
         "--share=ipc",
         "--share=network",
         "--socket=ssh-auth",
@@ -18536,7 +18556,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2020-01-25T07:06:10Z",
+      "date": "2020-02-03T19:06:08Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -22173,7 +22193,7 @@
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-07-26T20:22:02Z",
+      "date": "2020-10-01T08:29:35Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -22215,7 +22235,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 6,
+  "stargazerCount": 5,
   "history": [
     {
       "ext": "yaml",
@@ -22375,7 +22395,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "json",
@@ -22636,7 +22656,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -22768,7 +22788,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 14,
+  "stargazerCount": 15,
   "history": [
     {
       "ext": "json",
@@ -22966,7 +22986,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "json",
@@ -23035,23 +23055,23 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 7,
+  "stargazerCount": 8,
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-11-16T14:20:44Z",
+      "date": "2020-11-28T00:06:45Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
         "--env=KDE_FORK_SLAVES=1",
         "--filesystem=host",
         "--filesystem=xdg-config/kdeglobals:ro",
+        "--filesystem=xdg-run/speech-dispatcher:ro",
         "--own-name=org.kde.StatusNotifierItem-2-1",
         "--share=ipc",
         "--share=network",
         "--socket=wayland",
         "--socket=x11",
-        "--system-talk-name=org.freedesktop.NetworkManager",
         "--system-talk-name=org.freedesktop.UDisks2",
         "--talk-name=com.canonical.AppMenu.Registrar",
         "--talk-name=org.kde.StatusNotifierWatcher"
@@ -23109,7 +23129,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 3,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -23827,7 +23847,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 3,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "json",
@@ -24680,7 +24700,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 3,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "json",
@@ -25371,7 +25391,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -25561,7 +25581,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 13,
+  "stargazerCount": 14,
   "history": [
     {
       "ext": "yml",
@@ -26264,19 +26284,18 @@
   ]
 },{
   "appID": "com.jetbrains.IntelliJ-IDEA-Community",
-  "displayURL": "https://github.com/flathub/com.jetbrains.IntelliJ-IDEA-Community/blob/master/com.jetbrains.IntelliJ-IDEA-Community.json",
-  "ext": "json",
+  "displayURL": "https://github.com/flathub/com.jetbrains.IntelliJ-IDEA-Community/blob/master/com.jetbrains.IntelliJ-IDEA-Community.yml",
+  "ext": "yml",
   "status": "ok",
   "branch": "master",
   "stargazerCount": 6,
   "history": [
     {
-      "ext": "json",
-      "date": "2020-11-04T21:54:42Z",
+      "ext": "yml",
+      "date": "2020-11-27T00:23:57Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
-        "--env=LD_LIBRARY_PATH=/app/lib/",
         "--filesystem=host",
         "--filesystem=xdg-run/keyring",
         "--share=ipc",
@@ -26529,7 +26548,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -26938,7 +26957,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "yml",
@@ -26971,7 +26990,7 @@
     },
     {
       "ext": "yml",
-      "date": "2018-12-27T13:12:27Z",
+      "date": "2018-12-27T13:13:36Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -27875,7 +27894,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 0,
   "history": [
     {
       "ext": "yaml",
@@ -28580,7 +28599,7 @@
     },
     {
       "ext": "json",
-      "date": "2019-03-06T01:18:23Z",
+      "date": "2019-03-17T02:56:19Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -28688,7 +28707,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -28712,7 +28731,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "json",
@@ -29414,7 +29433,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 4,
+  "stargazerCount": 5,
   "history": [
     {
       "ext": "yml",
@@ -29728,7 +29747,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 4,
+  "stargazerCount": 5,
   "history": [
     {
       "ext": "json",
@@ -29780,7 +29799,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -30339,7 +30358,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 4,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -30864,7 +30883,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 7,
+  "stargazerCount": 8,
   "history": [
     {
       "ext": "json",
@@ -31708,7 +31727,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 30,
+  "stargazerCount": 34,
   "history": [
     {
       "ext": "yml",
@@ -31844,31 +31863,6 @@
         "--filesystem=~/.var/app/com.valvesoftware.Steam:ro",
         "--filesystem=~/Games:create",
         "--persist=.wine",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.gnome.Mutter.DisplayConfig"
-      ]
-    },
-    {
-      "ext": "yml",
-      "date": "2019-04-14T19:48:45Z",
-      "status": "ok",
-      "finishArgs": [
-        "--allow=devel",
-        "--allow=multiarch",
-        "--device=all",
-        "--env=PATH=/app/bin:/app/runners/bin:/usr/bin",
-        "--filesystem=xdg-config/dconf:ro",
-        "--filesystem=xdg-data/Steam:ro",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.var/app/com.valvesoftware.Steam:ro",
-        "--filesystem=~/Games:create",
-        "--persist=~/.wine",
         "--share=ipc",
         "--share=network",
         "--socket=pulseaudio",
@@ -32045,22 +32039,6 @@
         "--device=all",
         "--env=AGS_LICENSE_FILENAME=/app/share/gsequencer/GPL-3",
         "--env=AGS_ONLINE_HELP_START_FILENAME=file:///app/share/doc/gsequencer/html/index.html",
-        "--env=DSSI_PATH=/app/lib/dssi",
-        "--env=LADSPA_PATH=/app/lib/ladspa",
-        "--env=LV2_PATH=/app/lib/lv2",
-        "--filesystem=host",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2019-12-07T15:16:56Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--env=AGS_LICENSE_FILENAME=/app/share/gsequencer/GPL-3",
         "--env=DSSI_PATH=/app/lib/dssi",
         "--env=LADSPA_PATH=/app/lib/ladspa",
         "--env=LV2_PATH=/app/lib/lv2",
@@ -33096,7 +33074,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -33826,6 +33804,46 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-09-07T10:13:57Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-08-02T10:17:12Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-07-07T21:29:40Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=/run/tor/control.authcookie:ro",
+        "--filesystem=/var/run/tor/control.authcookie:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2019-08-10T03:27:15Z",
       "status": "ok",
       "finishArgs": [
@@ -34216,7 +34234,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -35055,26 +35073,6 @@
     }
   ]
 },{
-  "appID": "com.github.huluti.ImCompressor",
-  "displayURL": "https://github.com/flathub/com.github.huluti.ImCompressor/blob/master/com.github.huluti.ImCompressor.json",
-  "ext": "json",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2019-10-09T11:57:08Z",
-      "status": "ok",
-      "finishArgs": [
-        "--filesystem=home",
-        "--share=ipc",
-        "--socket=fallback-x11",
-        "--socket=wayland"
-      ]
-    }
-  ]
-},{
   "appID": "org.pegasus_frontend.Pegasus",
   "displayURL": "https://github.com/flathub/org.pegasus_frontend.Pegasus/blob/master/org.pegasus_frontend.Pegasus.yml",
   "ext": "yml",
@@ -35336,7 +35334,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yaml",
@@ -35363,7 +35361,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -35743,7 +35741,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -35824,7 +35822,7 @@
   "ext": "yml",
   "status": "finish-args-not-found",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yml",
@@ -35885,7 +35883,7 @@
   "ext": "yml",
   "status": "finish-args-not-found",
   "branch": "master",
-  "stargazerCount": 15,
+  "stargazerCount": 17,
   "history": [
     {
       "ext": "yml",
@@ -35900,7 +35898,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 3,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "json",
@@ -36124,7 +36122,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -36798,7 +36796,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -36840,7 +36838,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -37420,7 +37418,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -37704,7 +37702,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 6,
+  "stargazerCount": 7,
   "history": [
     {
       "ext": "json",
@@ -38467,7 +38465,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -38512,7 +38510,7 @@
   "ext": "yml",
   "status": "finish-args-not-found",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -38574,7 +38572,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -38912,7 +38910,7 @@
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-07-10T18:24:27Z",
+      "date": "2020-09-18T09:24:58Z",
       "status": "ok",
       "finishArgs": [
         "--allow=devel",
@@ -39010,7 +39008,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -39158,7 +39156,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -39206,7 +39204,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -39467,6 +39465,21 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-06-06T13:06:48Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--device=shm",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-05-03T16:39:03Z",
       "status": "ok",
       "finishArgs": [
@@ -39485,7 +39498,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 19,
+  "stargazerCount": 21,
   "history": [
     {
       "ext": "yaml",
@@ -39699,7 +39712,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yaml",
@@ -39820,8 +39833,23 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-28T10:22:08Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host",
+        "--filesystem=xdg-run/gvfs",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-05-06T11:16:30Z",
@@ -40142,7 +40170,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "yaml",
@@ -40273,21 +40301,6 @@
         "--share=network",
         "--socket=x11"
       ]
-    }
-  ]
-},{
-  "appID": "org.kicad_pcb.KiCad.Library.Packages3D",
-  "displayURL": "https://github.com/flathub/org.kicad_pcb.KiCad.Library.Packages3D/blob/master/org.kicad_pcb.KiCad.Library.Packages3D.json",
-  "ext": "json",
-  "status": "finish-args-not-found",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-05-24T13:47:47Z",
-      "status": "finish-args-not-found",
-      "finishArgs": null
     }
   ]
 },{
@@ -40427,7 +40440,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -40447,7 +40460,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "yaml",
@@ -40574,6 +40587,25 @@
   "branch": "master",
   "stargazerCount": 3,
   "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-23T00:58:56Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=ALSA_CONFIG_PATH=",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
+        "--env=LV2_PATH=/app/extensions/Plugins/lv2",
+        "--env=LXVST_PATH=/app/extensions/Plugins/lxvst",
+        "--env=TMPDIR=/var/tmp",
+        "--env=VST3_PATH=/app/extensions/Plugins/vst3",
+        "--filesystem=home",
+        "--own-name=org.freedesktop.ReserveDevice1.*",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-10-05T23:38:07Z",
@@ -40857,7 +40889,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -40913,7 +40945,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -40938,7 +40970,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -40950,29 +40982,6 @@
         "--share=network",
         "--socket=pulseaudio",
         "--socket=x11"
-      ]
-    }
-  ]
-},{
-  "appID": "com.gigitux.gtkwhats",
-  "displayURL": "https://github.com/flathub/com.gigitux.gtkwhats/blob/master/com.gigitux.gtkwhats.json",
-  "ext": "json",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-06-14T18:15:17Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--share=ipc",
-        "--share=network",
-        "--socket=fallback-x11",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--talk-name=org.freedesktop.Notifications"
       ]
     }
   ]
@@ -41107,7 +41116,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 6,
+  "stargazerCount": 5,
   "history": [
     {
       "ext": "json",
@@ -41779,7 +41788,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -42051,7 +42060,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 16,
+  "stargazerCount": 19,
   "history": [
     {
       "ext": "yaml",
@@ -42543,26 +42552,6 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--talk-name=org.kde.StatusNotifierWatcher"
-      ]
-    }
-  ]
-},{
-  "appID": "uk.co.mrbenshef.Boop-GTK",
-  "displayURL": "https://github.com/flathub/uk.co.mrbenshef.Boop-GTK/blob/master/uk.co.mrbenshef.Boop-GTK.json",
-  "ext": "json",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-08-13T16:06:02Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--share=ipc",
-        "--socket=fallback-x11",
-        "--socket=wayland"
       ]
     }
   ]
@@ -43110,7 +43099,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -43737,6 +43726,21 @@
   "history": [
     {
       "ext": "json",
+      "date": "2020-11-25T08:13:23Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=~/.local/share/fonts:create",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-10-02T19:15:16Z",
       "status": "ok",
       "finishArgs": [
@@ -43827,26 +43831,6 @@
     }
   ]
 },{
-  "appID": "uk.co.mrbenshef.TeX-Match",
-  "displayURL": "https://github.com/flathub/uk.co.mrbenshef.TeX-Match/blob/master/uk.co.mrbenshef.TeX-Match.json",
-  "ext": "json",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 1,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-09-19T18:11:10Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--share=ipc",
-        "--socket=fallback-x11",
-        "--socket=wayland"
-      ]
-    }
-  ]
-},{
   "appID": "com.github.jmlich.geotagging",
   "displayURL": "https://github.com/flathub/com.github.jmlich.geotagging/blob/master/com.github.jmlich.geotagging.json",
   "ext": "json",
@@ -43889,7 +43873,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -44171,7 +44155,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 0,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "yaml",
@@ -44230,7 +44214,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yml",
@@ -44274,7 +44258,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2020-11-19T07:25:10Z",
+      "date": "2020-11-27T07:32:08Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -44282,9 +44266,13 @@
         "--env=GSETTINGS_SCHEMA_DIR=/run/host/usr/share/glib-2.0/schemas/",
         "--env=GTK3_MODULES=/app/clippy/lib/libclippy-module.so",
         "--filesystem=/var/lib/AccountsService/icons/:ro",
+        "--filesystem=/var/lib/flatpak/app/:ro",
+        "--filesystem=/var/lib/flatpak/exports/:ro",
         "--filesystem=host",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
+        "--filesystem=~/.local/share/flatpak/app/:ro",
+        "--filesystem=~/.local/share/flatpak/exports/:ro",
         "--own-name=com.endlessm.GameStateService",
         "--own-name=com.hack_computer.GameStateService",
         "--own-name=com.hack_computer.HackSoundServer",
@@ -44384,20 +44372,22 @@
   ]
 },{
   "appID": "org.chromium.Chromium",
-  "displayURL": "https://github.com/flathub/org.chromium.Chromium/blob/beta/org.chromium.Chromium.yaml",
+  "displayURL": "https://github.com/flathub/org.chromium.Chromium/blob/master/org.chromium.Chromium.yaml",
   "ext": "yaml",
   "status": "ok",
-  "branch": "beta",
-  "stargazerCount": 3,
+  "branch": "master",
+  "stargazerCount": 13,
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-11-19T21:29:08Z",
+      "date": "2020-11-24T19:07:01Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
         "--env=GTK_PATH=/app/lib/gtkmodules",
+        "--env=LD_LIBRARY_PATH=/app/chromium/nonfree-codecs/lib",
         "--filesystem=home",
+        "--filesystem=xdg-run/pipewire-0",
         "--own-name=org.mpris.MediaPlayer2.chromium.*",
         "--require-version=1.8.2",
         "--share=ipc",
@@ -44546,31 +44536,6 @@
     }
   ]
 },{
-  "appID": "com.github.thestr4ng3r.Chiaki",
-  "displayURL": "https://github.com/flathub/com.github.thestr4ng3r.Chiaki/blob/master/com.github.thestr4ng3r.Chiaki.yaml",
-  "ext": "yaml",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "yaml",
-      "date": "2020-10-20T10:06:40Z",
-      "status": "ok",
-      "finishArgs": [
-        "--allow=bluetooth",
-        "--device=all",
-        "--env=DBUS_FATAL_WARNINGS=0",
-        "--own-name=org.kde.*",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.ScreenSaver"
-      ]
-    }
-  ]
-},{
   "appID": "org.tabos.banking",
   "displayURL": "https://github.com/flathub/org.tabos.banking/blob/master/org.tabos.banking.json",
   "ext": "json",
@@ -44682,7 +44647,7 @@
   "ext": "yml",
   "status": "finish-args-not-found",
   "branch": "beta",
-  "stargazerCount": 6,
+  "stargazerCount": 13,
   "history": [
     {
       "ext": "yml",
@@ -44745,7 +44710,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2020-11-10T09:37:51Z",
+      "date": "2020-11-27T17:05:40Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -44759,7 +44724,8 @@
         "--talk-name=com.hack_computer.HackSoundServer",
         "--talk-name=com.hack_computer.HackableAppsManager",
         "--talk-name=com.hack_computer.hack",
-        "--talk-name=org.gnome.Shell"
+        "--talk-name=org.gnome.Shell",
+        "--talk-name=org.gnome.Software"
       ]
     },
     {
@@ -44903,7 +44869,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -44956,7 +44922,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2020-11-10T09:38:40Z",
+      "date": "2020-11-27T17:06:34Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -44970,7 +44936,8 @@
         "--talk-name=com.hack_computer.HackSoundServer",
         "--talk-name=com.hack_computer.HackableAppsManager",
         "--talk-name=com.hack_computer.hack",
-        "--talk-name=org.gnome.Shell"
+        "--talk-name=org.gnome.Shell",
+        "--talk-name=org.gnome.Software"
       ]
     }
   ]
@@ -44980,22 +44947,23 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 2,
+  "stargazerCount": 8,
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-11-15T14:16:26Z",
+      "date": "2020-11-24T13:49:21Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
         "--env=GTK_PATH=/app/lib/gtkmodules",
-        "--filesystem=xdg-download",
+        "--filesystem=home",
         "--own-name=org.mpris.MediaPlayer2.chromium.*",
         "--require-version=1.8.2",
         "--share=ipc",
         "--share=network",
         "--socket=cups",
         "--socket=pulseaudio",
+        "--socket=wayland",
         "--socket=x11",
         "--system-talk-name=org.freedesktop.Avahi",
         "--system-talk-name=org.freedesktop.UPower",
@@ -45106,7 +45074,7 @@
   "ext": "yml",
   "status": "finish-args-not-found",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -45372,4 +45340,1244 @@
       ]
     }
   ]
+},{
+  "appID": "im.fluffychat.Fluffychat",
+  "displayURL": "https://github.com/flathub/im.fluffychat.Fluffychat/blob/master/im.fluffychat.Fluffychat.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-10-28T17:52:59Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=xdg-download",
+        "--own-name=chat.fluffy.fluffychat",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.treagod.spectator",
+  "displayURL": "https://github.com/flathub/com.github.treagod.spectator/blob/master/com.github.treagod.spectator.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-23T07:01:09Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "org.aliflang.lang",
+  "displayURL": "https://github.com/flathub/org.aliflang.lang/blob/master/org.aliflang.lang.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 2,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-21T15:29:31Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=PATH=$PATH:/usr/bin:/bin:/app/bin",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "nz.mega.MEGAsync",
+  "displayURL": "https://github.com/flathub/nz.mega.MEGAsync/blob/master/nz.mega.MEGAsync.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-27T01:19:18Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=~/MEGA:create",
+        "--filesystem=~/MEGAsync Downloads:create",
+        "--own-name=org.kde.StatusNotifierItem-2-1",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
+    {
+      "ext": "yml",
+      "date": "2019-10-27T16:51:33Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=~/MEGA:create",
+        "--own-name=org.kde.StatusNotifierItem-2-1",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
+    {
+      "ext": "yml",
+      "date": "2019-04-07T13:23:05Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host",
+        "--own-name=org.kde.StatusNotifierItem-2-1",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    }
+  ]
+},{
+  "appID": "net.tedomum.CapBattleship",
+  "displayURL": "https://github.com/flathub/net.tedomum.CapBattleship/blob/master/net.tedomum.CapBattleship.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-28T16:50:24Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "io.github.cmus.cmus",
+  "displayURL": "https://github.com/flathub/io.github.cmus.cmus/blob/master/io.github.cmus.cmus.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-29T06:59:22Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=/media",
+        "--filesystem=/run/media",
+        "--filesystem=xdg-music",
+        "--own-name=org.mpris.MediaPlayer2.cmus",
+        "--socket=pulseaudio"
+      ]
+    }
+  ]
+},{
+  "appID": "com.poweriso.PowerISO",
+  "displayURL": "https://github.com/flathub/com.poweriso.PowerISO/blob/master/com.poweriso.PowerISO.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-27T15:15:58Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=home",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.reds.LogisimEvolution",
+  "displayURL": "https://github.com/flathub/com.github.reds.LogisimEvolution/blob/master/com.github.reds.LogisimEvolution.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-30T17:56:46Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=JAVA_HOME=/app/jre",
+        "--env=PATH=/usr/bin:/app/bin:/app/jre/bin",
+        "--env=_JAVA_AWT_WM_NONREPARENTING=1",
+        "--filesystem=xdg-documents",
+        "--persist=.java",
+        "--socket=fallback-x11"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.iortcw.iortcw",
+  "displayURL": "https://github.com/flathub/com.github.iortcw.iortcw/blob/master/com.github.iortcw.iortcw.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-10-27T15:32:51Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.valvesoftware.Steam.CompatibilityTool.Proton-GE",
+  "displayURL": "https://github.com/flathub/com.valvesoftware.Steam.CompatibilityTool.Proton-GE",
+  "ext": null,
+  "status": null,
+  "branch": "beta",
+  "stargazerCount": 5,
+  "history": []
+},{
+  "appID": "net.sonic_pi.SonicPi",
+  "displayURL": "https://github.com/flathub/net.sonic_pi.SonicPi/blob/master/net.sonic_pi.SonicPi.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-30T15:39:09Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=QT_ENABLE_HIGHDPI_SCALING=1",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=home",
+        "--filesystem=xdg-run/pipewire-0",
+        "--own-name=org.mpris.MediaPlayer2.net.sonic_pi.SonicPi",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=system-bus",
+        "--socket=x11",
+        "--talk-name=org.mpris.MediaPlayer2"
+      ]
+    }
+  ]
+},{
+  "appID": "io.typora.Typora",
+  "displayURL": "https://github.com/flathub/io.typora.Typora",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "fr.romainvigier.MetadataCleaner",
+  "displayURL": "https://github.com/flathub/fr.romainvigier.MetadataCleaner",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.mightycreak.Diffuse",
+  "displayURL": "https://github.com/flathub/io.github.mightycreak.Diffuse",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.inklestudios.Inky",
+  "displayURL": "https://github.com/flathub/com.inklestudios.Inky",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.w1hkj.fldigi",
+  "displayURL": "https://github.com/flathub/com.w1hkj.fldigi/blob/master/com.w1hkj.fldigi.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-30T02:18:37Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.w1hkj.flrig",
+  "displayURL": "https://github.com/flathub/com.w1hkj.flrig",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.viking.Viking",
+  "displayURL": "https://github.com/flathub/org.viking.Viking",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "chat.schildi.desktop",
+  "displayURL": "https://github.com/flathub/chat.schildi.desktop",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "org.guitarix.Guitarix",
+  "displayURL": "https://github.com/flathub/org.guitarix.Guitarix/blob/master/org.guitarix.Guitarix.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-30T16:43:03Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
+        "--env=LV2_PATH=/app/extensions/Plugins/lv2",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--filesystem=xdg-run/pipewire-0",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=system-bus",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-09-23T02:40:47Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
+        "--env=LV2_PATH=/app/extensions/Plugins/lv2",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--filesystem=xdg-run/pipewire-0",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=system-bus",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-07-07T18:08:44Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--device=shm",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa:/app/extensions/LadspaPlugins/ladspa",
+        "--env=LV2_PATH=/app/extensions/Plugins/lv2:/app/extensions/Lv2Plugins/lv2",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-06-02T02:24:18Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--device=shm",
+        "--env=LADSPA_PATH=/app/extensions/LadspaPlugins/ladspa",
+        "--env=LV2_PATH=/app/extensions/Lv2Plugins/lv2",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-05-03T00:20:55Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--device=shm",
+        "--env=DSSI_PATH=/app/extensions/DssiPlugins/dssi",
+        "--env=LADSPA_PATH=/app/extensions/LadspaPlugins/ladspa",
+        "--env=LV2_PATH=/app/extensions/Lv2Plugins/lv2:/app/lv2",
+        "--env=LXVST_PATH=/app/extensions/VstPlugins/lxvst",
+        "--env=TMPDIR=/var/tmp",
+        "--env=VST3_PATH=/app/extensions/Vst3Plugins/vst3",
+        "--env=VST_PATH=/app/extensions/VstPlugins/lxvst",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2019-02-02T05:24:43Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "net.christianbeier.Gromit-MPX",
+  "displayURL": "https://github.com/flathub/net.christianbeier.Gromit-MPX",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "com.github.ransome1.sleek",
+  "displayURL": "https://github.com/flathub/com.github.ransome1.sleek/blob/master/com.github.ransome1.sleek.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-30T11:23:33Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "net.sourceforge.Hugin",
+  "displayURL": "https://github.com/flathub/net.sourceforge.Hugin/blob/master/net.sourceforge.Hugin.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-06-23T03:29:53Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PERL5LIB=/app/lib/perl5/site_perl/5.30.0/",
+        "--filesystem=home",
+        "--share=ipc",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "org.gnome.BreakTimer",
+  "displayURL": "https://github.com/flathub/org.gnome.BreakTimer/blob/master/org.gnome.BreakTimer.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-11-25T18:48:59Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.gnome.ControlCenter",
+        "--talk-name=org.gnome.Mutter.IdleMonitor",
+        "--talk-name=org.gnome.ScreenSaver",
+        "--talk-name=org.gnome.Shell"
+      ]
+    }
+  ]
+},{
+  "appID": "net.cebix.basilisk",
+  "displayURL": "https://github.com/flathub/net.cebix.basilisk",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "io.github.leonardschardijn.Chirurgien",
+  "displayURL": "https://github.com/flathub/io.github.leonardschardijn.Chirurgien",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "net.sourceforge.Pdfedit",
+  "displayURL": "https://github.com/flathub/net.sourceforge.Pdfedit",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.dosbox-staging",
+  "displayURL": "https://github.com/flathub/io.github.dosbox-staging",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.d3cod3.Mosaic",
+  "displayURL": "https://github.com/flathub/org.d3cod3.Mosaic/blob/master/org.d3cod3.Mosaic.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-10-26T15:11:19Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "dev.tchx84.Portfolio",
+  "displayURL": "https://github.com/flathub/dev.tchx84.Portfolio",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.microsoft.Edge",
+  "displayURL": "https://github.com/flathub/com.microsoft.Edge",
+  "ext": null,
+  "status": null,
+  "branch": "beta",
+  "stargazerCount": 2,
+  "history": []
+},{
+  "appID": "com.github.huluti.Curtail",
+  "displayURL": "https://github.com/flathub/com.github.huluti.Curtail",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.Soundux",
+  "displayURL": "https://github.com/flathub/io.github.Soundux",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.helpseeker.Gyre",
+  "displayURL": "https://github.com/flathub/io.github.helpseeker.Gyre",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.lukajankovic.ambience",
+  "displayURL": "https://github.com/flathub/io.github.lukajankovic.ambience",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.filmulator.Filmulator",
+  "displayURL": "https://github.com/flathub/org.filmulator.Filmulator",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.mpdevil.mpdevil",
+  "displayURL": "https://github.com/flathub/org.mpdevil.mpdevil",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.gigitux.youp",
+  "displayURL": "https://github.com/flathub/com.gigitux.youp",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "me.hyliu.fluentreader",
+  "displayURL": "https://github.com/flathub/me.hyliu.fluentreader",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "eu.nimmerfort.blackbody",
+  "displayURL": "https://github.com/flathub/eu.nimmerfort.blackbody",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.gitlab.adnan338.Nixwriter",
+  "displayURL": "https://github.com/flathub/com.gitlab.adnan338.Nixwriter",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.soundconverter.SoundConverter",
+  "displayURL": "https://github.com/flathub/org.soundconverter.SoundConverter/blob/master/org.soundconverter.SoundConverter.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-11-28T14:56:14Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=/media",
+        "--filesystem=/run/media",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "org.scintilla.SciTE",
+  "displayURL": "https://github.com/flathub/org.scintilla.SciTE",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.gramps_project.Gramps",
+  "displayURL": "https://github.com/flathub/org.gramps_project.Gramps",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "fyi.zoey.TeX-Match",
+  "displayURL": "https://github.com/flathub/fyi.zoey.TeX-Match",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "fyi.zoey.Boop-GTK",
+  "displayURL": "https://github.com/flathub/fyi.zoey.Boop-GTK",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "dev.Cogitri.Health",
+  "displayURL": "https://github.com/flathub/dev.Cogitri.Health",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.kde.neochat",
+  "displayURL": "https://github.com/flathub/org.kde.neochat",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "re.chiaki.Chiaki",
+  "displayURL": "https://github.com/flathub/re.chiaki.Chiaki",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.valvesoftware.Steam.CompatibilityTool.Proton-Exp",
+  "displayURL": "https://github.com/flathub/com.valvesoftware.Steam.CompatibilityTool.Proton-Exp",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "com.belmoussaoui.Decoder",
+  "displayURL": "https://github.com/flathub/com.belmoussaoui.Decoder",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "net.biniou.LeBiniou",
+  "displayURL": "https://github.com/flathub/net.biniou.LeBiniou",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.usebottles.bottles",
+  "displayURL": "https://github.com/flathub/com.usebottles.bottles",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 3,
+  "history": []
+},{
+  "appID": "com.rosegardenmusic.rosegarden",
+  "displayURL": "https://github.com/flathub/com.rosegardenmusic.rosegarden/blob/master/com.rosegardenmusic.rosegarden.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2020-09-03T03:46:03Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=ALSA_CONFIG_PATH=",
+        "--env=DSSI_PATH=/app/extensions/Plugins/dssi",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
+        "--env=QT_AUTO_SCREEN_SCALE_FACTOR=1",
+        "--env=QT_QPA_PLATFORM=xcb",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=home",
+        "--filesystem=xdg-run/pipewire-0",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=system-bus",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-07-01T14:19:35Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--device=shm",
+        "--env=ALSA_CONFIG_PATH=",
+        "--env=DSSI_PATH=/app/extensions/Plugins/dssi:/app/extensions/DssiPlugins/dssi",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa:/app/extensions/LadspaPlugins/ladspa",
+        "--env=QT_AUTO_SCREEN_SCALE_FACTOR=1",
+        "--env=QT_QPA_PLATFORM=xcb",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=home",
+        "--require-version=1.6.1",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-06-28T16:42:39Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--device=shm",
+        "--env=ALSA_CONFIG_PATH=",
+        "--env=DSSI_PATH=/app/extensions/DssiPlugins/dssi",
+        "--env=LADSPA_PATH=/app/extensions/LadspaPlugins/ladspa",
+        "--env=QT_AUTO_SCREEN_SCALE_FACTOR=1",
+        "--env=QT_QPA_PLATFORM=xcb",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=home",
+        "--require-version=1.6.1",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2020-04-13T22:19:44Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--device=shm",
+        "--env=QT_AUTO_SCREEN_SCALE_FACTOR=1",
+        "--env=QT_QPA_PLATFORM=xcb",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=home",
+        "--require-version=1.6.1",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2019-02-12T05:04:20Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=QT_AUTO_SCREEN_SCALE_FACTOR=1",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=home",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2019-01-27T18:28:30Z",
+      "status": "ill-formed",
+      "finishArgs": null
+    }
+  ]
+},{
+  "appID": "com.bjareholt.johan.SimpleDiary",
+  "displayURL": "https://github.com/flathub/com.bjareholt.johan.SimpleDiary",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.worldpossible.ScriptLauncher",
+  "displayURL": "https://github.com/flathub/org.worldpossible.ScriptLauncher",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "com.github.yucefsourani.albasheer-electronic-quran-browser",
+  "displayURL": "https://github.com/flathub/com.github.yucefsourani.albasheer-electronic-quran-browser",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.github.alexhuntley.Plots",
+  "displayURL": "https://github.com/flathub/com.github.alexhuntley.Plots",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.hikounomizu.HikouNoMizu",
+  "displayURL": "https://github.com/flathub/org.hikounomizu.HikouNoMizu",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.kicad.KiCad",
+  "displayURL": "https://github.com/flathub/org.kicad.KiCad",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.kicad.KiCad.Library.Packages3D",
+  "displayURL": "https://github.com/flathub/org.kicad.KiCad.Library.Packages3D",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "dev.alextren.Spot",
+  "displayURL": "https://github.com/flathub/dev.alextren.Spot",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "de.finnik.PassVault",
+  "displayURL": "https://github.com/flathub/de.finnik.PassVault",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.ciromattia.kcc",
+  "displayURL": "https://github.com/flathub/io.github.ciromattia.kcc",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.tofudd.lanchat.terminal",
+  "displayURL": "https://github.com/flathub/io.github.tofudd.lanchat.terminal",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.sourceforge.Pixelitor",
+  "displayURL": "https://github.com/flathub/io.sourceforge.Pixelitor",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.yairm210.unciv",
+  "displayURL": "https://github.com/flathub/io.github.yairm210.unciv/blob/master/io.github.yairm210.unciv.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-01-19T22:55:39Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=JAVA_HOME=/app/jre",
+        "--env=PATH=/app/bin:/app/jre/bin:/usr/bin",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "org.fcitx.Fcitx5",
+  "displayURL": "https://github.com/flathub/org.fcitx.Fcitx5",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.fcitx.Fcitx5.Addon.ChineseAddons",
+  "displayURL": "https://github.com/flathub/org.fcitx.Fcitx5.Addon.ChineseAddons",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.fcitx.Fcitx5.Addon.Mozc",
+  "displayURL": "https://github.com/flathub/org.fcitx.Fcitx5.Addon.Mozc",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.kde.kdevelop",
+  "displayURL": "https://github.com/flathub/org.kde.kdevelop",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.diy_fever.DIYLayoutCreator",
+  "displayURL": "https://github.com/flathub/com.diy_fever.DIYLayoutCreator",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.gitlab.adnan338.Invoicer",
+  "displayURL": "https://github.com/flathub/com.gitlab.adnan338.Invoicer",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.github.dawidd6.checksumo",
+  "displayURL": "https://github.com/flathub/com.github.dawidd6.checksumo",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "com.github.itext.i7j_rups",
+  "displayURL": "https://github.com/flathub/com.github.itext.i7j_rups",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.neverball.Neverball",
+  "displayURL": "https://github.com/flathub/org.neverball.Neverball",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "net.cozic.joplin_desktop",
+  "displayURL": "https://github.com/flathub/net.cozic.joplin_desktop",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "io.github.peazip.PeaZip",
+  "displayURL": "https://github.com/flathub/io.github.peazip.PeaZip",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "app.lith.Lith",
+  "displayURL": "https://github.com/flathub/app.lith.Lith",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.unknown_horizons.UnknownHorizons",
+  "displayURL": "https://github.com/flathub/org.unknown_horizons.UnknownHorizons",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.itextpdf.RUPS",
+  "displayURL": "https://github.com/flathub/com.itextpdf.RUPS",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.github.nrittsti.NTag",
+  "displayURL": "https://github.com/flathub/com.github.nrittsti.NTag",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.enjoyingfoss.FOSStriangulator",
+  "displayURL": "https://github.com/flathub/org.enjoyingfoss.FOSStriangulator",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.kde.bomber",
+  "displayURL": "https://github.com/flathub/org.kde.bomber",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.github.qarmin.czkawka",
+  "displayURL": "https://github.com/flathub/com.github.qarmin.czkawka",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.lainsce.Quilter",
+  "displayURL": "https://github.com/flathub/io.github.lainsce.Quilter",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "uk.et1.big-finish-downloader",
+  "displayURL": "https://github.com/flathub/uk.et1.big-finish-downloader",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": []
+},{
+  "appID": "org.kicad.KiCad.Library.Templates",
+  "displayURL": "https://github.com/flathub/org.kicad.KiCad.Library.Templates",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.kicad.KiCad.Library.Footprints",
+  "displayURL": "https://github.com/flathub/org.kicad.KiCad.Library.Footprints",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.kicad.KiCad.Library.Symbols",
+  "displayURL": "https://github.com/flathub/org.kicad.KiCad.Library.Symbols",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "org.verapdf.veraPDF",
+  "displayURL": "https://github.com/flathub/org.verapdf.veraPDF",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.github.mgropp.PdfJumbler",
+  "displayURL": "https://github.com/flathub/com.github.mgropp.PdfJumbler",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.lainsce.Notejot",
+  "displayURL": "https://github.com/flathub/io.github.lainsce.Notejot",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "io.github.lainsce.Khronos",
+  "displayURL": "https://github.com/flathub/io.github.lainsce.Khronos",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
+},{
+  "appID": "com.qq.QQmusic",
+  "displayURL": "https://github.com/flathub/com.qq.QQmusic",
+  "ext": null,
+  "status": null,
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": []
 }]
