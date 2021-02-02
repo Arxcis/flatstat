@@ -1,5 +1,5 @@
 // PAT with no scopes. Readonly to public information on github
-const PAT = "64c0ffde304a67cd3cab32f23290440d754b52c2";
+const PAT = "44b7837eb68c63f6366ede1febffd63ec4be987b";
 export const RestConfig = {
   headers: {
     Authorization: `token ${PAT}`,
@@ -52,4 +52,5 @@ export const MONTHS = [
   "2020-11",
   "2020-12",
   "2021-01",
+  "2021-02",
 ];
