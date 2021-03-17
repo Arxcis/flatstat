@@ -20,19 +20,19 @@
 <body>
   <header>
     <a href="/flatstat/">
-      <h1 id="title" title="Flatstat | Apps">flatstat</h1>
+      <h1 id="title" title="Flatstat | Apps">Flatstat</h1>
     </a>
     <nav>
-      <a href="/flatstat/" title="Apps" class="active">apps</a>
-      <a href="/flatstat/graphs/" title="Graphs">graphs</a>
-      <a href="/flatstat/library/" title="Library">library</a>
-      <a href="/flatstat/about/" title="About">about</a>
+      <a href="/flatstat/" title="Apps" class="active">Apps</a>
+      <a href="/flatstat/graphs/" title="Graphs">Graphs</a>
+      <a href="/flatstat/library/" title="Library">Library</a>
+      <a href="/flatstat/about/" title="About">About</a>
     </nav>
   </header>
   <main>
     <input id="search" value="" type="search" placeholder="Search any column">
     <nav>
-      <a id="#stars" title="Apps sorted by Github stars" href="/flatstat/#stars">⭐ by stars</a>
+      <a id="#stars" title="Apps sorted by GitHub stars" href="/flatstat/#stars">⭐ by stars</a>
       <a id="#achievements" title="Apps sorted by achievements" href="/flatstat/#achievements">🏅 by achievements</a>
       <a id="#holes" title="Apps sorted by holes" href="/flatstat/#holes">💥 by holes</a>
       <a id="#talk-names" title="Apps sorted by well-known --talk-names" href="/flatstat/#talk-names">💬 by
@@ -215,7 +215,7 @@
     appsIndex = metafiles
       .map(it => {
         const finishArgs = incrementFinishArgs(it.history[0]?.finishArgs ?? [])
-        const tags = [`🕹️ ${it.appID}, with ⭐ ${it.stargazerCount} Github stars, has 🏁 finish-args:&#010;`, ...(finishArgs ? Object.keys(finishArgs) : [])];
+        const tags = [`🕹️ ${it.appID}, with ⭐ ${it.stargazerCount} GitHub stars, has 🏁 finish-args:&#010;`, ...(finishArgs ? Object.keys(finishArgs) : [])];
 
         return {
           count: it.stargazerCount,
