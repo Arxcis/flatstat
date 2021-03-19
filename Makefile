@@ -1,3 +1,13 @@
+help:
+	sh ./cmd/help.sh
+
+all:
+	make install;
+	make apps;
+	make metafiles;
+	make count;
+	make changelog;
+
 # make-apps.js - Generates 'apps.json' based on Github REST API
 apps:
 	node cmd/make-apps.js --harmony-top-level-await;
@@ -14,15 +24,12 @@ count:
 changelog:
 	node cmd/make-changelog.js --harmony-top-level-await;
 
-
-all:
-	make apps;
-	make metafiles;
-	make count;
+install:
+	npm i;
 
 # Host 'index.html' at '0.0.0.0:8000'
 server:
-	python -m http.server
+	python3 -m http.server
 
 # Test things
 test:

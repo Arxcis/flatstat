@@ -62,7 +62,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-21T13:01:40Z",
+      "date": "2018-03-25T19:04:29Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -123,7 +123,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-12T03:49:54Z",
+      "date": "2018-05-14T06:14:45Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -327,18 +327,6 @@
         "--socket=session-bus",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-26T20:47:34Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt",
-        "--share=ipc",
-        "--share=network",
-        "--socket=session-bus",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -385,6 +373,21 @@
   "history": [
     {
       "ext": "json",
+      "date": "2021-03-03T22:11:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=host:ro",
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.ScreenSaver"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2019-08-20T14:57:36Z",
       "status": "ok",
       "finishArgs": [
@@ -422,7 +425,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-24T18:40:53Z",
+      "date": "2018-04-10T05:22:16Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -477,7 +480,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-02-06T17:35:09Z",
+      "date": "2018-04-08T15:55:34Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -602,18 +605,6 @@
       "finishArgs": [
         "--device=dri",
         "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-16T20:37:12Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
         "--share=network",
         "--socket=pulseaudio",
         "--socket=wayland",
@@ -1104,7 +1095,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-26T18:16:29Z",
+      "date": "2018-04-29T22:46:28Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -1130,33 +1121,6 @@
         "--talk-name=org.gtk.vfs.*",
         "--talk-name=org.mate.SettingsDaemon",
         "--talk-name=org.xfce.SessionManager"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-01T20:19:02Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=/tmp",
-        "--filesystem=home",
-        "--filesystem=xdg-config/dconf:ro",
-        "--filesystem=xdg-data/vocal:create",
-        "--filesystem=xdg-run/dconf",
-        "--own-name=com.github.needle-and-thread.vocal",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gnome.SettingsDaemon",
-        "--talk-name=org.gtk.vfs",
-        "--talk-name=org.gtk.vfs.*",
-        "--talk-name=org.mate.SettingsDaemon"
       ]
     }
   ]
@@ -1235,23 +1199,6 @@
         "--filesystem=~/.config/dconf:ro",
         "--share=ipc",
         "--share=network",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gtk.vfs",
-        "--talk-name=org.gtk.vfs.*"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-09T02:08:21Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=host",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
         "--socket=x11",
         "--talk-name=ca.desrt.dconf",
         "--talk-name=org.freedesktop.secrets",
@@ -1921,7 +1868,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-10T14:33:11Z",
+      "date": "2018-03-13T12:08:00Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -2114,11 +2061,11 @@
   "ext": "yml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 161,
+  "stargazerCount": 164,
   "history": [
     {
       "ext": "yml",
-      "date": "2021-01-01T10:43:43Z",
+      "date": "2021-03-13T21:26:35Z",
       "status": "ok",
       "finishArgs": [
         "--allow=bluetooth",
@@ -2127,6 +2074,117 @@
         "--device=all",
         "--env=ALSA_CONFIG_PATH=",
         "--env=DBUS_FATAL_WARNINGS=0",
+        "--env=FLATPAK_STEAM_UPDATE_SYMLINKS=0",
+        "--env=FLATPAK_STEAM_XDG_DIRS_PREFIX=~/.var/app/com.valvesoftware.Steam",
+        "--env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/app/lib32/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0:/usr/lib/i386-linux-gnu/gstreamer-1.0",
+        "--env=LC_ADDRESS=C",
+        "--env=LC_COLLATE=C",
+        "--env=LC_MEASUREMENT=C",
+        "--env=LC_MONETARY=C",
+        "--env=LC_NAME=C",
+        "--env=LC_NUMERIC=C",
+        "--env=LC_TELEPHONE=C",
+        "--env=MESA_GLSL_CACHE_DIR=",
+        "--env=PATH=/app/bin:/app/utils/bin:/usr/bin",
+        "--env=PROTON_DEBUG_DIR=/var/tmp",
+        "--env=PYTHONPATH=/app/utils/lib/python3.8/site-packages",
+        "--env=SDL_VIDEODRIVER=",
+        "--env=SSL_CERT_DIR=/etc/ssl/certs",
+        "--env=STEAM_EXTRA_COMPAT_TOOLS_PATHS=/app/share/steam/compatibilitytools.d",
+        "--env=STEAM_RUNTIME=",
+        "--env=STEAM_RUNTIME_PREFER_HOST_LIBRARIES=",
+        "--env=TZ=",
+        "--env=XDG_CONFIG_DIRS=/etc/xdg:/usr/lib/x86_64-linux-gnu/GL:/usr/lib/i386-linux-gnu/GL",
+        "--filesystem=xdg-music:ro",
+        "--filesystem=xdg-pictures:ro",
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--persist=.",
+        "--require-version=1.0.0",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.NetworkManager",
+        "--system-talk-name=org.freedesktop.UDisks2",
+        "--system-talk-name=org.freedesktop.UPower",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.PowerManagement",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--unset-env=ALSA_CONFIG_PATH",
+        "--unset-env=MESA_GLSL_CACHE_DIR",
+        "--unset-env=SDL_VIDEODRIVER",
+        "--unset-env=STEAM_RUNTIME",
+        "--unset-env=STEAM_RUNTIME_PREFER_HOST_LIBRARIES",
+        "--unset-env=TZ"
+      ]
+    },
+    {
+      "ext": "yml",
+      "date": "2021-02-26T11:59:28Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=bluetooth",
+        "--allow=devel",
+        "--allow=multiarch",
+        "--device=all",
+        "--env=ALSA_CONFIG_PATH=",
+        "--env=DBUS_FATAL_WARNINGS=0",
+        "--env=FLATPAK_STEAM_UPDATE_SYMLINKS=0",
+        "--env=FLATPAK_STEAM_XDG_DIRS_PREFIX=~/.var/app/com.valvesoftware.Steam",
+        "--env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/app/lib32/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0:/usr/lib/i386-linux-gnu/gstreamer-1.0",
+        "--env=LC_ADDRESS=C",
+        "--env=LC_COLLATE=C",
+        "--env=LC_MEASUREMENT=C",
+        "--env=LC_MONETARY=C",
+        "--env=LC_NAME=C",
+        "--env=LC_NUMERIC=C",
+        "--env=LC_TELEPHONE=C",
+        "--env=MESA_GLSL_CACHE_DIR=",
+        "--env=PATH=/app/bin:/app/utils/bin:/usr/bin",
+        "--env=PROTON_DEBUG_DIR=/var/tmp",
+        "--env=PYTHONPATH=/app/utils/lib/python3.8/site-packages",
+        "--env=SDL_VIDEODRIVER=",
+        "--env=SSL_CERT_DIR=/etc/ssl/certs",
+        "--env=STEAM_EXTRA_COMPAT_TOOLS_PATHS=/app/share/steam/compatibilitytools.d",
+        "--env=STEAM_RUNTIME=",
+        "--env=STEAM_RUNTIME_PREFER_HOST_LIBRARIES=",
+        "--env=TZ=",
+        "--env=XDG_CONFIG_DIRS=/etc/xdg:/usr/lib/x86_64-linux-gnu/GL:/usr/lib/i386-linux-gnu/GL",
+        "--filesystem=xdg-music:ro",
+        "--filesystem=xdg-pictures:ro",
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--persist=.",
+        "--require-version=1.0.0",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.NetworkManager",
+        "--system-talk-name=org.freedesktop.UDisks2",
+        "--system-talk-name=org.freedesktop.UPower",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.PowerManagement",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
+    {
+      "ext": "yml",
+      "date": "2021-01-30T18:51:03Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=bluetooth",
+        "--allow=devel",
+        "--allow=multiarch",
+        "--device=all",
+        "--env=ALSA_CONFIG_PATH=",
+        "--env=DBUS_FATAL_WARNINGS=0",
+        "--env=FLATPAK_STEAM_XDG_DIRS_PREFIX=~/.var/app/com.valvesoftware.Steam",
         "--env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/app/lib32/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0:/usr/lib/i386-linux-gnu/gstreamer-1.0",
         "--env=LC_ADDRESS=C",
         "--env=LC_COLLATE=C",
@@ -2588,7 +2646,7 @@
     },
     {
       "ext": "yml",
-      "date": "2019-03-09T19:22:11Z",
+      "date": "2019-04-02T19:58:36Z",
       "status": "ok",
       "finishArgs": [
         "--allow=devel",
@@ -2607,42 +2665,6 @@
         "--filesystem=xdg-music:ro",
         "--filesystem=xdg-pictures:ro",
         "--filesystem=xdg-run/discord:create",
-        "--persist=.",
-        "--require-version=0.9.0",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--system-talk-name=org.freedesktop.NetworkManager",
-        "--system-talk-name=org.freedesktop.UPower",
-        "--talk-name=org.freedesktop.PowerManagement",
-        "--talk-name=org.freedesktop.ScreenSaver",
-        "--talk-name=org.gnome.SettingsDaemon",
-        "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
-        "--talk-name=org.kde.StatusNotifierWatcher"
-      ]
-    },
-    {
-      "ext": "yml",
-      "date": "2019-02-06T21:30:47Z",
-      "status": "ok",
-      "finishArgs": [
-        "--allow=devel",
-        "--allow=multiarch",
-        "--device=all",
-        "--env=ALSA_CONFIG_PATH=",
-        "--env=DBUS_FATAL_WARNINGS=0",
-        "--env=LC_COLLATE=C",
-        "--env=LC_NUMERIC=C",
-        "--env=MESA_GLSL_CACHE_DIR=",
-        "--env=SDL_VIDEODRIVER=",
-        "--env=SSL_CERT_DIR=/etc/ssl/certs",
-        "--env=STEAM_RUNTIME=",
-        "--env=STEAM_RUNTIME_PREFER_HOST_LIBRARIES=",
-        "--env=TZ=",
-        "--filesystem=xdg-music:ro",
-        "--filesystem=xdg-pictures:ro",
         "--persist=.",
         "--require-version=0.9.0",
         "--share=ipc",
@@ -2880,37 +2902,6 @@
         "--talk-name=org.gnome.SettingsDaemon",
         "--talk-name=org.kde.StatusNotifierWatcher"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-12T20:33:09Z",
-      "status": "ok",
-      "finishArgs": [
-        "--allow=multiarch",
-        "--device=all",
-        "--extension=org.freedesktop.Platform.Compat32=directory=lib/32bit",
-        "--extension=org.freedesktop.Platform.Compat32=version=1.6",
-        "--extension=org.freedesktop.Platform.GL32=add-ld-path=lib",
-        "--extension=org.freedesktop.Platform.GL32=autodelete=false",
-        "--extension=org.freedesktop.Platform.GL32=directory=lib/32bit/lib/GL",
-        "--extension=org.freedesktop.Platform.GL32=download-if=active-gl-driver",
-        "--extension=org.freedesktop.Platform.GL32=enable-if=active-gl-driver",
-        "--extension=org.freedesktop.Platform.GL32=merge-dirs=vulkan/icd.d;glvnd/egl_vendor.d",
-        "--extension=org.freedesktop.Platform.GL32=no-autodownload=true",
-        "--extension=org.freedesktop.Platform.GL32=subdirectories=true",
-        "--extension=org.freedesktop.Platform.GL32=version=1.4",
-        "--extension=org.freedesktop.Platform.GL32=versions=1.6;1.4",
-        "--filesystem=xdg-music:ro",
-        "--persist=.",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=system-bus",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.NetworkManager",
-        "--talk-name=org.gnome.SettingsDaemon",
-        "--talk-name=org.kde.StatusNotifierWatcher"
-      ]
     }
   ]
 },{
@@ -2919,7 +2910,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 29,
+  "stargazerCount": 32,
   "history": [
     {
       "ext": "json",
@@ -3041,29 +3032,12 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-06T08:13:57Z",
+      "date": "2018-05-01T17:06:46Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
         "--env=XDG_CURRENT_DESKTOP=Unity",
         "--filesystem=xdg-download",
-        "--filesystem=xdg-pictures:ro",
-        "--filesystem=xdg-videos:ro",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.kde.StatusNotifierWatcher"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-09T16:59:02Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--env=XDG_CURRENT_DESKTOP=Unity",
         "--filesystem=xdg-pictures:ro",
         "--filesystem=xdg-videos:ro",
         "--share=ipc",
@@ -3162,7 +3136,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-07T15:15:19Z",
+      "date": "2018-03-13T13:23:52Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -3184,7 +3158,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 9,
+  "stargazerCount": 10,
   "history": [
     {
       "ext": "json",
@@ -3220,21 +3194,6 @@
     {
       "ext": "json",
       "date": "2018-04-26T14:42:28Z",
-      "status": "ok",
-      "finishArgs": [
-        "--allow=multiarch",
-        "--device=all",
-        "--filesystem=host",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-19T21:47:09Z",
       "status": "ok",
       "finishArgs": [
         "--allow=multiarch",
@@ -3329,7 +3288,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-25T10:58:44Z",
+      "date": "2018-03-01T15:04:42Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -3404,7 +3363,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-25T17:55:51Z",
+      "date": "2018-11-28T18:17:03Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -3473,7 +3432,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-05T11:57:56Z",
+      "date": "2018-06-21T20:20:52Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -3558,24 +3517,10 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-13T16:52:23Z",
+      "date": "2018-03-15T16:57:44Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
-        "--persist=Jagex",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-22T20:40:46Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--extra-data=runescape.deb:e46f1e4e1969eacbf13d2092c9073ba2c40f876f9434d5a58a267ca474c646ab:3016040::https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb",
         "--persist=Jagex",
         "--share=ipc",
         "--share=network",
@@ -3801,7 +3746,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-12T06:33:58Z",
+      "date": "2018-04-02T20:55:11Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -3958,7 +3903,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-28T20:48:49Z",
+      "date": "2018-03-03T21:35:44Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -4183,7 +4128,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-16T08:30:06Z",
+      "date": "2018-03-15T00:09:44Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=host",
@@ -4326,7 +4271,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-08T17:00:19Z",
+      "date": "2018-04-03T08:14:31Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -4454,7 +4399,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-22T15:39:08Z",
+      "date": "2018-03-12T09:34:48Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -4577,7 +4522,7 @@
     },
     {
       "ext": "yml",
-      "date": "2018-07-10T16:17:13Z",
+      "date": "2018-08-19T21:03:44Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -4605,22 +4550,6 @@
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--env=LADSPA_PATH=/app/lib/ladspa",
-        "--env=LV2_PATH=/app/lib/lv2",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-01T23:07:46Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--env=LV2_PATH=/app/lib/lv2",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
@@ -4660,7 +4589,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 8,
+  "stargazerCount": 9,
   "history": [
     {
       "ext": "json",
@@ -4779,26 +4708,6 @@
         "--talk-name=org.freedesktop.secrets",
         "--talk-name=org.kde.kwalletd",
         "--talk-name=org.kde.kwalletd5",
-        "--talk-name=org.mpris.MediaPlayer2.Player"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-19T17:58:51Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=host:ro",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--own-name=org.mpris.MediaPlayer2.vlc",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.ScreenSaver",
         "--talk-name=org.mpris.MediaPlayer2.Player"
       ]
     }
@@ -5035,7 +4944,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-12T20:14:16Z",
+      "date": "2018-04-02T21:21:57Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=xdg-download",
@@ -5097,7 +5006,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-14T01:24:46Z",
+      "date": "2018-10-11T20:43:05Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -5141,7 +5050,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-11T00:46:16Z",
+      "date": "2018-06-22T08:12:37Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -5287,7 +5196,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-01T19:52:30Z",
+      "date": "2018-03-01T02:31:08Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -5346,19 +5255,6 @@
         "--socket=pulseaudio",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-21T10:56:54Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--filesystem=host",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -5396,7 +5292,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-10T03:58:17Z",
+      "date": "2018-06-22T23:40:45Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=home",
@@ -5456,7 +5352,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 10,
+  "stargazerCount": 11,
   "history": [
     {
       "ext": "json",
@@ -5530,7 +5426,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-07T16:27:02Z",
+      "date": "2018-03-04T19:38:34Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -5619,6 +5515,28 @@
   "branch": "master",
   "stargazerCount": 4,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-27T00:41:36Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=/tmp",
+        "--filesystem=xdg-cache/evolution/addressbook:ro",
+        "--filesystem=xdg-download:rw",
+        "--metadata=X-DConf=migrate-path=/org/gnome/Geary/",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.gnome.Contacts",
+        "--talk-name=org.gnome.ControlCenter",
+        "--talk-name=org.gnome.OnlineAccounts",
+        "--talk-name=org.gnome.evolution.dataserver.*"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2021-01-17T09:24:30Z",
@@ -5803,7 +5721,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-13T00:32:31Z",
+      "date": "2018-04-24T00:46:10Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -5828,7 +5746,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 22,
+  "stargazerCount": 24,
   "history": [
     {
       "ext": "json",
@@ -5989,25 +5907,6 @@
         "--talk-name=org.freedesktop.portal.Fcitx",
         "--talk-name=org.kde.StatusNotifierWatcher"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2020-02-10T23:57:27Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=QT_QPA_PLATFORM=xcb",
-        "--filesystem=xdg-download",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=com.canonical.Unity",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.portal.Fcitx",
-        "--talk-name=org.kde.StatusNotifierWatcher"
-      ]
     }
   ]
 },{
@@ -6065,6 +5964,28 @@
   "history": [
     {
       "ext": "json",
+      "date": "2021-02-27T18:53:08Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--env=GST_ENCODING_TARGET_PATH=/app/share/gstreamer-1.0/encoding-profiles/:/app/share/pitivi/encoding-profiles/",
+        "--env=GST_PLUGIN_PATH=/app/lib/codecs/lib/gstreamer-1.0",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
+        "--env=LV2_PATH=/app/extensions/Plugins/lv2",
+        "--filesystem=host",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=ca.desrt.dconf",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-10-21T17:29:45Z",
       "status": "ok",
       "finishArgs": [
@@ -6106,7 +6027,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-17T23:03:05Z",
+      "date": "2018-08-30T10:29:10Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -6526,26 +6447,12 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-05T20:17:29Z",
+      "date": "2018-06-29T12:15:31Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
         "--env=DOOMWADDIR=/app/share/games/doom",
         "--persist=.config/gzdoom",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-24T16:39:54Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DOOMWADDIR=/app/share/games/doom",
-        "--filesystem=xdg-config/gzdoom",
         "--share=ipc",
         "--socket=pulseaudio",
         "--socket=wayland",
@@ -6656,7 +6563,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-15T17:28:46Z",
+      "date": "2019-07-01T12:32:45Z",
       "status": "ok",
       "finishArgs": [
         "--share=ipc",
@@ -6676,7 +6583,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-25T00:08:27Z",
+      "date": "2018-03-03T05:12:01Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=home",
@@ -6693,7 +6600,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 7,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -6745,7 +6652,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 12,
+  "stargazerCount": 11,
   "history": [
     {
       "ext": "yaml",
@@ -6870,19 +6777,6 @@
         "--socket=wayland",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-27T13:46:10Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=PATH=/usr/bin:/app/bin:/usr/lib/sdk/gfortran-62/bin:/usr/lib/sdk/openjdk9/bin",
-        "--filesystem=host",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -6924,26 +6818,12 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-05T20:18:18Z",
+      "date": "2018-06-29T12:56:37Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
         "--env=DOOMWADDIR=/app/share/games/doom",
         "--persist=.config/gzdoom",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-24T16:40:38Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DOOMWADDIR=/app/share/games/doom",
-        "--filesystem=xdg-config/gzdoom",
         "--share=ipc",
         "--socket=pulseaudio",
         "--socket=wayland",
@@ -6993,7 +6873,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-02-26T17:54:24Z",
+      "date": "2019-03-04T22:40:04Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -7035,7 +6915,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "yaml",
@@ -7161,7 +7041,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-28T17:20:21Z",
+      "date": "2018-03-10T16:01:46Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -7376,22 +7256,6 @@
         "--socket=x11",
         "--talk-name=ca.desrt.dconf"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-12T22:11:43Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=home",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
     }
   ]
 },{
@@ -7428,7 +7292,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-29T12:10:17Z",
+      "date": "2018-03-15T00:09:47Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -7528,21 +7392,6 @@
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--filesystem=xdg-documents",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-05T11:26:42Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
         "--share=ipc",
@@ -7737,29 +7586,6 @@
         "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-10T22:22:10Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=xdg-music",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--own-name=org.gnome.UPnP.MediaServer2.Rhythmbox",
-        "--own-name=org.mpris.MediaPlayer2.rhythmbox",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--system-talk-name=org.freedesktop.Avahi",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.gnome.SettingsDaemon.MediaKeys"
-      ]
     }
   ]
 },{
@@ -7789,30 +7615,6 @@
         "--talk-name=org.kde.kdeconnect",
         "--talk-name=org.kde.kdeconnectd"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-03T00:41:11Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=host",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--own-name=com.github.bajoja.indicator-kdeconnect.settings",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.DBus.Proprieties",
-        "--talk-name=org.freedesktop.IBus",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.kde.StatusNotifierWatcher",
-        "--talk-name=org.kde.kdeconnect",
-        "--talk-name=org.kde.kdeconnectd"
-      ]
     }
   ]
 },{
@@ -7825,7 +7627,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-22T11:50:32Z",
+      "date": "2019-06-30T19:49:01Z",
       "status": "ok",
       "finishArgs": [
         "--share=ipc",
@@ -7885,7 +7687,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 23,
+  "stargazerCount": 21,
   "history": [
     {
       "ext": "json",
@@ -7977,7 +7779,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-24T10:10:23Z",
+      "date": "2018-03-01T13:09:09Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -8058,7 +7860,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-06T15:38:57Z",
+      "date": "2018-06-28T18:38:13Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -8191,7 +7993,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-09T19:37:59Z",
+      "date": "2018-03-16T04:03:26Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -8307,6 +8109,27 @@
   "branch": "master",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-20T15:42:51Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=GDK_PIXBUF_MODULE_FILE=/app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache",
+        "--filesystem=host",
+        "--metadata=X-DConf=migrate-path=/org/gnome/evince/",
+        "--own-name=org.gnome.evince",
+        "--own-name=org.gnome.evince.Daemon",
+        "--require-version=0.11.6",
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.FileManager1",
+        "--talk-name=org.gnome.SessionManager",
+        "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*"
+      ]
+    },
     {
       "ext": "json",
       "date": "2019-10-01T18:05:17Z",
@@ -9054,7 +8877,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-16T01:10:27Z",
+      "date": "2018-03-14T01:01:30Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -9079,7 +8902,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 12,
+  "stargazerCount": 13,
   "history": [
     {
       "ext": "json",
@@ -9191,7 +9014,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-04-25T08:34:52Z",
+      "date": "2018-07-06T06:26:24Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -9278,7 +9101,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-23T08:15:35Z",
+      "date": "2018-04-03T07:46:31Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -9307,7 +9130,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-02-18T02:22:17Z",
+      "date": "2018-07-31T17:40:05Z",
       "status": "ok",
       "finishArgs": [
         "--share=ipc",
@@ -9431,33 +9254,6 @@
         "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.freedesktop.secrets"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-09T10:04:47Z",
-      "status": "ok",
-      "finishArgs": [
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.secrets"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-11T13:30:57Z",
-      "status": "ok",
-      "finishArgs": [
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.secrets"
-      ]
     }
   ]
 },{
@@ -9470,7 +9266,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-02-11T03:10:59Z",
+      "date": "2018-06-17T21:26:34Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -9517,7 +9313,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-11T14:03:33Z",
+      "date": "2018-12-28T11:13:39Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -9560,21 +9356,10 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-02-01T15:20:27Z",
+      "date": "2018-03-29T00:06:51Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-25T16:25:42Z",
-      "status": "ok",
-      "finishArgs": [
         "--filesystem=home",
         "--share=ipc",
         "--share=network",
@@ -9588,7 +9373,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 21,
+  "stargazerCount": 23,
   "history": [
     {
       "ext": "yaml",
@@ -9741,7 +9526,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-04T03:30:49Z",
+      "date": "2018-03-12T09:41:00Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -9841,7 +9626,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-02T07:51:03Z",
+      "date": "2018-04-09T20:55:15Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -9864,7 +9649,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -9941,24 +9726,6 @@
         "--talk-name=ca.desrt.dconf",
         "--talk-name=org.freedesktop.Notifications"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-10T07:54:51Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=home",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
     }
   ]
 },{
@@ -9971,7 +9738,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-02-26T12:09:59Z",
+      "date": "2018-07-30T19:06:25Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -9993,7 +9760,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-10T15:51:49Z",
+      "date": "2018-04-30T16:10:39Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -10055,7 +9822,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-25T13:21:47Z",
+      "date": "2018-03-15T12:14:22Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -10258,7 +10025,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-26T18:43:53Z",
+      "date": "2018-03-19T21:10:54Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -10421,7 +10188,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 56,
+  "stargazerCount": 59,
   "history": [
     {
       "ext": "yml",
@@ -10455,18 +10222,6 @@
     {
       "ext": "yml",
       "date": "2018-05-07T11:04:56Z",
-      "status": "ok",
-      "finishArgs": [
-        "--filesystem=host",
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-15T12:20:46Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=host",
@@ -10521,7 +10276,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-08T18:26:30Z",
+      "date": "2018-03-23T00:19:20Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -10824,7 +10579,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-28T01:35:06Z",
+      "date": "2018-05-13T03:08:27Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -10847,7 +10602,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-02-05T09:30:05Z",
+      "date": "2018-05-20T10:19:58Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -10872,8 +10627,38 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 12,
+  "stargazerCount": 13,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-02T12:47:27Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=/tmp",
+        "--filesystem=host",
+        "--filesystem=xdg-run/gvfs",
+        "--own-name=org.kde.StatusNotifierItem-2-1",
+        "--own-name=org.kde.StatusNotifierItem-2-2",
+        "--own-name=org.kde.StatusNotifierItem-3-2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=ssh-auth",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=com.canonical.Unity.Session",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.freedesktop.login1.Manager",
+        "--talk-name=org.freedesktop.login1.Session",
+        "--talk-name=org.gnome.ScreenSaver",
+        "--talk-name=org.gnome.SessionManager",
+        "--talk-name=org.gnome.SessionManager.Presence",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2021-01-08T11:29:42Z",
@@ -11180,65 +10965,6 @@
         "--talk-name=org.gnome.SessionManager.Presence",
         "--talk-name=org.kde.StatusNotifierWatcher"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-15T19:13:28Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=com.canonical.Unity.Session",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.ScreenSaver",
-        "--talk-name=org.freedesktop.login1.Manager",
-        "--talk-name=org.gnome.SessionManager",
-        "--talk-name=org.gnome.SessionManager.Presence",
-        "--talk-name=org.kde.StatusNotifierWatcher"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-18T11:18:52Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--share=ipc",
-        "--share=network",
-        "--socket=x11",
-        "--talk-name=com.canonical.Unity.Session",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.ScreenSaver",
-        "--talk-name=org.freedesktop.login1.Manager",
-        "--talk-name=org.gnome.SessionManager",
-        "--talk-name=org.gnome.SessionManager.Presence"
-      ]
-    }
-  ]
-},{
-  "appID": "com.github.z.Cumulonimbus",
-  "displayURL": "https://github.com/flathub/com.github.z.Cumulonimbus/blob/master/com.github.z.Cumulonimbus.json",
-  "ext": "json",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 0,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2018-01-03T15:08:45Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications"
-      ]
     }
   ]
 },{
@@ -11249,6 +10975,19 @@
   "branch": "master",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-16T08:48:47Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--metadata=X-DConf=migrate-path=/com/github/paolostivanin/OTPClient",
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.gnome.Shell.Screenshot"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-10-12T15:14:10Z",
@@ -11297,7 +11036,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-06T10:33:21Z",
+      "date": "2018-03-29T08:01:16Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -11332,7 +11071,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-05T02:43:08Z",
+      "date": "2018-03-30T01:07:14Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -11348,7 +11087,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -11583,7 +11322,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-13T20:16:09Z",
+      "date": "2018-04-03T08:02:46Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -11605,7 +11344,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-08T03:15:54Z",
+      "date": "2018-08-16T21:19:06Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -11733,31 +11472,6 @@
         "--socket=pulseaudio",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-16T12:40:22Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--filesystem=host",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-05T08:54:21Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -11794,26 +11508,11 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-20T19:05:40Z",
+      "date": "2018-07-18T21:06:38Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-08T17:12:08Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.cache/com.github.lainsce.notejot/saved_notes.json:rw",
         "--filesystem=~/.config/dconf:ro",
         "--share=ipc",
         "--socket=wayland",
@@ -11832,7 +11531,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-10T13:42:38Z",
+      "date": "2019-03-05T12:59:02Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -11854,7 +11553,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-10T13:26:33Z",
+      "date": "2018-05-09T19:55:46Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -11892,7 +11591,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 25,
+  "stargazerCount": 26,
   "history": [
     {
       "ext": "json",
@@ -11995,24 +11694,6 @@
         "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.freedesktop.secrets"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-26T13:34:02Z",
-      "status": "ok",
-      "finishArgs": [
-        "--allow=devel",
-        "--allow=multiarch",
-        "--device=all",
-        "--env=ANDROID_EMULATOR_USE_SYSTEM_LIBS=1",
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=system-bus",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications"
-      ]
     }
   ]
 },{
@@ -12050,7 +11731,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-10T15:50:49Z",
+      "date": "2018-05-11T22:13:43Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -12086,7 +11767,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-10T04:06:59Z",
+      "date": "2018-05-18T13:12:36Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -12153,20 +11834,6 @@
         "--socket=wayland",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-21T19:14:21Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DOOMWADDIR=/app/share/games/doom",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -12175,7 +11842,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 14,
+  "stargazerCount": 15,
   "history": [
     {
       "ext": "json",
@@ -12264,7 +11931,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-23T14:53:31Z",
+      "date": "2018-04-03T09:40:34Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -12363,7 +12030,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-26T05:11:57Z",
+      "date": "2018-04-03T08:49:50Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -12461,7 +12128,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-10T16:49:31Z",
+      "date": "2018-03-10T21:01:10Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=home",
@@ -12481,7 +12148,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-22T15:53:25Z",
+      "date": "2019-03-05T13:23:37Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -12503,7 +12170,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-22T15:55:31Z",
+      "date": "2019-03-05T13:45:36Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -12574,16 +12241,6 @@
         "--socket=wayland",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-25T11:41:02Z",
-      "status": "ok",
-      "finishArgs": [
-        "--share=ipc",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -12596,7 +12253,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-24T12:46:44Z",
+      "date": "2018-03-20T11:05:46Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -12614,7 +12271,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 10,
+  "stargazerCount": 12,
   "history": [
     {
       "ext": "json",
@@ -12707,7 +12364,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-02T04:08:38Z",
+      "date": "2018-08-31T13:12:08Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -12723,23 +12380,6 @@
         "--talk-name=org.freedesktop.ScreenSaver",
         "--talk-name=org.gnome.SessionManager",
         "--talk-name=org.gnome.Shell.Screencast",
-        "--talk-name=org.kde.StatusNotifierWatcher",
-        "--talk-name=org.mate.SessionManager"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-23T14:47:38Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.PowerManagement.Inhibit",
-        "--talk-name=org.freedesktop.ScreenSaver",
-        "--talk-name=org.gnome.SessionManager",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=org.mate.SessionManager"
       ]
@@ -12784,7 +12424,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-09-11T15:20:20Z",
+      "date": "2018-09-13T14:36:47Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=/tmp",
@@ -12819,7 +12459,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-26T18:57:29Z",
+      "date": "2018-03-06T13:59:35Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -12841,7 +12481,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-01-29T16:14:19Z",
+      "date": "2018-03-25T21:05:25Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -12894,7 +12534,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-03T21:55:07Z",
+      "date": "2018-04-22T21:23:07Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -12919,7 +12559,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2018-02-09T13:42:49Z",
+      "date": "2018-06-28T12:24:17Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -12954,7 +12594,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-01T22:57:31Z",
+      "date": "2018-03-14T04:51:01Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -12988,7 +12628,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-17T12:32:42Z",
+      "date": "2018-03-28T20:30:47Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -13026,7 +12666,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-18T13:11:41Z",
+      "date": "2018-09-29T13:28:33Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -13141,7 +12781,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-17T11:29:44Z",
+      "date": "2018-04-22T10:05:39Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -13212,23 +12852,6 @@
         "--socket=x11",
         "--talk-name=ca.desrt.dconf"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-27T00:24:12Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=home:ro",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--filesystem=~/.vice:create",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
     }
   ]
 },{
@@ -13257,7 +12880,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-23T13:01:23Z",
+      "date": "2018-03-04T02:47:29Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -13317,6 +12940,21 @@
   "history": [
     {
       "ext": "yaml",
+      "date": "2021-03-03T14:11:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=home:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.secrets"
+      ]
+    },
+    {
+      "ext": "yaml",
       "date": "2020-06-20T16:35:10Z",
       "status": "ok",
       "finishArgs": [
@@ -13372,7 +13010,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-28T22:36:57Z",
+      "date": "2018-03-06T16:19:56Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=home:ro",
@@ -13489,22 +13127,6 @@
         "--socket=pulseaudio",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-11T12:48:28Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=JAVA_HOME=/app/jre",
-        "--env=PATH=/usr/bin:/app/bin:/app/jre/bin",
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -13530,7 +13152,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-25T15:08:06Z",
+      "date": "2018-03-17T19:52:14Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -13615,18 +13237,6 @@
         "--socket=pulseaudio",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-25T15:03:54Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--filesystem=home",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -13692,7 +13302,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-02-23T20:01:59Z",
+      "date": "2018-03-09T05:40:34Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -14042,140 +13652,6 @@
     }
   ]
 },{
-  "appID": "com.github.bilelmoussaoui.Authenticator",
-  "displayURL": "https://github.com/flathub/com.github.bilelmoussaoui.Authenticator/blob/master/com.github.bilelmoussaoui.Authenticator.json",
-  "ext": "json",
-  "status": "ok",
-  "branch": "master",
-  "stargazerCount": 2,
-  "history": [
-    {
-      "ext": "json",
-      "date": "2020-07-01T20:43:50Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=ZBAR_PATH=/app/lib/libzbar.so",
-        "--metadata=X-DConf=migrate-path=/com/github/bilelmoussaoui/Authenticator/",
-        "--own-name=com.github.bilelmoussaoui.Authenticator.SearchProvider",
-        "--share=ipc",
-        "--share=network",
-        "--socket=fallback-x11",
-        "--socket=wayland",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gnome.SettingsDaemon.Color",
-        "--talk-name=org.gnome.Shell.Screenshot"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2019-09-13T19:52:14Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=ZBAR_PATH=/app/lib/libzbar.so",
-        "--metadata=X-DConf=migrate-path=/com/github/bilelmoussaoui/Authenticator/",
-        "--own-name=com.github.bilelmoussaoui.Authenticator.SearchProvider",
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gnome.SettingsDaemon.Color",
-        "--talk-name=org.gnome.Shell.Screenshot"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2019-07-23T18:53:25Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--env=ZBAR_PATH=/app/lib/libzbar.so",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--own-name=com.github.bilelmoussaoui.Authenticator.SearchProvider",
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gnome.SettingsDaemon.Color",
-        "--talk-name=org.gnome.Shell.Screenshot"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2019-05-22T22:55:04Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--env=ZBAR_PATH=/app/lib/libzbar.so",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--own-name=com.github.bilelmoussaoui.Authenticator.SearchProvider",
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.Flatpak",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gnome.SettingsDaemon.Color",
-        "--talk-name=org.gnome.Shell.Screenshot"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-11-08T10:54:51Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--env=ZBAR_PATH=/app/lib/libzbar.so",
-        "--filesystem=home",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gnome.Shell.Screenshot"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-09-11T23:51:40Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=home",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.secrets",
-        "--talk-name=org.gnome.Shell.Screenshot"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-03-18T17:13:28Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.secrets"
-      ]
-    }
-  ]
-},{
   "appID": "org.freedesktop.GstDebugViewer",
   "displayURL": "https://github.com/flathub/org.freedesktop.GstDebugViewer/blob/master/org.freedesktop.GstDebugViewer.json",
   "ext": "json",
@@ -14209,6 +13685,25 @@
   "branch": "master",
   "stargazerCount": 3,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-18T14:02:03Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=PATH=/app/bin:/usr/bin:/app/texlive-bin:/app/texlive/bin",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=/media",
+        "--filesystem=/run/media",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=com.canonical.indicator.application",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "json",
       "date": "2019-04-02T02:26:10Z",
@@ -14737,45 +14232,6 @@
         "--talk-name=org.gnome.OnlineAccounts",
         "--talk-name=org.gnome.SettingsDaemon.MediaKeys"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-22T12:15:11Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=xdg-cache/media-art",
-        "--filesystem=xdg-music",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=com.intel.dleyna-server",
-        "--talk-name=org.freedesktop.Tracker1",
-        "--talk-name=org.gnome.OnlineAccounts"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-23T12:01:37Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=xdg-music",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=com.intel.dleyna-server",
-        "--talk-name=org.freedesktop.Tracker1"
-      ]
     }
   ]
 },{
@@ -14784,7 +14240,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 17,
+  "stargazerCount": 18,
   "history": [
     {
       "ext": "json",
@@ -15022,46 +14478,6 @@
         "--socket=x11",
         "--talk-name=ca.desrt.dconf"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-07T00:08:51Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=home:ro",
-        "--filesystem=xdg-download",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--persist=.cache/thunderbird",
-        "--persist=.thunderbird",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-05T18:46:14Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=home:ro",
-        "--filesystem=xdg-download",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.cache/thunderbird",
-        "--filesystem=~/.config/dconf:ro",
-        "--filesystem=~/.thunderbird",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf"
-      ]
     }
   ]
 },{
@@ -15217,34 +14633,6 @@
         "--socket=wayland",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-05T19:58:24Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DOOMWADDIR=/app/share/games/doom",
-        "--persist=.config/gzdoom",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-28T01:12:33Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=DOOMWADDIR=/app/share/games/doom",
-        "--filesystem=xdg-config/gzdoom",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -15255,6 +14643,36 @@
   "branch": "master",
   "stargazerCount": 4,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-04T09:04:31Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--filesystem=home",
+        "--filesystem=xdg-download",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pcsc",
+        "--socket=pulseaudio",
+        "--socket=ssh-auth",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.Avahi",
+        "--talk-name=ca.desrt.dconf",
+        "--talk-name=com.canonical.Unity",
+        "--talk-name=com.canonical.indicator.application",
+        "--talk-name=org.ayatana.indicator.application",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.portal.Fcitx",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.gnome.Shell",
+        "--talk-name=org.gtk.vfs.*",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "json",
       "date": "2021-01-07T16:15:10Z",
@@ -15401,7 +14819,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-12-10T07:56:21Z",
+      "date": "2019-02-25T14:08:12Z",
       "status": "ok",
       "finishArgs": [
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
@@ -16292,20 +15710,6 @@
         "--socket=pulseaudio",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-17T10:42:25Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=all",
-        "--env=PYTHONPATH=/app/lib/python3/dist-packages",
-        "--filesystem=host",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -16438,7 +15842,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-01-25T15:53:07Z",
+      "date": "2018-04-27T13:47:28Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -16640,7 +16044,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yaml",
@@ -17019,6 +16423,30 @@
   "history": [
     {
       "ext": "yaml",
+      "date": "2021-01-02T09:46:43Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=GI_TYPELIB_PATH=/app/lib/girepository-1.0:/app/plugins/lib/girepository-1.0",
+        "--env=PYTHONPATH=/app/plugins/site-packages",
+        "--filesystem=~/.gnupg",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.GeoClue2",
+        "--system-talk-name=org.freedesktop.login1",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.freedesktop.portal.Fcitx",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.gnome.Mutter.IdleMonitor",
+        "--talk-name=org.kde.kwalletd5",
+        "--talk-name=org.mpris.MediaPlayer2.*"
+      ]
+    },
+    {
+      "ext": "yaml",
       "date": "2020-09-19T06:35:59Z",
       "status": "ok",
       "finishArgs": [
@@ -17372,6 +16800,23 @@
   "history": [
     {
       "ext": "yaml",
+      "date": "2021-02-17T21:11:25Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PATH=/usr/bin:/app/bin:/app/texlive/bin:/app/texlive/bin/x86_64-linux",
+        "--filesystem=/tmp",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=com.canonical.AppMenu.Registrar",
+        "--talk-name=org.freedesktop.Flatpak"
+      ]
+    },
+    {
+      "ext": "yaml",
       "date": "2021-01-22T23:04:09Z",
       "status": "ok",
       "finishArgs": [
@@ -17643,20 +17088,6 @@
         "--socket=wayland",
         "--socket=x11"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-24T18:36:18Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=PATH=/usr/bin:/app/bin:/app/bin/x86_64-linux",
-        "--filesystem=home",
-        "--share=ipc",
-        "--share=network",
-        "--socket=wayland",
-        "--socket=x11"
-      ]
     }
   ]
 },{
@@ -17747,8 +17178,32 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 6,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-03-18T13:59:06Z",
+      "status": "ok",
+      "finishArgs": [
+        "--add-policy=Tracker3.dbus:org.freedesktop.Tracker3.Miner.Files=tracker:Software",
+        "--device=all",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--filesystem=/var/lib/AccountsService/icons:ro",
+        "--filesystem=host",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.freedesktop.Accounts",
+        "--system-talk-name=org.freedesktop.timedate1",
+        "--talk-name=ca.desrt.dconf",
+        "--talk-name=org.freedesktop.secrets"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-10-19T10:50:32Z",
@@ -18479,12 +17934,25 @@
   ]
 },{
   "appID": "net.sf.fuse_emulator",
-  "displayURL": "https://github.com/flathub/net.sf.fuse_emulator/blob/master/net.sf.fuse_emulator.json",
-  "ext": "json",
+  "displayURL": "https://github.com/flathub/net.sf.fuse_emulator/blob/master/net.sf.fuse_emulator.yaml",
+  "ext": "yaml",
   "status": "ok",
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2020-11-14T21:02:09Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-10-28T11:54:11Z",
@@ -18890,24 +18358,6 @@
         "--socket=x11",
         "--talk-name=org.freedesktop.secrets"
       ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-07-12T21:08:00Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--env=LD_LIBRARY_PATH=/app/lib",
-        "--filesystem=host",
-        "--require-version=0.11.1",
-        "--share=ipc",
-        "--share=network",
-        "--socket=ssh-auth",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.secrets"
-      ]
     }
   ]
 },{
@@ -19079,7 +18529,7 @@
   "history": [
     {
       "ext": "json",
-      "date": "2020-02-05T19:06:07Z",
+      "date": "2020-02-10T19:06:07Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -19890,7 +19340,7 @@
     },
     {
       "ext": "json",
-      "date": "2018-07-03T09:57:11Z",
+      "date": "2018-07-03T13:42:24Z",
       "status": "ok",
       "finishArgs": [
         "--filesystem=/tmp",
@@ -20372,6 +19822,21 @@
   "branch": "master",
   "stargazerCount": 4,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-28T08:21:43Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PATH=/usr/bin:/app/bin:/app/jre/bin",
+        "--persist=.shatteredpixel",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2018-07-08T20:36:30Z",
@@ -21211,6 +20676,25 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-03-03T18:07:35Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=devel",
+        "--device=dri",
+        "--env=TERMINFO_DIRS=/app/share/terminfo:",
+        "--filesystem=home",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=session-bus",
+        "--socket=ssh-auth",
+        "--socket=system-bus",
+        "--socket=wayland"
+      ]
+    },
     {
       "ext": "json",
       "date": "2018-08-03T17:44:39Z",
@@ -22773,7 +22257,7 @@
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-10-05T21:23:56Z",
+      "date": "2020-11-08T09:21:00Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -23076,27 +22560,6 @@
         "--talk-name=org.freedesktop.ScreenSaver",
         "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
         "--talk-name=org.mpris.MediaPlayer2"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-01-15T21:54:47Z",
-      "status": "ok",
-      "finishArgs": [
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        "--filesystem=host",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--own-name=org.mpris.MediaPlayer2.com.github.artemanufrij.playmymusic",
-        "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=x11",
-        "--talk-name=ca.desrt.dconf",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.ScreenSaver",
-        "--talk-name=org.gnome.SettingsDaemon.MediaKeys"
       ]
     }
   ]
@@ -23649,7 +23112,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 8,
+  "stargazerCount": 9,
   "history": [
     {
       "ext": "yaml",
@@ -24489,6 +23952,30 @@
   "branch": "master",
   "stargazerCount": 4,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-10T16:03:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=/run/.heim_org.h5l.kcm-socket",
+        "--filesystem=xdg-config/gnupg:rw",
+        "--filesystem=xdg-config/pki:rw",
+        "--filesystem=~/.gnupg:rw",
+        "--filesystem=~/.pki:rw",
+        "--metadata=X-DConf=migrate-path=/org/gnome/evolution/",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pcsc",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.gnome.OnlineAccounts",
+        "--talk-name=org.gnome.keyring.SystemPrompter"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-11-20T14:13:54Z",
@@ -25720,7 +25207,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "yaml",
@@ -25821,6 +25308,22 @@
   "branch": "master",
   "stargazerCount": 2,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-02T12:15:04Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=com.canonical.AppMenu.Registrar",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-12-04T20:45:55Z",
@@ -26024,6 +25527,24 @@
   "branch": "master",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-03-08T14:31:38Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=LD_PRELOAD=/app/lib/libmock-udev.so",
+        "--filesystem=xdg-videos",
+        "--persist=.config",
+        "--persist=.pki",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2019-04-02T15:54:38Z",
@@ -26267,8 +25788,33 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 14,
+  "stargazerCount": 15,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-24T12:57:28Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=bluetooth",
+        "--device=all",
+        "--filesystem=/media",
+        "--filesystem=/mnt",
+        "--filesystem=/run/media",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-videos",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.Avahi",
+        "--system-talk-name=org.freedesktop.UDisks2",
+        "--system-talk-name=org.freedesktop.UPower",
+        "--system-talk-name=org.freedesktop.login1",
+        "--talk-name=org.freedesktop.ScreenSaver"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2019-02-27T14:48:17Z",
@@ -27159,7 +26705,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 4,
+  "stargazerCount": 5,
   "history": [
     {
       "ext": "yaml",
@@ -27324,7 +26870,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 0,
   "history": [
     {
       "ext": "yaml",
@@ -27814,8 +27360,20 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-03T05:56:59Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=xdg-documents",
+        "--filesystem=~/Inform/:create",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2019-01-15T02:13:50Z",
@@ -28080,7 +27638,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 7,
+  "stargazerCount": 8,
   "history": [
     {
       "ext": "yml",
@@ -28281,7 +27839,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -29342,7 +28900,7 @@
     },
     {
       "ext": "json",
-      "date": "2019-03-17T02:56:19Z",
+      "date": "2019-04-13T04:48:08Z",
       "status": "ok",
       "finishArgs": [
         "--device=dri",
@@ -30278,7 +29836,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 10,
+  "stargazerCount": 11,
   "history": [
     {
       "ext": "yaml",
@@ -30889,6 +30447,28 @@
   "history": [
     {
       "ext": "yml",
+      "date": "2021-02-07T12:23:50Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=GTK_PATH=/app/lib/gtk-3.0",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-videos",
+        "--metadata=X-DConf=migrate-path=/net/jami/JamiGnome/",
+        "--own-name=cx.ring.Ring",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
+    {
+      "ext": "yml",
       "date": "2021-01-20T20:59:18Z",
       "status": "ok",
       "finishArgs": [
@@ -31280,6 +30860,24 @@
   "branch": "master",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-10T15:07:54Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=LD_LIBRARY_PATH=/app/lib/mumble/:/app/lib",
+        "--filesystem=home",
+        "--own-name=org.kde.StatusNotifierItem-2-2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2020-10-10T23:34:01Z",
@@ -31705,18 +31303,6 @@
         "--device=dri",
         "--persist=.minecraft",
         "--share=ipc",
-        "--share=network",
-        "--socket=pulseaudio",
-        "--socket=x11"
-      ]
-    },
-    {
-      "ext": "json",
-      "date": "2018-02-05T16:29:28Z",
-      "status": "ok",
-      "finishArgs": [
-        "--device=dri",
-        "--persist=.minecraft",
         "--share=network",
         "--socket=pulseaudio",
         "--socket=x11"
@@ -32547,7 +32133,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 35,
+  "stargazerCount": 39,
   "history": [
     {
       "ext": "yml",
@@ -32806,6 +32392,23 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-03-16T16:01:06Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=AGS_LICENSE_FILENAME=/app/share/gsequencer/GPL-3",
+        "--env=AGS_ONLINE_HELP_START_FILENAME=file:///app/share/doc/gsequencer/html/index.html",
+        "--env=DSSI_PATH=/app/extensions/Plugins/dssi:/app/lib/dssi",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa:/app/lib/ladspa",
+        "--env=LV2_PATH=/app/extensions/Plugins/lv2:/app/lib/lv2",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-11-04T13:48:17Z",
@@ -33221,6 +32824,28 @@
   "history": [
     {
       "ext": "json",
+      "date": "2021-02-18T10:11:13Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=host",
+        "--filesystem=~/.var/app/",
+        "--own-name=org.kde.*",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=ssh-auth",
+        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.NetworkManager",
+        "--talk-name=org.freedesktop.DBus.*",
+        "--talk-name=org.freedesktop.Flatpak.*",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.kde.kwalletd5"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-09-14T22:31:33Z",
       "status": "ok",
       "finishArgs": [
@@ -33346,6 +32971,31 @@
   "branch": "master",
   "stargazerCount": 4,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-18T13:50:18Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-videos",
+        "--own-name=org.kde.*",
+        "--own-name=org.mpris.MediaPlayer2.qutebrowser.*",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.UPower",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2019-01-17T13:15:26Z",
@@ -33552,6 +33202,18 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-09T16:33:44Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=PULSE_PROP_media.category=Manager",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2019-03-13T10:38:59Z",
@@ -33951,7 +33613,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "yaml",
@@ -34516,7 +34178,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 6,
+  "stargazerCount": 7,
   "history": [
     {
       "ext": "yaml",
@@ -34659,7 +34321,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "yaml",
@@ -35542,7 +35204,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -36018,7 +35680,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "yaml",
@@ -36311,7 +35973,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 0,
   "history": [
     {
       "ext": "yaml",
@@ -36578,7 +36240,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "json",
@@ -36602,6 +36264,23 @@
   "branch": "master",
   "stargazerCount": 3,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-24T23:42:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=KOLIBRI_HOME=~/.var/app/org.learningequality.Kolibri/data/kolibri",
+        "--env=KOLIBRI_HTTP_PORT=0",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--system-talk-name=org.learningequality.Kolibri.Daemon"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-05-22T22:15:12Z",
@@ -36814,7 +36493,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -36860,7 +36539,7 @@
   "ext": "yml",
   "status": "finish-args-not-found",
   "branch": "master",
-  "stargazerCount": 17,
+  "stargazerCount": 18,
   "history": [
     {
       "ext": "yml",
@@ -37103,6 +36782,38 @@
   "history": [
     {
       "ext": "json",
+      "date": "2021-03-08T13:56:38Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=devel",
+        "--device=dri",
+        "--filesystem=host",
+        "--require-version=1.7.1",
+        "--share=ipc",
+        "--share=network",
+        "--socket=session-bus",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2021-02-11T11:09:58Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=devel",
+        "--device=dri",
+        "--filesystem=host",
+        "--require-version=1.0.2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=session-bus",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-09-15T14:29:42Z",
       "status": "ok",
       "finishArgs": [
@@ -37269,7 +36980,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -37543,6 +37254,20 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-02T15:09:40Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PATH=/app/texlive/bin/x86_64-linux:/app/texlive/bin/aarch64-linux:/app/bin:/usr/bin",
+        "--env=SESSION_MANAGER=",
+        "--env=TEXMFCACHE=$XDG_CACHE_HOME",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2019-11-30T12:01:11Z",
@@ -37963,6 +37688,19 @@
   "branch": "master",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-05T07:17:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "json",
       "date": "2019-12-21T11:10:31Z",
@@ -38583,12 +38321,32 @@
   ]
 },{
   "appID": "com.github.Qv2ray",
-  "displayURL": "https://github.com/flathub/com.github.Qv2ray/blob/master/com.github.Qv2ray.json",
-  "ext": "json",
+  "displayURL": "https://github.com/flathub/com.github.Qv2ray/blob/master/com.github.Qv2ray.yml",
+  "ext": "yml",
   "status": "ok",
   "branch": "master",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-05T07:00:58Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--own-name=org.kde.StatusNotifierItem-2-1",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=ca.desrt.dconf",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-01-24T13:02:19Z",
@@ -38693,7 +38451,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 8,
+  "stargazerCount": 9,
   "history": [
     {
       "ext": "json",
@@ -38849,7 +38607,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 2,
+  "stargazerCount": 3,
   "history": [
     {
       "ext": "json",
@@ -39211,6 +38969,20 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-05T12:14:30Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PATH=/app/texlive/bin/x86_64-linux:/app/texlive/bin/aarch64-linux:/app/bin:/usr/bin",
+        "--env=TEXMFCACHE=$XDG_CACHE_HOME",
+        "--filesystem=xdg-documents",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
     {
       "ext": "yaml",
       "date": "2020-02-19T20:28:34Z",
@@ -39807,7 +39579,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -39940,6 +39712,17 @@
   "history": [
     {
       "ext": "yaml",
+      "date": "2021-02-03T17:09:02Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "yaml",
       "date": "2020-03-29T14:04:31Z",
       "status": "ok",
       "finishArgs": [
@@ -39960,7 +39743,7 @@
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-09-24T12:36:40Z",
+      "date": "2020-11-16T11:23:31Z",
       "status": "ok",
       "finishArgs": [
         "--allow=devel",
@@ -40142,6 +39925,19 @@
   "branch": "master",
   "stargazerCount": 1,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-03-10T00:32:23Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=PATH=/app/bin:/usr/bin:/app/extensions/TexLive/2018/bin/x86_64-linux/",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-04-18T14:55:43Z",
@@ -40562,7 +40358,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 21,
+  "stargazerCount": 24,
   "history": [
     {
       "ext": "yaml",
@@ -40776,7 +40572,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 0,
   "history": [
     {
       "ext": "yaml",
@@ -40847,6 +40643,21 @@
   "branch": "master",
   "stargazerCount": 2,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-02T15:54:53Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PATH=/app/bin:/app/texlive/bin:/app/texlive/bin/x86_64-linux:/usr/bin/",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2020-07-24T23:08:36Z",
@@ -41038,7 +40849,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yaml",
@@ -41373,7 +41184,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yaml",
@@ -41698,6 +41509,27 @@
   "branch": "master",
   "stargazerCount": 4,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-03-07T03:19:57Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=ALSA_CONFIG_PATH=",
+        "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa",
+        "--env=LV2_PATH=$HOME/.lv2:/app/extensions/Plugins/lv2",
+        "--env=LXVST_PATH=/app/extensions/Plugins/lxvst",
+        "--env=TMPDIR=/var/tmp",
+        "--env=VST3_PATH=/app/extensions/Plugins/vst3",
+        "--filesystem=home",
+        "--filesystem=xdg-run/pipewire-0",
+        "--own-name=org.freedesktop.ReserveDevice1.*",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=system-bus",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "json",
       "date": "2021-01-16T18:10:11Z",
@@ -42248,7 +42080,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 5,
+  "stargazerCount": 9,
   "history": [
     {
       "ext": "json",
@@ -42282,7 +42114,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 6,
+  "stargazerCount": 8,
   "history": [
     {
       "ext": "yml",
@@ -42499,7 +42331,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -42674,7 +42506,7 @@
   "history": [
     {
       "ext": "yaml",
-      "date": "2020-07-06T11:05:42Z",
+      "date": "2020-10-24T11:24:21Z",
       "status": "ok",
       "finishArgs": [
         "--device=all",
@@ -42728,6 +42560,21 @@
   "history": [
     {
       "ext": "yaml",
+      "date": "2021-02-27T03:02:24Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--talk-name=org.mpris.MediaPlayer2.*"
+      ]
+    },
+    {
+      "ext": "yaml",
       "date": "2020-09-12T16:21:15Z",
       "status": "ok",
       "finishArgs": [
@@ -42764,6 +42611,16 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-05T04:37:32Z",
+      "status": "ok",
+      "finishArgs": [
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-07-17T03:56:09Z",
@@ -43098,7 +42955,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -43235,7 +43092,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 19,
+  "stargazerCount": 22,
   "history": [
     {
       "ext": "yaml",
@@ -43558,6 +43415,20 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-10T04:14:03Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=TMPDIR=/var/tmp",
+        "--env=VST3_PATH=/app/extensions/Plugins/vst3",
+        "--filesystem=home",
+        "--share=ipc",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-12-17T05:22:39Z",
@@ -44102,6 +43973,22 @@
   "history": [
     {
       "ext": "json",
+      "date": "2021-02-03T18:21:00Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=home",
+        "--own-name=org.x.StatusIcon.warpinator",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.FileManager1",
+        "--talk-name=org.x.StatusIconMonitor.*"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-08-21T16:53:38Z",
       "status": "ok",
       "finishArgs": [
@@ -44233,7 +44120,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yaml",
@@ -44853,6 +44740,38 @@
   "history": [
     {
       "ext": "json",
+      "date": "2021-03-08T14:01:02Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=devel",
+        "--device=dri",
+        "--filesystem=host",
+        "--require-version=1.7.1",
+        "--share=ipc",
+        "--share=network",
+        "--socket=session-bus",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2021-02-11T11:31:12Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=devel",
+        "--device=dri",
+        "--filesystem=host",
+        "--require-version=1.0.2",
+        "--share=ipc",
+        "--share=network",
+        "--socket=session-bus",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2020-09-15T14:59:47Z",
       "status": "ok",
       "finishArgs": [
@@ -45131,7 +45050,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 0,
+  "stargazerCount": 6,
   "history": [
     {
       "ext": "json",
@@ -45432,7 +45351,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -45479,7 +45398,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 6,
+  "stargazerCount": 8,
   "history": [
     {
       "ext": "yaml",
@@ -45541,7 +45460,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "yml",
@@ -45789,7 +45708,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 13,
+  "stargazerCount": 15,
   "history": [
     {
       "ext": "yaml",
@@ -46046,7 +45965,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -46087,7 +46006,7 @@
   "ext": "yml",
   "status": "finish-args-not-found",
   "branch": "beta",
-  "stargazerCount": 13,
+  "stargazerCount": 15,
   "history": [
     {
       "ext": "yml",
@@ -46413,11 +46332,11 @@
   ]
 },{
   "appID": "com.github.Eloston.UngoogledChromium",
-  "displayURL": "https://github.com/flathub/com.github.Eloston.UngoogledChromium/blob/beta/com.github.Eloston.UngoogledChromium.yaml",
+  "displayURL": "https://github.com/flathub/com.github.Eloston.UngoogledChromium/blob/master/com.github.Eloston.UngoogledChromium.yaml",
   "ext": "yaml",
   "status": "ok",
-  "branch": "beta",
-  "stargazerCount": 8,
+  "branch": "master",
+  "stargazerCount": 9,
   "history": [
     {
       "ext": "yaml",
@@ -46857,6 +46776,18 @@
   "history": [
     {
       "ext": "yaml",
+      "date": "2021-03-01T15:42:30Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "yaml",
       "date": "2020-11-17T03:30:30Z",
       "status": "ok",
       "finishArgs": [
@@ -46942,6 +46873,19 @@
   "history": [
     {
       "ext": "yml",
+      "date": "2021-02-25T23:08:46Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PATH=$PATH:/usr/bin:/bin:/app/bin",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "yml",
       "date": "2020-11-21T15:29:31Z",
       "status": "ok",
       "finishArgs": [
@@ -46959,8 +46903,25 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-17T17:35:25Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=~/MEGAsync Downloads:create",
+        "--filesystem=~/MEGAsync:create",
+        "--own-name=org.kde.StatusNotifierItem-2-1",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2021-01-29T13:19:57Z",
@@ -47163,7 +47124,7 @@
   "ext": "yml",
   "status": "finish-args-not-found",
   "branch": "beta",
-  "stargazerCount": 7,
+  "stargazerCount": 8,
   "history": [
     {
       "ext": "yml",
@@ -47549,6 +47510,19 @@
   "history": [
     {
       "ext": "yml",
+      "date": "2021-03-07T19:29:12Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--socket=x11",
+        "--talk-name=ca.desrt.dconf",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
+    {
+      "ext": "yml",
       "date": "2020-12-03T19:04:15Z",
       "status": "ok",
       "finishArgs": [
@@ -47776,8 +47750,38 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-03-01T15:20:28Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=/media",
+        "--filesystem=/run/media",
+        "--filesystem=home",
+        "--own-name=org.freedesktop.FileManager1",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2021-02-10T19:59:00Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=/media",
+        "--filesystem=/run/media",
+        "--filesystem=home",
+        "--own-name=org.freedesktop.FileManager1",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
     {
       "ext": "json",
       "date": "2020-12-21T00:16:49Z",
@@ -47798,7 +47802,7 @@
   "ext": "yaml",
   "status": "ok",
   "branch": "beta",
-  "stargazerCount": 2,
+  "stargazerCount": 4,
   "history": [
     {
       "ext": "yaml",
@@ -48133,6 +48137,20 @@
   "history": [
     {
       "ext": "yml",
+      "date": "2021-02-14T14:48:30Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=home",
+        "--own-name=org.gramps-project.Gramps",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    },
+    {
+      "ext": "yml",
       "date": "2020-12-20T14:39:47Z",
       "status": "ok",
       "finishArgs": [
@@ -48329,6 +48347,60 @@
   "branch": "master",
   "stargazerCount": 3,
   "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-09T14:47:39Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=multiarch",
+        "--device=all",
+        "--filesystem=/media",
+        "--filesystem=/run/media",
+        "--filesystem=xdg-desktop",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-videos",
+        "--filesystem=~/.Bottles:ro",
+        "--filesystem=~/.local/share/bottles:create",
+        "--filesystem=~/Games:ro",
+        "--filesystem=~/wineprefixes:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--system-talk-name=org.freedesktop.UDisks2",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*"
+      ]
+    },
+    {
+      "ext": "yml",
+      "date": "2021-02-11T23:33:50Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=multiarch",
+        "--device=all",
+        "--device=all",
+        "--filesystem=xdg-desktop",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-videos",
+        "--filesystem=~/.Bottles:ro",
+        "--filesystem=~/.local/share/bottles:create",
+        "--filesystem=~/Games:ro",
+        "--filesystem=~/wineprefixes:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=session-bus"
+      ]
+    },
     {
       "ext": "yml",
       "date": "2021-01-04T15:08:25Z",
@@ -48615,7 +48687,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -48682,6 +48754,15 @@
   "branch": "master",
   "stargazerCount": 0,
   "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-09T20:12:55Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=DOTNET_ROOT=/app/dotnet/lib",
+        "--share=network"
+      ]
+    },
     {
       "ext": "json",
       "date": "2021-01-13T12:37:56Z",
@@ -48802,7 +48883,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -48827,7 +48908,7 @@
   "ext": "json",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 0,
+  "stargazerCount": 1,
   "history": [
     {
       "ext": "json",
@@ -48927,7 +49008,7 @@
   "ext": "yml",
   "status": "ok",
   "branch": "master",
-  "stargazerCount": 1,
+  "stargazerCount": 2,
   "history": [
     {
       "ext": "yml",
@@ -49149,6 +49230,20 @@
   "history": [
     {
       "ext": "json",
+      "date": "2021-02-15T13:46:52Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2021-01-22T00:12:31Z",
       "status": "ok",
       "finishArgs": [
@@ -49288,6 +49383,20 @@
   "history": [
     {
       "ext": "json",
+      "date": "2021-02-14T19:24:13Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
+    {
+      "ext": "json",
       "date": "2021-01-23T15:52:16Z",
       "status": "ok",
       "finishArgs": [
@@ -49342,6 +49451,1191 @@
         "--share=network",
         "--socket=pulseaudio",
         "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    }
+  ]
+},{
+  "appID": "org.kde.bovo",
+  "displayURL": "https://github.com/flathub/org.kde.bovo/blob/master/org.kde.bovo.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-01-27T03:59:10Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "org.kde.kongress",
+  "displayURL": "https://github.com/flathub/org.kde.kongress/blob/master/org.kde.kongress.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-01-26T09:58:00Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--own-name=org.kde.kongressac",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.Solid.PowerManagement"
+      ]
+    }
+  ]
+},{
+  "appID": "com.nitrokey.nitrokey-app",
+  "displayURL": "https://github.com/flathub/com.nitrokey.nitrokey-app/blob/master/com.nitrokey.nitrokey-app.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 2,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-01-25T14:08:42Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=host",
+        "--share=ipc",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "com.visualstudio.code.tool.fish",
+  "displayURL": "https://github.com/flathub/com.visualstudio.code.tool.fish/blob/master/com.visualstudio.code.tool.fish.yml",
+  "ext": "yml",
+  "status": "finish-args-not-found",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2020-04-20T20:10:31Z",
+      "status": "finish-args-not-found",
+      "finishArgs": null
+    }
+  ]
+},{
+  "appID": "net.kirgroup.confy",
+  "displayURL": "https://github.com/flathub/net.kirgroup.confy/blob/master/net.kirgroup.confy.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-01-28T13:49:52Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    }
+  ]
+},{
+  "appID": "org.sonic3air.Sonic3AIR",
+  "displayURL": "https://github.com/flathub/org.sonic3air.Sonic3AIR/blob/master/org.sonic3air.Sonic3AIR.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-01-28T20:55:57Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=~/.local/share/Steam/steamapps/common/SegaClassics/uncompressedROMs/Sonic_Knuckles_wSonic3.bin:ro",
+        "--filesystem=~/.steam/debian-installation/steamapps/common/SegaClassics/uncompressedROMs/Sonic_Knuckles_wSonic3.bin:ro",
+        "--filesystem=~/.steam/root/steamapps/common/SegaClassics/uncompressedROMs/Sonic_Knuckles_wSonic3.bin:ro",
+        "--filesystem=~/.steam/steam/steamapps/common/SegaClassics/uncompressedROMs/Sonic_Knuckles_wSonic3.bin:ro",
+        "--filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/SegaClassics/uncompressedROMs/Sonic_Knuckles_wSonic3.bin:ro",
+        "--filesystem=~/Steam/steamapps/common/SegaClassics/uncompressedROMs/Sonic_Knuckles_wSonic3.bin:ro",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.joseexposito.touche",
+  "displayURL": "https://github.com/flathub/com.github.joseexposito.touche/blob/master/com.github.joseexposito.touche.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-01-31T12:58:22Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host:ro",
+        "--filesystem=~/.config/touchegg",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.belmoussaoui.Authenticator",
+  "displayURL": "https://github.com/flathub/com.belmoussaoui.Authenticator/blob/master/com.belmoussaoui.Authenticator.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-01T01:11:52Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0",
+        "--env=G_MESSAGES_DEBUG=none",
+        "--env=RUST_LOG=authenticator=debug",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.a11y.Bus",
+        "--talk-name=org.freedesktop.secrets"
+      ]
+    }
+  ]
+},{
+  "appID": "com.gitlab.guillermop.MasterKey",
+  "displayURL": "https://github.com/flathub/com.gitlab.guillermop.MasterKey/blob/master/com.gitlab.guillermop.MasterKey.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-01T22:00:13Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.fushinari.Wordbook",
+  "displayURL": "https://github.com/flathub/com.github.fushinari.Wordbook/blob/master/com.github.fushinari.Wordbook.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-02T14:19:06Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "fi.skyjake.Lagrange",
+  "displayURL": "https://github.com/flathub/fi.skyjake.Lagrange/blob/master/fi.skyjake.Lagrange.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-02T10:09:10Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=home:ro",
+        "--filesystem=xdg-download",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2021-01-29T10:44:11Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=home",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "org.standardnotes.standardnotes",
+  "displayURL": "https://github.com/flathub/org.standardnotes.standardnotes/blob/master/org.standardnotes.standardnotes.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-01-28T07:30:31Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-run/keyring",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2019-09-15T23:06:30Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-run/keyring",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets"
+      ]
+    }
+  ]
+},{
+  "appID": "org.fcitx.Fcitx5.Addon.Zhuyin",
+  "displayURL": "https://github.com/flathub/org.fcitx.Fcitx5.Addon.Zhuyin/blob/master/org.fcitx.Fcitx5.Addon.Zhuyin.yaml",
+  "ext": "yaml",
+  "status": "finish-args-not-found",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-03T05:12:16Z",
+      "status": "finish-args-not-found",
+      "finishArgs": null
+    }
+  ]
+},{
+  "appID": "com.github.PopoutApps.popout3d",
+  "displayURL": "https://github.com/flathub/com.github.PopoutApps.popout3d/blob/master/com.github.PopoutApps.popout3d.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-01-27T16:55:44Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host:rw",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "org.ghidra_sre.Ghidra",
+  "displayURL": "https://github.com/flathub/org.ghidra_sre.Ghidra/blob/master/org.ghidra_sre.Ghidra.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-09T08:11:49Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=JAVA_HOME=/app/jdk",
+        "--env=PATH=/usr/bin:/app/bin:/app/jdk/bin",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "com.vesc_project.VescTool",
+  "displayURL": "https://github.com/flathub/com.vesc_project.VescTool/blob/master/com.vesc_project.VescTool.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-01-16T13:52:06Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "io.github.hmlendea.geforcenow-electron",
+  "displayURL": "https://github.com/flathub/io.github.hmlendea.geforcenow-electron/blob/master/io.github.hmlendea.geforcenow-electron.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-09T14:46:24Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "app.midterm.MidtermDesktop",
+  "displayURL": "https://github.com/flathub/app.midterm.MidtermDesktop/blob/master/app.midterm.MidtermDesktop.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-10T18:15:05Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "io.jamulus.Jamulus",
+  "displayURL": "https://github.com/flathub/io.jamulus.Jamulus/blob/master/io.jamulus.Jamulus.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-07T10:58:04Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=xdg-run/pipewire-0",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=system-bus",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "dev.geopjr.Hashbrown",
+  "displayURL": "https://github.com/flathub/dev.geopjr.Hashbrown/blob/master/dev.geopjr.Hashbrown.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-03-07T14:46:36Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
+    {
+      "ext": "yaml",
+      "date": "2021-02-11T12:39:59Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "org.kde.kblackbox",
+  "displayURL": "https://github.com/flathub/org.kde.kblackbox/blob/master/org.kde.kblackbox.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-12T14:34:32Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "se.emijoh.mpw",
+  "displayURL": "https://github.com/flathub/se.emijoh.mpw/blob/master/se.emijoh.mpw.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-13T15:38:35Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "org.kde.granatier",
+  "displayURL": "https://github.com/flathub/org.kde.granatier/blob/master/org.kde.granatier.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-15T08:01:55Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "org.citra_emu.citra",
+  "displayURL": "https://github.com/flathub/org.citra_emu.citra/blob/master/org.citra_emu.citra.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-16T00:19:52Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--filesystem=host:ro",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "com.stremio.Stremio",
+  "displayURL": "https://github.com/flathub/com.stremio.Stremio/blob/master/com.stremio.Stremio.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-01-14T13:21:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=TMPDIR=/var/cache/tmp",
+        "--own-name=org.kde.*",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.a11y.Bus",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.jkotra.eovpn",
+  "displayURL": "https://github.com/flathub/com.github.jkotra.eovpn/blob/master/com.github.jkotra.eovpn.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-11T10:44:10Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    }
+  ]
+},{
+  "appID": "org.gnome.design.Typography",
+  "displayURL": "https://github.com/flathub/org.gnome.design.Typography/blob/master/org.gnome.design.Typography.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-17T22:16:10Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.wiz.Note",
+  "displayURL": "https://github.com/flathub/com.wiz.Note/blob/master/com.wiz.Note.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-11T01:56:32Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=xdg-documents",
+        "--persist=.wiznote",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=com.canonical.indicator.application",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    },
+    {
+      "ext": "json",
+      "date": "2019-03-17T12:52:49Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=xdg-documents",
+        "--persist=.local",
+        "--persist=.wiznote",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "com.cassidyjames.plausible",
+  "displayURL": "https://github.com/flathub/com.cassidyjames.plausible/blob/master/com.cassidyjames.plausible.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-03-11T03:45:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--system-talk-name=org.freedesktop.Accounts"
+      ]
+    },
+    {
+      "ext": "yaml",
+      "date": "2021-02-20T06:37:54Z",
+      "status": "ill-formed",
+      "finishArgs": null
+    }
+  ]
+},{
+  "appID": "org.deluge_torrent.deluge",
+  "displayURL": "https://github.com/flathub/org.deluge_torrent.deluge/blob/master/org.deluge_torrent.deluge.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-25T19:21:01Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=xdg-download",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    }
+  ]
+},{
+  "appID": "org.nmap.Zenmap",
+  "displayURL": "https://github.com/flathub/org.nmap.Zenmap/blob/master/org.nmap.Zenmap.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-18T21:17:22Z",
+      "status": "ok",
+      "finishArgs": [
+        "--env=TMPDIR=/var/tmp",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "tech.feliciano.pocket-casts",
+  "displayURL": "https://github.com/flathub/tech.feliciano.pocket-casts/blob/master/tech.feliciano.pocket-casts.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-16T10:18:33Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--own-name=org.mpris.MediaPlayer2.chromium.*",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=org.kde.StatusNotifierWatcher"
+      ]
+    }
+  ]
+},{
+  "appID": "info.portfolio_performance.PortfolioPerformance",
+  "displayURL": "https://github.com/flathub/info.portfolio_performance.PortfolioPerformance/blob/master/info.portfolio_performance.PortfolioPerformance.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-17T13:09:06Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=PATH=/app/jre/bin:/usr/bin",
+        "--filesystem=home",
+        "--share=network",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "at.vintagestory.VintageStory",
+  "displayURL": "https://github.com/flathub/at.vintagestory.VintageStory/blob/master/at.vintagestory.VintageStory.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-21T22:00:07Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=MONO_PATH=/app/lib/mono/4.5",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "org.onionshare.OnionShare",
+  "displayURL": "https://github.com/flathub/org.onionshare.OnionShare/blob/master/org.onionshare.OnionShare.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-02-23T03:37:23Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=home:ro",
+        "--filesystem=xdg-config/onionshare:create",
+        "--filesystem=~/OnionShare:create",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets"
+      ]
+    }
+  ]
+},{
+  "appID": "org.upnproutercontrol.UPnPRouterControl",
+  "displayURL": "https://github.com/flathub/org.upnproutercontrol.UPnPRouterControl/blob/master/org.upnproutercontrol.UPnPRouterControl.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-24T20:43:42Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "net.sourceforge.squirrel_sql",
+  "displayURL": "https://github.com/flathub/net.sourceforge.squirrel_sql/blob/master/net.sourceforge.squirrel_sql.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-23T01:21:13Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.rafostar.Clapper",
+  "displayURL": "https://github.com/flathub/com.github.rafostar.Clapper/blob/master/com.github.rafostar.Clapper.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-02-26T10:59:00Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--device=dri",
+        "--env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0",
+        "--env=GST_VAAPI_ALL_DRIVERS=1",
+        "--filesystem=xdg-videos",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.gnome.Shell"
+      ]
+    }
+  ]
+},{
+  "appID": "com.valvesoftware.SteamLink",
+  "displayURL": "https://github.com/flathub/com.valvesoftware.SteamLink/blob/beta/com.valvesoftware.SteamLink.yml",
+  "ext": "yml",
+  "status": "finish-args-not-found",
+  "branch": "beta",
+  "stargazerCount": 32,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-02-11T17:37:16Z",
+      "status": "finish-args-not-found",
+      "finishArgs": null
+    }
+  ]
+},{
+  "appID": "com.etlegacy.ETLegacy",
+  "displayURL": "https://github.com/flathub/com.etlegacy.ETLegacy/blob/master/com.etlegacy.ETLegacy.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-03-02T16:28:21Z",
+      "status": "ok",
+      "finishArgs": [
+        "--allow=multiarch",
+        "--device=dri",
+        "--env=LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/lib32/",
+        "--persist=.etlegacy",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.elth0r0.iqpuzzle",
+  "displayURL": "https://github.com/flathub/com.github.elth0r0.iqpuzzle/blob/master/com.github.elth0r0.iqpuzzle.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-07T14:05:21Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.plexamp.Plexamp",
+  "displayURL": "https://github.com/flathub/com.plexamp.Plexamp/blob/master/com.plexamp.Plexamp.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-03-09T14:37:10Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--own-name=org.mpris.MediaPlayer2.Plexamp",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    }
+  ]
+},{
+  "appID": "org.genivi.DLTViewer",
+  "displayURL": "https://github.com/flathub/org.genivi.DLTViewer/blob/master/org.genivi.DLTViewer.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 1,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-09T22:14:32Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=LD_LIBRARY_PATH=/app/usr/lib/aarch64-linux-gnu:/app/usr/lib/x86_64-linux-gnu",
+        "--persist=.dlt",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
+    {
+      "ext": "yml",
+      "date": "2021-02-06T18:13:34Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=all",
+        "--env=LD_LIBRARY_PATH=/app/usr/lib/x86_64-linux-gnu",
+        "--persist=.dlt",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    },
+    {
+      "ext": "yml",
+      "date": "2020-11-30T21:48:54Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=LD_LIBRARY_PATH=/app/lib/x86_64-linux-gnu",
+        "--filesystem=host",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.sireliah.Dragit",
+  "displayURL": "https://github.com/flathub/com.sireliah.Dragit/blob/master/com.sireliah.Dragit.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-08T22:16:25Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "com.github.liferooter.textpieces",
+  "displayURL": "https://github.com/flathub/com.github.liferooter.textpieces/blob/master/com.github.liferooter.textpieces.yaml",
+  "ext": "yaml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yaml",
+      "date": "2021-03-10T21:33:33Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "fi.mooc.tmc.tmc-cli-rust",
+  "displayURL": "https://github.com/flathub/fi.mooc.tmc.tmc-cli-rust/blob/master/fi.mooc.tmc.tmc-cli-rust.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-06T03:00:25Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=host",
+        "--share=network"
+      ]
+    }
+  ]
+},{
+  "appID": "org.goldendict.GoldenDict",
+  "displayURL": "https://github.com/flathub/org.goldendict.GoldenDict/blob/master/org.goldendict.GoldenDict.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-17T02:40:20Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=QT_AUTO_SCREEN_SCALE_FACTOR=1",
+        "--env=TMPDIR=/var/tmp",
+        "--persist=.goldendict",
+        "--share=ipc",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.freedesktop.Notifications"
+      ]
+    }
+  ]
+},{
+  "appID": "im.bernard.Funkcio",
+  "displayURL": "https://github.com/flathub/im.bernard.Funkcio/blob/master/im.bernard.Funkcio.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-03-11T15:55:12Z",
+      "status": "ok",
+      "finishArgs": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+      ]
+    }
+  ]
+},{
+  "appID": "io.github.seadve.Kooha",
+  "displayURL": "https://github.com/flathub/io.github.seadve.Kooha/blob/master/io.github.seadve.Kooha.json",
+  "ext": "json",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "json",
+      "date": "2021-03-13T13:25:45Z",
+      "status": "ok",
+      "finishArgs": [
+        "--filesystem=xdg-videos",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
+        "--talk-name=org.gnome.Shell.Screencast",
+        "--talk-name=org.gnome.Shell.Screenshot"
+      ]
+    }
+  ]
+},{
+  "appID": "org.nanuc.Axolotl",
+  "displayURL": "https://github.com/flathub/org.nanuc.Axolotl/blob/master/org.nanuc.Axolotl.yml",
+  "ext": "yml",
+  "status": "ok",
+  "branch": "master",
+  "stargazerCount": 0,
+  "history": [
+    {
+      "ext": "yml",
+      "date": "2021-03-04T21:33:53Z",
+      "status": "ok",
+      "finishArgs": [
+        "--device=dri",
+        "--env=AXOLOTL_WEB_DIR=/app/bin/axolotl-web/dist",
+        "--filesystem=home:ro",
+        "--filesystem=xdg-download:rw",
+        "--filesystem=~/.config/textsecure.nanuc:create",
+        "--filesystem=~/.local/share/textsecure.nanuc:create",
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland",
         "--talk-name=org.freedesktop.Notifications"
       ]
     }

@@ -20,6 +20,11 @@ const NON_APP_LIST = [
 do {
   // Fetch next page
   const res = await fetch(next, RestConfig);
+  if (!res.ok) {
+    console.error({res})
+    process.exit(1);
+  }
+
   const json = (await res.json()) ?? [];
 
   const activeRepos = json.filter((it) => !it.archived && !it.disabled);
@@ -28,7 +33,7 @@ do {
     ...apps,
     ...activeRepos
       .filter((it) => it.name.includes("."))
-      .filter((it) => NON_APP_LIST.every((ignore) => !it.name.includes(ignore)))
+      .filter((it) => NON_APP_LIST.every((nonApp) => !it.name.includes(nonApp)))
       .map((it) => it.name),
   ];
 
