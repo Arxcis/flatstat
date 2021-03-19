@@ -258,7 +258,7 @@
     }
 
     // filter by current search
-    const filtered = list.filter(it => it.count)
+    const filtered = list
       .map(it => ({ ...it, hits: searchHits(search, it.tags) }))
       .filter(it => it.hits)
       .slice(0, LIST_LIMIT)
