@@ -15,6 +15,8 @@ const NON_APP_LIST = [
   ".BaseApp",
   "org.kde.KStyle.",
   "org.kde.PlatformTheme.",
+  "io.dbeaver.DBeaverCommunity.Client.psql.json",
+  "io.dbeaver.DBeaverCommunity.Client.mariadb.json",
 ];
 
 do {
