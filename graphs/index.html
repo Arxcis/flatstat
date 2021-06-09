@@ -203,6 +203,13 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
+            label: HOLES.FilesystemAll,
+            backgroundColor: SUPER_BAD_COLOR,
+            borderColor: SUPER_BAD_COLOR,
+            data: count.map((it) => it.holes[HOLES.FilesystemAll]),
+            fill: false,
+          },
+          {
             label: achievementLabel(ACHIEVEMENTS.NoFilesystem),
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
@@ -224,10 +231,10 @@
             fill: false,
           },
           {
-            label: HOLES.FilesystemAll,
-            backgroundColor: SUPER_BAD_COLOR,
-            borderColor: SUPER_BAD_COLOR,
-            data: count.map((it) => it.holes[HOLES.FilesystemAll]),
+            label: achievementLabel(ACHIEVEMENTS.Persist),
+            backgroundColor: TOTAL_COLOR,
+            borderColor: TOTAL_COLOR,
+            data: count.map((it) => it.achievements[ACHIEVEMENTS.Persist]),
             fill: false,
           },
         ],
@@ -242,18 +249,18 @@
       data: {
         labels: count.map((it) => it.month),
         datasets: [
-          {
-            label: ACHIEVEMENTS.NoDevice,
-            backgroundColor: GOOD_COLOR,
-            borderColor: GOOD_COLOR,
-            data: count.map((it) => it.achievements[ACHIEVEMENTS.NoDevice]),
-            fill: false,
-          },
-          {
+         {
             label: HOLES.DeviceWellKnown,
             backgroundColor: BAD_COLOR,
             borderColor: BAD_COLOR,
             data: count.map((it) => it.holes[HOLES.DeviceWellKnown]),
+            fill: false,
+          },
+          {
+            label: achievementLabel(ACHIEVEMENTS.NoDevice),
+            backgroundColor: GOOD_COLOR,
+            borderColor: GOOD_COLOR,
+            data: count.map((it) => it.achievements[ACHIEVEMENTS.NoDevice]),
             fill: false,
           },
           {
@@ -276,7 +283,7 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.NoPulseaudio,
+            label: achievementLabel(ACHIEVEMENTS.NoPulseaudio),
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it.achievements[ACHIEVEMENTS.NoPulseaudio]),
