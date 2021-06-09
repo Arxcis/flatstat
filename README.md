@@ -9,9 +9,9 @@ Makefile
 
 # Commands that generate data
 cmd/
-    makeApps.js
-    makeCount.js
-    makeMetafiles.js
+    make-apps.js
+    make-count.js
+    make-metafiles.js
 
 # Data-folder contains generated data
 data/
