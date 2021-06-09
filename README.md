@@ -19,7 +19,7 @@ data/
     count.json
     metafiles.json
 
-# Shared javascript code
+# Shared javascript files
 lib/
 
 # HTML Pages
