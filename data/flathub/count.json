@@ -5916,7 +5916,8 @@
       "--no-device": 266,
       "--wayland-with-fallback": 194,
       "--no-device-all": 194,
-      "--persist": 95
+      "--persist": 95,
+      "--pipewire": 4
     },
     "holes": {
       "--x11": 771,
@@ -6225,7 +6226,8 @@
       "--no-device": 273,
       "--wayland-with-fallback": 212,
       "--no-device-all": 201,
-      "--persist": 95
+      "--persist": 95,
+      "--pipewire": 4
     },
     "holes": {
       "--x11": 786,
@@ -6539,7 +6541,8 @@
       "--no-device": 281,
       "--wayland-with-fallback": 227,
       "--no-device-all": 206,
-      "--persist": 95
+      "--persist": 95,
+      "--pipewire": 6
     },
     "holes": {
       "--x11": 793,
@@ -6861,7 +6864,8 @@
       "--no-device": 288,
       "--wayland-with-fallback": 242,
       "--no-device-all": 216,
-      "--persist": 100
+      "--persist": 100,
+      "--pipewire": 13
     },
     "holes": {
       "--x11": 808,
@@ -7193,7 +7197,8 @@
       "--no-device": 303,
       "--wayland-with-fallback": 265,
       "--no-device-all": 225,
-      "--persist": 107
+      "--persist": 107,
+      "--pipewire": 15
     },
     "holes": {
       "--x11": 832,
@@ -7531,7 +7536,8 @@
       "--no-device": 308,
       "--wayland-with-fallback": 279,
       "--no-device-all": 232,
-      "--persist": 109
+      "--persist": 109,
+      "--pipewire": 16
     },
     "holes": {
       "--x11": 844,
@@ -7872,7 +7878,8 @@
       "--no-device": 317,
       "--wayland-with-fallback": 301,
       "--no-device-all": 232,
-      "--persist": 111
+      "--persist": 111,
+      "--pipewire": 16
     },
     "holes": {
       "--x11": 848,
@@ -8222,7 +8229,8 @@
       "--wayland-with-fallback": 340,
       "--no-device": 318,
       "--no-device-all": 245,
-      "--persist": 116
+      "--persist": 116,
+      "--pipewire": 22
     },
     "holes": {
       "--x11": 856,
@@ -8574,7 +8582,8 @@
       "--wayland-with-fallback": 361,
       "--no-device": 313,
       "--no-device-all": 249,
-      "--persist": 117
+      "--persist": 117,
+      "--pipewire": 29
     },
     "holes": {
       "--x11": 863,

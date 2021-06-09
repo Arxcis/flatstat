@@ -283,7 +283,7 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: achievementLabel(ACHIEVEMENTS.NoPulseaudio),
+            label: ACHIEVEMENTS.NoPulseaudio,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
             data: count.map((it) => it.achievements[ACHIEVEMENTS.NoPulseaudio]),
@@ -294,6 +294,13 @@
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
             data: count.map((it) => it.holes[HOLES.Pulseaudio]),
+            fill: false,
+          },
+          {
+            label: achievementLabel(ACHIEVEMENTS.Pipewire),
+            backgroundColor: SUPER_BAD_COLOR,
+            borderColor: SUPER_BAD_COLOR,
+            data: count.map((it) => it.achievements[ACHIEVEMENTS.Pipewire]),
             fill: false,
           },
         ],
