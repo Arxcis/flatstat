@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/3092618/136671575-dae8cb93-d5ec-44d5-bfb9-c882a8fba516.png" width=700/>
+
 Hosted at https://arxcis.github.io/flatstat/
 
 
