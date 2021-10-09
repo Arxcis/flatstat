@@ -1,5 +1,5 @@
 // PAT with no scopes. Readonly to public information on github
-const PAT = "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";
+const PAT = process.env.GITHUB_PERSONAL_ACCESS_TOKEN ?? "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";
 export const RestConfig = {
   headers: {
     Authorization: `token ${PAT}`,
@@ -51,4 +51,8 @@ export const MONTHS = [
   "2021-03",
   "2021-04",
   "2021-05",
+  "2021-06",
+  "2021-07",
+  "2021-08",
+  "2021-09",
 ];

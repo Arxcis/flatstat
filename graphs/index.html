@@ -88,6 +88,7 @@
   const BAD_COLOR = "#ff9100";
   const VERY_BAD_COLOR = "#ac0800";
   const SUPER_BAD_COLOR = "#4a148c";
+  const HOTPINK_COLOR = "hotpink";
 
   function achievementLabel(label) {
     return `${label} 🏅 `
@@ -203,10 +204,10 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: HOLES.FilesystemAll,
+            label: HOLES.FilesystemHome,
             backgroundColor: SUPER_BAD_COLOR,
             borderColor: SUPER_BAD_COLOR,
-            data: count.map((it) => it.holes[HOLES.FilesystemAll]),
+            data: count.map((it) => it.holes[HOLES.FilesystemHome]),
             fill: false,
           },
           {
@@ -217,17 +218,24 @@
             fill: false,
           },
           {
-            label: HOLES.FilesystemWellKnown,
-            backgroundColor: BAD_COLOR,
-            borderColor: BAD_COLOR,
-            data: count.map((it) => it.holes[HOLES.FilesystemWellKnown]),
+            label: HOLES.FilesystemHost,
+            backgroundColor: HOTPINK_COLOR,
+            borderColor: HOTPINK_COLOR,
+            data: count.map((it) => it.holes[HOLES.FilesystemHost]),
             fill: false,
           },
           {
-            label: HOLES.FilesystemUnknown,
+            label: HOLES.FilesystestemXDG,
+            backgroundColor: BAD_COLOR,
+            borderColor: BAD_COLOR,
+            data: count.map((it) => it.holes[HOLES.FilesystestemXDG]),
+            fill: false,
+          },
+          {
+            label: HOLES.FilesystemOther,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it.holes[HOLES.FilesystemUnknown]),
+            data: count.map((it) => it.holes[HOLES.FilesystemOther]),
             fill: false,
           },
           {
@@ -250,10 +258,10 @@
         labels: count.map((it) => it.month),
         datasets: [
          {
-            label: HOLES.DeviceWellKnown,
+            label: HOLES.DeviceDri,
             backgroundColor: BAD_COLOR,
             borderColor: BAD_COLOR,
-            data: count.map((it) => it.holes[HOLES.DeviceWellKnown]),
+            data: count.map((it) => it.holes[HOLES.DeviceDri]),
             fill: false,
           },
           {
@@ -270,6 +278,13 @@
             data: count.map((it) => it.holes[HOLES.DeviceAll]),
             fill: false,
           },
+          {
+            label: HOLES.DeviceShm,
+            backgroundColor: TOTAL_COLOR,
+            borderColor: TOTAL_COLOR,
+            data: count.map((it) => it.holes[HOLES.DeviceShm]),
+            fill: false,
+          },
         ],
       },
       options: {
@@ -283,24 +298,31 @@
         labels: count.map((it) => it.month),
         datasets: [
           {
-            label: ACHIEVEMENTS.NoPulseaudio,
+            label: ACHIEVEMENTS.NoAudio,
             backgroundColor: GOOD_COLOR,
             borderColor: GOOD_COLOR,
-            data: count.map((it) => it.achievements[ACHIEVEMENTS.NoPulseaudio]),
+            data: count.map((it) => it.achievements[ACHIEVEMENTS.NoAudio]),
             fill: false,
           },
           {
-            label: HOLES.Pulseaudio,
+            label: HOLES.OnlyPulseaudio,
             backgroundColor: VERY_BAD_COLOR,
             borderColor: VERY_BAD_COLOR,
-            data: count.map((it) => it.holes[HOLES.Pulseaudio]),
+            data: count.map((it) => it.holes[HOLES.OnlyPulseaudio]),
             fill: false,
           },
           {
-            label: achievementLabel(ACHIEVEMENTS.Pipewire),
+            label: HOLES.PipewireAndPulseaudio,
+            backgroundColor: TOTAL_COLOR,
+            borderColor: TOTAL_COLOR,
+            data: count.map((it) => it.holes[HOLES.PipewireAndPulseaudio]),
+            fill: false,
+          },
+          {
+            label: achievementLabel(ACHIEVEMENTS.OnlyPipewire),
             backgroundColor: SUPER_BAD_COLOR,
             borderColor: SUPER_BAD_COLOR,
-            data: count.map((it) => it.achievements[ACHIEVEMENTS.Pipewire]),
+            data: count.map((it) => it.achievements[ACHIEVEMENTS.OnlyPipewire]),
             fill: false,
           },
         ],
@@ -343,7 +365,7 @@
         ...defaultOptions,
       },
     });
-    const GREY_COLORS = [GOOD_COLOR, BAD_COLOR, VERY_BAD_COLOR, SUPER_BAD_COLOR]
+    const TALK_NAME_COLORS = [GOOD_COLOR, BAD_COLOR, VERY_BAD_COLOR, SUPER_BAD_COLOR, HOTPINK_COLOR]
 
     const datasets = Object.keys(count[count.length - 1].talkNames)
       .map(talkName => [
@@ -351,18 +373,18 @@
         count.map(it => it.talkNames[talkName] ?? 0)
       ])
       .sort(([, aCounts], [, bCounts]) => bCounts[bCounts.length - 1] - aCounts[aCounts.length - 1])
-      .slice(0, 32)  // Show the n most used talk-names
+      .slice(0, 30)  // Show the n most used talk-names
       .map(([talkName, data], i) => ({
         label: `#${i + 1} ${talkName}`,
-        backgroundColor: GREY_COLORS[i % 4],
-        borderColor: GREY_COLORS[i % 4],
+        backgroundColor: TALK_NAME_COLORS[i % 5],
+        borderColor: TALK_NAME_COLORS[i % 5],
         data,
         fill: false,
       }));
 
-    for (let page = 1; page <= 8; ++page) {
-      const beginSlice = (page - 1) * 4
-      const endSlice = beginSlice + 4;
+    for (let page = 1; page <= 6; ++page) {
+      const beginSlice = (page - 1) * 5
+      const endSlice = beginSlice + 5;
 
       new Chart(document.getElementById(`talk-names-page${page}`).getContext("2d"), {
         type: "line",
