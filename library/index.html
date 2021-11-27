@@ -46,44 +46,45 @@
   </main>
 </body>
 <script type="module">
-  import { useJSON } from "../lib/useJSON.js";
-  import { useActiveLink } from "../lib/useActiveLink.js";
-  import { HOLE_DESCRIPTIONS } from "../lib/holes.js";
-  import { ACHIEVEMENT_DESCRIPTIONS } from "../lib/achievements.js";
+import { useJSON } from "../lib/useJSON.js";
+import { useActiveLink } from "../lib/useActiveLink.js";
+import { HOLE_DESCRIPTIONS } from "../lib/holes.js";
+import { ACHIEVEMENT_DESCRIPTIONS } from "../lib/achievements.js";
 
+
+(async function main() {
   useActiveLink("#achievements")
-  
-  render()
-  async function render() {
-    const count = await useJSON("../data/flathub/count.json")
-    const { achievements: achievementCounts, holes: holeCounts } = count[count.length - 1]; 
 
-    document.querySelector("#achievements").innerHTML = ACHIEVEMENT_DESCRIPTIONS
+  const count = await useJSON("../data/flathub/count.json")
+  const { achievements: achievementCounts, holes: holeCounts } = count[count.length - 1]; 
+
+  document.querySelector("#achievements").innerHTML = ACHIEVEMENT_DESCRIPTIONS
     .sort((a,b) => (achievementCounts[b.id] ?? 0) - (achievementCounts[a.id] ?? 0))
     .map(achievement => {
       const count = achievementCounts[achievement.id] ?? 0
 
       return `\
-          <article title="🏅 ${achievement.id}, earned by 🕹️ ${count} apps">
-            <h3><span>🏅 Achievement: ${achievement.id} </span><span>🕹️ ${count}</span></h3>
-            <p>${achievement.description}</p>
-          </article>`
+        <article title="🏅 ${achievement.id}, earned by 🕹️ ${count} apps">
+          <h3><span>🏅 Achievement: ${achievement.id} </span><span>🕹️ ${count}</span></h3>
+          <p>${achievement.description}</p>
+        </article>
+      `;
     }).join("\n")
 
-    document.querySelector("#holes").innerHTML = HOLE_DESCRIPTIONS
+  document.querySelector("#holes").innerHTML = HOLE_DESCRIPTIONS
     .sort((a,b) => (holeCounts[b.id] ?? 0) - (holeCounts[a.id] ?? 0))
     .map(hole => {
       const count = holeCounts[hole.id] ?? 0;
 
       return `\
-          <article title="💥 ${hole.id}, punched by 🕹️ ${count} apps">
-            <h3><span>💥 Hole: ${hole.id}</span><span>🕹️ ${count}</span></h3>
-            <p>${hole.description}</p>
-          </article>
-  `;
+        <article title="💥 ${hole.id}, punched by 🕹️ ${count} apps">
+          <h3><span>💥 Hole: ${hole.id}</span><span>🕹️ ${count}</span></h3>
+          <p>${hole.description}</p>
+        </article>
+      `;
     }).join("\n")
-  }
-  
+})()
+
 </script>
 
 </html>
