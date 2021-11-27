@@ -1,12 +1,319 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html>
+
 <head>
-  <title>Flatstat HTML Redirect</title>
-  <meta http-equiv="refresh" content="0; url = /flatstat/" />
+  <meta charset="utf-8" />
+  <title>Flatstat | Apps</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <meta property="og:title" content="Flatstat | Apps">
+  <meta property="og:locale" content="en_US">
+  <link rel="canonical" href="https://arxcis.github.io/flatstat/">
+  <meta property="og:url" content="https://arxcis.github.io/flatstat/">
+  <meta property="og:site_name" content="Flatstat">
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:title" content="Flatstat | Apps">
+  <script type="application/ld+json">{"description":"Statistics for Flatpak packages","@type":"WebSite","headline":"Flatstat","url":"https://arxcis.github.io/flatstat/","name":"Flatstat","@context":"https://schema.org"}</script>
+  <meta name="description" content="Statistics for Flatpak packages">
+  <meta property="og:description" content="Statistics for Flatpak packages">
 </head>
+
 <body>
-  <p style="text-align:center;">
-    Trying to redirect from <a href="/flatstat/apps">/flatstat/apps</a> to <a href="/flatstat/">/flatstat</a>...
-  </p>
+  <header>
+    <a href="/flatstat/">
+      <h1 id="title" title="Flatstat | Apps">Flatstat</h1>
+    </a>
+    <nav>
+      <a href="/flatstat/graphs/" title="Graphs">Graphs</a>
+      <a href="/flatstat/apps/" title="Apps" class="active">Apps</a>
+      <a href="/flatstat/library/" title="Library">Library</a>
+      <a href="/flatstat/about/" title="About">About</a>
+    </nav>
+  </header>
+  <main>
+    <input id="search" value="" type="search" placeholder="Search any column">
+    <nav>
+      <a id="#stars" title="Apps sorted by GitHub stars" href="/flatstat/#stars">⭐ by stars</a>
+      <a id="#achievements" title="Apps sorted by achievements" href="/flatstat/#achievements">🏅 by achievements</a>
+      <a id="#holes" title="Apps sorted by holes" href="/flatstat/#holes">💥 by holes</a>
+      <a id="#talk-names" title="Apps sorted by well-known --talk-names" href="/flatstat/#talk-names">💬 by
+        talk-names</a>
+      <a id="#changelog" title="Latest changes to apps" href="/flatstat/#changelog">📜 changelog</a>
+      <a id="#finish-args" title="Frequently used 'finish-args'" href=" /flatstat/#finish-args">🏁 finish-args</a>
+    </nav>
+    <ul>
+    </ul>
+    <footer>Showing 0 results</footer>
+  </main>
 </body>
+<script type="module">
+
+import {
+  incrementAchievementCount,
+  incrementHoleCount,
+  incrementTalkNameCount,
+  incrementFinishArgs,
+  sumFinishArgs,
+  sumAchievements,
+  sumHoles,
+  sumTalkNames
+} from "./lib/stats.js";
+import { useJSON } from "./lib/useJSON.js";
+import { useActiveLink } from "./lib/useActiveLink.js";
+import { useSearch } from "./lib/useSearch.js";
+import { useMarkPerformance, useMeasurePerformance } from "./lib/usePerformance.js";
+
+
+(async function main() {
+  const lists = {
+    changelogList: [],
+    holesList: [],
+    talkNamesList: [],
+    achievementsList: [],
+    appsList: [],
+    finishArgsList: [],
+  }
+
+  useActiveLink("#stars")
+
+  // Fetch data
+  const count = await useJSON("./data/flathub/count.json")
+  const metafiles = await useJSON("./data/flathub/metafiles.json")
+  const changelog = await useJSON("./data/flathub/changelog.json")
+
+  // Build lists optimized for search and render
+
+  // changelog
+  lists.changelogList = changelog
+    .reduce((acc, { appID, ext, displayURL, date, additions, deletions, created }) => {
+      const count = `&#010;${date.slice(0, 10)}`;
+
+      if (created) {
+        const tags = [`🕹️ ${appID} created with 🏁 finish-args:&#010;`, ...created, count];
+        acc.push({
+          name: `🕹️ ${appID}`,
+          displayURL,
+          count,
+          icon: "",
+          details: created.join(", "),
+          tags,
+          searchString: tags.join("").toLocaleLowerCase()
+        });
+      }
+
+      if (additions) {
+        const tags = [`🕹️ ${appID} added 🏁 finish-args:&#010;`, ...additions, count];
+        acc.push({
+          name: `➕ ${additions.join(", ")}`,
+          displayURL,
+          count,
+          icon: "",
+          details: appID,
+          tags,
+          searchString: tags.join("").toLocaleLowerCase()
+        });
+      }
+
+      if (deletions) {
+        const tags = [`🕹️ ${appID} removed 🏁 finish-args:&#010;`, ...deletions, count];
+        acc.push({
+          name: `➖ ${deletions.join(", ")}`,
+          displayURL,
+          count,
+          icon: "",
+          details: appID,
+          tags,
+          seachString: tags.join("").toLocaleLowerCase()
+        })
+      }
+
+      return acc;
+    }, [])
+    .sort((a, b) => b.count.localeCompare(a.count))
+
+
+  // holes
+  lists.holesList = metafiles
+    .filter(it => it.history[0]?.finishArgs)
+    .map(it => {
+      const name = `🕹️ ${it.appID}`;
+      const holes = incrementHoleCount(it.history[0].finishArgs)
+      const count = sumHoles(holes);
+      const tags = [`💥 Holes in ${name}&#010;`, ...Object.keys(holes)];
+
+      return {
+        count,
+        displayURL: it.displayURL,
+        icon: "💥",
+        name,
+        tags,
+        searchString: tags.join(" ").toLocaleLowerCase(),
+      }
+    })
+    .sort((a, b) => b.count - a.count)
+
+  // talk-names
+  lists.talkNamesList = metafiles
+    .filter(it => it.history[0]?.finishArgs)
+    .map(it => {
+      const name = `🕹️ ${it.appID}`;
+      const talkNames = incrementTalkNameCount(it.history[0].finishArgs)
+      const count = sumTalkNames(talkNames);
+      const tags = [`💬 talk-names of ${name}&#010;`, ...Object.keys(talkNames)];
+
+      return {
+        count,
+        displayURL: it.displayURL,
+        icon: "💬",
+        name,
+        tags,
+        searchString: tags.join("").toLocaleLowerCase(),
+      }
+    })
+    .sort((a, b) => b.count - a.count)
+
+  // achievements
+  lists.achievementsList = metafiles
+    .filter(it => it.history[0]?.finishArgs)
+    .map(it => {
+      const name = `🕹️ ${it.appID}`;
+      const achievements = incrementAchievementCount(it.history[0].finishArgs);
+      const count = sumAchievements(achievements);
+      const tags = [`🏅 Achievements of ${name}&#010;`, ...Object.keys(achievements)];
+
+      return {
+        count,
+        displayURL: it.displayURL,
+        icon: "🏅",
+        name,
+        tags,
+        searchString: tags.join("").toLocaleLowerCase(),
+      }
+    })
+    .sort((a, b) => b.count - a.count)
+
+  // finishArgs
+  lists.finishArgsList = Object.entries(count[count.length - 1].finishArgs).map(([arg, count]) => {
+    const name = `🏁 ${arg}`;
+    const tags = [name]
+
+    return {
+      title: `🏁 ${arg}, used by 🕹️ ${count} apps`,
+      count,
+      displayURL: null,
+      icon: "",
+      name,
+      tags,
+      searchString: tags.join("").toLocaleLowerCase(),
+    }
+  })
+    .sort((a, b) => b.count - a.count)
+
+  // apps
+  lists.appsList = metafiles
+    .map(it => {
+      const finishArgs = incrementFinishArgs(it.history[0]?.finishArgs ?? [])
+      const tags = [`🕹️ ${it.appID}, with ⭐ ${it.stargazerCount} GitHub stars, has 🏁 finish-args:&#010;`, ...(finishArgs ? Object.keys(finishArgs) : [])];
+
+      return {
+        count: it.stargazerCount,
+        displayURL: it.displayURL,
+        icon: "⭐",
+        name: `🕹️ ${it.appID}`,
+        tags,
+        searchString: tags.join("").toLocaleLowerCase(),
+      }
+    })
+    .sort((a, b) => b.count - a.count)
+
+  // Setup rendering triggers
+  const input = useSearch("#search", (search) => renderList(lists, search, window.location.hash))
+  window.addEventListener("hashchange", () => renderList(lists, input.value, window.location.hash))
+
+  renderList(lists, input.value, window.location.hash);
+})()
+
+// renderList - Map, filter, sort, slice, join, then display the list on the page.
+async function renderList(lists, search, hash) {
+  const LIST_LIMIT = 300;
+
+  let list = [];
+  switch (hash) {
+    case "#changelog":
+      list = lists.changelogList;
+      break;
+    case "#holes":
+      list = lists.holesList;
+      break;
+    case "#talk-names":
+      list = lists.talkNamesList;
+      break;
+    case "#achievements":
+      list = lists.achievementsList;
+      break;
+    case "#finish-args":
+      list = lists.finishArgsList;
+      break;
+    default: //"#apps":
+      list = lists.appsList;
+      break;
+  }
+
+  // filter by current search
+  const filteredList = list
+    .map(it => ({ ...it, hits: searchHits(search, it.tags) }))
+    .filter(it => it.hits)
+    .slice(0, LIST_LIMIT)
+
+  const renderedList = filteredList.map(({ count, displayURL, icon, name, title, hits, tags, details }) => {
+    title = title ?? tags?.join("&#010;")
+    details = details ?? hits?.filter(hit => !hit.includes(name)).join(", ")
+
+    return `\
+      <${displayURL ? "a" : "div"}
+        class="row"
+        href="${displayURL}"
+        title="${title}"
+        target="_blank"
+      >
+        <span class="left">${name}</span>
+        <span class="middle">${details}</span>
+        <span class="padding"></span>
+        <span class="right">${count ? (count + ` ${icon}`) : ""}</span>
+      </${ displayURL ? "a" : "div"} >
+  `;
+  })
+
+  document.querySelector("main > ul").innerHTML = renderedList.join("");
+  document.querySelector("footer").innerHTML = `Showing ${renderedList.length === LIST_LIMIT ? "max" : ""} ${renderedList.length} results`
+
+  return;
+}
+
+// Generate a list of search hits
+function searchHits(search, tags) {
+  if (search.trim() === "") {
+    return tags;
+  }
+
+  const terms = search
+    .toLowerCase()
+    .split(" ")
+    .map(it => it.trim())
+    .filter(it => it !== "")
+
+
+  if (terms.length === 0) {
+    return tags;
+  }
+
+  const searchString = tags.join(" ").toLowerCase();
+  const hit = terms.every(term => searchString.includes(term))
+  if (!hit) {
+    return null;
+  }
+
+  return tags.filter(tag => terms.some(term => tag.toLowerCase().includes(term)))
+}
+
+</script>
 </html>
