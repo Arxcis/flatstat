@@ -75,10 +75,6 @@ import { useMarkPerformance, useMeasurePerformance } from "./lib/usePerformance.
 
   useActiveLink("#stars")
 
-  // Setup rendering triggers
-  const input = useSearch("#search", (search) => renderList(lists, search, window.location.hash))
-  window.addEventListener("hashchange", () => renderList(lists, input.value, window.location.hash))
-
   // Fetch data
   const count = await useJSON("./data/flathub/count.json")
   const metafiles = await useJSON("./data/flathub/metafiles.json")
@@ -229,6 +225,10 @@ import { useMarkPerformance, useMeasurePerformance } from "./lib/usePerformance.
     })
     .sort((a, b) => b.count - a.count)
 
+  // Setup rendering triggers
+  const input = useSearch("#search", (search) => renderList(lists, search, window.location.hash))
+  window.addEventListener("hashchange", () => renderList(lists, input.value, window.location.hash))
+
   renderList(lists, input.value, window.location.hash);
 })()
 
@@ -316,5 +316,4 @@ function searchHits(search, tags) {
 }
 
 </script>
-
 </html>
