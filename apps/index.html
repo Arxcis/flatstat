@@ -56,11 +56,11 @@ import {
   sumAchievements,
   sumHoles,
   sumTalkNames
-} from "/lib/stats.js";
-import { useJSON } from "/lib/useJSON.js";
-import { useActiveLink } from "/lib/useActiveLink.js";
-import { useSearch } from "/lib/useSearch.js";
-import { useMarkPerformance, useMeasurePerformance } from "/lib/usePerformance.js";
+} from "../lib/stats.js";
+import { useJSON } from "../lib/useJSON.js";
+import { useActiveLink } from "../lib/useActiveLink.js";
+import { useSearch } from "../lib/useSearch.js";
+import { useMarkPerformance, useMeasurePerformance } from "../lib/usePerformance.js";
 
 
 (async function main() {
@@ -76,9 +76,9 @@ import { useMarkPerformance, useMeasurePerformance } from "/lib/usePerformance.j
   useActiveLink("#stars")
 
   // Fetch data
-  const count = await useJSON("/data/flathub/count.json")
-  const metafiles = await useJSON("/data/flathub/metafiles.json")
-  const changelog = await useJSON("/data/flathub/changelog.json")
+  const count = await useJSON("../data/flathub/count.json")
+  const metafiles = await useJSON("../data/flathub/metafiles.json")
+  const changelog = await useJSON("../data/flathub/changelog.json")
 
   // Build lists optimized for search and render
 
