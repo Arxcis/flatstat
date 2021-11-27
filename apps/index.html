@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Flatstat | Apps</title>
-  <link rel="stylesheet" type="text/css" href="./index.css">
+  <link rel="stylesheet" type="text/css" href="/index.css">
   <meta property="og:title" content="Flatstat | Apps">
   <meta property="og:locale" content="en_US">
   <link rel="canonical" href="https://arxcis.github.io/flatstat/">
@@ -32,13 +32,13 @@
   <main>
     <input id="search" value="" type="search" placeholder="Search any column">
     <nav>
-      <a id="#stars" title="Apps sorted by GitHub stars" href="/flatstat/#stars">⭐ by stars</a>
-      <a id="#achievements" title="Apps sorted by achievements" href="/flatstat/#achievements">🏅 by achievements</a>
-      <a id="#holes" title="Apps sorted by holes" href="/flatstat/#holes">💥 by holes</a>
-      <a id="#talk-names" title="Apps sorted by well-known --talk-names" href="/flatstat/#talk-names">💬 by
+      <a id="#stars" title="Apps sorted by GitHub stars" href="/flatstat/apps/#stars">⭐ by stars</a>
+      <a id="#achievements" title="Apps sorted by achievements" href="/flatstat/apps/#achievements">🏅 by achievements</a>
+      <a id="#holes" title="Apps sorted by holes" href="/flatstat/apps/#holes">💥 by holes</a>
+      <a id="#talk-names" title="Apps sorted by well-known --talk-names" href="/flatstat/apps/#talk-names">💬 by
         talk-names</a>
-      <a id="#changelog" title="Latest changes to apps" href="/flatstat/#changelog">📜 changelog</a>
-      <a id="#finish-args" title="Frequently used 'finish-args'" href=" /flatstat/#finish-args">🏁 finish-args</a>
+      <a id="#changelog" title="Latest changes to apps" href="/flatstat/apps/#changelog">📜 changelog</a>
+      <a id="#finish-args" title="Frequently used 'finish-args'" href=" /flatstat/apps/#finish-args">🏁 finish-args</a>
     </nav>
     <ul>
     </ul>
@@ -56,11 +56,11 @@ import {
   sumAchievements,
   sumHoles,
   sumTalkNames
-} from "./lib/stats.js";
-import { useJSON } from "./lib/useJSON.js";
-import { useActiveLink } from "./lib/useActiveLink.js";
-import { useSearch } from "./lib/useSearch.js";
-import { useMarkPerformance, useMeasurePerformance } from "./lib/usePerformance.js";
+} from "/lib/stats.js";
+import { useJSON } from "/lib/useJSON.js";
+import { useActiveLink } from "/lib/useActiveLink.js";
+import { useSearch } from "/lib/useSearch.js";
+import { useMarkPerformance, useMeasurePerformance } from "/lib/usePerformance.js";
 
 
 (async function main() {
@@ -76,9 +76,9 @@ import { useMarkPerformance, useMeasurePerformance } from "./lib/usePerformance.
   useActiveLink("#stars")
 
   // Fetch data
-  const count = await useJSON("./data/flathub/count.json")
-  const metafiles = await useJSON("./data/flathub/metafiles.json")
-  const changelog = await useJSON("./data/flathub/changelog.json")
+  const count = await useJSON("/data/flathub/count.json")
+  const metafiles = await useJSON("/data/flathub/metafiles.json")
+  const changelog = await useJSON("/data/flathub/changelog.json")
 
   // Build lists optimized for search and render
 

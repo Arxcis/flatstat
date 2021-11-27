@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Flatstat | Graphs</title>
-  <link rel="stylesheet" type="text/css" href="../index.css">
+  <link rel="stylesheet" type="text/css" href="/index.css">
   <meta property="og:title" content="Flatstat | Graphs">
   <meta property="og:locale" content="en_US">
   <link rel="canonical" href="https://arxcis.github.io/flatstat/">
@@ -31,13 +31,13 @@
   </header>
   <main>
     <nav>
-      <a id="#window" title="Apps with --wayland or --x11" href="/flatstat/graphs/#window">window</a>
-      <a id="#audio" title="Apps with --pulseaudio" href="/flatstat/graphs/#audio">audio</a>
-      <a id="#filesystem" title="Apps with --filesystem" href="/flatstat/graphs/#filesystem">filesystem</a>
-      <a id="#device" title="Apps with --device" href="/flatstat/graphs/#device">device</a>
-      <a id="#talk-names" title="Most used --talk-names" href="/flatstat/graphs/#talk-names">talk-names</a>
-      <a id="#metafile" title=".json or .yaml or .yml" href="/flatstat/graphs/#metafile">metafile</a>
-      <a id="#total" title="Totals" href="/flatstat/graphs/#total">total</a>
+      <a id="#window" title="Apps with --wayland or --x11" href="/flatstat/#window">window</a>
+      <a id="#audio" title="Apps with --pulseaudio" href="/flatstat/#audio">audio</a>
+      <a id="#filesystem" title="Apps with --filesystem" href="/flatstat/#filesystem">filesystem</a>
+      <a id="#device" title="Apps with --device" href="/flatstat/#device">device</a>
+      <a id="#talk-names" title="Most used --talk-names" href="/flatstat/#talk-names">talk-names</a>
+      <a id="#metafile" title=".json or .yaml or .yml" href="/flatstat/#metafile">metafile</a>
+      <a id="#total" title="Totals" href="/flatstat/#total">total</a>
     </nav>
 
     <section>
@@ -75,11 +75,11 @@
 <script type="module">
 
 import "https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js";
-import { ACHIEVEMENTS } from "../lib/achievements.js";
-import { HOLES } from "../lib/holes.js";
-import { sumAchievements, sumHoles, sumTalkNames } from "../lib/stats.js";
-import { useJSON } from "../lib/useJSON.js";
-import { useActiveLink } from "../lib/useActiveLink.js";
+import { ACHIEVEMENTS } from "/lib/achievements.js";
+import { HOLES } from "/lib/holes.js";
+import { sumAchievements, sumHoles, sumTalkNames } from "/lib/stats.js";
+import { useJSON } from "/lib/useJSON.js";
+import { useActiveLink } from "/lib/useActiveLink.js";
 
 (async function main() {
   useActiveLink("#window")
@@ -133,7 +133,7 @@ import { useActiveLink } from "../lib/useActiveLink.js";
   let count = [];
 
   if (fetching) {
-    count = await useJSON("../data/flathub/count.json")
+    count = await useJSON("/data/flathub/count.json")
     fetching = false;
   }
 
