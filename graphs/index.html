@@ -2,11 +2,13 @@
 <html>
 <head>
   <title>Flatstat HTML Redirect</title>
-  <meta http-equiv="refresh" content="0; url = /flatstat/" />
 </head>
 <body>
   <p style="text-align:center;">
     Trying to redirect from <a href="/flatstat/graphs/">/flatstat/graphs</a> to <a href="/flatstat/">/flatstat</a>...
   </p>
 </body>
+<script>
+window.location.replace(`/flatstat/${window.location.search}${window.location.hash}`);
+</script>
 </html>
