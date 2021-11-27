@@ -17,7 +17,8 @@
       "--persist": 9
     },
     "holes": {
-      "--x11": 111,
+      "--x11-only": 111,
+      "--x11-and-wayland": 64,
       "--only-pulseaudio": 61,
       "--filesystem-home": 59,
       "--device-dri": 56,
@@ -121,7 +122,8 @@
       "--persist": 21
     },
     "holes": {
-      "--x11": 184,
+      "--x11-only": 184,
+      "--x11-and-wayland": 109,
       "--only-pulseaudio": 95,
       "--device-dri": 89,
       "--filesystem-home": 86,
@@ -241,7 +243,8 @@
       "--persist": 25
     },
     "holes": {
-      "--x11": 259,
+      "--x11-only": 259,
+      "--x11-and-wayland": 160,
       "--only-pulseaudio": 137,
       "--device-dri": 134,
       "--filesystem-home": 122,
@@ -381,7 +384,8 @@
       "--wayland-with-fallback": 6
     },
     "holes": {
-      "--x11": 296,
+      "--x11-only": 296,
+      "--x11-and-wayland": 193,
       "--device-dri": 155,
       "--only-pulseaudio": 155,
       "--filesystem-home": 138,
@@ -545,7 +549,8 @@
       "--wayland-with-fallback": 5
     },
     "holes": {
-      "--x11": 343,
+      "--x11-only": 343,
+      "--x11-and-wayland": 224,
       "--device-dri": 183,
       "--only-pulseaudio": 173,
       "--talks-session-name": 161,
@@ -717,7 +722,8 @@
       "--wayland-with-fallback": 6
     },
     "holes": {
-      "--x11": 376,
+      "--x11-only": 376,
+      "--x11-and-wayland": 248,
       "--device-dri": 195,
       "--only-pulseaudio": 186,
       "--talks-session-name": 184,
@@ -893,7 +899,8 @@
       "--wayland-with-fallback": 9
     },
     "holes": {
-      "--x11": 399,
+      "--x11-only": 399,
+      "--x11-and-wayland": 264,
       "--device-dri": 209,
       "--talks-session-name": 198,
       "--only-pulseaudio": 194,
@@ -1078,7 +1085,8 @@
       "--wayland-with-fallback": 10
     },
     "holes": {
-      "--x11": 427,
+      "--x11-only": 427,
+      "--x11-and-wayland": 279,
       "--device-dri": 224,
       "--talks-session-name": 212,
       "--only-pulseaudio": 209,
@@ -1275,7 +1283,8 @@
       "--wayland-with-fallback": 14
     },
     "holes": {
-      "--x11": 451,
+      "--x11-only": 451,
+      "--x11-and-wayland": 297,
       "--only-pulseaudio": 228,
       "--talks-session-name": 224,
       "--device-dri": 222,
@@ -1474,7 +1483,8 @@
       "--wayland-with-fallback": 17
     },
     "holes": {
-      "--x11": 486,
+      "--x11-only": 486,
+      "--x11-and-wayland": 319,
       "--device-dri": 253,
       "--only-pulseaudio": 243,
       "--talks-session-name": 238,
@@ -1677,7 +1687,8 @@
       "--wayland-with-fallback": 19
     },
     "holes": {
-      "--x11": 515,
+      "--x11-only": 515,
+      "--x11-and-wayland": 335,
       "--device-dri": 270,
       "--only-pulseaudio": 262,
       "--talks-session-name": 255,
@@ -1889,7 +1900,8 @@
       "--wayland-with-fallback": 23
     },
     "holes": {
-      "--x11": 532,
+      "--x11-only": 532,
+      "--x11-and-wayland": 358,
       "--device-dri": 278,
       "--only-pulseaudio": 273,
       "--talks-session-name": 270,
@@ -2104,7 +2116,8 @@
       "--wayland-with-fallback": 24
     },
     "holes": {
-      "--x11": 545,
+      "--x11-only": 545,
+      "--x11-and-wayland": 364,
       "--device-dri": 287,
       "--talks-session-name": 277,
       "--only-pulseaudio": 276,
@@ -2321,7 +2334,8 @@
       "--wayland-with-fallback": 22
     },
     "holes": {
-      "--x11": 560,
+      "--x11-only": 560,
+      "--x11-and-wayland": 376,
       "--device-dri": 296,
       "--talks-session-name": 287,
       "--only-pulseaudio": 284,
@@ -2546,7 +2560,8 @@
       "--wayland-with-fallback": 27
     },
     "holes": {
-      "--x11": 579,
+      "--x11-only": 579,
+      "--x11-and-wayland": 388,
       "--device-dri": 305,
       "--only-pulseaudio": 294,
       "--talks-session-name": 286,
@@ -2772,7 +2787,8 @@
       "--wayland-with-fallback": 36
     },
     "holes": {
-      "--x11": 608,
+      "--x11-only": 608,
+      "--x11-and-wayland": 413,
       "--device-dri": 323,
       "--only-pulseaudio": 308,
       "--filesystem-home": 275,
@@ -3008,7 +3024,8 @@
       "--wayland-with-fallback": 44
     },
     "holes": {
-      "--x11": 622,
+      "--x11-only": 622,
+      "--x11-and-wayland": 423,
       "--device-dri": 331,
       "--only-pulseaudio": 318,
       "--filesystem-home": 283,
@@ -3241,7 +3258,8 @@
       "--wayland-with-fallback": 47
     },
     "holes": {
-      "--x11": 650,
+      "--x11-only": 650,
+      "--x11-and-wayland": 438,
       "--device-dri": 353,
       "--only-pulseaudio": 336,
       "--filesystem-home": 296,
@@ -3475,7 +3493,8 @@
       "--wayland-with-fallback": 52
     },
     "holes": {
-      "--x11": 669,
+      "--x11-only": 669,
+      "--x11-and-wayland": 444,
       "--device-dri": 371,
       "--only-pulseaudio": 351,
       "--filesystem-home": 304,
@@ -3715,7 +3734,8 @@
       "--wayland-with-fallback": 69
     },
     "holes": {
-      "--x11": 682,
+      "--x11-only": 682,
+      "--x11-and-wayland": 445,
       "--device-dri": 389,
       "--only-pulseaudio": 369,
       "--filesystem-home": 311,
@@ -3969,7 +3989,8 @@
       "--wayland-with-fallback": 78
     },
     "holes": {
-      "--x11": 689,
+      "--x11-only": 689,
+      "--x11-and-wayland": 448,
       "--device-dri": 401,
       "--only-pulseaudio": 380,
       "--filesystem-home": 319,
@@ -4231,7 +4252,8 @@
       "--persist": 82
     },
     "holes": {
-      "--x11": 699,
+      "--x11-only": 699,
+      "--x11-and-wayland": 451,
       "--device-dri": 411,
       "--only-pulseaudio": 392,
       "--filesystem-home": 329,
@@ -4497,7 +4519,8 @@
       "--persist": 83
     },
     "holes": {
-      "--x11": 710,
+      "--x11-only": 710,
+      "--x11-and-wayland": 454,
       "--device-dri": 426,
       "--only-pulseaudio": 407,
       "--filesystem-home": 341,
@@ -4766,7 +4789,8 @@
       "--persist": 88
     },
     "holes": {
-      "--x11": 727,
+      "--x11-only": 727,
+      "--x11-and-wayland": 462,
       "--device-dri": 444,
       "--only-pulseaudio": 423,
       "--filesystem-home": 353,
@@ -5048,8 +5072,9 @@
       "--persist": 90
     },
     "holes": {
-      "--x11": 726,
+      "--x11-only": 726,
       "--device-dri": 463,
+      "--x11-and-wayland": 450,
       "--only-pulseaudio": 436,
       "--filesystem-home": 373,
       "--talks-session-name": 295,
@@ -5339,8 +5364,9 @@
       "--persist": 91
     },
     "holes": {
-      "--x11": 740,
+      "--x11-only": 740,
       "--device-dri": 477,
+      "--x11-and-wayland": 451,
       "--only-pulseaudio": 449,
       "--filesystem-home": 378,
       "--talks-session-name": 303,
@@ -5633,9 +5659,10 @@
       "--persist": 91
     },
     "holes": {
-      "--x11": 754,
+      "--x11-only": 754,
       "--device-dri": 489,
       "--only-pulseaudio": 460,
+      "--x11-and-wayland": 453,
       "--filesystem-home": 391,
       "--talks-session-name": 314,
       "--filesystem-host": 195,
@@ -5931,9 +5958,10 @@
       "--persist": 95
     },
     "holes": {
-      "--x11": 769,
+      "--x11-only": 769,
       "--device-dri": 510,
       "--only-pulseaudio": 476,
+      "--x11-and-wayland": 452,
       "--filesystem-home": 395,
       "--talks-session-name": 326,
       "--filesystem-host": 199,
@@ -6244,9 +6272,10 @@
       "--persist": 95
     },
     "holes": {
-      "--x11": 785,
+      "--x11-only": 785,
       "--device-dri": 530,
       "--only-pulseaudio": 491,
+      "--x11-and-wayland": 455,
       "--filesystem-home": 404,
       "--talks-session-name": 340,
       "--filesystem-host": 206,
@@ -6561,9 +6590,10 @@
       "--persist": 95
     },
     "holes": {
-      "--x11": 793,
+      "--x11-only": 793,
       "--device-dri": 540,
       "--only-pulseaudio": 499,
+      "--x11-and-wayland": 463,
       "--filesystem-home": 415,
       "--talks-session-name": 345,
       "--filesystem-host": 209,
@@ -6886,9 +6916,10 @@
       "--persist": 99
     },
     "holes": {
-      "--x11": 807,
+      "--x11-only": 807,
       "--device-dri": 553,
       "--only-pulseaudio": 503,
+      "--x11-and-wayland": 463,
       "--filesystem-home": 434,
       "--talks-session-name": 354,
       "--device-all": 215,
@@ -7221,9 +7252,10 @@
       "--persist": 106
     },
     "holes": {
-      "--x11": 831,
+      "--x11-only": 831,
       "--device-dri": 580,
       "--only-pulseaudio": 521,
+      "--x11-and-wayland": 468,
       "--filesystem-home": 455,
       "--talks-session-name": 369,
       "--filesystem-host": 223,
@@ -7562,9 +7594,10 @@
       "--persist": 109
     },
     "holes": {
-      "--x11": 844,
+      "--x11-only": 844,
       "--device-dri": 595,
       "--only-pulseaudio": 534,
+      "--x11-and-wayland": 471,
       "--filesystem-home": 463,
       "--talks-session-name": 376,
       "--device-all": 231,
@@ -7906,10 +7939,11 @@
       "--persist": 111
     },
     "holes": {
-      "--x11": 848,
+      "--x11-only": 848,
       "--device-dri": 614,
       "--only-pulseaudio": 544,
       "--filesystem-home": 470,
+      "--x11-and-wayland": 467,
       "--talks-session-name": 389,
       "--device-all": 231,
       "--filesystem-host": 230,
@@ -8259,10 +8293,11 @@
       "--persist": 117
     },
     "holes": {
-      "--x11": 857,
+      "--x11-only": 857,
       "--device-dri": 650,
       "--only-pulseaudio": 554,
       "--filesystem-home": 490,
+      "--x11-and-wayland": 466,
       "--talks-session-name": 411,
       "--device-all": 244,
       "--filesystem-host": 232,
@@ -8614,10 +8649,11 @@
       "--persist": 118
     },
     "holes": {
-      "--x11": 864,
+      "--x11-only": 864,
       "--device-dri": 682,
       "--only-pulseaudio": 560,
       "--filesystem-home": 506,
+      "--x11-and-wayland": 462,
       "--talks-session-name": 414,
       "--device-all": 248,
       "--filesystem-host": 235,
@@ -8964,10 +9000,11 @@
       "--persist": 121
     },
     "holes": {
-      "--x11": 868,
+      "--x11-only": 868,
       "--device-dri": 700,
       "--only-pulseaudio": 573,
       "--filesystem-home": 520,
+      "--x11-and-wayland": 457,
       "--talks-session-name": 420,
       "--device-all": 256,
       "--filesystem-host": 242,
@@ -9324,10 +9361,11 @@
       "--persist": 122
     },
     "holes": {
-      "--x11": 872,
+      "--x11-only": 872,
       "--device-dri": 710,
       "--only-pulseaudio": 575,
       "--filesystem-home": 525,
+      "--x11-and-wayland": 458,
       "--talks-session-name": 422,
       "--device-all": 263,
       "--filesystem-host": 246,
@@ -9692,10 +9730,11 @@
       "--persist": 128
     },
     "holes": {
-      "--x11": 884,
+      "--x11-only": 884,
       "--device-dri": 735,
       "--only-pulseaudio": 593,
       "--filesystem-home": 539,
+      "--x11-and-wayland": 460,
       "--talks-session-name": 435,
       "--device-all": 272,
       "--filesystem-host": 251,
@@ -10075,10 +10114,11 @@
       "--persist": 128
     },
     "holes": {
-      "--x11": 887,
+      "--x11-only": 887,
       "--device-dri": 749,
       "--only-pulseaudio": 605,
       "--filesystem-home": 550,
+      "--x11-and-wayland": 457,
       "--talks-session-name": 447,
       "--device-all": 272,
       "--filesystem-host": 255,
