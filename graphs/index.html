@@ -319,16 +319,9 @@ import { useActiveLink } from "../lib/useActiveLink.js";
         },
         {
           label: HOLES.PipewireAndPulseaudio,
-          backgroundColor: TOTAL_COLOR,
-          borderColor: TOTAL_COLOR,
-          data: count.map((it) => it.holes[HOLES.PipewireAndPulseaudio]),
-          fill: false,
-        },
-        {
-          label: achievementLabel(ACHIEVEMENTS.PipewireOnly),
           backgroundColor: SUPER_BAD_COLOR,
           borderColor: SUPER_BAD_COLOR,
-          data: count.map((it) => it.achievements[ACHIEVEMENTS.PipewireOnly]),
+          data: count.map((it) => it.holes[HOLES.PipewireAndPulseaudio]),
           fill: false,
         },
       ],
