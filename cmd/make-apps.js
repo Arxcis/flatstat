@@ -12,11 +12,13 @@ const NON_APP_LIST = [
   "org.freedesktop.Platform.",
   ".Extension.",
   ".Plugin.",
+  ".Addon.",
   ".BaseApp",
   "org.kde.KStyle.",
   "org.kde.PlatformTheme.",
-  "io.dbeaver.DBeaverCommunity.Client.psql.json",
-  "io.dbeaver.DBeaverCommunity.Client.mariadb.json",
+  "io.dbeaver.DBeaverCommunity.Client.",        // example: pgsql | mariadb
+  "com.valvesoftware.Steam.CompatibilityTool.", // example: proton | Boxtron
+  "com.valvesoftware.Steam.Utility.",           // example: Protontricks | Mangohud
 ];
 
 do {
