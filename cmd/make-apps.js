@@ -7,18 +7,23 @@ const APPS_JSON = "./data/flathub/apps.json";
 let apps = [];
 let next = "https://api.github.com/orgs/flathub/repos?per_page=100";
 const NON_APP_LIST = [
-  "org.gtk.Gtk3theme.",
   "org.freedesktop.LinuxAudio.",
   "org.freedesktop.Platform.",
+  ".Extensions.",
+  ".extensions.",
   ".Extension.",
   ".Plugin.",
+  ".plugin.",
   ".Addon.",
+  ".Utility.",           // example: Protontricks | Mangohud
+  ".CompatibilityTool.", // example: proton | Boxtron
   ".BaseApp",
+  "org.gtk.Gtk3theme.",
   "org.kde.KStyle.",
   "org.kde.PlatformTheme.",
   "io.dbeaver.DBeaverCommunity.Client.",        // example: pgsql | mariadb
-  "com.valvesoftware.Steam.CompatibilityTool.", // example: proton | Boxtron
-  "com.valvesoftware.Steam.Utility.",           // example: Protontricks | Mangohud
+  "org.gnome.Crosswords.PuzzleSets.",
+  "org.kicad.KiCad.ODBCDriver.",
 ];
 
 do {
