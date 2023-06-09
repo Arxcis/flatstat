@@ -6,7 +6,7 @@ const APPS_JSON = "./data/flathub/apps.json";
 
 let apps = [];
 let next = "https://api.github.com/orgs/flathub/repos?per_page=100";
-const NON_APP_LIST = [
+const NON_APP_PATTERNS = [
   "org.freedesktop.LinuxAudio.",
   "org.freedesktop.Platform.",
   ".Extensions.",
@@ -24,6 +24,7 @@ const NON_APP_LIST = [
   "io.dbeaver.DBeaverCommunity.Client.",        // example: pgsql | mariadb
   "org.gnome.Crosswords.PuzzleSets.",
   "org.kicad.KiCad.ODBCDriver.",
+  "org.kde.WaylandDecoration.QGnomePlatform-decoration"
 ];
 
 do {
@@ -42,7 +43,7 @@ do {
     ...apps,
     ...activeRepos
       .filter((it) => it.name.includes("."))
-      .filter((it) => NON_APP_LIST.every((nonApp) => !it.name.includes(nonApp)))
+      .filter((it) => NON_APP_PATTERNS.every((nonApp) => !it.name.includes(nonApp)))
       .map((it) => it.name),
   ];
 
