@@ -8,35 +8,187 @@ import { GqlConfig, MONTHS } from "./config.js";
  * @param {string} appID example: "com.valvesoftware.Steam"
  */
 export async function queryMetafileHistory(appID) {
-  // 1. Query the 3 known file extensions in parallell
-  const [json, yaml, yml] = await Promise.all([
-    queryCommitHistory(appID, "json"),
-    queryCommitHistory(appID, "yaml"),
-    queryCommitHistory(appID, "yml"),
-  ]);
-  if (!yaml && !yml && !json) {
+
+  // 0. Construct request to Github gql API
+  const query = `{
+    repository(name: "${appID}", owner: "flathub") {
+      name
+      stargazerCount
+      defaultBranchRef {
+        name
+        target {
+          ... on Commit {
+            json: history(since: "${MONTHS[0]}-01T00:00:00Z" path: "${appID}.json") {
+              nodes {
+                committedDate
+                file(path: "${appID}.json") {
+                  object {
+                    ... on Blob {
+                      text
+                    }
+                  }
+                }
+              }
+            }
+            yaml: history(since: "${MONTHS[0]}-01T00:00:00Z" path: "${appID}.yaml") {
+              nodes {
+                committedDate
+                file(path: "${appID}.yaml") {
+                  object {
+                    ... on Blob {
+                      text
+                    }
+                  }
+                }
+              }
+            }
+            yml: history(since: "${MONTHS[0]}-01T00:00:00Z" path: "${appID}.yml") {
+              nodes {
+                committedDate
+                file(path: "${appID}.yml") {
+                  object {
+                    ... on Blob {
+                      text
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }`;
+
+  const body = JSON.stringify({ query });
+  
+  // 1. Send request
+  const res = await fetch("https://api.github.com/graphql", {
+    ...GqlConfig,
+    method: "POST",
+    body,
+  });
+
+  const jsonRes = await res.json();
+
+  if (!jsonRes.data?.repository?.defaultBranchRef) {
+    console.log(JSON.stringify(jsonRes, null, 2));
     return null;
   }
 
-  // 2. Pick a branch and stargazer count. Should be the same across queries.
-  const branch = json?.branch ?? yaml?.branch ?? yml?.branch;
-  const stargazerCount = json?.stargazerCount ?? yaml?.stargazerCount ?? yml?.stargazerCount;
+  // 2. Unpack result from Github
+  let {
+    data: {
+      repository: {
+        stargazerCount,
+        defaultBranchRef: {
+          name: branch,
+          target: {
+            json: rawJson,
+            yaml: rawYaml,
+            yml: rawYml,
+          },
+        },
+      },
+    },
+  } = jsonRes;
 
-  // 3. Parse commit history
-  const jsonHistory = json ? parseCommits(json.commits) : [];
-  const yamlHistory = yaml ? parseCommits(yaml.commits) : [];
-  const ymlHistory = yml ? parseCommits(yml.commits) : [];
 
-  // 4. Merge
-  const history = [
-    ...jsonHistory,
-    ...yamlHistory,
-    ...ymlHistory,
-  ]
-  // Sort oldest -> newest date
+  // 3. Parse yaml
+  const parsedYaml = rawYaml.nodes.map(({committedDate, file}) => {
+    const text = file?.object?.text ?? null
+    const ext = "yaml"
+
+    try {
+      const metafile = yaml.safeLoad(text)
+      return _parseFinishArgs(metafile, ext, committedDate)
+    } catch (err){
+      // invalid yaml. Moving on...
+      return {
+        ext,
+        date: committedDate,
+        status: `ill-formed-yaml: ${err.message}`,
+        finishArgs: null,
+      };
+    }
+  })
+
+  // 4. Parse yml
+  const parsedYml = rawYml.nodes.map(({committedDate, file}) => {
+    const text = file?.object?.text ?? null
+    const ext = "yml"
+    try {
+      const metafile = yaml.safeLoad(text)
+      return _parseFinishArgs(metafile, ext, committedDate)
+    } catch (err){
+      // invalid yml. Moving on...
+      return {
+        ext,
+        date: committedDate,
+        status: `ill-formed-yml: ${err.message}`,
+        finishArgs: null,
+      };
+    }
+  })
+
+  // 5. Parse json
+  const parsedJson = rawJson.nodes.map(({committedDate, file}) => {
+    const text = file?.object?.text ?? null
+    const ext = "json"
+    try {
+      // Try to make JSON better formed, before parsing it, to get fewer "ill-formed" results.
+      const jsonWithoutComments = stripJsonComments(text);
+      const jsonWithoutWhitespace = jsonWithoutComments.replace(/\s/g, "")
+
+      const metafile = JSON.parse(jsonWithoutWhitespace)
+      return _parseFinishArgs(metafile, ext, committedDate);
+    } catch (err) {
+      // invalid json. Moving on...
+      return {
+        ext,
+        date: committedDate,
+        status: `ill-formed-json: ${err.message}`,
+        finishArgs: null,
+      };
+    }
+  })
+
+  function _parseFinishArgs(metafile, ext, date) {
+    if (!metafile) {
+      // file must have been deleted in this commit. Moving on...
+      return {
+        ext,
+        date,
+        status: "empty",
+        finishArgs: null,
+      };
+    }
+
+    const finishArgs = metafile["finish-args"]
+    if (!finishArgs) {
+      return {
+        ext,
+        date,
+        status: "finish-args-not-found",
+        finishArgs: null,
+      }
+    }
+
+    return {
+      ext,
+      date,
+      status: "ok",
+      finishArgs: [...finishArgs].sort(),
+    };   
+  }
+
+  // 6. Combine history
+  const history = [...parsedYaml, ...parsedYml, ...parsedJson];
+
+  // 7. Sort oldest -> newest date
   const historyFromOldest = [...history].sort((a, b) => a.date.localeCompare(b.date));
 
-  // 5. De-duplication strategy: Only keep history-entries which have a difference from previous entry
+  // 8. De-duplication strategy: Only keep history-entries which have a difference from previous entry
   const deDuplicatedHistory = historyFromOldest
     .map((it, index) => {
       // If first entry, moving on...
@@ -68,9 +220,7 @@ export async function queryMetafileHistory(appID) {
       return it;
     }).filter(it => it.status !== "duplicate")
 
-
-
-  // 6. Trim the history to contain one entry per month, which should be the latest entry per month
+  // 9. Trim the history to contain one entry per month, which should be the latest entry per month
   const historyFromNewest = [...deDuplicatedHistory].sort((a, b) => a.date.localeCompare(b.date.localeCompare));
 
   const trimmedHistory = MONTHS
@@ -78,167 +228,15 @@ export async function queryMetafileHistory(appID) {
     .filter(it => it)
     .reverse()
 
-  // 7. Get the file-extension of the latest history entry
+  // 10. Get the file-extension of the latest history entry
   const ext = trimmedHistory[0]?.ext ?? null;
   const status = trimmedHistory[0]?.status ?? null;
 
-  // 8. Concat the displayURL
+  // 11. Concat the displayURL
   const displayURL = ext ? `https://github.com/flathub/${appID}/blob/${branch}/${appID}.${ext}` : `https://github.com/flathub/${appID}`;
 
-  // 9. Bundle what we learned into a metafile object
+  // 12. Bundle what we learned into a metafile object
   const metafile = { appID, displayURL, ext, status, branch, stargazerCount, history: trimmedHistory };
 
   return metafile;
-}
-
-/**
- * @param {string} appID example: "com.valvesoftware.Steam"
- * @param {string} ext json|yaml|yml
- */
-async function queryCommitHistory(appID, ext) {
-  const query = `\
-  query {\
-      repository(name:"${appID}", owner:"flathub") {\
-        name\
-        stargazerCount\
-        defaultBranchRef {\
-          name
-          target {\
-            ... on Commit {\
-              history(since: "${MONTHS[0]}-01T00:00:00Z", path:"${appID}.${ext}") {\
-                nodes {\
-                  committedDate\
-                  file(path:"${appID}.${ext}") {\
-                    object {\
-                      ... on Blob {\
-                        text\
-                      }\
-                    }\
-                  }\
-                }\
-              }\
-            }\
-          }\
-        }\
-      }\
-    }\
-  `;
-
-  const body = JSON.stringify({ query });
-  const res = await fetch("https://api.github.com/graphql", {
-    ...GqlConfig,
-    method: "POST",
-    body,
-  });
-
-  const json = await res.json();
-
-  if (!json.data?.repository?.defaultBranchRef) {
-    console.log(JSON.stringify(json, null, 2));
-    return null;
-  }
-
-  const {
-    data: {
-      repository: {
-        stargazerCount,
-        defaultBranchRef: {
-          name: branch,
-          target: {
-            history: { nodes },
-          },
-        },
-      },
-    },
-  } = json;
-
-  if (nodes.length === 0) {
-    return null;
-  }
-
-  return {
-    branch,
-    stargazerCount,
-    commits: nodes.map(({ committedDate, file }) => ({
-      date: committedDate,
-      text: file?.object?.text ?? null,
-      ext,
-    })),
-  };
-}
-
-/**
- * @param {{ date: string, text: string, ext: "json"|"yaml"|"yml"}[]} commits
- *
- * @returns {{
- *   ext: string,
- *   date: string,
- *   status: "ill-formed"|"empty"|"missing-finish-args"|"ok"
- *   finishArgs: {
- *     socket: string[],
- *     allow: string[],
- *     device: string[],
- *     extension: string[],
- *     filesystem: string[],
- *     persist: string[],
- *     share: string[],
- *     socket: string[],
- *     talkName: string[]
- *   }|null
- * }}
- */
-function parseCommits(commits) {
-  const history = commits
-    .map(({ date, text, ext }) => {
-
-      let meta;
-      try {
-        if (ext === "yml" || ext === "yaml") {
-          meta = yaml.safeLoad(text)
-        } else {
-          // Try to make JSON better formed, before parsing it, to get fewer "ill-formed" results.
-          const jsonWithoutComments = stripJsonComments(text);
-          const jsonWithoutWhitespace = jsonWithoutComments.replace(/\s/g, "")
-
-          meta = JSON.parse(jsonWithoutWhitespace);
-        }
-      } catch {
-        // invalid json or yaml. Moving on...
-        return {
-          ext,
-          date,
-          status: "ill-formed",
-          finishArgs: null,
-        };
-      }
-
-      if (!meta) {
-        // file must have been deleted in this commit. Moving on...
-        return {
-          ext,
-          date,
-          status: "empty",
-          finishArgs: null,
-        };
-      }
-
-      const finishArgs = meta["finish-args"]
-      if (!finishArgs) {
-        return {
-          ext,
-          date,
-          status: "finish-args-not-found",
-          finishArgs: null,
-        }
-      }
-
-      return {
-        ext,
-        date,
-        status: "ok",
-        finishArgs: [...finishArgs].sort(),
-      };
-    })
-
-  return history;
 }
