@@ -197,6 +197,13 @@ import { useActiveLink } from "./lib/useActiveLink.js";
           data: count.map((it) => it.achievements[ACHIEVEMENTS.WaylandWithFallback]),
           fill: false,
         },
+        {
+          label: ACHIEVEMENTS.WaylandOnly,
+          backgroundColor: HOTPINK_COLOR,
+          borderColor: HOTPINK_COLOR,
+          data: count.map((it) => it.achievements[ACHIEVEMENTS.WaylandOnly]),
+          fill: false,
+        },
       ],
     },
     options: {
