@@ -184,6 +184,9 @@ export async function queryMetafileHistory(appID) {
 
   // 6. Combine history
   const history = [...parsedYaml, ...parsedYml, ...parsedJson];
+  if (history.length == 0) {
+    return null;
+  }
 
   // 7. Sort oldest -> newest date
   const historyFromOldest = [...history].sort((a, b) => a.date.localeCompare(b.date));

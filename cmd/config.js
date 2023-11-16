@@ -1,5 +1,4 @@
-// PAT with no scopes. Readonly to public information on github
-const PAT = process.env.GITHUB_PERSONAL_ACCESS_TOKEN ?? "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";
+const PAT = process.env.GITHUB_PERSONAL_ACCESS_TOKEN ?? "<missing an env.GITHUB_PERSONAL_ACCESS_TOKEN>";
 export const RestConfig = {
   headers: {
     Authorization: `token ${PAT}`,
@@ -15,12 +14,6 @@ export const GqlConfig = {
 };
 
 export const MONTHS = [
-  "2020-05",
-  "2020-06",
-  "2020-07",
-  "2020-08",
-  "2020-09",
-  "2020-10",
   "2020-11",
   "2020-12",
   "2021-01",
@@ -52,4 +45,10 @@ export const MONTHS = [
   "2023-03",
   "2023-04",
   "2023-05",
+  "2023-06",
+  "2023-07",
+  "2023-08",
+  "2023-09",
+  "2023-10",
+  "2023-11",
 ];

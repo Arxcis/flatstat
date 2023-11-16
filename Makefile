@@ -35,4 +35,4 @@ server:
 test:
 	node cmd/query.test.js --harmony-top-level-await;
 
-.PHONY: apps count metafiles server test all changelog
+.PHONY: apps count metafiles server test all changelog install
