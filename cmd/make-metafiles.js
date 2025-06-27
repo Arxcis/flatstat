@@ -3,12 +3,12 @@ import { queryMetafileHistory } from "./query.js";
 
 const apps = JSON.parse(await readFile("./data/flathub/apps.json"));
 
-const MEATFILES_JSON = "./data/flathub/metafiles.json";
+const METAFILES_JSON = "./data/flathub/metafiles.json";
 
-await unlink(MEATFILES_JSON)
-await appendFile(MEATFILES_JSON, "[");
+await unlink(METAFILES_JSON)
+await appendFile(METAFILES_JSON, "[");
 await makeMetafiles(apps);
-await appendFile(MEATFILES_JSON, "]");
+await appendFile(METAFILES_JSON, "]");
 
 async function makeMetafiles(apps) {
   let index = 0;
@@ -31,6 +31,6 @@ async function makeMetafiles(apps) {
 
     // 4. Append metafile-object to file
     const notTheLastApp = index !== apps.length
-    await appendFile(MEATFILES_JSON, `${JSON.stringify(metafile, null, 2)}${notTheLastApp ? "," : ""}`);
+    await appendFile(METAFILES_JSON, `${JSON.stringify(metafile, null, 2)}${notTheLastApp ? "," : ""}`);
   }
 }
