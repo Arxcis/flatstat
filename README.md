@@ -1,4 +1,4 @@
-<img width="700" alt="image" src="https://github.com/Arxcis/flatstat/assets/3092618/470433d7-4818-49ff-9c61-37e2b9f9cb05">
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/02d00cb4-6ae5-40b6-ab6b-321cf727e145" />
 
 
 Hosted at https://arxcis.github.io/flatstat/
