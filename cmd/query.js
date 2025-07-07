@@ -61,7 +61,7 @@ export async function queryMetafileHistory(appID) {
   }`;
 
   const body = JSON.stringify({ query });
-  
+
   // 1. Send request
   const res = await fetch("https://api.github.com/graphql", {
     ...GqlConfig,
@@ -179,7 +179,7 @@ export async function queryMetafileHistory(appID) {
       date,
       status: "ok",
       finishArgs: [...finishArgs].sort(),
-    };   
+    };
   }
 
   // 6. Combine history
@@ -226,10 +226,28 @@ export async function queryMetafileHistory(appID) {
   // 9. Trim the history to contain one entry per month, which should be the latest entry per month
   const historyFromNewest = [...deDuplicatedHistory].sort((a, b) => a.date.localeCompare(b.date.localeCompare));
 
-  const trimmedHistory = MONTHS
-    .map(month => historyFromNewest.find(it => it.date.startsWith(month)))
-    .filter(it => it)
-    .reverse()
+  const trimmedHistory = MONTHS.map((month) => {
+    const found = historyFromNewest.find((it) => it.date.startsWith(month));
+
+    // 9.1 If found entry has null finishargs, it might have been replaced with another file
+    // with a different extension at the exact same commit/timestamp. For instance .json-file may
+    // have been replaced with a .yaml og .yml-file. Checking for this..
+    if (found?.finishArgs === null) {
+      const foundAnother = historyFromNewest.find(
+        (it) => it.finishArgs !== null && it.date === found.date
+      );
+      if (foundAnother) {
+        return foundAnother;
+      }
+    }
+    return found;
+  })
+    .filter((it) => it)
+    .reverse();
+
+  if (trimmedHistory.length === 0) {
+    return null;
+  }
 
   // 10. Get the file-extension of the latest history entry
   const ext = trimmedHistory[0]?.ext ?? null;
