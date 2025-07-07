@@ -59,7 +59,8 @@ const count = [...countMap.entries()]
       finishArgs: trimAndSortCount(value.finishArgs),
     })
   })
-  .sort((a, b) => a.month.localeCompare(b.month));
+  .sort((a, b) => a.month.localeCompare(b.month))
+  .slice(0,-1); // Ignore latest month, because it is incomplete.
 
 await writeFile(COUNT_JSON, JSON.stringify(count, null, 2));
 

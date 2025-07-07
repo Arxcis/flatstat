@@ -16,7 +16,7 @@ export const GqlConfig = {
   },
 };
 
-const start = new Date("2018-01");
+const start = new Date("2018-06");
 const end = new Date("2025-07");
 export const MONTHS = [];
 
