@@ -32,12 +32,12 @@
   <main>
     <input id="search" value="" type="search" placeholder="Search any column">
     <nav>
+      <a id="#changelog" title="Latest changes to apps" href="/flatstat/apps/#changelog">📜 changelog</a>
       <a id="#stars" title="Apps sorted by GitHub stars" href="/flatstat/apps/#stars">⭐ by stars</a>
       <a id="#achievements" title="Apps sorted by achievements" href="/flatstat/apps/#achievements">🏅 by achievements</a>
       <a id="#holes" title="Apps sorted by holes" href="/flatstat/apps/#holes">💥 by holes</a>
       <a id="#talk-names" title="Apps sorted by well-known --talk-names" href="/flatstat/apps/#talk-names">💬 by
         talk-names</a>
-      <a id="#changelog" title="Latest changes to apps" href="/flatstat/apps/#changelog">📜 changelog</a>
       <a id="#finish-args" title="Frequently used 'finish-args'" href=" /flatstat/apps/#finish-args">🏁 finish-args</a>
     </nav>
     <ul>
@@ -73,7 +73,7 @@ import { useMarkPerformance, useMeasurePerformance } from "../lib/usePerformance
     finishArgsList: [],
   }
 
-  useActiveLink("#stars")
+  useActiveLink("#changelog")
 
   // Fetch data
   const count = await useJSON("../data/flathub/count.json")
