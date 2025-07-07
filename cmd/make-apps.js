@@ -11,33 +11,42 @@ let next = "https://api.github.com/orgs/flathub/repos?per_page=100";
 const NON_APP_PATTERNS = [
   "org.freedesktop.LinuxAudio.",
   "org.freedesktop.Platform.",
+  // Common non-app patterns
   ".Extensions.",
   ".extensions.",
   ".Extension.",
   ".BundledExtension.",
   ".Plugin.",
   ".plugin.",
+  ".Plugins.",
+  ".plugins.",
   ".Addon.",
-  ".Utility.",                    // .Protontricks, .Mangohud
-  ".CompatibilityTool.",          // .proton, .Boxtron
+  ".Utility.", // .Protontricks, .Mangohud
+  ".CompatibilityTool.", // .proton, .Boxtron
   ".BaseApp",
+  // Specific non-app patterns
   "org.gtk.Gtk3theme.",
   "org.kde.KStyle.",
   "org.kde.PlatformTheme.",
-  "io.dbeaver.DBeaverCommunity.Client.", // .pgsql | .mariadb
+  "io.dbeaver.DBeaverCommunity.Client.", // .pgsql .mariadb
   "org.gnome.Crosswords.PuzzleSets.", // .nienteperniente, .oedipus
-  "org.kicad.KiCad.ODBCDriver.",  // .psqlodbc, .sqliteodbc
-  "org.kicad.KiCad.Library.",     // .Templates, .Footprints, .Symbols
-  "com.visualstudio.code.tool.",  // .fish, .podman
-  "org.winehq.Wine.DLLs.",        // .dxvk
+  "org.kicad.KiCad.ODBCDriver.", // .psqlodbc, .sqliteodbc
+  "org.kicad.KiCad.Library.", // .Templates, .Footprints, .Symbols
+  "com.visualstudio.code.tool.", // .fish, .podman
+  "org.winehq.Wine.DLLs.", // .dxvk
+  "org.kde.WaylandDecoration.", // .QGnomePlatform-decoration, .QAdwaitaDecorations
+  "dev.tchx84.Gameeky.ThematicPack.", // .Battle
+  "net.krafting.SemantiK.Lang.", // .English .French
+  // One-off non-apps
   "com.sublimetext.three.DevUtils",
-  "org.kde.WaylandDecoration.",   // .QGnomePlatform-decoration, .QAdwaitaDecorations
   "org.gnome.Totem.Videosite.YouTubeDl",
   "com.fightcade.Fightcade.Wine",
   "org.telegram.desktop.webview",
   "com.hack_computer.Clippy.Extension",
   "org.qutebrowser.qutebrowser.Userscripts",
   "net._86box._86Box.ROMs",
+  "org.gimp.GIMP.Manual",
+  "org.gnome.Totem.Devel",
 ];
 
 do {
@@ -50,9 +59,9 @@ do {
 
   const json = (await res.json()) ?? [];
 
-  const activeRepos = json.filter((it) => !it.archived && !it.disabled)
-    .filter((it) => it.name.includes("."))
-  
+  const activeRepos = json
+    .filter((it) => !it.archived && !it.disabled)
+    .filter((it) => it.name.includes("."));
 
   non_apps = [
     ...non_apps,
