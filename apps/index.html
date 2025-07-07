@@ -253,8 +253,11 @@ async function renderList(lists, search, hash) {
     case "#finish-args":
       list = lists.finishArgsList;
       break;
-    default: //"#apps":
-      list = lists.appsList;
+    case "#apps":
+      list = lists.appsList
+      break;
+    default:
+      list = lists.changelogList
       break;
   }
 
